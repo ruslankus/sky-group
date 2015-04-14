@@ -1,0 +1,214 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: open_sanscondensed_light;
+}
+
+body
+{
+    min-width: 853px;
+}
+
+/********************************************* H E A D E R ************************************************************/
+
+.header
+{
+    display: block;
+    height: 104px;
+    /*background-color: yellow;*/
+    /*margin-left: 145px;*/
+    padding-left: 145px;
+    padding-right: 208px;
+    position: relative;
+}
+
+.header .logo
+{
+    left: 0;
+    display: block;
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    background: url("../img/logo_transparent.png") center center no-repeat #444444;
+}
+
+.header .logo:hover
+{
+    background-color: #7c7c7c;
+    transition: background-color 100ms linear;
+}
+
+.header .right-box
+{
+    display: block;
+    width: 104px;
+    height: 104px;
+    background-color: grey;
+    position: absolute;
+}
+.header .right-box.login-button
+{
+    right: 0;
+    background: url("../img/enter.png") center center no-repeat #ecbd62;
+}
+.header .right-box.menu-button
+{
+    right: 104px;
+    background: url("../img/menu_normal.png") center center no-repeat #444444;
+}
+.header .right-box.menu-button.active, .header .right-box.menu-button:hover
+{
+    background: url("../img/menu_hover.png") center center no-repeat #444444;
+}
+
+.nav ul
+{
+    list-style: none;
+    display: block;
+    width: 100%;
+    height: 104px;
+    /*background-color: red;*/
+    text-align: right;
+}
+
+.nav ul li:last-child
+{
+    margin-right: 32px;
+}
+.nav ul li
+{
+    display: inline-block;
+    height: 104px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: #444444;
+    font-family: open_sanscondensed_light;
+    font-size: 22px;
+}
+
+.nav ul li a
+{
+    margin-top: 36px;
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    height: 33px;
+}
+
+.nav ul li a:hover
+{
+    border-bottom: 2px solid #d0d0d0;
+}
+
+/************************************************** M A I N ************************************************************/
+
+.main
+{
+    /*width: 90%;*/
+    display: block;
+    margin: 0 auto;
+    min-height: 500px;
+    padding-left: 65px;
+    padding-right: 65px;
+    /*background-color: red;*/
+}
+
+/* head */
+.main .header-section
+{
+    width: 100%;
+    min-height: 145px;
+    /*background-color: yellow;*/
+    padding-top: 75px;
+    border-bottom: 1px solid #dadada;
+}
+
+.main .header-section h1
+{
+    color: #777777;
+    font-weight: normal;
+    font-size: 70px;
+    text-transform: uppercase;
+    line-height: 145px;
+}
+
+/* path */
+.main .path-nav
+{
+    width: 100%;
+    min-height: 120px;
+    display: block;
+    /*background-color: yellow;*/
+}
+
+.main .path-nav a:first-child
+{
+    margin-left: 0;
+}
+
+.main .path-nav a
+{
+    display: block;
+    /*height: 9px;*/
+    /*width: 9px;*/
+    border: 2px solid #c2c2c2;
+    float: left;
+    margin: 15px;
+    margin-top: 35px;
+    border-radius: 50px;
+    font-size: 22px;
+    font-family: open_sansbold;
+    text-decoration: none;
+    color: #c2c2c2;
+    padding: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.main .path-nav a.active
+{
+    color: #f0b74a;
+}
+
+.main .path-nav a:hover
+{
+    color: #f0b74a;
+}
+
+/*form area*/
+
+.main .form-area
+{
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    /*background-color: red;*/
+}
+
+.main .form-area fieldset
+{
+    display: block;
+    border: none;
+    width: 50%;
+    float: left;
+}
+
+.main .form-area fieldset input[type=text]
+{
+    display: block;
+    width: 95%;
+    float: left;
+    height: 45px;
+    margin-bottom: 45px;
+}
+
+.main .form-area fieldset.reg-1 input
+{
+    float: left;
+}
+
+.main .form-area fieldset.reg-2 input
+{
+    float: right;
+}

@@ -1,0 +1,201 @@
+2015/04/14 15:34:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/enter.png".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('img/enter.png')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/enter.png
+HTTP_REFERER=http://ypay.local/css/forms.css
+---
+2015/04/14 15:34:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/menu_normal.png".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('img/menu_normal...')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/menu_normal.png
+HTTP_REFERER=http://ypay.local/css/forms.css
+---
+2015/04/14 15:34:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/logo_transparent.png".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('img/logo_transp...')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/logo_transparent.png
+HTTP_REFERER=http://ypay.local/css/forms.css
+---
+2015/04/14 15:34:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/opensans-condlight.woff2".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/opensans-...')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/opensans-condlight.woff2
+HTTP_REFERER=http://ypay.local/css/fonts.css
+---
+2015/04/14 15:34:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/opensans-bold.woff2".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/opensans-...')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/opensans-bold.woff2
+HTTP_REFERER=http://ypay.local/css/fonts.css
+---
+2015/04/14 15:34:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/opensans-bold.woff".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/opensans-...')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/opensans-bold.woff
+HTTP_REFERER=http://ypay.local/css/fonts.css
+---
+2015/04/14 15:34:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/opensans-condlight.woff".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/opensans-...')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/opensans-condlight.woff
+HTTP_REFERER=http://ypay.local/css/fonts.css
+---
+2015/04/14 15:34:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/opensans-condlight.ttf".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/opensans-...')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/opensans-condlight.ttf
+HTTP_REFERER=http://ypay.local/css/fonts.css
+---
+2015/04/14 15:34:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/opensans-bold.ttf".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/opensans-...')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/opensans-bold.ttf
+HTTP_REFERER=http://ypay.local/css/fonts.css
+---
+2015/04/14 15:40:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/04/14 15:40:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/04/14 15:58:14 [error] [php] Invalid argument supplied for foreach() (C:\OpenServer\domains\ypay.local\protected\widgets\views\main_menu.php:5)
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\widgets\CWidget.php(244): MainMenu->renderFile()
+#1 C:\OpenServer\domains\ypay.local\protected\widgets\MainMenu.php(12): MainMenu->render()
+#2 C:\OpenServer\domains\ypay.local\framework\web\CBaseController.php(181): MainMenu->run()
+#3 C:\OpenServer\domains\ypay.local\protected\views\layouts\main.php(20): MainController->widget()
+#4 C:\OpenServer\domains\ypay.local\framework\web\CBaseController.php(126): require()
+#5 C:\OpenServer\domains\ypay.local\framework\web\CBaseController.php(95): MainController->renderInternal()
+#6 C:\OpenServer\domains\ypay.local\framework\web\CController.php(833): MainController->renderFile()
+#7 C:\OpenServer\domains\ypay.local\protected\controllers\MainController.php(6): MainController->renderText()
+#8 C:\OpenServer\domains\ypay.local\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#9 C:\OpenServer\domains\ypay.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\OpenServer\domains\ypay.local\framework\web\CController.php(286): MainController->runAction()
+#11 C:\OpenServer\domains\ypay.local\framework\web\CController.php(265): MainController->runActionWithFilters()
+#12 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(282): MainController->run()
+#13 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\OpenServer\domains\ypay.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\OpenServer\domains\ypay.local\protected\widgets\views\main_menu.php (5)
+in C:\OpenServer\domains\ypay.local\protected\widgets\MainMenu.php (12)
+in C:\OpenServer\domains\ypay.local\protected\views\layouts\main.php (20)
+2015/04/14 15:59:08 [error] [php] Invalid argument supplied for foreach() (C:\OpenServer\domains\ypay.local\protected\widgets\views\main_menu.php:5)
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\widgets\CWidget.php(244): MainMenu->renderFile()
+#1 C:\OpenServer\domains\ypay.local\protected\widgets\MainMenu.php(12): MainMenu->render()
+#2 C:\OpenServer\domains\ypay.local\framework\web\CBaseController.php(181): MainMenu->run()
+#3 C:\OpenServer\domains\ypay.local\protected\views\layouts\main.php(20): MainController->widget()
+#4 C:\OpenServer\domains\ypay.local\framework\web\CBaseController.php(126): require()
+#5 C:\OpenServer\domains\ypay.local\framework\web\CBaseController.php(95): MainController->renderInternal()
+#6 C:\OpenServer\domains\ypay.local\framework\web\CController.php(833): MainController->renderFile()
+#7 C:\OpenServer\domains\ypay.local\protected\controllers\MainController.php(6): MainController->renderText()
+#8 C:\OpenServer\domains\ypay.local\framework\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#9 C:\OpenServer\domains\ypay.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\OpenServer\domains\ypay.local\framework\web\CController.php(286): MainController->runAction()
+#11 C:\OpenServer\domains\ypay.local\framework\web\CController.php(265): MainController->runActionWithFilters()
+#12 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(282): MainController->run()
+#13 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\OpenServer\domains\ypay.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/
+in C:\OpenServer\domains\ypay.local\protected\widgets\views\main_menu.php (5)
+in C:\OpenServer\domains\ypay.local\protected\widgets\MainMenu.php (12)
+in C:\OpenServer\domains\ypay.local\protected\views\layouts\main.php (20)
+2015/04/14 16:00:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "product".' in C:\OpenServer\domains\ypay.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CController.php(270): CController->missingAction('product')
+#1 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(282): CController->run('product')
+#2 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('main/product')
+#3 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/main/product
+HTTP_REFERER=http://ypay.local/
+---
+2015/04/14 16:00:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "product".' in C:\OpenServer\domains\ypay.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CController.php(270): CController->missingAction('product')
+#1 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(282): CController->run('product')
+#2 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('main/product')
+#3 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/main/product
+HTTP_REFERER=http://ypay.local/main/about
+---
+2015/04/14 16:02:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "product".' in C:\OpenServer\domains\ypay.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CController.php(270): CController->missingAction('product')
+#1 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(282): CController->run('product')
+#2 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('main/product')
+#3 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/main/product
+HTTP_REFERER=http://ypay.local/main/about
+---
+2015/04/14 16:29:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "registration".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('registration')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/registration
+---
+2015/04/14 16:52:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "step2".' in C:\OpenServer\domains\ypay.local\framework\web\CController.php:483
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CController.php(270): CController->missingAction('step2')
+#1 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(282): CController->run('step2')
+#2 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('registration/st...')
+#3 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/registration/step2
+HTTP_REFERER=http://ypay.local/registration/step1
+---
+2015/04/14 16:55:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "registratin".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('registratin')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/registratin
+---
