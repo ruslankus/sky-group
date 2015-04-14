@@ -5,5 +5,5 @@
 
  <?php $this->widget('application.widgets.StepWidget',array('currentStep' => $this->currentStep));?>
  
-<?echo $this->renderPartial("_step_{$step}")?>
+<?echo $this->renderPartial("_step_{$step}", array('sessData' => $sessData))?>
 </main>

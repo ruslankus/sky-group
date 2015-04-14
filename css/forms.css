@@ -108,7 +108,7 @@ body
     /*width: 90%;*/
     display: block;
     margin: 0 auto;
-    min-height: 500px;
+    min-height: 920px;
     padding-left: 65px;
     padding-right: 65px;
     /*background-color: red;*/
@@ -176,7 +176,7 @@ body
     color: #f0b74a;
 }
 
-/*form area*/
+/*form area - 1 step*/
 
 .main .form-area
 {
@@ -186,22 +186,61 @@ body
     /*background-color: red;*/
 }
 
+.main .form-area form
+{
+    display: block;
+}
+
 .main .form-area fieldset
 {
     display: block;
     border: none;
     width: 50%;
     float: left;
+    position: relative;
+    margin-bottom: 20px;
 }
 
-.main .form-area fieldset input[type=text]
+
+.main .form-area fieldset input[type=text], .main .form-area fieldset input[type=password]
 {
     display: block;
-    width: 95%;
+    width: 90%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     float: left;
-    height: 45px;
+    height: 40px;
     margin-bottom: 45px;
+
+    color: #444444;
+    font-size: 18px;
+    font-family: open_sanslight;
+
+    border: none;
+    border-bottom: 2px solid #ecbd62;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
+
+.main .form-area fieldset input[type=text].promo
+{
+    font-family: open_sanssemibold;
+}
+.main .form-area fieldset.reg-1 .question
+{
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url("../img/question.png") center center transparent;
+    position: absolute;
+    right: 6%;
+    top: 8px;
+}
+
+.main .form-area fieldset input::-webkit-input-placeholder{opacity: 1;}
+.main .form-area fieldset input::-moz-placeholder{opacity: 1;}
+.main .form-area fieldset input:-moz-placeholder{opacity: 1;}
+.main .form-area fieldset input:-ms-input-placeholder{opacity: 1;}
 
 .main .form-area fieldset.reg-1 input
 {
@@ -211,4 +250,48 @@ body
 .main .form-area fieldset.reg-2 input
 {
     float: right;
+}
+
+.main .form-area fieldset.reg-2 input[type=submit]
+{
+    margin-top: 40px;
+}
+.main .form-area input[type=submit]
+{
+    display: block;
+    height: 40px;
+    color: #ecbd62;
+    font-family: open_sans_condensedbold;
+    text-transform: uppercase;
+    font-size: 20px;
+    background: white;
+    border: 2px solid #c2c2c2;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 35px;
+    cursor: pointer;
+    background: url("../img/next.png") center right no-repeat;
+}
+
+/*footer*/
+.footer
+{
+    display: block;
+    height: 105px;
+    background-color: #444444;
+    text-align: center;
+}
+
+.footer a
+{
+    display: inline-block;
+    font-family: open_sanslight;
+    font-size: 33px;
+    color: white;
+    height: 75px;
+    padding-top: 30px;
+    padding-right: 60px;
+    /*line-height: 105px;*/
+    text-decoration: none;
+    background: url("../img/email-ico.png") center right no-repeat;
 }

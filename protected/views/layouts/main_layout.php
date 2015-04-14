@@ -24,5 +24,7 @@
     <?echo $content?>
 
 </body>
-
+<footer class="footer">
+    <a href="#">Связаться с нами</a>
+</footer>
 </html>

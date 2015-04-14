@@ -6,12 +6,30 @@ class RegistrationController extends Controller
     public $currentStep;
     
     public function actionIndex(){
-        $this->redirect("registration/step/1");
+        $this->redirect("/registration/step/1");
     }
     
     public function actionStep($id){
+        
+        $sessData = Yii::app()->session->get("step_{$id}");
         $this->currentStep = $id;
-        $this->render('registration',array('step'=> $id));
+        $request = Yii::app()->request;
+        if($request->isPostRequest){
+            
+            $arrStep = $_POST;
+            Yii::app()->session->add("step_{$id}", $arrStep);
+            $next = $id + 1;
+            if($id == 7){
+                
+                //redirect payment
+                echo "payment";
+            }else{
+                $this->redirect("/registration/step/{$next}");    
+            }
+            
+        }
+       
+        $this->render('registration',array('step'=> $id, 'sessData' => $sessData));
     }
     
     
