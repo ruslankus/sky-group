@@ -47,7 +47,7 @@ class PayController extends Controller
         
         // for 3d security
         // is enabled, response callback url, mode, popup, onepage, language
-        $pay->setWPF("true","http://inlusion.eu/pay/callback/", "DEFAULT","true","true");
+        $pay->setWPF("true","http://inlusion.eu/pay/callback/", "DEFAULT","false","true","en");
         
         $pay->sendRequest();    
         

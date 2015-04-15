@@ -17,7 +17,7 @@ class SolidPay
 	 * @param protected boolean $responseFull
 	 * should we show full CURL response by default
 	*/
-	protected $responseFull = false;
+	protected $responseFull = true;
 	
 	/*
 	 * @param protected string $url
@@ -41,7 +41,7 @@ class SolidPay
 	{
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 2);
-		curl_setopt($curl, CURLOPT_HEADER, true);
+		curl_setopt($curl, CURLOPT_HEADER, false);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLOPT_URL, $this->url);
 
@@ -120,7 +120,7 @@ class SolidPay
 				// requested returned failed message
 				if($response['POST.VALIDATION'] != 'ACK')
 					{
-						$new_response = (object)[];
+						$new_response = (object) array();
 						$new_response->paymentSuccess = false;
 						$new_response->result = 'NOK';
 						$new_response->code = $response['POST.VALIDATION'];
@@ -137,7 +137,7 @@ class SolidPay
 						// PAID, request returned success message
 						if ($response['PROCESSING.RETURN.CODE'] == '000.000.000')
 							{
-								$new_response = (object)[];
+								$new_response = (object) array();
 								$new_response->paymentSuccess = true;
 								$new_response->result = 'ACK';
 								$new_response->code = $response['POST.VALIDATION'];
@@ -158,7 +158,7 @@ class SolidPay
 						// request returned success message, but money wasnt paid.
 						else
 							{
-								$new_response = (object)[];
+								$new_response = (object) array();
 								$new_response->paymentSuccess = false;
 								$new_response->result = $response['PROCESSING.RESULT'];
 								$new_response->statusCode = $response['PROCESSING.STATUS.CODE'];
@@ -201,7 +201,7 @@ class SolidPay
 				// requested returned failed message
 				if($response['PROCESSING_RESULT'] != 'ACK')
 					{
-						$new_response = (object)[];
+						$new_response = (object) array();
 						$new_response->paymentSuccess = false;
 						$new_response->result = 'NOK';
 						$new_response->processingCode = $response['PROCESSING_RESULT'];
@@ -219,7 +219,7 @@ class SolidPay
 						// PAID, request returned success message
 						if ($response['PROCESSING.RETURN.CODE'] == '000.000.000')
 							{
-								$new_response = (object)[];
+								$new_response = (object) array();
 								$new_response->paymentSuccess = true;
 								$new_response->result = 'ACK';
 								$new_response->processingCode = $response['PROCESSING_RESULT'];
@@ -241,7 +241,7 @@ class SolidPay
 						// request returned success message, but money wasnt paid.
 						else
 							{
-								$new_response = (object)[];
+								$new_response = (object) array();
 								$new_response->paymentSuccess = false;
 								$new_response->result = $response['PROCESSING_RESULT'];
 								$new_response->statusCode = $response['PROCESSING_STATUS_CODE'];
