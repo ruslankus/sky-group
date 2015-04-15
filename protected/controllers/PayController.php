@@ -5,8 +5,12 @@ class PayController extends Controller
     
     private $_host = "http://inlusion.eu/pay/callback/";
     
+    public $layout='//layouts/main_layout';
+    
+    public $title = "Регистрация";
+    
     public function actionIndex(){
-        
+        $this->render('success');
     }
     
     public function actionSend(){
@@ -75,7 +79,7 @@ class PayController extends Controller
     
     public function actionError(){
         
-        Debug::d($_POST);
+        $this->render('fail');
     }
     
     

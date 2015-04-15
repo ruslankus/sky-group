@@ -3,7 +3,7 @@
 class RegistrationController extends Controller
 {
     public $layout='//layouts/main_layout';
-    
+    public $title = "Регистрация";
     public $currentStep;
     
     public $steps = array(

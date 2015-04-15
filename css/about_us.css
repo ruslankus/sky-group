@@ -1,0 +1,95 @@
+.main,
+.content {
+	position:relative;
+	margin: 0 auto 0 auto;
+	width:1170px;
+}
+h1 span {
+	padding-right:40px;
+	background: url('../img/about_us_ico.png') right top no-repeat;
+}
+.cls {
+	position:relative;
+	height:0;
+	clear: both;
+}
+
+.content-col {
+	font-family: open_sanslight;
+	font-size: 0.938em;
+	line-height: 1.625em;
+	position:relative;
+	width:49%;
+	padding:12px 0px 70px 0px;
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.content-col img {
+	width:100%;
+	padding-bottom:20px;
+}
+
+.content-col p {
+	margin-bottom: 20px;
+}
+
+.content-col h2 {
+	font-family: open_sanscondensed_light;
+	font-size: 1.375em;
+	color: #edae36;
+	letter-spacing: 0.5px;
+
+}
+
+.content-col h3 {
+	font-family: open_sanssemibold;
+	font-size: 0.938em;
+	line-height: 1.625em;
+
+}
+
+.content-col table {
+	width:100%;
+	margin-top:15px;
+}
+
+.content-col table tr td.center{
+	text-align: center;
+}
+
+.content-col table tr td{
+	text-align: right;
+	height:40px;
+	vertical-align: center;
+	padding-right: 10px;
+	font-family: open_sanslight;
+}
+.content-col table th {
+ 	background: #ecbd63;
+ 	border-right: 1px solid #fff;
+ 	font-family: open_sanscondensed;
+ 	color: #ffffff;
+ 	font-size:1.250em;
+ 	line-height: 2.375em;
+ }
+
+ .content-col table tr:nth-child(even) {background: #efefef;}
+
+ .content-col table tr.footer-table th {
+ 	background: #8c8c8c;
+ 	color:#ffffff;
+ }
+
+ @media only screen and (max-width: 960px) {
+	.main,
+	.content {
+		width:900px;
+	}
+}

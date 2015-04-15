@@ -4,6 +4,10 @@ class MainController extends Controller
 {
     public function actionIndex(){
         
+        $this->title = "Главная";
+        
+        $this->layout = '//layouts/page_layout';
+        
         $request = Yii::app()->request;
         if($request->isPostRequest){
             
@@ -18,11 +22,13 @@ class MainController extends Controller
     
     
     public function actionAbout(){
+        $this->title = "О нас";
         $this->render('about'); 
     }
     
     
     public function actionContacts(){
+      $this->title = "Контакты";
       $this->render('contacts');     
     }
     
@@ -33,6 +39,7 @@ class MainController extends Controller
     
     
     public function actionNews(){
+        $this->title = "Новости";
         $this->render('news');
     }
     
