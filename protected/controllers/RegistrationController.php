@@ -2,8 +2,19 @@
 
 class RegistrationController extends Controller
 {
+    public $layout='//layouts/main_layout';
     
     public $currentStep;
+    
+    public $steps = array(
+        '1' => true,
+        '2' => false,
+        '3' => false,
+        '4' => false,
+        '5' => false ,
+        '6' => false,
+        '7' => false,
+     );
     
     public function actionIndex(){
         $this->redirect("/registration/step/1");
@@ -12,23 +23,30 @@ class RegistrationController extends Controller
     public function actionStep($id){
         
         $sessData = Yii::app()->session->get("step_{$id}");
+        
+        $sessSteps = Yii::app()->session->get("steps");
+        if(empty($sessSteps)){
+             Yii::app()->session->add("steps", $this->steps);
+        }
+        
         $this->currentStep = $id;
         $request = Yii::app()->request;
         if($request->isPostRequest){
             
             $arrStep = $_POST;
             Yii::app()->session->add("step_{$id}", $arrStep);
+            //write session step like complited
+            $sessSteps[$id] = true;
+             Yii::app()->session->add("steps", $sessSteps);
             $next = $id + 1;
             if($id == 7){
-                
-                //redirect payment
-                echo "payment";
+                $this->redirect("/pay/send");
             }else{
                 $this->redirect("/registration/step/{$next}");    
             }
             
         }
-       
+        //Debug::d($_SESSION);
         $this->render('registration',array('step'=> $id, 'sessData' => $sessData));
     }
     

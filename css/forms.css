@@ -142,12 +142,12 @@ body
     /*background-color: yellow;*/
 }
 
-.main .path-nav a:first-child
+.main .path-nav a:first-child, .main .path-nav span:first-child
 {
     margin-left: 0;
 }
 
-.main .path-nav a
+.main .path-nav a, .main .path-nav span
 {
     display: block;
     /*height: 9px;*/
@@ -164,6 +164,11 @@ body
     padding: 15px;
     padding-top: 7px;
     padding-bottom: 7px;
+}
+
+.main .path-nav span
+{
+    opacity: 0.6;
 }
 
 .main .path-nav a.active
@@ -200,7 +205,55 @@ body
     position: relative;
     margin-bottom: 20px;
 }
+.main .form-area fieldset.buttons
+{
+    width: 100%;
+    margin-bottom: 75px;
+}
+.main .form-area fieldset.buttons .left
+{
+    float: left;
+}
 
+.main .form-area fieldset.buttons .right
+{
+    float: right;
+}
+
+.main .form-area fieldset .offset-in
+{
+    padding-left: 20px;
+    border-left: 1px solid #DADADA;
+    position: relative;
+}
+
+.main .form-area fieldset .offset-in.small-modified
+{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 50%;
+}
+
+.main .form-area fieldset .offset-in:after
+{
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: white;
+    top: 0;
+    left: -51px;
+    height: 100%;
+    width: 50px;
+}
+
+.main .form-area fieldset.not-tall
+{
+    margin-bottom: 0;
+}
+.main .form-area fieldset input[type=text].not-tall
+{
+    margin-bottom: 20px;
+}
 
 .main .form-area fieldset input[type=text], .main .form-area fieldset input[type=password]
 {
@@ -222,10 +275,300 @@ body
     border-bottom-right-radius: 5px;
 }
 
-.main .form-area fieldset input[type=text].promo
+.main .form-area fieldset select
+{
+    display: block;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    float: left;
+    height: 40px;
+    margin-bottom: 45px;
+
+    color: #444444;
+    font-size: 18px;
+    font-family: open_sanslight;
+
+    border: none;
+    border-bottom: 2px solid #ecbd62;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -ms-appearance: none;
+    appearance: none!important;
+
+    background: url("../img/select-arrow.png") center right no-repeat;
+
+    cursor: pointer;
+}
+
+.hidden-block
+{
+    display: none;
+    /*visibility: hidden;*/
+}
+
+.main .form-area .question-span
+{
+    display: block;
+    font-size: 18px;
+    color: #444444;
+    font-family: open_sanssemibold;
+    height: 48px;
+}
+
+.main .form-area .question-span span.right
+{
+    float: right;
+}
+
+.main .form-area .question-span span
+{
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+.main .form-area .question-span span.bold
 {
     font-family: open_sanssemibold;
 }
+
+.main .form-area .question-span.small
+{
+    padding-right: 8%;
+    display: inline-block;
+    font-size: 18px;
+    font-family: open_sanslight;
+    float: left;
+    color: #444444;
+}
+
+.main .form-area .question-span.bold
+{
+    font-family: open_sanssemibold;
+}
+
+.main .form-area .question-span.small.block
+{
+    padding-right: 0;
+    display: block;
+    width: 100%;
+}
+
+.main .form-area input[type=radio], .main .form-area input[type=checkbox]
+{
+    display: none;
+}
+
+
+.main .form-area label.check-box-label
+{
+    width: 100%;
+    display: block;
+    float: left;
+    font-family: open_sanslight;
+    font-size: 18px;
+    color: #444444;
+    height: 50px;
+    line-height: 50px;
+    /*margin-right: 45px;*/
+    /*padding-left: 35px;*/
+    position: relative;
+    cursor: pointer;
+    text-transform: none;
+    padding-left: 45px;
+    background: url("../img/check-box-unselected.png") center left no-repeat;
+}
+
+.main .form-area label.check-box-label.checked
+{
+    background: url("../img/check-box-selected.png") center left no-repeat;
+}
+
+
+.main .form-area ul
+{
+    display: block;
+    list-style: square inside;
+    margin-bottom: 30px;
+}
+
+.main .form-area ul li
+{
+    display: block;
+    padding-left: 60px;
+    font-family: open_sanslight;
+    font-size: 18px;
+    color: #444444;
+    /*height: 60px;*/
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.main .form-area ul li:after
+{
+    content: " ";
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: #ecbd62;
+    position: absolute;
+    top: 12px;
+    left: 40px;
+}
+
+.main .form-area label.radio
+{
+    display: block;
+    float: left;
+    font-family: open_sanslight;
+    font-size: 18px;
+    color: #444444;
+    height: 75px;
+    margin-right: 45px;
+    padding-left: 35px;
+    position: relative;
+    cursor: pointer;
+    line-height: 25px;
+    text-transform: none;
+}
+
+.main .form-area label.radio.modified-small
+{
+    width: 100%;
+    display: block;
+    float: left;
+    font-family: open_sanslight;
+    font-size: 18px;
+    color: #444444;
+    height: 50px;
+    line-height: 29px;
+    /*margin-right: 45px;*/
+    /*padding-left: 35px;*/
+    position: relative;
+    cursor: pointer;
+    text-transform: none;
+    padding-left: 45px;
+}
+
+.main .form-area label.radio.modified-small.packet span:first-child
+{
+    font-family: open_sanssemibold;
+    font-size: 18px;
+    color: #444444;
+    text-decoration: none;
+}
+
+.main .form-area label.radio.modified-small.packet span.old
+{
+    font-family: open_sanssemibold;
+    font-size: 18px;
+    color: #444444;
+    text-decoration: line-through #edae36;
+}
+
+.main .form-area label.radio.modified-small.packet span:last-child
+{
+    font-family: open_sanssemibold;
+    font-size: 18px;
+    color: #edae36;
+    text-decoration: none;
+}
+
+
+.main .form-area label.radio:after
+{
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 23px;
+    height: 23px;
+    border: 2px solid #ecbd62;
+    border-radius: 20px;
+}
+
+.main .form-area label.radio.active:after
+{
+    background-color: #ecbd62;
+}
+
+
+/*
+.main .form-area input[type=radio]:checked + label:after
+{
+    background-color: red;
+}
+*/
+
+
+.main .form-area label
+{
+    color: #edae36;
+    font-size: 22px;
+    font-family: open_sanscondensed_light;
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    height: 90px;
+    line-height: 90px;
+}
+
+.main .form-area label.block
+{
+    display: block;
+    width: 100%;
+}
+
+.main .form-area fieldset label.bold-label
+{
+    font-family: open_sanssemibold;
+    font-size: 25px;
+    text-transform: none;
+}
+
+.main .form-area .add-child-info
+{
+    /*display: */
+    font-family: open_sanslight;
+    font-size: 18px;
+    color: #edae36;
+    padding-right: 30px;
+    background: url("../img/plus.png") center right no-repeat;
+}
+
+
+.main .form-area fieldset select.selector-1{width: 25%;}
+.main .form-area fieldset select.selector-3{width: 20%;}
+.main .form-area fieldset select.selector-2{width: 40%; margin-left: 5%; margin-right: 5%}
+
+.main .form-area fieldset input.promo
+{
+    font-family: open_sanssemibold;
+}
+
+.main .form-area fieldset input.half
+{
+    width: 40%;
+}
+
+.main .form-area fieldset input.half.separate
+{
+    margin-left: 5%;
+}
+
+.main .form-area fieldset.right input.half.separate
+{
+    margin-left: 0;
+    margin-right: 5%;
+}
+
 .main .form-area fieldset.reg-1 .question
 {
     display: block;
@@ -242,6 +585,12 @@ body
 .main .form-area fieldset input:-moz-placeholder{opacity: 1;}
 .main .form-area fieldset input:-ms-input-placeholder{opacity: 1;}
 
+.main .form-area fieldset.bordered-bottom
+{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dadada;
+}
+
 .main .form-area fieldset.reg-1 input
 {
     float: left;
@@ -256,7 +605,29 @@ body
 {
     margin-top: 40px;
 }
-.main .form-area input[type=submit]
+
+.main .form-area fieldset.reg-3
+{
+    width: 100%;
+    min-height: 325px;
+}
+.main .form-area fieldset.reg-3.small-height
+{
+    min-height: 50px;
+}
+
+.main .form-area fieldset.reg-3 input[type=text], .main .form-area fieldset.reg-3 input[type=password]
+{
+    width: 95%;
+}
+
+.main .form-area fieldset.reg-3 input[type=submit]
+{
+    float: right;
+    margin-top: 40px;
+}
+
+.main .form-area input[type=submit], .main .form-area button, .main .form-area a.button
 {
     display: block;
     height: 40px;
@@ -271,6 +642,44 @@ body
     padding-right: 35px;
     cursor: pointer;
     background: url("../img/next.png") center right no-repeat;
+    text-decoration: none;
+}
+
+.main .form-area input[type=submit].pay
+{
+    color: white;
+    border: 2px solid #ecbd62;
+    background: url("../img/next-white.png") #ecbd62 center right no-repeat;
+}
+
+.main .form-area a.button
+{
+    height: 36px;
+    line-height: 36px;
+}
+
+.main .form-area a.cancel-link
+{
+    height: 36px;
+    line-height: 36px;
+    font-family: open_sanslight;
+    color: #edae36;
+    padding-right: 20px;
+}
+
+.main .form-area input[type=submit].reversed, .main .form-area button.reversed, .main .form-area a.button.reversed
+{
+    padding-right: 10px;
+    padding-left: 35px;
+    background: url("../img/back.png") center left no-repeat;
+}
+
+.main .form-area .offset
+{
+    width: 97%;
+    padding-left: 3%;
+    border-left: 1px solid #dadada;
+    margin-bottom: 55px;
 }
 
 /*footer*/

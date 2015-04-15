@@ -3,27 +3,37 @@
 class MainController extends Controller
 {
     public function actionIndex(){
-        $this->renderText('text');
-    }
+        
+        $request = Yii::app()->request;
+        if($request->isPostRequest){
+            
+            $arrStep = $_POST;
+            Yii::app()->session->add("step_1", $arrStep);
+            
+            $this->redirect("/registration/step/1"); 
+        }
+        
+        $this->render('index');
+    }//index
     
     
     public function actionAbout(){
-        $this->renderText( 'about'); 
+        $this->render('about'); 
     }
     
     
     public function actionContacts(){
-      $this->renderText('contacts');     
+      $this->render('contacts');     
     }
     
     
     public function actionProducts(){
-        $this->renderText('products');      
+        $this->render('products');      
     }
     
     
     public function actionNews(){
-        $this->renderText('news');
+        $this->render('news');
     }
     
     

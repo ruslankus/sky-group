@@ -332,3 +332,43 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2015/04/15 16:32:21 [error] [php] json_encode() expects parameter 2 to be long, string given (C:\OpenServer\domains\ypay.local\protected\helpers\SolidPay.php:112)
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\protected\controllers\PayController.php(52): SolidPay->sendRequest()
+#1 C:\OpenServer\domains\ypay.local\framework\web\actions\CInlineAction.php(49): PayController->actionSend()
+#2 C:\OpenServer\domains\ypay.local\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\OpenServer\domains\ypay.local\framework\web\CController.php(286): PayController->runAction()
+#4 C:\OpenServer\domains\ypay.local\framework\web\CController.php(265): PayController->runActionWithFilters()
+#5 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(282): PayController->run()
+#6 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\OpenServer\domains\ypay.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/pay/send
+in C:\OpenServer\domains\ypay.local\protected\helpers\SolidPay.php (112)
+in C:\OpenServer\domains\ypay.local\protected\helpers\SolidPay.php (49)
+in C:\OpenServer\domains\ypay.local\protected\controllers\PayController.php (52)
+2015/04/15 16:50:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/04/15 18:22:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/04/15 18:26:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/next-white.png".' in C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\ypay.local\framework\web\CWebApplication.php(141): CWebApplication->runController('img/next-white....')
+#1 C:\OpenServer\domains\ypay.local\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\ypay.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/next-white.png
+HTTP_REFERER=http://ypay.local/css/forms.css
+---

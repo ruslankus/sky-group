@@ -1,11 +1,19 @@
 <nav class="path-nav">
-<?php for($i=1; $i <= 7; $i++):?>
-    <?php if($i == $current): ?>
-    <a class="active" href="<?php echo "/registration/step/{$i}"?>"><?php echo $i; ?></a>
+<?php foreach($steps as $key => $value):?>
+<?php if($value):?>
+    <?php if($key == $current): ?>
+    <a class="active" href="<?php echo "/registration/step/{$key}"?>"><?php echo $key; ?></a>
     <?php else:?>
-     <a href="<?php echo "/registration/step/{$i}"?>"><?php echo $i; ?></a>
+     <a href="<?php echo "/registration/step/{$key}"?>"><?php echo $key; ?></a>
     <?php endif?>
-<?php endfor; ?>    
+<?php else: ?>
+        <?php if($key == $current): ?>
+        <a class="active" href="<?php echo "/registration/step/{$key}"?>"><?php echo $key; ?></a>
+        <?php else:?>
+        <span><?php echo $key; ?></span>
+        <?php endif?>
+<?php endif;?>    
+<?php endforeach; ?>    
    
     <div style="clear: both;"></div>
 </nav>

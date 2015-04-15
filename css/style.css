@@ -1,0 +1,156 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: open_sanscondensed_light;
+}
+
+body
+{
+    min-width: 853px;
+}
+
+/********************************************* H E A D E R ************************************************************/
+
+.header
+{
+    display: block;
+    height: 104px;
+    /*background-color: yellow;*/
+    /*margin-left: 145px;*/
+    padding-left: 145px;
+    padding-right: 208px;
+    position: relative;
+}
+
+.header .logo
+{
+    left: 0;
+    display: block;
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    background: url("../img/logo_transparent.png") center center no-repeat #444444;
+}
+
+.header .logo:hover
+{
+    background-color: #7c7c7c;
+    transition: background-color 100ms linear;
+}
+
+.header .right-box
+{
+    display: block;
+    width: 104px;
+    height: 104px;
+    background-color: grey;
+    position: absolute;
+}
+.header .right-box.login-button
+{
+    right: 0;
+    background: url("../img/enter.png") center center no-repeat #ecbd62;
+}
+.header .right-box.menu-button
+{
+    right: 104px;
+    background: url("../img/menu_normal.png") center center no-repeat #444444;
+}
+.header .right-box.menu-button.active, .header .right-box.menu-button:hover
+{
+    background: url("../img/menu_hover.png") center center no-repeat #444444;
+}
+
+.nav ul
+{
+    list-style: none;
+    display: block;
+    width: 100%;
+    height: 104px;
+    /*background-color: red;*/
+    text-align: right;
+}
+
+.nav ul li:last-child
+{
+    margin-right: 32px;
+}
+.nav ul li
+{
+    display: inline-block;
+    height: 104px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: #444444;
+    font-family: open_sanscondensed_light;
+    font-size: 22px;
+}
+
+.nav ul li a
+{
+    margin-top: 36px;
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    height: 33px;
+}
+
+.nav ul li a:hover
+{
+    border-bottom: 2px solid #d0d0d0;
+}
+
+/************************************************** M A I N ************************************************************/
+/* head */
+.main .header-section
+{
+    width: 100%;
+    min-height: 145px;
+    /*background-color: yellow;*/
+    padding-top: 75px;
+    border-bottom: 1px solid #dadada;
+}
+
+.main .header-section h1
+{
+    color: #777777;
+    font-weight: normal;
+    font-size: 70px;
+    text-transform: uppercase;
+    line-height: 145px;
+}
+.main
+{
+    /*width: 90%;*/
+    display: block;
+    margin: 0 auto;
+    min-height: 920px;
+    padding-left: 65px;
+    padding-right: 65px;
+    /*background-color: red;*/
+}
+
+
+/*footer*/
+.footer
+{
+    display: block;
+    height: 105px;
+    background-color: #444444;
+    text-align: center;
+}
+
+.footer a
+{
+    display: inline-block;
+    font-family: open_sanslight;
+    font-size: 33px;
+    color: white;
+    height: 75px;
+    padding-top: 30px;
+    padding-right: 60px;
+    /*line-height: 105px;*/
+    text-decoration: none;
+    background: url("../img/email-ico.png") center right no-repeat;
+}

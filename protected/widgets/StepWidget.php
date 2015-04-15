@@ -5,6 +5,9 @@ class StepWidget extends CWidget
     
     
     public function run(){
-        $this->render('steps',array('current' => $this->currentStep));
+        
+        $sessSteps = Yii::app()->session->get("steps");
+        //Debug::d($sessSteps);
+        $this->render('steps',array('current' => $this->currentStep,'steps' => $sessSteps));
     }
 }//StepWidget

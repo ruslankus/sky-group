@@ -22,9 +22,13 @@
 </header>
 
     <?echo $content?>
-
-</body>
+    
+    
 <footer class="footer">
     <a href="#">Связаться с нами</a>
 </footer>
+</body>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.2.min.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/forms.js"></script>
+
 </html>

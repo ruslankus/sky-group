@@ -27,15 +27,15 @@ class PayController extends Controller
         $pay->setPaymentInformation('1','EUR','items on site.net','transactionId');
         
         //given name, family name, company, salutation, title
-        //$pay->setCustomerName('Joe', 'Doe');
+        $pay->setCustomerName('Joe', 'Doe');
         
         //email, mobile, ip, phone
-        //$pay->setCustomerContact('test@mail.com');
+        $pay->setCustomerContact('test@mail.com');
         
         //$pay->setColectData("false");
         
         //street, zip, city, state, country
-        //$pay->setCustomerAddress('HOPER ROAD','E163PU','LONDON', null, 'GB');
+        $pay->setCustomerAddress('HOPER ROAD','E163PU','LONDON', null, 'GB');
         
         //card holder, number, brand, exp_month, exp_year, verification cvc
         //$pay->setCreditCard('Joe Doe','4929453812312008','VISA','09','2015','391');
@@ -47,7 +47,7 @@ class PayController extends Controller
         
         // for 3d security
         // is enabled, response callback url, mode, popup, onepage, language
-        $pay->setWPF("true","http://inlusion.eu/pay/callback/" , "DEFAULT", "false");
+        $pay->setWPF("true","http://inlusion.eu/pay/callback/", "DEFAULT","true","true");
         
         $pay->sendRequest();    
         
