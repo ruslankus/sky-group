@@ -1,3 +1,8 @@
+<main class="main">
+<section class="header-section">
+    <h1>Оплата</h1>
+</section>
+
 <section class="form-area">
     <?php echo CHtml::beginForm("https://test.ctpe.net/frontend/payment.prc", "post");?>
 	<!--hidden inputs-->
@@ -77,3 +82,4 @@
 		<div style="clear: both;"></div>
     <?php echo CHtml::endForm();?>
 </section>
+</main>

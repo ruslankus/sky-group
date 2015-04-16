@@ -16,7 +16,7 @@ class PayController extends Controller
     public function actionSend(){
         
 		//$this->render('send');
-		$this->render('registration',array('step'=> "send", 'sessData' => $sessData));
+		$this->render('_pay_form');
         /*$pay = new SolidPay();
         $pay->setPaymentCode('DC.DB');
         
