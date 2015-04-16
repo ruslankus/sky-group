@@ -87,9 +87,22 @@ $(document).ready(function(){
         {
             $(".if-chasnaya-strahovka").addClass('hidden-block');
         }
+
+        //activate other person
+        if($(this).attr('for') == 'other-person-yes')
+        {
+            $(".if-other-person").removeClass('hidden-block');
+        }
+        else if($(this).attr('for') == 'other-person-no')
+        {
+            $(".if-other-person").addClass('hidden-block');
+        }
     });
 
 
+    /**
+     * Changing radio buttons (used on page 6)
+     */
     $("label.radio.lots-of").click(function(){
 
         var name = $(this).data('name');
@@ -158,6 +171,60 @@ $(document).ready(function(){
         return false;
     });
 
+    /**
+     * Sliding menu
+     */
+    $(".menu-button").click(function(){
 
+        if($(this).hasClass('active'))
+        {
+            $(this).removeClass('active');
+            $(".header nav ul").animate({'margin-left':'500px'});
+        }
+        else
+        {
+            $(this).addClass('active');
+            $(".header nav ul").animate({'margin-left':'0'});
+        }
+
+        return false;
+
+    });
+
+
+    /**
+     * Login box activation
+     */
+    $(".login-button").click(function(){
+
+        if(!$(this).hasClass('out'))
+        {
+            var top = $(this).offset().top;
+            var height = $(this).height();
+
+            var result_top = top + height;
+            var box = $('.login-box');
+
+            box.css({'top':result_top+'px'});
+
+            if(!box.hasClass('active'))
+            {
+                box.addClass('active');
+            }
+            else
+            {
+                box.removeClass('active');
+            }
+            return false;
+        }
+
+        return true;
+    });
+
+
+    $(".login-box .close").click(function(){
+        $('.login-box').removeClass('active');
+        return false;
+    });
 
 });

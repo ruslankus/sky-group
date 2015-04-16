@@ -52,6 +52,12 @@ body
     right: 0;
     background: url("../img/enter.png") center center no-repeat #ecbd62;
 }
+
+.header .right-box.login-button.out
+{
+    background: url("../img/exit.png") center center no-repeat #ecbd62;
+}
+
 .header .right-box.menu-button
 {
     right: 104px;
@@ -60,6 +66,11 @@ body
 .header .right-box.menu-button.active, .header .right-box.menu-button:hover
 {
     background: url("../img/menu_hover.png") center center no-repeat #444444;
+}
+
+.nav
+{
+    overflow: hidden;
 }
 
 .nav ul
@@ -112,6 +123,7 @@ body
     padding-left: 65px;
     padding-right: 65px;
     /*background-color: red;*/
+    max-width: 1280px;
 }
 
 /* head */
@@ -196,7 +208,7 @@ body
     display: block;
 }
 
-.main .form-area fieldset
+.form-area fieldset
 {
     display: block;
     border: none;
@@ -246,16 +258,16 @@ body
     width: 50px;
 }
 
-.main .form-area fieldset.not-tall
+.form-area fieldset.not-tall
 {
     margin-bottom: 0;
 }
-.main .form-area fieldset input[type=text].not-tall
+.form-area input[type=text].not-tall
 {
     margin-bottom: 20px;
 }
 
-.main .form-area fieldset input[type=text], .main .form-area fieldset input[type=password]
+.form-area input[type=text], .form-area input[type=password]
 {
     display: block;
     width: 90%;
@@ -273,6 +285,20 @@ body
     border-bottom: 2px solid #ecbd62;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.form-area textarea
+{
+    padding: 1%;
+    display: block;
+    width: 98%;
+    border: 2px solid #ecbd62;
+    border-radius: 4px;
+    height: 300px;
+    resize: none;
+    font-family: open_sanslight;
+    font-size: 18px;
+    color: #444444;
 }
 
 .main .form-area fieldset select
@@ -520,6 +546,23 @@ body
     line-height: 90px;
 }
 
+.main .form-area label.bigger
+{
+    font-size: 33px;
+}
+
+.main .form-area span.message-special
+{
+    display: block;
+    width: 100%;
+    color: #444444;
+    font-size: 18px;
+    font-family: open_sanslight;
+    line-height: 40px;
+    /*line-height: 30px;*/
+    /*letter-spacing: 50px;*/
+}
+
 .main .form-area label.block
 {
     display: block;
@@ -569,7 +612,9 @@ body
     margin-right: 5%;
 }
 
-.main .form-area fieldset.reg-1 .question
+
+
+.main .form-area .question
 {
     display: block;
     width: 23px;
@@ -580,10 +625,18 @@ body
     top: 8px;
 }
 
-.main .form-area fieldset input::-webkit-input-placeholder{opacity: 1;}
-.main .form-area fieldset input::-moz-placeholder{opacity: 1;}
-.main .form-area fieldset input:-moz-placeholder{opacity: 1;}
-.main .form-area fieldset input:-ms-input-placeholder{opacity: 1;}
+.main .form-area .question.bottom
+{
+    bottom: 53px;
+    right: 3%;
+    top: inherit;
+}
+
+
+input::-webkit-input-placeholder{opacity: 1;}
+input::-moz-placeholder{opacity: 1;}
+input:-moz-placeholder{opacity: 1;}
+input:-ms-input-placeholder{opacity: 1;}
 
 .main .form-area fieldset.bordered-bottom
 {
@@ -616,18 +669,18 @@ body
     min-height: 50px;
 }
 
-.main .form-area fieldset.reg-3 input[type=text], .main .form-area fieldset.reg-3 input[type=password]
+.form-area fieldset.reg-3 input[type=text], .form-area fieldset.reg-3 input[type=password]
 {
     width: 95%;
 }
 
-.main .form-area fieldset.reg-3 input[type=submit]
+.form-area fieldset.reg-3 input[type=submit]
 {
     float: right;
     margin-top: 40px;
 }
 
-.main .form-area input[type=submit], .main .form-area button, .main .form-area a.button
+.form-area input[type=submit], .form-area button, .form-area a.button
 {
     display: block;
     height: 40px;
@@ -645,20 +698,26 @@ body
     text-decoration: none;
 }
 
-.main .form-area input[type=submit].pay
+.form-area input[type=submit].inactive, .main .form-area button.inactive, .main .form-area a.button.inactive
+{
+    color: #c2c2c2;
+    background: url("../img/next-grey.png") center right no-repeat;
+}
+
+.form-area input[type=submit].pay, .main .form-area a.button.pay
 {
     color: white;
     border: 2px solid #ecbd62;
     background: url("../img/next-white.png") #ecbd62 center right no-repeat;
 }
 
-.main .form-area a.button
+.form-area a.button
 {
     height: 36px;
     line-height: 36px;
 }
 
-.main .form-area a.cancel-link
+.form-area a.cancel-link
 {
     height: 36px;
     line-height: 36px;
@@ -667,11 +726,16 @@ body
     padding-right: 20px;
 }
 
-.main .form-area input[type=submit].reversed, .main .form-area button.reversed, .main .form-area a.button.reversed
+.form-area input[type=submit].reversed, .form-area button.reversed, .form-area a.button.reversed
 {
     padding-right: 10px;
     padding-left: 35px;
     background: url("../img/back.png") center left no-repeat;
+}
+
+.main .form-area input[type=submit].reversed.inactive, .main .form-area button.reversed.inactive, .main .form-area a.button.reversed.inactive
+{
+    background: url("../img/back-grey.png") center left no-repeat;
 }
 
 .main .form-area .offset
@@ -703,4 +767,92 @@ body
     /*line-height: 105px;*/
     text-decoration: none;
     background: url("../img/email-ico.png") center right no-repeat;
+}
+
+.marginal
+{
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.login-box
+{
+    /*display: block;*/
+    display: none;
+    width: 316px;
+    height: 300px;
+    border: 2px solid #ecbd62;
+    background-color: white;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.login-box.active
+{
+    display: block;
+}
+
+.login-box h2
+{
+    display: block;
+    font-family: open_sanscondensed_light;
+    color: #f0b74a;
+    font-size: 33px;
+    height: 75px;
+    line-height: 75px;
+    font-weight: normal;
+    padding-left: 60px;
+    text-transform: uppercase;
+    background: url("../img/login-icon.png") center left no-repeat;
+}
+
+.login-box span.close
+{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../img/close-login-icon.png") center center no-repeat;
+    cursor: pointer;
+
+    transition: 200ms;
+    opacity: 0.8;
+}
+
+.login-box span.close:hover
+{
+    transition: 200ms;
+    opacity: 1;
+}
+
+.login-box .form-area input[type=text], .login-box .form-area input[type=password]
+{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    float: none;
+}
+
+.login-box .form-area fieldset .left {float: left;}
+.login-box .form-area fieldset .right {float: right;}
+
+.login-box .form-area fieldset
+{
+    float: none;
+    margin: 0 auto;
+    width: 82%;
 }
