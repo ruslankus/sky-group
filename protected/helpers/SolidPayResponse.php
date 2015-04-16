@@ -2,7 +2,7 @@
 /*
  * use this class only for ASYNC POST classbacl
 */
-class SolidPaymentsResponse
+class SolidPayResponse
 {
 	/*
 	 * @param protected array $callback
