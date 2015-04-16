@@ -42,9 +42,18 @@
                 </select>
             </fieldset>
 
-            <div style="clear: both;"></div>
+            <fieldset class="reg-2">
+                <input placeholder="Улица" type="text" name="street" value="<?php echo $sessData['street']; ?>">
+                <input class="half separate" placeholder="Квартира" type="text" name="flat" value="<?php echo $sessData['flat']; ?>">
+                <input class="half" placeholder="Дом" type="text" name="house" value="<?php echo $sessData['house']; ?>">
+                <input placeholder="Город" type="text" name="city" value="<?php echo $sessData['city']; ?>">
+                <input placeholder="Страна" type="text" name="country" value="<?php echo $sessData['country']; ?>">
+                <input placeholder="Почтовый Индекс (Россия)" type="text" name="post_code" value="">
+                <input placeholder="Домашний Телефон" type="text" name="phone" value="<?php echo $sessData['phone']; ?>">
+                <input placeholder="Мобильный телефон" type="text" name="mphone" value="<?php echo $sessData['mphone']; ?>">
+            </fieldset>
 
-            <fieldset class="reg-1 small-height">
+            <fieldset class="reg-3 small-height">
                 <input placeholder="Профессия" type="text" name="profession" value="<?php echo $sessData['profession']; ?>">
                 <input placeholder="Место работы" type="text" name="employment" value="<?php echo $sessData['employment']; ?>">
             </fieldset>

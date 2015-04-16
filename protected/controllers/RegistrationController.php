@@ -22,6 +22,10 @@ class RegistrationController extends Controller
     
     public function actionStep($id){
         
+        $model_class_name = "FormStep_".$id;
+        $errors = array();
+        $model = new $model_class_name();
+        
         $sessData = Yii::app()->session->get("step_{$id}");
         
         $sessSteps = Yii::app()->session->get("steps");
@@ -34,20 +38,27 @@ class RegistrationController extends Controller
         if($request->isPostRequest){
             
             $arrStep = $_POST;
-            Yii::app()->session->add("step_{$id}", $arrStep);
-            //write session step like complited
-            $sessSteps[$id] = true;
-             Yii::app()->session->add("steps", $sessSteps);
-            $next = $id + 1;
-             if($id == 7){
-               $this->redirect("/pay/send");
+            $model->attributes = $_POST;
+            if($model->validate()){
+                Yii::app()->session->add("step_{$id}", $arrStep);
+                //write session step like complited
+                $sessSteps[$id] = true;
+                 Yii::app()->session->add("steps", $sessSteps);
+                $next = $id + 1;
+                 if($id == 7){
+                   $this->redirect("/pay/send");
+                }else{
+                    $this->redirect("/registration/step/{$next}");    
+                }
             }else{
-                $this->redirect("/registration/step/{$next}");    
-            }
-            
+                foreach($model->errors as $key => $value){
+                    $errors[$key] = array_shift($value); 
+                }
+            }//end validation
+            //Debug::d($errors);    
         }
         //Debug::d($_SESSION);
-        $this->render('registration',array('step'=> $id, 'sessData' => $sessData));
+        $this->render('registration',array('step'=> $id, 'sessData' => $sessData, 'errors' => $errors));
     }
     
     

@@ -1,6 +1,6 @@
 <section class="form-area">
 
-     <?php echo CHtml::beginForm();?>
+    <?php echo CHtml::beginForm();?>
 
         <span class="question-span small">Есть ли у вас ипотечные ссуды ?</span>
 
@@ -63,7 +63,7 @@
         <section class="offset hidden-block if-kasa">
             <fieldset class="reg-3 small-height">
                 <span class="question-span small block">Укажите больничную кассу:</span>
-                <input id="leumit" type="radio" name="kasa-type" value="leumit"><label data-name="kasa-type" class="radio modified-small" for="leumit">LEUMIT</label>
+                <input id="leumit" checked type="radio" name="kasa-type" value="leumit"><label data-name="kasa-type" class="radio modified-small active" for="leumit">LEUMIT</label>
                 <input id="macabi" type="radio" name="kasa-type" value="macabi"><label data-name="kasa-type" class="radio modified-small" for="macabi">MACABI</label>
                 <input id="meucheded" type="radio" name="kasa-type" value="macabi"><label data-name="kasa-type" class="radio modified-small" for="meucheded">MEUCHEDET</label>
                 <input id="calit" type="radio" name="kasa-type" value="macabi"><label data-name="kasa-type" class="radio modified-small" for="calit">CLALIT</label>
@@ -80,7 +80,7 @@
 
         <fieldset class="reg-3 small-height">
             <span class="question-span small block">Укажите ежемесячный доход семьи:</span>
-            <input id="do5000" type="radio" name="dohod" value="1"><label data-name="dohod" class="radio modified-small" for="do5000">До 5000 шекелей</label>
+            <input id="do5000" type="radio" checked name="dohod" value="1"><label data-name="dohod" class="radio active modified-small" for="do5000">До 5000 шекелей</label>
             <input id="ot5000do9000" type="radio" name="dohod" value="2"><label data-name="dohod" class="radio modified-small" for="ot5000do9000">От 5000 до 9000 шекелей</label>
             <input id="ot9000do16000" type="radio" name="dohod" value="3"><label data-name="dohod" class="radio modified-small" for="ot9000do16000">От 9000 до 16000 шекелей</label>
             <input id="bolshe1600" type="radio" name="dohod" value="4"><label data-name="dohod" class="radio modified-small" for="bolshe1600">Выше 16000 шекелей</label>
@@ -104,43 +104,48 @@
         <section class="offset hidden-block if-chasnaya-strahovka">
             <fieldset class="reg-3 small-height">
 
-                <input id="strah_do5000" type="radio" checked name="chasnaya-strahovka-ammount" value="1"><label data-name="chasnaya-strahovka-ammount" class="radio active modified-small lots-of" for="strah_do5000">До 5000 шекелей</label>
+                <input id="medicinskoye" type="radio" name="chasnaya-strahovka-type" value="1"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="medicinskoye">Медицинское</label>
                 <div style="clear: both;"></div>
-
-                <div class="offset-in small-modified strah_do5000 strah-block">
-                    <input placeholder="В какой компании?" type="text" value="">
+                <div class="offset-in hidden-block small-modified medicinskoye strah-block">
+                    <input placeholder="В какой компанииc?" type="text" value="">
                     <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value="">
+                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
                     <div style="clear: both;"></div>
                 </div>
 
-                <input id="strah_ot5000do9000" type="radio" name="chasnaya-strahovka-ammount" value="2"><label data-name="chasnaya-strahovka-ammount" class="radio modified-small lots-of" for="strah_ot5000do9000">От 5000 до 9000 шекелей</label>
+                <input id="neschistny_sluchay" type="radio" name="chasnaya-strahovka-type" value="2"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="neschistny_sluchay">Несчастный случай</label>
                 <div style="clear: both;"></div>
-
-                <div class="offset-in hidden-block small-modified strah_ot5000do9000 strah-block">
-                    <input placeholder="В какой компании?" type="text" value="">
+                <div class="offset-in hidden-block small-modified neschistny_sluchay strah-block">
+                    <input placeholder="В какой компанииc?" type="text" value="">
                     <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value="">
+                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
                     <div style="clear: both;"></div>
                 </div>
 
-                <input id="strah_ot9000do16000" type="radio" name="chasnaya-strahovka-ammount" value="3"><label data-name="chasnaya-strahovka-ammount" class="radio modified-small lots-of" for="strah_ot9000do16000">От 9000 до 16000 шекелей</label>
+                <input id="strahovka_zhizni" type="radio" name="chasnaya-strahovka-type" value="3"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="strahovka_zhizni">Страховка жизни</label>
                 <div style="clear: both;"></div>
-
-                <div class="offset-in hidden-block small-modified strah_ot9000do16000 strah-block">
+                <div class="offset-in hidden-block small-modified strahovka_zhizni strah-block">
                     <input placeholder="В какой компании?" type="text" value="">
                     <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value="">
+                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
                     <div style="clear: both;"></div>
                 </div>
 
-                <input id="strah_bolshe1600" type="radio" name="chasnaya-strahovka-ammount" value="4"><label data-name="chasnaya-strahovka-ammount" class="radio modified-small lots-of" for="strah_bolshe1600">Выше 16000 шекелей</label>
+                <input id="nakopitelnaya_programa" type="radio" name="chasnaya-strahovka-type" value="4"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="nakopitelnaya_programa">Накопительная программа</label>
                 <div style="clear: both;"></div>
-
-                <div class="offset-in hidden-block small-modified strah_bolshe1600 strah-block">
+                <div class="offset-in hidden-block small-modified nakopitelnaya_programa strah-block">
                     <input placeholder="В какой компании?" type="text" value="">
                     <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value="">
+                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
+                    <div style="clear: both;"></div>
+                </div>
+
+                <input id="poteria_deesposobnosti" type="radio" name="chasnaya-strahovka-type" value="5"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="poteria_deesposobnosti">Потеря дееспособности</label>
+                <div style="clear: both;"></div>
+                <div class="offset-in hidden-block small-modified poteria_deesposobnosti strah-block">
+                    <input placeholder="В какой компании?" type="text" value="">
+                    <input placeholder="Какой ежемесячный платёж?" type="text" value="">
+                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
                     <div style="clear: both;"></div>
                 </div>
 
@@ -156,5 +161,6 @@
 
         <div style="clear: both;"></div>
      <?php echo CHtml::endForm();?>
+
 
 </section>

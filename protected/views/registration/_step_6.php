@@ -32,8 +32,17 @@
                 <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
             </ul>
 
-            <input id="diamond" type="radio" name="packet" value="4">
-            <label data-name="packet" class="radio modified-small packet" for="diamond"><span>Diamond</span> – price <span class="old">250.50 ILS</span> <span>200.10 ILS</span></label>
+            <input id="business" type="radio" name="packet" value="4">
+            <label data-name="packet" class="radio modified-small packet" for="business"><span>Business</span> – price <span class="old">250.50 ILS</span> <span>200.10 ILS</span></label>
+            <div style="clear: both;"></div>
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</li>
+                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+            </ul>
+
+            <input id="loyalty" type="radio" name="packet" value="5">
+            <label data-name="packet" class="radio modified-small packet" for="loyalty"><span>Loyalty program - cash back</span> – price <span class="old">250.50 ILS</span> <span>200.10 ILS</span></label>
             <div style="clear: both;"></div>
             <ul>
                 <li>Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</li>
