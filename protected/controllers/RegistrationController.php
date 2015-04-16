@@ -39,11 +39,11 @@ class RegistrationController extends Controller
             $sessSteps[$id] = true;
              Yii::app()->session->add("steps", $sessSteps);
             $next = $id + 1;
-            if($id == 7){
-                $this->redirect("/pay/send");
-            }else{
+            // if($id == 7){
+            //   $this->redirect("/pay/send");
+            //}else{
                 $this->redirect("/registration/step/{$next}");    
-            }
+            //}
             
         }
         //Debug::d($_SESSION);

@@ -15,7 +15,9 @@ class PayController extends Controller
     
     public function actionSend(){
         
-        $pay = new SolidPay();
+		//$this->render('send');
+		$this->render('registration',array('step'=> "send", 'sessData' => $sessData));
+        /*$pay = new SolidPay();
         $pay->setPaymentCode('DC.DB');
         
         // login, password
@@ -53,27 +55,44 @@ class PayController extends Controller
         // is enabled, response callback url, mode, popup, onepage, language
         $pay->setWPF("true","http://inlusion.eu/pay/callback/", "DEFAULT","false","true","en");
         
-        $pay->sendRequest();    
+        $pay->sendRequest();   */ 
         
     }
     
     public function actionCallback(){
-        $returnvalue=$_POST['PROCESSING_RESULT'];
-        if ($returnvalue)
-        {
-        	//result after WPF
-        	//$fp = fopen("callback.txt", "w+"); fwrite($fp, json_encode($_POST)); fclose($fp); // loging callback
-        	
-        	if(strstr($returnvalue,"ACK"))
-    		{
-    			echo 'http://inlusion.eu/pay'; // Url to success page
-    			
-    		}
-        	else
-    		{
-    			echo 'http://inlusion.eu/pay/error'; // Url to error page
-    		}
-        }
+		
+		$callback = new SolidPayResponse();
+
+		if($callback->isSuccess() === true && $callback->needReview() == false)
+		{
+			$response = $callback->getResponse();
+			//$fp = fopen("callback.txt", "w+"); fwrite($fp, json_encode($response)); fclose($fp); // loging callback
+			// Payment successfull
+			echo "http://inlusion.eu/pay";
+			// $decode->return->code;
+			// $decode->return->message;
+			
+			// $decode->identification->transactionid
+			// $decode->identification->uniqueid
+			// $decode->identification->shortid
+			
+			// $decode->payment->amount
+			// $decode->payment->currency
+			// $decode->payment->descriptor
+			// $decode->payment->timestamp
+			// $decode->payment->riskscore
+			// ...
+		}
+		else if($callback->isSuccess() === true && $callback->needReview() == true)
+		{
+			// payment successful, but needs manual review of transaction.
+			echo "http://inlusion.eu/pay";
+		}
+		else
+		{
+			// Payment unsuccessfull
+			echo "http://inlusion.eu/pay/error";
+		}
     }//actionCallback
     
     
