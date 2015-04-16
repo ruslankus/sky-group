@@ -2,46 +2,49 @@
 
 class CabinetController extends Controller
 {
-    public function actionIndex(){
-        echo 'Cabinet';
+    const MESSAGE_ERROR = 1;
+    const MESSAGE_SUCCESS = 2;
+    const MESSAGE_NO_ACCESS = 3;
+
+    /**
+     * Check
+     * @param CAction $action
+     * @return bool|void
+     */
+    function beforeAction($action)
+    {
+        //if user not allowed to this controller and action
+        if(Yii::app()->user->isGuest && $action->id != 'message')
+        {
+            $this->redirect(Yii::app()->createUrl('cabinet/message',array('id' => self::MESSAGE_NO_ACCESS)));
+        }
+
+        return true;
     }
-    
-    
-    
-    	/**
-	 * Displays the login page
-	 */
-	public function actionLogin()
-	{
-		$model=new LoginForm;
 
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
 
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
-	}
+    /**
+     * Entry
+     */
+    function actionIndex()
+    {
+        $this->render('index');
+    }
 
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
-	public function actionLogout()
-	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
-	}
+    /**
+     * Renders message page (depending on type of message)
+     * @param $id
+     */
+    public function actionMessage($id)
+    {
+        $templates = array(
+            self::MESSAGE_ERROR => "message_error",
+            self::MESSAGE_SUCCESS => "message_success",
+            self::MESSAGE_NO_ACCESS => "message_no_access"
+        );
+
+        $this->render($templates[$id]);
+    }
     
     
 }//Cabinet

@@ -1,4 +1,6 @@
 <?php /* @var $this Controller */ ?>
+<?php /* @var $content string */ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +15,7 @@
 
 <header class="header">
     <a href="/" class="logo"></a>
-    <a href="#" class="right-box menu-button"></a>
+    <span class="right-box menu-button active"></span>
     <a href="#" class="right-box login-button"></a>
 
     <nav class="nav">
@@ -21,12 +23,28 @@
     </nav>
 </header>
 
-    <?echo $content?>
-    
-    
+<?echo $content?>
+
 <footer class="footer">
     <a href="#">Связаться с нами</a>
 </footer>
+
+<div class="login-box">
+    <h2>Вход</h2>
+    <span class="close"></span>
+    <form class="form-area" action="#" method="post">
+        <input placeholder="Электронная почта" type="text" name="" value="">
+        <input placeholder="Пароль" type="password" name="" value="">
+        <div style="clear: both;"></div>
+
+        <fieldset class="buttons">
+            <a href="#" class="left cancel-link">Регистрация</a>
+            <input class="pay right" type="submit" value="Войти">
+        </fieldset>
+    </form>
+</div>
+
+
 </body>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.2.min.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/forms.js"></script>
