@@ -20,7 +20,7 @@ class PayController extends Controller
         
         for($i = 1; $i <= 7; $i++){
             if(!empty($_SESSION["step_$i"])){
-                $arrSteps["steps_$i"] = $_SESSION["step_$i"];
+                $arrSteps["step_$i"] = $_SESSION["step_$i"];
                 unset($_SESSION["step_$i"]);
             }
         }
