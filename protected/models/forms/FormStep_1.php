@@ -14,7 +14,9 @@ class FormStep_1 extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('email, password, next_pass, user_name, last_name', 'required'),		
+			array('email, password, next_pass, user_name, last_name', 'required'),
+            array('email','email'),
+            array('password','compare','compareAttribute'=>'next_pass'),		
 		);
 	}
     
