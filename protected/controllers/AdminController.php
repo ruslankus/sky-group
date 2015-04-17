@@ -52,7 +52,8 @@ class AdminController extends Controller
      */
     public function actionOrders()
     {
-        $this->render('orders');
+        $orders = Orders::model()->findAll();
+        $this->render('orders',array('orders' => $orders));
     }
 
     /**

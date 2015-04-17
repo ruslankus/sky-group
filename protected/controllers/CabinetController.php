@@ -6,6 +6,7 @@ class CabinetController extends Controller
     const MESSAGE_SUCCESS_CHANGE = 2;
     const MESSAGE_NO_ACCESS = 3;
     const MESSAGE_SUCCESS_SEND = 4;
+    const MESSAGE_NOT_APPROVED = 5;
 
     /**
      * Check
@@ -18,6 +19,10 @@ class CabinetController extends Controller
         if(Yii::app()->user->isGuest && $action->id != 'message' && $action->id != 'login')
         {
             $this->redirect(Yii::app()->createUrl('cabinet/message',array('id' => self::MESSAGE_NO_ACCESS)));
+        }
+        elseif(Yii::app()->user->getState('status') != ClientIdentity::CLIENT_STATUS_APPROVED && $action->id != 'message' && $action->id != 'login')
+        {
+            $this->redirect(Yii::app()->createUrl('cabinet/message',array('id' => self::MESSAGE_NOT_APPROVED)));
         }
 
         return true;
@@ -110,7 +115,8 @@ class CabinetController extends Controller
             self::MESSAGE_ERROR => "message_error",
             self::MESSAGE_SUCCESS_CHANGE => "message_success_change",
             self::MESSAGE_NO_ACCESS => "message_no_access",
-            self::MESSAGE_SUCCESS_SEND => "message_success_send"
+            self::MESSAGE_SUCCESS_SEND => "message_success_send",
+            self::MESSAGE_NOT_APPROVED => "message_no_approved"
         );
 
         $this->render($templates[$id]);

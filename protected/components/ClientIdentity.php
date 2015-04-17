@@ -15,7 +15,7 @@ class ClientIdentity extends CUserIdentity
         $client = Clients::model()->findByAttributes(array('login' => $this->username));
 
         //if user found
-        if(!empty($client) && $client->status_id == self::CLIENT_STATUS_APPROVED)
+        if(!empty($client))
         {
             $hashed_pass = md5($this->password);
 
@@ -35,6 +35,7 @@ class ClientIdentity extends CUserIdentity
                 $this->setState('id',$client->id);
                 $this->setState('login',$client->login);
                 $this->setState('email',$client->login);
+                $this->setState('status',$client->status_id);
             }
         }
         //if user not found
