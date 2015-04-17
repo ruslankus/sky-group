@@ -54,11 +54,12 @@ class RegistrationController extends Controller
                 foreach($model->errors as $key => $value){
                     $errors[$key] = array_shift($value); 
                 }
+                $sessData = $arrStep;
             }//end validation
             //Debug::d($errors);    
         }
         //Debug::d($_SESSION);
-        $this->render('registration',array('step'=> $id, 'sessData' => $sessData, 'errors' => $errors));
+        $this->render('registration',array('step'=> $id, 'sessData' => $sessData, 'errors' => $errors,));
     }
     
     
