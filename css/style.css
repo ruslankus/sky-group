@@ -62,6 +62,11 @@ body
     background: url("../img/menu_hover.png") center center no-repeat #444444;
 }
 
+.nav
+{
+    overflow: hidden;
+}
+
 .nav ul
 {
     list-style: none;
@@ -96,12 +101,26 @@ body
     height: 33px;
 }
 
+.nav ul li a.active,
 .nav ul li a:hover
 {
     border-bottom: 2px solid #d0d0d0;
 }
 
 /************************************************** M A I N ************************************************************/
+
+.main
+{
+    /*width: 90%;*/
+    display: block;
+    margin: 0 auto;
+    min-height: 920px;
+    padding-left: 65px;
+    padding-right: 65px;
+    /*background-color: red;*/
+    max-width: 1280px;
+}
+
 /* head */
 .main .header-section
 {
@@ -120,16 +139,7 @@ body
     text-transform: uppercase;
     line-height: 145px;
 }
-.main
-{
-    /*width: 90%;*/
-    display: block;
-    margin: 0 auto;
-    min-height: 920px;
-    padding-left: 65px;
-    padding-right: 65px;
-    /*background-color: red;*/
-}
+
 
 
 /*footer*/
@@ -153,4 +163,103 @@ body
     /*line-height: 105px;*/
     text-decoration: none;
     background: url("../img/email-ico.png") center right no-repeat;
+}
+
+/*********************** login box *****************************************/
+
+
+
+
+
+.login-box
+{
+    /*display: block;*/
+    display: none;
+    width: 316px;
+    height: 300px;
+    border: 2px solid #ecbd62;
+    background-color: white;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.login-box.active
+{
+    display: block;
+}
+
+.login-box h2
+{
+    display: block;
+    font-family: open_sanscondensed_light;
+    color: #f0b74a;
+    font-size: 33px;
+    height: 75px;
+    line-height: 75px;
+    font-weight: normal;
+    padding-left: 60px;
+    text-transform: uppercase;
+    background: url("../img/login-icon.png") center left no-repeat;
+}
+
+.login-box span.close
+{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../img/close-login-icon.png") center center no-repeat;
+    cursor: pointer;
+
+    transition: 200ms;
+    opacity: 0.8;
+}
+
+.login-box span.close:hover
+{
+    transition: 200ms;
+    opacity: 1;
+}
+
+.login-box .form-area input[type=text], .login-box .form-area input[type=password]
+{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    float: none;
+}
+
+.login-box .form-area fieldset .left {float: left;}
+.login-box .form-area fieldset .right {float: right;}
+
+.login-box .form-area fieldset
+{
+    float: none;
+    margin: 0 auto;
+    width: 82%;
+}
+
+.login-box .form-area input[type=text], .form-area input[type=password]
+{
+    display: block;
+    width: 90%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    float: left;
+    height: 40px;
+    margin-bottom: 45px;
+
+    color: #444444;
+    font-size: 18px;
+    font-family: open_sanslight;
+
+    border: none;
+    border-bottom: 2px solid #ecbd62;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
