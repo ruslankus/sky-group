@@ -12,7 +12,7 @@
             <div style="clear: both;"></div>
 
             <fieldset class="buttons">
-                <a class="left button" href="<?php echo Yii::app()->createUrl('main/index'); ?>">В кабинет</a>
+                <a class="left button" href="<?php echo Yii::app()->createUrl('cabinet/index'); ?>">В кабинет</a>
             </fieldset>
             <div style="clear: both;"></div>
         </form>

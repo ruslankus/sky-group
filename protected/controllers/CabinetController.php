@@ -3,8 +3,9 @@
 class CabinetController extends Controller
 {
     const MESSAGE_ERROR = 1;
-    const MESSAGE_SUCCESS = 2;
+    const MESSAGE_SUCCESS_CHANGE = 2;
     const MESSAGE_NO_ACCESS = 3;
+    const MESSAGE_SUCCESS_SEND = 4;
 
     /**
      * Check
@@ -65,11 +66,22 @@ class CabinetController extends Controller
     function actionIndex()
     {
         /* @var $current_client Clients */
-
+        $feedback_form = new FeedbackForm();
         $products = Products::model()->findAll();
         $current_client = Clients::model()->findByPk(Yii::app()->user->id);
 
-        $this->render('index',array('products' => $products, 'current_client' => $current_client));
+        if($_POST['FeedbackForm'])
+        {
+            $feedback_form->attributes = $_POST['FeedbackForm'];
+
+            if($feedback_form->validate())
+            {
+                //TODO: send message
+                $this->redirect(Yii::app()->createUrl('cabinet/message',array('id' => self::MESSAGE_SUCCESS_SEND)));
+            }
+        }
+
+        $this->render('index',array('products' => $products, 'current_client' => $current_client, 'feedback_form' => $feedback_form));
     }
 
     /**
@@ -87,6 +99,7 @@ class CabinetController extends Controller
         }
     }
 
+
     /**
      * Renders message page (depending on type of message)
      * @param $id
@@ -95,8 +108,9 @@ class CabinetController extends Controller
     {
         $templates = array(
             self::MESSAGE_ERROR => "message_error",
-            self::MESSAGE_SUCCESS => "message_success",
-            self::MESSAGE_NO_ACCESS => "message_no_access"
+            self::MESSAGE_SUCCESS_CHANGE => "message_success_change",
+            self::MESSAGE_NO_ACCESS => "message_no_access",
+            self::MESSAGE_SUCCESS_SEND => "message_success_send"
         );
 
         $this->render($templates[$id]);
