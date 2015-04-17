@@ -19,9 +19,10 @@ class PayController extends Controller
         Yii::app()->session;
         
         for($i = 1; $i <= 7; $i++){
-            
-            $arrSteps["steps_$i"] = $_SESSION["step_$i"];
-            unset($_SESSION["step_$i"]);
+            if(!empty($_SESSION["step_$i"])){
+                $arrSteps["steps_$i"] = $_SESSION["step_$i"];
+                unset($_SESSION["step_$i"]);
+            }
         }
         // delete steps
         unset($_SESSION['steps']);
@@ -29,17 +30,16 @@ class PayController extends Controller
         if(!empty($arrSteps)){
             //ctrate cuctomers
             $objClient = new Clients();
-            $objClient->user_name    
-	   
-             //save anketa in db
+            $objClient->login = $arrSteps['step_1']['email'];
+            $objClient->password = md5($arrSteps['step_1']['password']);
+            //save anketa in db
+            $objClient->profile_array = serialize($arrSteps);
+            
+            if($objClient->save()){
+                $this->render('_pay_form');    
+            }
        }
-                   
-       
-        Debug::d($_SESSION);
-       
-		$this->render('_pay_form');
-        
-        
+        echo "error";
     }
     
     public function actionCallback(){
