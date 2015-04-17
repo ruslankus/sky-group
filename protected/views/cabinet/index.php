@@ -1,5 +1,7 @@
 <?php /* @var $products Products[] */ ?>
 <?php /* @var $current_client Clients */ ?>
+<?php /* @var $feedback_form FeedbackForm */ ?>
+<?php /* @var $form CActiveForm */ ?>
 
 <main class="main">
     <section class="header-section">
@@ -26,22 +28,22 @@
             <div style="clear: both;"></div>
         </form>
         <div style="clear: both;"></div>
-        <form method="post">
+        <?php $form=$this->beginWidget('CActiveForm'); ?>
             <fieldset class="reg-1">
-                <input placeholder="Name" type="text" name="" value="">
-                <input placeholder="Email" type="text" name="" value="">
+                <?php echo $form->textField($feedback_form,'name',array('placeholder' => $feedback_form->getAttributeLabel('name'))); ?>
+                <?php echo $form->textField($feedback_form,'email',array('placeholder' => $feedback_form->getAttributeLabel('email'))); ?>
             </fieldset>
             <fieldset class="reg-2">
-                <input placeholder="Country" type="text" name="" value="">
-                <input placeholder="Phone number" type="text" name="" value="">
+                <?php echo $form->textField($feedback_form,'country',array('placeholder' => $feedback_form->getAttributeLabel('country'))); ?>
+                <?php echo $form->textField($feedback_form,'phone_number',array('placeholder' => $feedback_form->getAttributeLabel('phone_number'))); ?>
             </fieldset>
             <fieldset class="reg-3">
-                <textarea placeholder="Your request, coment, etc ..."></textarea>
+                <?php echo $form->textArea($feedback_form,'message',array('placeholder' => $feedback_form->getAttributeLabel('message'))); ?>
             </fieldset>
             <fieldset class="buttons">
-                <input class="right inactive" type="submit" value="Далее">
+                <?php echo CHtml::submitButton('Далее',array('class' => 'right inactive')); ?>
             </fieldset>
-        </form>
+        <?php $this->endWidget(); ?>
         <div style="clear: both;"></div>
     </section>
 </main>
