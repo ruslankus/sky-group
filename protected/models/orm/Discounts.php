@@ -9,7 +9,7 @@
  * @property integer $value
  *
  * The followings are the available model relations:
- * @property Clients[] $clients
+ * @property Orders[] $orders
  */
 class Discounts extends CActiveRecord
 {
@@ -45,7 +45,7 @@ class Discounts extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'clients' => array(self::HAS_MANY, 'Clients', 'discount_id'),
+			'orders' => array(self::HAS_MANY, 'Orders', 'discount_id'),
 		);
 	}
 

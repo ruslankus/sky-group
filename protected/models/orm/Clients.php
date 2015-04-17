@@ -10,12 +10,10 @@
  * @property string $profile_array
  * @property integer $status_id
  * @property integer $created_time
- * @property integer $discount_id
  * @property integer $current_packet_id
  *
  * The followings are the available model relations:
  * @property Products $currentPacket
- * @property Discounts $discount
  * @property Orders[] $orders
  */
 class Clients extends CActiveRecord
@@ -36,11 +34,11 @@ class Clients extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('status_id, created_time, discount_id, current_packet_id', 'numerical', 'integerOnly'=>true),
+			array('status_id, created_time, current_packet_id', 'numerical', 'integerOnly'=>true),
 			array('login, password, profile_array', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, login, password, profile_array, status_id, created_time, discount_id, current_packet_id', 'safe', 'on'=>'search'),
+			array('id, login, password, profile_array, status_id, created_time, current_packet_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,7 +51,6 @@ class Clients extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'currentPacket' => array(self::BELONGS_TO, 'Products', 'current_packet_id'),
-			'discount' => array(self::BELONGS_TO, 'Discounts', 'discount_id'),
 			'orders' => array(self::HAS_MANY, 'Orders', 'client_id'),
 		);
 	}
@@ -70,7 +67,6 @@ class Clients extends CActiveRecord
 			'profile_array' => 'Profile Array',
 			'status_id' => 'Status',
 			'created_time' => 'Created Time',
-			'discount_id' => 'Discount',
 			'current_packet_id' => 'Current Packet',
 		);
 	}
@@ -99,7 +95,6 @@ class Clients extends CActiveRecord
 		$criteria->compare('profile_array',$this->profile_array,true);
 		$criteria->compare('status_id',$this->status_id);
 		$criteria->compare('created_time',$this->created_time);
-		$criteria->compare('discount_id',$this->discount_id);
 		$criteria->compare('current_packet_id',$this->current_packet_id);
 
 		return new CActiveDataProvider($this, array(

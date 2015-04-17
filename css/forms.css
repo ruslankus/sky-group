@@ -538,6 +538,16 @@ body
     background-color: #ecbd62;
 }
 
+.main .form-area label.radio.selected:after
+{
+    border: 2px solid #ec2d29;
+}
+
+.main .form-area label.radio.selected.active:after
+{
+    border: 2px solid #ecbd62;
+}
+
 
 /*
 .main .form-area input[type=radio]:checked + label:after

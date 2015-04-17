@@ -11,7 +11,6 @@
  * @property integer $old_price
  *
  * The followings are the available model relations:
- * @property OrdersOld201504161[] $ordersOld201504161s
  * @property Clients[] $clients
  * @property Orders[] $orders
  */
@@ -49,7 +48,6 @@ class Products extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'ordersOld201504161s' => array(self::HAS_MANY, 'OrdersOld201504161', 'product_id'),
 			'clients' => array(self::HAS_MANY, 'Clients', 'current_packet_id'),
 			'orders' => array(self::HAS_MANY, 'Orders', 'product_id'),
 		);
@@ -108,4 +106,18 @@ class Products extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    /**
+     * Extension
+     */
+
+    public function priceFmt()
+    {
+        return number_format($this->price / 100,2,'.','');
+    }
+
+    public function oldPriceFmt()
+    {
+        return number_format($this->old_price / 100,2,'.','');
+    }
 }

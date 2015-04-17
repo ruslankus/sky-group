@@ -68,9 +68,23 @@ class CabinetController extends Controller
 
         $products = Products::model()->findAll();
         $current_client = Clients::model()->findByPk(Yii::app()->user->id);
-        $selected_product = $current_client->currentPacket;
 
         $this->render('index',array('products' => $products, 'current_client' => $current_client));
+    }
+
+    /**
+     * Changing packet
+     */
+    function actionChange()
+    {
+        if(Yii::app()->request->isPostRequest)
+        {
+            Debug::out($_POST);
+        }
+        else
+        {
+            $this->redirect(Yii::app()->createUrl('cabinet/message',array('id' => self::MESSAGE_NO_ACCESS)));
+        }
     }
 
     /**

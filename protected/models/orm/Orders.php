@@ -10,8 +10,10 @@
  * @property integer $order_time
  * @property integer $price
  * @property string $payment_status
+ * @property integer $discount_id
  *
  * The followings are the available model relations:
+ * @property Discounts $discount
  * @property Clients $client
  * @property Products $product
  */
@@ -33,11 +35,11 @@ class Orders extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('client_id, product_id, order_time, price', 'numerical', 'integerOnly'=>true),
+			array('client_id, product_id, order_time, price, discount_id', 'numerical', 'integerOnly'=>true),
 			array('payment_status', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, client_id, product_id, order_time, price, payment_status', 'safe', 'on'=>'search'),
+			array('id, client_id, product_id, order_time, price, payment_status, discount_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,6 +51,7 @@ class Orders extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'discount' => array(self::BELONGS_TO, 'Discounts', 'discount_id'),
 			'client' => array(self::BELONGS_TO, 'Clients', 'client_id'),
 			'product' => array(self::BELONGS_TO, 'Products', 'product_id'),
 		);
@@ -66,6 +69,7 @@ class Orders extends CActiveRecord
 			'order_time' => 'Order Time',
 			'price' => 'Price',
 			'payment_status' => 'Payment Status',
+			'discount_id' => 'Discount',
 		);
 	}
 
@@ -93,6 +97,7 @@ class Orders extends CActiveRecord
 		$criteria->compare('order_time',$this->order_time);
 		$criteria->compare('price',$this->price);
 		$criteria->compare('payment_status',$this->payment_status,true);
+		$criteria->compare('discount_id',$this->discount_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
