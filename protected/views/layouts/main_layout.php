@@ -16,7 +16,10 @@
 <header class="header">
     <a href="/" class="logo"></a>
     <span class="right-box menu-button active"></span>
-    <a href="<?php echo Yii::app()->createUrl('cabinet/logout'); ?>" class="right-box <?php echo Yii::app()->user->isGuest ? '' : 'out' ?> login-button"></a>
+    <?php $url = !Yii::app()->user->isGuest ? (Yii::app()->controller->id == 'cabinet' ? Yii::app()->createUrl('cabinet/logout') : Yii::app()->createUrl('cabinet/index')) : '#'; ?>
+    <?php $class = !Yii::app()->user->isGuest ? (Yii::app()->controller->id == 'cabinet' ? 'out' : 'in') : '';  ?>
+
+    <a href="<?php echo $url ?>" class="right-box <?php echo $class ?> login-button"></a>
 
     <nav class="nav">
          <?php $this->widget('application.widgets.MainMenu');?>

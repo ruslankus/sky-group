@@ -197,7 +197,7 @@ $(document).ready(function(){
      */
     $(".login-button").click(function(){
 
-        if(!$(this).hasClass('out'))
+        if(!$(this).hasClass('out') && !$(this).hasClass('in'))
         {
             var top = $(this).offset().top;
             var height = $(this).height();
