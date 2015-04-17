@@ -6,7 +6,7 @@
 }
 h1 span {
 	padding-right:40px;
-	background: url('../img/news_title.png') right top no-repeat;
+	background: url('../img/about_us_ico.png') right top no-repeat;
 }
 .cls {
 	position:relative;
@@ -19,21 +19,20 @@ h1 span {
 	font-size: 0.938em;
 	line-height: 1.625em;
 	position:relative;
-	width:33.33%;
-	float:left;
+	width:49%;
 	padding:12px 0px 70px 0px;
 }
 
-.content-col img {
-	display:block;
+.left {
+	float:left;
 }
 
-.content-col *{
-	width:90%;
-	margin-left:auto;
-	margin-right:auto;
+.right {
+	float:right;
 }
+
 .content-col img {
+	width:100%;
 	padding-bottom:20px;
 }
 
@@ -56,6 +55,38 @@ h1 span {
 
 }
 
+.content-col table {
+	width:100%;
+	margin-top:15px;
+}
+
+.content-col table tr td.center{
+	text-align: center;
+}
+
+.content-col table tr td{
+	text-align: right;
+	height:40px;
+	vertical-align: center;
+	padding-right: 10px;
+	font-family: open_sanslight;
+}
+.content-col table th {
+ 	background: #ecbd63;
+ 	border-right: 1px solid #fff;
+ 	font-family: open_sanscondensed;
+ 	color: #ffffff;
+ 	font-size:1.250em;
+ 	line-height: 2.375em;
+ }
+
+ .content-col table tr:nth-child(even) {background: #efefef;}
+
+ .content-col table tr.footer-table th {
+ 	background: #8c8c8c;
+ 	color:#ffffff;
+ }
+
  @media only screen and (max-width: 960px) {
 	.main,
 	.content {
@@ -66,4 +97,9 @@ h1 span {
 		padding-right:10px;
 		padding-left:10px;
 	}
+
+.content-col table th {
+ 	font-size:15px;
+ 	line-height:30px;
+ }
 }

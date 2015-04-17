@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'products':
  * @property integer $id
  * @property string $name
+ * @property string $class
  * @property string $description_text
  * @property integer $price
  * @property integer $old_price
@@ -33,10 +34,10 @@ class Products extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('price, old_price', 'numerical', 'integerOnly'=>true),
-			array('name, description_text', 'safe'),
+			array('name, class, description_text', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, description_text, price, old_price', 'safe', 'on'=>'search'),
+			array('id, name, class, description_text, price, old_price', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,6 +62,7 @@ class Products extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => 'Name',
+			'class' => 'Class',
 			'description_text' => 'Description Text',
 			'price' => 'Price',
 			'old_price' => 'Old Price',
@@ -87,6 +89,7 @@ class Products extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
+		$criteria->compare('class',$this->class,true);
 		$criteria->compare('description_text',$this->description_text,true);
 		$criteria->compare('price',$this->price);
 		$criteria->compare('old_price',$this->old_price);
@@ -106,18 +109,4 @@ class Products extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-
-    /**
-     * Extension
-     */
-
-    public function priceFmt()
-    {
-        return number_format($this->price / 100,2,'.','');
-    }
-
-    public function oldPriceFmt()
-    {
-        return number_format($this->old_price / 100,2,'.','');
-    }
 }

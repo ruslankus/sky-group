@@ -22,6 +22,7 @@ class RegistrationController extends Controller
     
     public function actionStep($id){
         
+        $objProds = null;
         $model_class_name = "FormStep_".$id;
         $errors = array();
         $model = new $model_class_name();
@@ -45,6 +46,7 @@ class RegistrationController extends Controller
                 $sessSteps[$id] = true;
                  Yii::app()->session->add("steps", $sessSteps);
                 $next = $id + 1;
+                                
                  if($id == 7){
                    $this->redirect("/pay/send");
                 }else{
@@ -58,8 +60,17 @@ class RegistrationController extends Controller
             }//end validation
             //Debug::d($errors);    
         }
+        
+        if($id == 6){
+            $objProds = Products::model()->findAll(); 
+        }
+        
+        if($id == 7){
+            $objProds = Products::model()->findByPk($_SESSION['step_6']['packet']);
+        }
+        
         //Debug::d($_SESSION);
-        $this->render('registration',array('step'=> $id, 'sessData' => $sessData, 'errors' => $errors,));
+        $this->render('registration',array('step'=> $id, 'sessData' => $sessData, 'errors' => $errors,'objProds' => $objProds));
     }
     
     
