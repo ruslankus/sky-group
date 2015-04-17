@@ -16,7 +16,7 @@
 <header class="header">
     <a href="/" class="logo"></a>
     <span class="right-box menu-button active"></span>
-    <a href="#" class="right-box login-button"></a>
+    <a href="<?php echo Yii::app()->createUrl('cabinet/logout'); ?>" class="right-box <?php echo Yii::app()->user->isGuest ? '' : 'out' ?> login-button"></a>
 
     <nav class="nav">
          <?php $this->widget('application.widgets.MainMenu');?>
@@ -32,9 +32,9 @@
 <div class="login-box">
     <h2>Вход</h2>
     <span class="close"></span>
-    <form class="form-area" action="#" method="post">
-        <input placeholder="Электронная почта" type="text" name="" value="">
-        <input placeholder="Пароль" type="password" name="" value="">
+    <form class="form-area" action="<?php echo Yii::app()->createUrl('cabinet/login') ?>" method="post">
+        <input placeholder="Электронная почта" type="text" name="login" value="">
+        <input placeholder="Пароль" type="password" name="password" value="">
         <div style="clear: both;"></div>
 
         <fieldset class="buttons">

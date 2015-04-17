@@ -2,6 +2,10 @@
 class ClientIdentity extends CUserIdentity
 {
 
+    const CLIENT_STATUS_NEW = 1;
+    const CLIENT_STATUS_APPROVED = 2;
+    const CLIENT_STATUS_SUSPENDED = 3;
+
     /**
      * Authentication for administrators
      * @return bool
@@ -9,16 +13,15 @@ class ClientIdentity extends CUserIdentity
     public function authenticate()
     {
         // WORK IN PROGRESS!
+        $client = Clients::model()->findByAttributes(array('login' => $this->username));
 
-        /*
         //if user found
-        if(!empty($user))
+        if(!empty($client) && $client->status_id == self::CLIENT_STATUS_APPROVED)
         {
-            $salt = $user->password_salt;
-            $hashed_pass = md5($this->password.$salt);
+            $hashed_pass = md5($this->password);
 
             //if password not correct
-            if($user->password !== $hashed_pass)
+            if($client->password !== $hashed_pass)
             {
                 //can't connect
                 $this->errorCode = self::ERROR_PASSWORD_INVALID;
@@ -30,12 +33,9 @@ class ClientIdentity extends CUserIdentity
                 $this->errorCode = self::ERROR_NONE;
 
                 //write params to session
-                $this->setState('id',$user->id);
-                $this->setState('login',$user->login);
-                $this->setState('name',$user->name);
-                $this->setState('surname',$user->surname);
-                $this->setState('email',$user->email);
-                $this->setState('role',$user->role_id);
+                $this->setState('id',$client->id);
+                $this->setState('login',$client->login);
+                $this->setState('email',$client->login);
             }
         }
         //if user not found
@@ -47,6 +47,6 @@ class ClientIdentity extends CUserIdentity
 
         //return error status
         return !$this->errorCode;
-        */
+
     }
 }

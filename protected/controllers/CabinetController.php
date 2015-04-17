@@ -14,7 +14,7 @@ class CabinetController extends Controller
     function beforeAction($action)
     {
         //if user not allowed to this controller and action
-        if(Yii::app()->user->isGuest && $action->id != 'message')
+        if(Yii::app()->user->isGuest && $action->id != 'message' && $action->id != 'login')
         {
             $this->redirect(Yii::app()->createUrl('cabinet/message',array('id' => self::MESSAGE_NO_ACCESS)));
         }
@@ -24,11 +24,53 @@ class CabinetController extends Controller
 
 
     /**
-     * Entry
+     * Login
+     */
+    function actionLogin()
+    {
+        if(Yii::app()->request->isPostRequest)
+        {
+            $login = Yii::app()->request->getParam('login',null);
+            $password = Yii::app()->request->getParam('password',null);
+
+            $form = new ClientLoginForm();
+            $form->password = $password;
+            $form->username = $login;
+
+            if($form->validate() && $form->login())
+            {
+                $this->redirect(Yii::app()->createUrl('cabinet/index'));
+            }
+            else
+            {
+                $this->redirect(Yii::app()->createUrl('cabinet/message',array('id' => self::MESSAGE_ERROR)));
+            }
+        }
+
+        $this->redirect(Yii::app()->createUrl('cabinet/message',array('id' => self::MESSAGE_NO_ACCESS)));
+    }
+
+    /**
+     * Logout
+     */
+    function actionLogout()
+    {
+        Yii::app()->user->logout(false);
+        $this->redirect(Yii::app()->createUrl('main/index'));
+    }
+
+    /**
+     * Main entry
      */
     function actionIndex()
     {
-        $this->render('index');
+        /* @var $current_client Clients */
+
+        $products = Products::model()->findAll();
+        $current_client = Clients::model()->findByPk(Yii::app()->user->id);
+        $selected_product = $current_client->currentPacket;
+
+        $this->render('index',array('products' => $products, 'current_client' => $current_client));
     }
 
     /**
