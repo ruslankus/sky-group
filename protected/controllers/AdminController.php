@@ -43,7 +43,8 @@ class AdminController extends Controller
      */
     public function actionClients()
     {
-        $this->render('clients');
+        $clients = Clients::model()->findAll();
+        $this->render('clients',array('clients' => $clients));
     }
 
     /**

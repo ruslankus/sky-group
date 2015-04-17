@@ -1,3 +1,4 @@
+<?php /* @var $clients Clients[] */ ?>
 <main>
     <div class="title-bar">
         <h1>Клиенты</h1>
@@ -16,40 +17,28 @@
         </div><!--table-->
         <div class="sortable">
 
-            <div class="menu-table" data-menu="1">
-                <div class="cell block">
-                    <div class="inner-table">
-                        <div class="row root" data-id="0">
-                            <div class="cell name">Вася</div>
-                            <div class="cell">email@email.com</div>
-                            <div class="cell type">Не подтвержден</div>
-                            <div class="cell type">Gold</div>
+            <?php foreach($clients as $client): ?>
+                <div class="menu-table" data-menu="1">
+                    <div class="cell block">
+                        <div class="inner-table">
+                            <div class="row root" data-id="0">
+                                <div class="cell name"><?php echo $client->login ?></div>
+                                <div class="cell"><?php echo $client->login ?></div>
+                                <div class="cell type"><?php echo $client->status_id == 1 ? 'Не подтвержден' : 'Подтвержден' ?></div>
+                                <div class="cell type"><?php echo $client->currentPacket->name; ?></div>
 
-                            <div class="action">
-                                <a href="#" class="edit"><span class="ficoned pencil"></span></a>
-                                <a href="#" class="delete"><span class="ficoned trash-can"></span></a>
-                            </div>
-                        </div><!--/row root-->
-                    </div><!--/inner-table-->
-                </div><!--/menu-table-->
-            </div><!--table-->
-            <div class="menu-table" data-menu="1">
-                <div class="cell block">
-                    <div class="inner-table">
-                        <div class="row root" data-id="0">
-                            <div class="cell name">Вася</div>
-                            <div class="cell">email@email.com</div>
-                            <div class="cell type">Не подтвержден</div>
-                            <div class="cell type">Gold</div>
+                                <div class="action">
+                                    <a href="#" class="edit"><span class="ficoned pencil"></span></a>
+                                    <a href="#" class="delete"><span class="ficoned trash-can"></span></a>
+                                </div>
+                            </div><!--/row root-->
+                        </div><!--/inner-table-->
+                    </div><!--/menu-table-->
+                </div><!--table-->
+            <?php endforeach; ?>
 
-                            <div class="action">
-                                <a href="#" class="edit"><span class="ficoned pencil"></span></a>
-                                <a href="#" class="delete"><span class="ficoned trash-can"></span></a>
-                            </div>
-                        </div><!--/row root-->
-                    </div><!--/inner-table-->
-                </div><!--/menu-table-->
-            </div><!--table-->
+
+
         </div><!--/sortable-->
     </div><!--/content-->
 
