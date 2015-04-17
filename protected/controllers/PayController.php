@@ -32,14 +32,27 @@ class PayController extends Controller
             $objClient = new Clients();
             $objClient->login = $arrSteps['step_1']['email'];
             $objClient->password = md5($arrSteps['step_1']['password']);
+            $objClient->current_packet_id = $arrSteps['step_6']['packet'];
             //save anketa in db
             $objClient->profile_array = serialize($arrSteps);
             
             if($objClient->save()){
-                $this->render('_pay_form');    
+                
+                //formiruem zakas
+                $objOrders = new Orders();
+                $objOrders->client_id = $objClient->id;
+                $objOrders->product_id = $arrSteps['step_6']['packet'];
+                $objOrders->order_time = time();
+                
+                if($objOrders->save()){
+                    
+                    $this->render('_pay_form');
+                    Yii::app()->end();        
+                }    
+             
             }
        }
-        echo "error";
+       echo "error";
     }
     
     public function actionCallback(){

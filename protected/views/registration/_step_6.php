@@ -4,52 +4,18 @@
 
         <fieldset class="reg-3 small-height">
             <span class="question-span small block bold">Выберите пакет обслуживания:</span>
-
-            <input id="silver" type="radio" name="packet" checked value="1">
-            <label data-name="packet" class="radio active modified-small packet" for="silver"><span>Silver</span> – price <span class="old">250.50 ILS</span> <span>200.10 ILS</span></label>
-            <div style="clear: both;"></div>
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</li>
-                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-            </ul>
-
-            <input id="gold" type="radio" name="packet" value="2">
-            <label data-name="packet" class="radio modified-small packet" for="gold"><span>Gold</span> – price <span class="old">250.50 ILS</span> <span>200.10 ILS</span></label>
-            <div style="clear: both;"></div>
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</li>
-                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-            </ul>
-
-            <input id="platinum" type="radio" name="packet" value="3">
-            <label data-name="packet" class="radio modified-small packet" for="platinum"><span>Platinum</span> – price <span class="old">250.50 ILS</span> <span>200.10 ILS</span></label>
-            <div style="clear: both;"></div>
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</li>
-                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-            </ul>
-
-            <input id="business" type="radio" name="packet" value="4">
-            <label data-name="packet" class="radio modified-small packet" for="business"><span>Business</span> – price <span class="old">250.50 ILS</span> <span>200.10 ILS</span></label>
-            <div style="clear: both;"></div>
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</li>
-                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-            </ul>
-
-            <input id="loyalty" type="radio" name="packet" value="5">
-            <label data-name="packet" class="radio modified-small packet" for="loyalty"><span>Loyalty program - cash back</span> – price <span class="old">250.50 ILS</span> <span>200.10 ILS</span></label>
-            <div style="clear: both;"></div>
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</li>
-                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-            </ul>
-
+            
+            
+            <?php $i=0; foreach($objProds as $prod):?>
+            
+                <input id="prod_<?php echo $prod->id?>" type="radio" name="packet" <?php echo ($i==0)? 'checked' : ""; ?> value="<?php echo $prod->id?>">
+                <label data-name="packet" class="radio <?php echo ($i==0)? 'active' : ""; ?> modified-small packet" for="prod_<?php echo $prod->id; ?>">
+                    <span><?php echo $prod->name?></span> – price <span class="old"><?php echo number_format($prod->price/100 ,2) ?> ILS</span> <span>200.10 ILS</span>
+                </label>
+                <div style="clear: both;"></div>
+                <?php echo $prod->description_text?>
+            <?php $i++; endforeach; ?>
+            
         </fieldset>
 
         <fieldset class="buttons">

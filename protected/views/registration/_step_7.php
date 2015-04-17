@@ -4,11 +4,15 @@
 
         <fieldset class="reg-3 small-height bordered-bottom">
             <span class="question-span small block bold">Система присваивает уникальный номер абонента</span>
-            <span class="question-span small block bold">Имя Фамилия</span>
-            <span class="question-span small block">Пакет обслуживания<span class="right bold">Gold</span></span>
-            <span class="question-span small block">Сумма (без скидки)<span class="right bold">25000.00 ILS</span></span>
-            <span class="question-span small block">Скидка (в случае действия промокода)<span class="right bold">25000.00 ILS</span></span>
-            <span class="question-span small block">Сумма (со скидкой)<span class="right bold">25000.00 ILS</span></span>
+            <span class="question-span small block bold"><?php echo $_SESSION['step_1']['user_name']." ".$_SESSION['step_1']['last_name'] ?></span>
+            <span class="question-span small block">Пакет обслуживания<span class="right bold"><?php echo $objProds->name?></span></span>
+            <span class="question-span small block">
+                Сумма (без скидки)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span>
+            </span>
+            <span class="question-span small block">
+                Скидка (в случае действия промокода)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span>
+            </span>
+            <span class="question-span small block">Сумма (со скидкой)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span></span>
             <div style="clear: both;"></div>
         </fieldset>
         <div style="clear: both;"></div>

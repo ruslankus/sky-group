@@ -12,93 +12,24 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/about_us.css');
     <div class="content-col left">
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
+           SkyGroup – это закрытый членский клуб, объединяющий большую группу людей с целью участия и поддержки пользователей в различных системах услуг. SkyGroup предлагает 5 различных видов членства, из которых по гибкой цене Вы можете выбрать абонемент, который устроит Вас и Вашу семью во всех отношениях.
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
+           Мы постоянно расширяем перечень наших предложений и возможностей, поэтому наши клиенты могут получить широкий спектр услуг, соответствующих самым высоким критериям оценки качества.
         </p>
-        <h3>
-            TABLE NAME
-        </h3>
-        <table border="0" CELLPADDING="0" CELLSPACING="0">
-            <tr>
-                <th>
-                    COLUMN NAME
-                </th>
-                <th>
-                    COLUMN NAME
-                </th>
-                <th>
-                    COLUMN NAME
-                </th>
-            </tr>
-            <tr>
-                <td class="center">
-                    CURABITUR PEDE
-                </td>
-                <td>
-                    522
-                </td>
-                <td>
-                    75
-                </td>
-            </tr>
-            <tr>
-                <td class="center">
-                    PEDE MOLESTIE
-                </td>
-                <td>
-                    254
-                </td>
-                <td>
-                    17000
-                </td>
-            </tr>
-            <tr>
-                <td class="center">
-                    INBLANDIT VITAE
-                </td>
-                <td>
-                    6000
-                </td>
-                <td>
-                    150000
-                </td>
-            </tr>
-            <tr>
-                <td class="center">
-                    VARIUS AC PURUS
-                </td>
-                <td>
-                    654
-                </td>
-                <td>
-                    3
-                </td>
-            </tr>
-            <tr class="footer-table">
-                <th>
-                    SUM ROW
-                </th>
-                <th>&nbsp;
-                 
-                 </th>
-                <th>
-                    352000
-                </th>
-            </tr>
-        </table>
+	<h3>Перечень услуг:</h3>
+    <ul>
+        <li>Каждому потенциальному клиенту предоставляется право приобретения абонемента сроком на 3 года></li>
+        <li>Членам клуба гарантируется помощь при пользовании платежными услугами (оплата налогов, нотариальные услуги и другие)</li>
+        <li>Через 24 часа после присоединения к клубу участнику предоставляется возможность приобретения стандартной страховки включая членов семьи страхуемого лица (страхование от несчастных случаев + операции) 
+        Оплата клубного членства производится ежемесячно</li> 
+        <li>Распределение стоимости членского взноса производится посредством простой и удобной в использовании системы PSP. При этом часть взноса переводится на счет клуба, другая часть на счет страховой компании 
+        Члены клуба имеют возможность воспользоваться интернет порталом для получения льготных услуг или call-центром</li>
+	</ul>
+
     </div>
     <div class="content-col right">
-        <h2>SUBTITLE TEXT</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
-        <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about_2.jpg">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
-    </div>
+     </div>   
     <div class="cls"></div>
 </section>
 </main>
+
