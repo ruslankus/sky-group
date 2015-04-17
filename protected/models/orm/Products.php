@@ -109,4 +109,20 @@ class Products extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+
+    /**
+     * Extension
+     */
+
+    public function priceFmt()
+    {
+        return number_format($this->price / 100,2,'.','');
+    }
+
+    public function oldPriceFmt()
+    {
+        return number_format($this->old_price / 100,2,'.','');
+    }
+
 }

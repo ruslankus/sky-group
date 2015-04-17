@@ -34,7 +34,24 @@ class AdminController extends Controller
      */
     public function actionProducts()
     {
-        $this->render('products');
+        $products = Products::model()->findAll();
+        $this->render('products',array('products' => $products));
+    }
+
+    /**
+     * List all clients
+     */
+    public function actionClients()
+    {
+        $this->render('clients');
+    }
+
+    /**
+     * List all clients
+     */
+    public function actionOrders()
+    {
+        $this->render('orders');
     }
 
     /**
@@ -59,21 +76,6 @@ class AdminController extends Controller
         $this->render('login',array('form_mdl' => $formMdl));
     }
 
-    /**
-     * List all clients
-     */
-    public function actionClients()
-    {
-        $this->render('clients');
-    }
-
-    /**
-     * List all clients
-     */
-    public function actionOrders()
-    {
-        $this->render('orders');
-    }
 
     /**
      * Admin logout
