@@ -51,7 +51,7 @@ h1 span {
 	text-decoration: underline;
 }
 
-h2 {
+h2.contacts {
 	color: #edae36;
 	font-family: open_sanscondensed_light;
 	font-size: 1.375em;
@@ -65,7 +65,7 @@ h2 {
 	font-size: 0.938em;
 	line-height: 1.625em;
 	position:relative;
-	width:50%;
+	width:49%;
 }
 
 .left {
@@ -79,7 +79,7 @@ h2 {
 	text-align: right;
 }
 
-input{
+.content-col input{
 	margin: 20px 0 20px 0;
     width:100%;
     padding-bottom:10px;
@@ -88,6 +88,8 @@ input{
     border-right: none;
     border-left: none;
     border-bottom: 2px solid #ecbd62;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
@@ -121,8 +123,12 @@ button {
     background: url('../img/home_but_arr.png') 70px 10px no-repeat #ecbd62;
     padding: 5px 35px 5px 15px;
     margin-left: 15px;
+    margin-right: -15px;
     font-family: open_sans_condensedbold;
     font-size: 1.250em;
+    border: 2px solid #ecbd62;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 
@@ -182,5 +188,17 @@ textarea {
 	.main,
 	.content {
 		width:900px;
+	}
+}
+
+ @media only screen and (max-width: 960px) {
+	.main,
+	.content {
+		width:900px;
+	}
+
+	.main {
+		padding-right:10px;
+		padding-left:10px;
 	}
 }

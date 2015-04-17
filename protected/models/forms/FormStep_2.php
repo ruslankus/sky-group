@@ -7,7 +7,7 @@ class FormStep_2 extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('id_number', 'required'),
+			//array('id_number', 'required'),
            	
 		);
 	}
