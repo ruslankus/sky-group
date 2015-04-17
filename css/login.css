@@ -1,0 +1,152 @@
+.login-box
+{
+    /*display: block;*/
+    display: none;
+    width: 316px;
+    height: 300px;
+    border: 2px solid #ecbd62;
+    background-color: white;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.login-box.active
+{
+    display: block;
+}
+
+.login-box h2
+{
+    display: block;
+    font-family: open_sanscondensed_light;
+    color: #f0b74a;
+    font-size: 33px;
+    height: 75px;
+    line-height: 75px;
+    font-weight: normal;
+    padding-left: 60px;
+    text-transform: uppercase;
+    background: url("../img/login-icon.png") center left no-repeat;
+}
+
+.login-box span.close
+{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../img/close-login-icon.png") center center no-repeat;
+    cursor: pointer;
+
+    transition: 200ms;
+    opacity: 0.8;
+}
+
+.login-box span.close:hover
+{
+    transition: 200ms;
+    opacity: 1;
+}
+
+.login-box .form-area input[type=text], .login-box .form-area input[type=password]
+{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    float: none;
+}
+
+.login-box .form-area fieldset .left {float: left;}
+.login-box .form-area fieldset .right {float: right;}
+
+.login-box .form-area fieldset
+{
+    float: none;
+    margin: 0 auto;
+    width: 82%;
+}
+
+/**** maxim add for style */
+
+.login-box .form-area input {
+    background: #ffffff;
+    color:#444444;
+}
+
+.form-area input[type=text], .form-area input[type=password]
+{
+    display: block;
+    width: 90%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    float: left;
+    height: 40px;
+    margin-bottom: 45px;
+
+    color: #444444;
+    font-size: 18px;
+    font-family: open_sanslight;
+
+    border: none;
+    border-bottom: 2px solid #ecbd62;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.login-box input::-webkit-input-placeholder{opacity: 1;color:#444444;}
+.login-box input::-moz-placeholder{opacity: 1;color:#444444;}
+.login-box input:-moz-placeholder{opacity: 1;color:#444444;}
+.login-box input:-ms-input-placeholder{opacity: 1;color:#444444;}
+
+.login-box fieldset
+{
+    display: block;
+    border: none;
+    width: 50%;
+    float: left;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.login-box a.cancel-link
+{
+    margin:0;
+    height: 36px;
+    line-height: 36px;
+    font-family: open_sanslight;
+    color: #edae36;
+    padding-right: 20px;
+}
+
+
+.login-box input[type=submit].pay,.login-box a.button.pay
+{
+    color: white;
+    border: 2px solid #ecbd62;
+    background: url("../img/next-white.png") #ecbd62 center right no-repeat;
+}
+
+.login-box input[type=submit], .login-box button, .login-box a.button
+{
+    margin:0;
+    display: block;
+    height: 40px;
+    color: #ecbd62;
+    font-family: open_sans_condensedbold;
+    text-transform: uppercase;
+    font-size: 20px;
+    background: white;
+    border: 2px solid #c2c2c2;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 35px;
+    cursor: pointer;
+    background: url("../img/next.png") center right no-repeat;
+    text-decoration: none;
+
+}

@@ -2,7 +2,9 @@
    <?php echo CHtml::beginForm();?>
         <fieldset class="reg-1">
             <a href="#" class="question"></a>
+
             <input class="promo" placeholder="Номер ID" type="text" name="id_number" value="<?php echo $sessData['id_number']?>">
+
             <input placeholder="Имя (вписываются с первой страницы)" type="text" name="fname" value="<?php echo $sessData['fname']?>">
             <input placeholder="Фамилия (вписываются с первой страницы)" type="text" name="lname" value="<?php echo $sessData['lname']?>">
             
