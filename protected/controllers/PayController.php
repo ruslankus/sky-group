@@ -46,7 +46,7 @@ class PayController extends Controller
                 
                 if($objOrders->save()){
                     
-                    $this->render('_pay_form');
+                    $this->render('_pay_form', array('order_id'=>$objOrders->id));
                     Yii::app()->end();        
                 }    
              
@@ -58,37 +58,33 @@ class PayController extends Controller
     public function actionCallback(){
 		
 		$callback = new SolidPayResponse();
-
-		if($callback->isSuccess() === true && $callback->needReview() == false)
-		{
-			$response = $callback->getResponse();
-			//$fp = fopen("callback.txt", "w+"); fwrite($fp, json_encode($response)); fclose($fp); // loging callback
-			// Payment successfull
-			echo "http://inlusion.eu/pay";
-			// $decode->return->code;
-			// $decode->return->message;
+		
+		$response = $callback->getResponse();
 			
-			// $decode->identification->transactionid
-			// $decode->identification->uniqueid
-			// $decode->identification->shortid
+		$order = Orders::model()->findByPk($response->identification->transactionid);
+		$order->price = $response->identification->transactionid;
+		$order->order_time = time();
 			
-			// $decode->payment->amount
-			// $decode->payment->currency
-			// $decode->payment->descriptor
-			// $decode->payment->timestamp
-			// $decode->payment->riskscore
-			// ...
-		}
-		else if($callback->isSuccess() === true && $callback->needReview() == true)
-		{
-			// payment successful, but needs manual review of transaction.
-			echo "http://inlusion.eu/pay";
-		}
-		else
-		{
-			// Payment unsuccessfull
-			echo "http://inlusion.eu/pay/error";
-		}
+			if($callback->isSuccess() === true && $callback->needReview() == false)
+			{
+				echo "http://inlusion.eu/pay";
+				$order->payment_status = "OK|".$response->return->code."|".$response->return->message;
+			}
+			else if($callback->isSuccess() === true && $callback->needReview() == true)
+			{
+				$order->payment_status = "CHECK|".$response->return->code."|".$response->return->message;
+				// payment successful, but needs manual review of transaction.
+				echo "http://inlusion.eu/pay";
+			}
+			else
+			{
+				$order->payment_status = "NOK|".$response->return->code."|".$response->return->message;
+				// Payment unsuccessfull
+				echo "http://inlusion.eu/pay/error";
+			}
+		
+		$order->save();
+		
     }//actionCallback
     
     

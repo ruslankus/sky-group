@@ -1,3 +1,4 @@
+<? /* $order_id = $objOrders->id */ ?>
 <main class="main">
 <section class="header-section">
     <h1>Оплата</h1>
@@ -26,7 +27,7 @@
 		<input type="hidden" name="PRESENTATION.CURRENCY" value="EUR" />
 		
 		
-		<input type="hidden" name="IDENTIFICATION.TRANSACTIONID" value="MyAssignedId" />
+		<input type="hidden" name="IDENTIFICATION.TRANSACTIONID" value="<?php echo $order_id; ?>" />
 		
 		
          <fieldset class="reg-1">

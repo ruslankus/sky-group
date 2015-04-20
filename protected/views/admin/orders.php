@@ -23,10 +23,10 @@
                         <div class="inner-table">
                             <div class="row root" data-id="0">
                                 <div class="cell ">Вася</div>
-                                <div class="cell type"><?php date('Y.m.d',$order->order_time); ?></div>
+                                <div class="cell type"><?php echo date('Y.m.d',$order->order_time); ?></div>
                                 <div class="cell type"><?php echo $order->product->name; ?></div>
                                 <div class="cell type"><?php echo $order->payment_status; ?></div>
-                                <div class="cell type">-</div>
+                                <div class="cell type"><?php echo $order->price; ?></div>
                                 <div class="cell type">-</div>
 
                                 <div class="action">
