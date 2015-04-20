@@ -13,7 +13,7 @@ class AdminController extends Controller
     function beforeAction($action)
     {
         //if user not allowed to this controller and action
-        if((Yii::app()->user->isGuest || Yii::app()->user->getState('role') != 'admin') && $action->id != 'login')
+        if((Yii::app()->user->isGuest || Yii::app()->user->getState('role') != 'admin') && $action->id != 'login' && $action->id != 'logout')
         {
             $this->redirect(Yii::app()->createUrl('admin/login'));
         }

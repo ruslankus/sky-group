@@ -5,7 +5,7 @@
     <section class="form-area">
         <form method="post">
             <fieldset class="reg-3 small-height">
-                <label class="bigger block">В доступе отказано</label>
+                <label class="bigger block">Ожидайте подтверждения</label>
                 <div style="clear: both;"></div>
                 <span class="message-special">Вы зарегестрирвоаны, но ваш аккаунт еще не подтвержден нашей администрацией. Дождитесь подтверждения. Вас об этом про информируют выслав письмо на вашу эл. почту. <br>В случае вопросов свяжитесь с нами.</span>
             </fieldset>

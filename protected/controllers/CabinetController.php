@@ -20,7 +20,7 @@ class CabinetController extends Controller
         {
             $this->redirect(Yii::app()->createUrl('cabinet/message',array('id' => self::MESSAGE_NO_ACCESS)));
         }
-        elseif(Yii::app()->user->getState('status') != ClientIdentity::CLIENT_STATUS_APPROVED && $action->id != 'message' && $action->id != 'login')
+        elseif(Yii::app()->user->getState('status') != ClientIdentity::CLIENT_STATUS_APPROVED && $action->id != 'message' && $action->id != 'login' && $action->id != 'logout')
         {
             $this->redirect(Yii::app()->createUrl('cabinet/message',array('id' => self::MESSAGE_NOT_APPROVED)));
         }
