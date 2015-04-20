@@ -1,9 +1,12 @@
 <? /* $order_id = $objOrders->id */ ?>
+<?php $cs = Yii::app()->clientScript; ?>
+<?php $cs->registerCssFile(Yii::app()->request->baseUrl."/css/payment-form.css?".time()); ?>
+<?php $cs->registerScriptFile(Yii::app()->request->baseUrl."/js/payment-form.js?".time(), CClientScript::POS_END); ?>
 <main class="main">
 <section class="header-section">
     <h1>Оплата</h1>
 </section>
-
+<?php print_r($sessData); ?>
 <section class="form-area">
     <?php echo CHtml::beginForm("https://test.ctpe.net/frontend/payment.prc", "post");?>
 	<!--hidden inputs-->
@@ -31,55 +34,72 @@
 		
 		
          <fieldset class="reg-1">
+		 <h2>Payer information</h2>
 		 <!--name-->
-            <input placeholder="Имя" type="text" name="NAME.GIVEN" value="<?php echo $sessData['fname']?>">
-            <input placeholder="Фамилия" type="text" name="NAME.FAMILY" value="<?php echo $sessData['lname']?>">
+            <input placeholder="Имя" type="text" name="NAME.GIVEN" value="">
+            <input placeholder="Фамилия" type="text" name="NAME.FAMILY" value="">
 			
 		<!--address-->	
             <input placeholder="street" type="text" name="ADDRESS.STREET" value="<?php echo $sessData['street']?>">
-            <input placeholder="zip" type="text" name="ADDRESS.ZIP" value="IPS808">
             <input placeholder="city" type="text" name="ADDRESS.CITY" value="<?php echo $sessData['city']; ?>">
-            <input placeholder="country" type="text" name="ADDRESS.COUNTRY" value="<?php echo $sessData['country']; ?>">
-        </fieldset>
-        <fieldset class="reg-2">
+			
+            <input placeholder="Zip Code" type="text" name="ADDRESS.ZIP" class="zip">
+            <select name="ADDRESS.COUNTRY" class="country">
+				<option value="RU">Россия</option>
+			</select>
+			
 		<!--contacts-->	
-            <input placeholder="Электронная почта" type="text" name="CONTACT.EMAIL" value="<?php echo $sessData['email']?>">
+			<input placeholder="Электронная почта" type="text" name="CONTACT.EMAIL" value="<?php echo $sessData['email']?>">
             <input placeholder="phone (optional)" type="text" name="CONTACT.PHONE" value="<?php echo $sessData['phone']; ?>">
             <input placeholder="mobile (optional)" type="text" name="CONTACT.MOBILE" value="<?php echo $sessData['mphone']; ?>">	
-		</fieldset>
-		<fieldset class="reg-3 small-height">
-		<!--account-->
-			<input placeholder="Account holder" type="text" name="ACCOUNT.HOLDER" value="<?php echo $sessData['fname']." ".$sessData['lname']; ?>" />
+        </fieldset>
+		<fieldset class="card-info">
+		<h2>Card Information</h2>
+		<div class="card">
+			<input placeholder="Name on Card" type="text" name="ACCOUNT.HOLDER" value="" />
 			
-			<input placeholder="number" type="text" name="ACCOUNT.NUMBER" value="4929453812312008" />
-			<input placeholder="CVC" type="text" name="ACCOUNT.VERIFICATION" value="391" />
-			<select  name="ACCOUNT.BRAND">
-					<option>VISA</option>
-					<option>MASTERCARD</option>
-				</select>
-			<select  name="ACCOUNT.EXPIRY_MONTH">
-					<option>01</option>
-					<option>02</option>
-					<option>03</option>
-					<option>04</option>
-					<option>05</option>
-					<option>06</option>
-					<option>07</option>
-					<option>08</option>
-					<option selected="selected">09</option>
-					<option>10</option>
-					<option>11</option>
-					<option>12</option>
-				</select>
-				<select  name="ACCOUNT.EXPIRY_YEAR">
-					<option>2015</option>
-					<option>2016</option>
-					<option>2017</option>
-					<option>2018</option>
-				</select>
-				
+			
+			<div class="sur">
+			<input class="card-number" placeholder="Credit Card Number" type="text" name="ACCOUNT.NUMBER" value="" />
+			
+			<input class="card-cvc" placeholder="CVC" type="text" name="ACCOUNT.VERIFICATION" value="" />
+			
+			<a href="#" class="question"></a>
+			</div>
+			<span class="clearfix"></span>
+			<select name="ACCOUNT.BRAND" class="card-brand">
+				<option>VISA</option>
+				<option>MASTERCARD</option>
+			</select>
+			<select class="exp-year" name="ACCOUNT.EXPIRY_YEAR">
+				<option value="-">Exp. Year</option>
+				<?php
+					for($i=date("Y"); $i<date("Y")+25; $i++):
+						echo "<option>{$i}</option>";
+					endfor;
+				?>
+			</select>
+			<select class="exp-month" name="ACCOUNT.EXPIRY_MONTH">
+				<option value="-">EXp. Month</option>
+				<option>01</option>
+				<option>02</option>
+				<option>03</option>
+				<option>04</option>
+				<option>05</option>
+				<option>06</option>
+				<option>07</option>
+				<option>08</option>
+				<option>09</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+			</select>
+			<span class="clearfix"></span>	
+			
+		</div><!--/card-->
 				<input type="submit" value="Далее">
 		</fieldset>
+		
 		<div style="clear: both;"></div>
     <?php echo CHtml::endForm();?>
 </section>
