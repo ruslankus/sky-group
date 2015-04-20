@@ -30,6 +30,7 @@
                 <li><span class="icon products"></span><a href="<?php echo Yii::app()->createUrl('admin/products'); ?>"><span>Продукты</span></a></li>
                 <li><span class="icon pages"></span><a href="<?php echo Yii::app()->createUrl('admin/clients'); ?>"><span>Клиенты</span></a></li>
                 <li><span class="icon edit-menu"></span><a href="<?php echo Yii::app()->createUrl('admin/orders'); ?>"><span>Заказы</span></a></li>
+                <li><span class="icon translate"></span><a href="<?php echo Yii::app()->createUrl('admin/logout'); ?>"><span>Выход</span></a></li>
             </ul>
         </aside>
         <?php echo $content; ?>
