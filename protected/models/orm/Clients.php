@@ -112,4 +112,30 @@ class Clients extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    /**
+     * Extension
+     */
+
+    public function getProfileArr()
+    {
+        if(!empty($this->profile_array))
+        {
+            return unserialize($this->profile_array);
+        }
+
+        return array();
+    }
+
+    public function getProfileParam($paramName,$stepNr = 1)
+    {
+        $profile = $this->getProfileArr();
+        if(isset($profile['step_'.$stepNr][$paramName]))
+        {
+            return $profile['step_'.$stepNr][$paramName];
+        }
+
+        return "";
+    }
+
 }

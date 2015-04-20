@@ -28,7 +28,7 @@
                     <div class="cell block">
                         <div class="inner-table">
                             <div class="row root" data-id="0">
-                                <div class="cell "><?php echo $client->login ?></div>
+                                <div class="cell "><?php echo $client->getProfileParam('user_name',1).' '.$client->getProfileParam('last_name',1); ?></div>
                                 <div class="cell type"><?php echo $client->login ?></div>
                                 <div class="cell type">
                                     <select class="select-status" data-client="<?php echo $client->id; ?>" data-url="<?php echo Yii::app()->createUrl('admin/changeclientstatus') ?>" style="font-size: 12px;">
