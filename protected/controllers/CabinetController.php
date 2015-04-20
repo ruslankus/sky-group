@@ -16,7 +16,7 @@ class CabinetController extends Controller
     function beforeAction($action)
     {
         //if user not allowed to this controller and action
-        if(Yii::app()->user->isGuest && $action->id != 'message' && $action->id != 'login')
+        if((Yii::app()->user->isGuest || Yii::app()->user->getState('role') != 'client') && $action->id != 'message' && $action->id != 'login')
         {
             $this->redirect(Yii::app()->createUrl('cabinet/message',array('id' => self::MESSAGE_NO_ACCESS)));
         }

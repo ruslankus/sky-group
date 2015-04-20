@@ -88,6 +88,34 @@ class AdminController extends Controller
         $this->redirect(Yii::app()->createUrl('admin/login'));
     }
 
+    /**
+     * Change client status (by ajax or by simple method)
+     * @param $cid
+     * @param $sid
+     * @throws CHttpException
+     */
+    public function actionChangeClientStatus($cid,$sid)
+    {
+        $client = Clients::model()->findByPk((int)$cid);
+
+        if(empty($client))
+        {
+            throw new CHttpException(404);
+        }
+
+        $client->status_id = (int)$sid;
+        $client->update();
+
+        if(Yii::app()->request->isAjaxRequest)
+        {
+            echo "OK";
+        }
+        else
+        {
+            $this->redirect(Yii::app()->createUrl('admin/clients'));
+        }
+    }
+
 
 
 

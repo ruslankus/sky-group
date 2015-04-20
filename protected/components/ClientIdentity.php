@@ -36,6 +36,7 @@ class ClientIdentity extends CUserIdentity
                 $this->setState('login',$client->login);
                 $this->setState('email',$client->login);
                 $this->setState('status',$client->status_id);
+                $this->setState('role','client');
             }
         }
         //if user not found

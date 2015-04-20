@@ -1,3 +1,6 @@
+<?php $cs = Yii::app()->clientScript; ?>
+<?php $cs->registerScriptFile(Yii::app()->request->baseUrl."/js/clients.status-change.js",CClientScript::POS_END); ?>
+
 <?php /* @var $clients Clients[] */ ?>
 <main>
     <div class="title-bar">
@@ -8,13 +11,16 @@
     </div><!--/title-bar-->
 
     <div class="content">
+
+
         <div class="title-table">
             <div class="cell">Имя</div>
-            <div class="cell">Эл. почта</div>
+            <div class="cell type">Эл. почта</div>
             <div class="cell type">Статус</div>
             <div class="cell type">Текущий пакет</div>
             <div class="cell action">Дейтсвия</div>
         </div><!--table-->
+
         <div class="sortable">
 
             <?php foreach($clients as $client): ?>
@@ -22,11 +28,16 @@
                     <div class="cell block">
                         <div class="inner-table">
                             <div class="row root" data-id="0">
-                                <div class="cell name"><?php echo $client->login ?></div>
-                                <div class="cell"><?php echo $client->login ?></div>
-                                <div class="cell type"><?php echo $client->status_id == 1 ? 'Не подтвержден' : 'Подтвержден' ?></div>
+                                <div class="cell "><?php echo $client->login ?></div>
+                                <div class="cell type"><?php echo $client->login ?></div>
+                                <div class="cell type">
+                                    <select class="select-status" data-client="<?php echo $client->id; ?>" data-url="<?php echo Yii::app()->createUrl('admin/changeclientstatus') ?>" style="font-size: 12px;">
+                                        <option <?php if($client->status_id == 1): ?> selected <?php endif; ?> value="1">Не подтвержден</option>
+                                        <option <?php if($client->status_id == 2): ?> selected <?php endif; ?> value="2">Подтвержден</option>
+                                        <option <?php if($client->status_id == 3): ?> selected <?php endif; ?> value="3">Приостановлен</option>
+                                    </select>
+                                </div>
                                 <div class="cell type"><?php echo $client->currentPacket->name; ?></div>
-
                                 <div class="action">
                                     <a href="#" class="edit"><span class="ficoned pencil"></span></a>
                                     <a href="#" class="delete"><span class="ficoned trash-can"></span></a>

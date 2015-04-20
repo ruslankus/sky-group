@@ -16,8 +16,8 @@
 <header class="header">
     <a href="/" class="logo"></a>
     <span class="right-box menu-button active"></span>
-    <?php $url = !Yii::app()->user->isGuest ? (Yii::app()->controller->id == 'cabinet' ? Yii::app()->createUrl('cabinet/logout') : Yii::app()->createUrl('cabinet/index')) : '#'; ?>
-    <?php $class = !Yii::app()->user->isGuest ? (Yii::app()->controller->id == 'cabinet' ? 'out' : 'in') : '';  ?>
+    <?php $url = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? Yii::app()->createUrl('cabinet/logout') : Yii::app()->createUrl('cabinet/index')) : '#'; ?>
+    <?php $class = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? 'out' : 'in') : '';  ?>
 
     <a href="<?php echo $url ?>" class="right-box <?php echo $class ?> login-button"></a>
 
