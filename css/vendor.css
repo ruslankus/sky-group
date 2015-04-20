@@ -100,7 +100,7 @@ body
 	}
 .fluid > header > .wrapper > .logo
 	{
-		color: #149fe4;
+		color: #777;
 		position: absolute;
 		left: 52px;
 		top: 0px;
@@ -146,12 +146,12 @@ body
 	}
 .fluid > header > .wrapper > a.user.active
 	{
-		background: #007ab7 url(../images/icon-user-active.png) center center no-repeat;
+		background: #ecbd62 url(../images/icon-user-active-dark.png) center center no-repeat;
 	}
 .fluid > header > .wrapper > a > span.bubble
 	{
 		position: absolute;
-		background: #fb8f73;
+		background: #ecbd62;
 		color: #fff;
 		font-size: 9px;
 		font-family: "Open_sans";
@@ -168,7 +168,7 @@ body
 		right: 48px;
 		width: 192px;
 		text-align: right;
-		background: #149fe4;
+		background: #ecbd62;
 		list-style-type: none;
 		display: none;
 		z-index: 99;
@@ -177,7 +177,7 @@ body
 	{
 		text-decoration: none;
 		color: #fff;
-		border-bottom: 1px dotted #77caf0;
+		border-bottom: 1px dotted #c48f2a;
 		padding: 10px 0;
 		position: relative;
 		height: 46px;
@@ -192,7 +192,7 @@ body
 	}
 .fluid > header > .wrapper ul.user-open > li:hover
 	{
-		background-color: #007ab7;
+		background-color: #ca9633;
 	}
 .fluid > header > .wrapper ul.user-open > li > a
 	{
@@ -210,7 +210,7 @@ body
 	}
 .fluid > header > .wrapper ul.user-open > li > span.icon
 	{
-		background-color: #007ab7;
+		background-color: #ca9633;
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -226,26 +226,26 @@ body
 	}
 .fluid > header > .wrapper ul.user-open > li:hover > span.icon
 	{
-		background-color: #0a6a9a;
+		background-color: #c48f2a;
 	}
 .fluid > header > .wrapper ul.user-open > li > span.icon.out
 	{
-		background-image: url(../images/icon-out.png);
+		background-image: url(../images/icon-out-dark.png);
 	}
 .fluid > header > .wrapper ul.user-open > li > span.icon.pencil
 	{
-		background-image: url(../images/icon-pencil.png);
+		background-image: url(../images/icon-pencil-dark.png);
 	}
 .fluid > header > .wrapper ul.user-open > li > span.icon.gear
 	{
-		background-image: url(../images/icon-gear.png);
+		background-image: url(../images/icon-gear-darktheme.png);
 	}
 /*---- Language div, list ----*/
 .fluid > header > .wrapper  > .langlist
 	{
 		width: 48px;
 		height: 44px;
-		background-color: #fb8f73;
+		background-color: #ecbd62;
 		text-align: center;
 		border-left: 1px solid #dddddd;
 		position: absolute;
@@ -263,7 +263,7 @@ body
 .fluid > header > .wrapper > .langlist  ul
 	{
 		list-style-type: none;
-		background-color: #fb8770;
+		background-color: #ecbd62;
 		position: absolute;
 		top: 44px;
 		width: 47px;
@@ -274,7 +274,7 @@ body
 	{
 		text-decoration: none;
 		color: #fff;
-		border-bottom: 1px dotted #dddddd;
+		border-bottom: 1px dotted #c48f2a;
 		padding: 10px 0;
 	}
 .fluid > header > .wrapper  > .langlist ul > li:last-of-type
@@ -299,7 +299,7 @@ body
 	{
 		width: 202px;
 		height: 100vh;
-		background: #149fe4;
+		background: #444444;
 		display: table-cell;
 		vertical-align: top;
 		z-index: 98;
@@ -325,7 +325,7 @@ body
 	{
 		text-decoration: none;
 		color: #fff;
-		border-bottom: 1px dotted #77caf0;
+		border-bottom: 1px dotted #797979;
 		padding: 10px 0;
 		position: relative;
 		height: 50px;
@@ -338,18 +338,18 @@ body
 	{
 		background-repeat: no-repeat;
 		background-position: 180px center;
-		background-image: url(../images/icon-arrow-right.png);
+		background-image: url(../images/icon-arrow-right-dark.png);
 	}
 .fluid > .content-fluid aside > ul.root > li:hover,
 .fluid > .content-fluid aside > ul.root > li:active,
 .fluid > .content-fluid aside > ul.root > li.active,
 .fluid > .content-fluid aside > ul.root > li.jactive
 	{
-		background-color: #0a6a9a;
+		background-color: #ecbd62;
 	}
 .fluid > .content-fluid aside > ul.root > li > a
 	{
-		color: #c9edff;
+		color: #c9c9c9;
 		position: absolute;
 		right: 0px;
 		top: 0;
@@ -360,9 +360,12 @@ body
 		height: 100%;
 		display: block;
 	}
+.fluid > .content-fluid aside > ul.root > li:hover > a,
+.fluid > .content-fluid aside > ul.root > li:active > a,
+.fluid > .content-fluid aside > ul.root > li.active > a,
+.fluid > .content-fluid aside > ul.root > li.jactive > a { color: #444444; }
 .fluid > .content-fluid aside > ul.root > li > span.icon
 	{
-		background-color: #007ab7;
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -377,27 +380,27 @@ body
 	}
 .fluid > .content-fluid aside > ul.root > li > span.icon.dashboard
 	{
-		background-image: url(../images/icon-dashboard.png);
+		background-image: url(../images/icon-dashboard-dark.png);
 	}
 .fluid > .content-fluid aside > ul.root > li > span.icon.pages
 	{
-		background-image: url(../images/icon-pages.png);
+		background-image: url(../images/icon-pages-dark.png);
 	}
 .fluid > .content-fluid aside > ul.root > li > span.icon.products
 	{
-		background-image: url(../images/icon-products.png);
+		background-image: url(../images/icon-products-dark.png);
 	}
 .fluid > .content-fluid aside > ul.root > li > span.icon.settings
 	{
-		background-image: url(../images/icon-settings.png);
+		background-image: url(../images/icon-settings-dark.png);
 	}
 .fluid > .content-fluid aside > ul.root > li > span.icon.edit-menu
 	{
-		background-image: url(../images/icon-editors.png);
+		background-image: url(../images/icon-editors-dark.png);
 	}
 .fluid > .content-fluid aside > ul.root > li > span.icon.translate
 	{
-		background-image: url(../images/icon-translate.png);
+		background-image: url(../images/icon-translate-dark.png);
 	}
 .fluid > .content-fluid aside > ul.root > li ul
 	{
@@ -406,7 +409,7 @@ body
 		right: -202px;
 		list-style-type: none;
 		width: 202px;
-		background-color: #007ab7;
+		background-color: #444;
 		display: none;
 		z-index: 98;
 	}
@@ -414,7 +417,7 @@ body
 	{
 		text-decoration: none;
 		color: #fff;
-		border-bottom: 1px dotted #77caf0;
+		border-bottom: 1px dotted #797979;
 		padding: 10px 0;
 		position: relative;
 		height: 50px;
@@ -425,7 +428,7 @@ body
 	}
 .fluid > .content-fluid aside > ul.root > li ul > li > a
 	{
-		color: #c9edff;
+		color: #c9c9c9;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -435,15 +438,19 @@ body
 		padding-left: 50px;
 		padding-top: 14px;
 		text-align: left;
-		background: transparent url(../images/icon-dbl-arrow-right.png) 20px center no-repeat;
+		background: transparent url(../images/icon-dbl-arrow-right-dark.png) 20px center no-repeat;
 	}
 .fluid > .content-fluid aside > ul.root > li ul > li:hover,
 .fluid > .content-fluid aside > ul.root > li ul > li:active,
 .fluid > .content-fluid aside > ul.root > li ul > li.active,
 .fluid > .content-fluid aside > ul.root > li ul > li.jactive
 	{
-		background-color: #0a6a9a;
+		background-color: #ecbd62;
 	}
+.fluid > .content-fluid aside > ul.root > li ul > li:hover > a,
+.fluid > .content-fluid aside > ul.root > li ul > li:active > a,
+.fluid > .content-fluid aside > ul.root > li ul > li.active > a,
+.fluid > .content-fluid aside > ul.root > li ul > li.jactive > a { color: #444; }
 /*------ main -------*/
 .fluid main
 	{
@@ -489,13 +496,13 @@ body
 	}
 .fluid > .content-fluid > main  .title-bar > .actions > li > .action.add
 	{
-		background: #149fe4 url(../images/icon-plus.png) center center no-repeat;
-		border: 1px solid #0084c6;
+		background: #ecbd62 url(../images/icon-plus.png) center center no-repeat;
+		border: 1px solid #ca9633;
 	}
 .fluid > .content-fluid > main  .title-bar > .actions > li > .action.del
 	{
-		background: #fb8f73 url(../images/icon-delete.png) center center no-repeat;
-		border: 1px solid #eb603c;
+		background: #777777 url(../images/icon-delete.png) center center no-repeat;
+		border: 1px solid #444444;
 	}
 .fluid > .content-fluid > main  .title-bar > .actions > li > .action.refresh
 	{
@@ -550,9 +557,9 @@ body
 	}
 .pagination > a.active
 	{
-		border: 1px solid #0084c6;
+		border: 1px solid #ca9633;
 		color: #fff;
-		background-color: #149fe4;
+		background-color: #ecbd62;
 	}
 .pagination > a:first-of-type
 	{
@@ -643,7 +650,7 @@ body
  }
 .content > .list-row > .cell > .order
 	{
-		color: #149fe4;
+		color: #ca9633;
 		font-weight: 600;
 		font-size: 17px;
 		cursor: pointer;
@@ -657,7 +664,7 @@ body
 		position: absolute;
 		top: 10px;
 		right: -20px;
-		background-image: url(../images/order-arrows.png);
+		background-image: url(../images/order-arrows-dark.png);
 		background-repeat: no-repeat;
 		background-position: 0 0;
 		
@@ -672,14 +679,14 @@ body
 	{
 		width: 40px;
 		height: 40px;
-		border: 1px solid #0084c6;
+		border: 1px solid #ca9633;
 		border-radius: 3px;
 		display: inline-block;
 		margin: 0 10px -3px;
 		padding: 0;
 	}
-.content > .list-row > .cell > .action.edit { background: #149fe4 url(../images/icon-edit.png) center center no-repeat; }
-.content > .list-row > .cell > .action.delete{ background: #149fe4 url(../images/icon-delete.png) center center no-repeat; }
+.content > .list-row > .cell > .action.edit { background: #ecbd62 url(../images/icon-edit.png) center center no-repeat; }
+.content > .list-row > .cell > .action.delete{ background: #ecbd62 url(../images/icon-delete.png) center center no-repeat; }
 
 
 .content > .list-message
@@ -844,11 +851,11 @@ body
 .content.page-content .header > a.active,
 .content.page-content .header > a:hover
 	{
-		background-color: #149fe4;
+		background-color: #ecbd62;
 		color: #fff;
 		border: none;
 		font-weight: bold;
-		border-left: 1px solid #149fe4;
+		border-left: 1px solid #ca9633;
 	}
 .content .inner-top
 	{
@@ -925,10 +932,10 @@ body
 		padding-left: 10px;
 		padding-right: 10px;
 		text-align: center;
-		background-color: #149fe4;
+		background-color: #ecbd62;
 		cursor: pointer;
 		border-radius: 3px;
-		border: 1px solid #0084c6;
+		border: 1px solid #ca9633;
 		color: #fff;
 		font-size: 15px;
 		font-family: "Open_sans";
@@ -1036,10 +1043,10 @@ body
 		padding-right: 10px;
 		padding-top: 3px;
 		text-align: center;
-		background-color: #149fe4;
+		background-color: #ecbd62;
 		cursor: pointer;
 		border-radius: 3px;
-		border: 1px solid #0084c6;
+		border: 1px solid #ca9633;
 		color: #fff;
 		font-size: 15px;
 		font-family: "Open_sans";
@@ -1091,8 +1098,8 @@ body
 		position: absolute;
 		top: 10px;
 		right: 10px;
-		background-color: #feddd5;
-		border: 1px solid #f9cfc4;
+		background-color: #e2e2e2;
+		border: 1px solid #d4d4d4;
 		border-radius: 3px;
 		width: 30px;
 		height: 30px;
@@ -1105,8 +1112,8 @@ body
 	}
 .content .inner-content .image-zone .list .image > .delete.active
 	{
-		background-color: #fb8f73;
-		border: 1px solid #eb603c;
+		background-color: #777;
+		border: 1px solid #444;
 		cursor: pointer;
 	}
 .content .inner-content .image-zone:after,
@@ -1262,8 +1269,8 @@ body
 		padding:50px 0;
 	}
 .add-image { 
-		background: #149fe4;
-		border: 1px solid #0084c6;
+		background: #ecbd62;
+		border: 1px solid #ca9633;
 		height: 30px;
 		display: block;
 		border-radius: 3px;
