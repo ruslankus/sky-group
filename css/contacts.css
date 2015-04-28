@@ -2,7 +2,7 @@
 .content {
 	position:relative;
 	margin: 0 auto 0 auto;
-	width:1170px;
+	max-width:1280px;
 }
 h1 span {
 	padding-right:40px;
@@ -15,8 +15,9 @@ h1 span {
 }
 
 .contacts-info {
-	padding:20px 0px 20px 0px;
+	padding:20px 25px 20px 25px;
 	border-bottom:1px solid #dadada;
+    margin-bottom: 20px;
 }
 
 .field {
@@ -40,7 +41,9 @@ h1 span {
 	font-family: open_sanssemibold;
 	font-size: 1.125em;
 }
-
+@media (max-width: 760px) {
+    .field, .value { width: 100%; }
+}
 .value a {
 	text-decoration: none;
 	font-family: open_sanslight;
@@ -122,10 +125,9 @@ button {
     color:#ffffff;
     border:2px solid #ffffff;
     border-radius:3px;
-    background: url('../img/home_but_arr.png') 70px 10px no-repeat #ecbd62;
+    background: url('../img/home_but_arr.png') 92% 10px no-repeat #ecbd62;
     padding: 5px 35px 5px 15px;
     margin-left: 15px;
-    margin-right: -15px;
     font-family: open_sans_condensedbold;
     font-size: 1.250em;
     border: 2px solid #ecbd62;
@@ -149,7 +151,6 @@ textarea {
 .buttons {
 	text-align:right;
 	margin-bottom:20px;
-
 }
 
 .buttons a {
@@ -184,23 +185,4 @@ textarea {
 	font-size: 0.938em;
 	line-height: 1.625em;
 
-}
-
- @media only screen and (max-width: 960px) {
-	.main,
-	.content {
-		width:900px;
-	}
-}
-
- @media only screen and (max-width: 960px) {
-	.main,
-	.content {
-		width:900px;
-	}
-
-	.main {
-		padding-right:10px;
-		padding-left:10px;
-	}
 }

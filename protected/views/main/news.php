@@ -1,7 +1,6 @@
 <?php
 $cs = Yii::app()->clientScript;
 $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/news.css');
-
 ?>
 <main class="main">
 <section class="header-section">
@@ -11,34 +10,22 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/news.css');
 <section class="content">
     <div class="content-col">
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
-        <h2>SUBTITLE TEXT</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
+        <p>Текстовая информация, которой хотите поделиться с клиентами</p>
+        <h2>НОВОСТИ (заголовок)</h2>
+        <p>Текстовая информация, которой хотите поделиться с клиентами</p>
     </div>
     <div class="content-col">
-        <h2>SUBTITLE TEXT</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
+        <h2>НОВОСТИ (заголовок)</h2>
+        <p>Текстовая информация, которой хотите поделиться с клиентами</p>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about_2.jpg">
-        <h2>SUBTITLE TEXT</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
+        <h2>НОВОСТИ (заголовок)</h2>
+        <p>Текстовая информация, которой хотите поделиться с клиентами</p>
     </div>
     <div class="content-col">
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
-        <h2>SUBTITLE TEXT</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
+        <p>Текстовая информация, которой хотите поделиться с клиентами</p>
+        <h2>НОВОСТИ (заголовок)</h2>
+        <p>Текстовая информация, которой хотите поделиться с клиентами</p>
     </div>
     <div class="cls"></div>
 </section>

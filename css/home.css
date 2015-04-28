@@ -245,7 +245,10 @@ button {
     text-align: center;
     background: url('../img/home_footer_contacts_us.png') no-repeat right center; 
 }
-
+.footer-content a {
+    color: #fff;
+    text-decoration: none;
+}
 .footer-top {
     height:40px;
 }
@@ -320,6 +323,7 @@ button {
 @media (max-width: 860px) {
     .header-slider > .abs > .container > .nav {
         display: none;
+        position: relative;
     }
 }
 .header-slider > .abs > .container > .nav ul {
@@ -336,6 +340,8 @@ button {
         height: auto!important;
         width: 208px;
         padding-bottom: 35px;
+        position: absolute;
+        top: 104px;
     }
 }
 .header-slider > .abs > .container > .nav ul li:last-child {

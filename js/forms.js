@@ -176,15 +176,18 @@ $(document).ready(function(){
      */
     $(".menu-button").click(function(){
         var $menu = $(".nav");
-        if($menu.is(":visible"))
+        console.log("click");
+        if($menu.css("display") == 'block')
         {
             $(this).removeClass('active');
             $menu.fadeOut();
+            console.log("remove");
         }
         else
         {
             $(this).addClass('active');
             $menu.fadeIn();
+            console.log("add");
         }
 
         return false;

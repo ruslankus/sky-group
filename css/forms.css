@@ -48,6 +48,7 @@ body
     height: 104px;
     background-color: grey;
     float: right;
+    cursor: pointer;
 }
 .header .right-box.login-button {
     background: url("../img/enter.png") center center no-repeat #ecbd62;
@@ -66,6 +67,7 @@ body
 @media (max-width: 860px) {
     .header .nav {
         display: none;
+        position: relative;
     }
 }
 .header .nav ul {
@@ -82,6 +84,9 @@ body
         height: auto!important;
         width: 208px;
         padding-bottom: 35px;
+        position: absolute;
+        z-index: 1;
+        top: 104px;
     }
 }
 .header .nav ul li:last-child {
@@ -124,8 +129,8 @@ body
     display: block;
     margin: 0 auto;
     min-height: 920px;
-    padding-left: 65px;
-    padding-right: 65px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-top: 25px;
     max-width: 1280px;
 }
@@ -135,8 +140,6 @@ body
 {
     width: 100%;
     min-height: 145px;
-    /*background-color: yellow;*/
-    padding-top: 75px;
     border-bottom: 1px solid #dadada;
 }
 
