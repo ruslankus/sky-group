@@ -413,19 +413,14 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
+    background-size: cover!important;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .header-slider > .slider-block > .slider-wrapper > .slide.active,
 .header-slider > .slider-block > .slider-wrapper > .slide:first-of-type {
     display: block;
-}
-.header-slider > .slider-block > .slider-wrapper > .slide.slide-1 {
-    background: url(../img/home-banner.jpg) center center no-repeat;
-    background-size: cover;
-}
-.header-slider > .slider-block > .slider-wrapper > .slide.slide-2 {
-    background: url(../img/home_bg.jpg) center center no-repeat;
-    background-size: cover;
 }
 .header-slider > .slider-block > .slider-nav {
     position: absolute;

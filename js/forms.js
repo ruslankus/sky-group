@@ -239,15 +239,24 @@ $(document).ready(function(){
     });
     // custom slideshow
     $(".slider-wrapper > .slide").each(function(i){
-        $(this).data("id",i+1);
+        $(this).attr("data-id",i+1);
         var nav = $("<li>");
         if (i==0) {
             nav.addClass("active");
             $(this).addClass("active");
         }
         nav.data("id",i+1);
-        console.log(nav.data("id"));
         nav.appendTo(".slider-nav > ul");
+    });
+    $(document).find(".slider-nav > ul > li").on("click", function() {
+        console.log("opa");
+        if (!$(this).hasClass("active")) {
+            var $id = $(this).data("id");
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".slider-wrapper > .slide[data-id="+$id+"]").fadeIn(300);
+            setTimeout(function() {$(".slider-wrapper > .slide[data-id="+$id+"]").siblings().hide();  }, 300);
+        }
+        return false;
     });
 
 });
