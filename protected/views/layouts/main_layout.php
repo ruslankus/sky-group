@@ -6,6 +6,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/forms.css">
     <title><?php echo $this->title;?></title>
@@ -15,11 +17,11 @@
 
 <header class="header">
     <a href="/" class="logo"></a>
+
+    <a href="<?php echo $url ?>" class="right-box <?php echo $class ?> login-button"></a>
     <span class="right-box menu-button active"></span>
     <?php $url = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? Yii::app()->createUrl('cabinet/logout') : Yii::app()->createUrl('cabinet/index')) : '#'; ?>
     <?php $class = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? 'out' : 'in') : '';  ?>
-
-    <a href="<?php echo $url ?>" class="right-box <?php echo $class ?> login-button"></a>
 
     <nav class="nav">
          <?php $this->widget('application.widgets.MainMenu');?>
@@ -29,7 +31,7 @@
 <?echo $content?>
 
 <footer class="footer">
-    <a href="#">Связаться с нами</a>
+    <a href="#">СВЯЗАТЬСЯ С НАМИ</a>
 </footer>
 
 <div class="login-box">

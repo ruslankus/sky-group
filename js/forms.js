@@ -175,16 +175,16 @@ $(document).ready(function(){
      * Sliding menu
      */
     $(".menu-button").click(function(){
-
-        if($(this).hasClass('active'))
+        var $menu = $(".nav");
+        if($menu.is(":visible"))
         {
             $(this).removeClass('active');
-            $(".header nav ul").animate({'margin-left':'500px'});
+            $menu.fadeOut();
         }
         else
         {
             $(this).addClass('active');
-            $(".header nav ul").animate({'margin-left':'0'});
+            $menu.fadeIn();
         }
 
         return false;
@@ -205,7 +205,7 @@ $(document).ready(function(){
             var result_top = top + height;
             var box = $('.login-box');
 
-            box.css({'top':result_top+'px'});
+            box.css({'top':result_top+'px','right':'0px'});
 
             if(!box.hasClass('active'))
             {

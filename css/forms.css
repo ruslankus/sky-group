@@ -3,79 +3,72 @@
     margin: 0;
     padding: 0;
     font-family: open_sanscondensed_light;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body
 {
-    min-width: 853px;
+    min-width: 360px;
 }
 
 /********************************************* H E A D E R ************************************************************/
 
 .header
 {
-    display: block;
-    height: 104px;
-    /*background-color: yellow;*/
-    /*margin-left: 145px;*/
-    padding-left: 145px;
-    padding-right: 208px;
-    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    min-width: 360px;
 }
-
-.header .logo
-{
-    left: 0;
+.header:before,
+.header:after {
+    display: table;
+    clear: both;
+    content: '';
+}
+.header .logo {
     display: block;
-    position: absolute;
+    float: left;
     width: 145px;
     height: 145px;
-    background: url("../img/logo_transparent.png") center center no-repeat #444444;
+    background: rgba(0,0,0,0.5) url("../img/logo_transparent.png") center center no-repeat;
 }
 
-.header .logo:hover
-{
-    background-color: #7c7c7c;
+.header .logo:hover {
+    background-color: rgba(0,0,0,0.7);
     transition: background-color 100ms linear;
 }
 
-.header .right-box
-{
+
+
+.header .right-box {
     display: block;
     width: 104px;
     height: 104px;
     background-color: grey;
-    position: absolute;
-    cursor: pointer;
+    float: right;
 }
-.header .right-box.login-button
-{
-    right: 0;
+.header .right-box.login-button {
     background: url("../img/enter.png") center center no-repeat #ecbd62;
 }
-
-.header .right-box.login-button.out
-{
-    background: url("../img/exit.png") center center no-repeat #ecbd62;
+.header .right-box.menu-button {
+    background: rgba(0,0,0,0.5) url("../img/menu_normal.png") center center no-repeat;
+}
+.header .right-box.menu-button.active, .header .right-box.menu-button:hover {
+    background: rgba(0,0,0,0.7) url("../img/menu_hover.png") center center no-repeat;
 }
 
-.header .right-box.menu-button
-{
-    right: 104px;
-    background: url("../img/menu_normal.png") center center no-repeat #444444;
+.header .nav {
+    display: block;
+    float: right;
 }
-.header .right-box.menu-button.active, .header .right-box.menu-button:hover
-{
-    background: url("../img/menu_hover.png") center center no-repeat #444444;
+@media (max-width: 860px) {
+    .header .nav {
+        display: none;
+    }
 }
-
-.nav
-{
-    overflow: hidden;
-}
-
-.nav ul
-{
+.header .nav ul {
     list-style: none;
     display: block;
     width: 100%;
@@ -83,47 +76,57 @@ body
     /*background-color: red;*/
     text-align: right;
 }
-
-.nav ul li:last-child
-{
+@media (max-width: 860px) {
+    .header .nav ul {
+        background-color: rgba(0,0,0,0.7);
+        height: auto!important;
+        width: 208px;
+        padding-bottom: 35px;
+    }
+}
+.header .nav ul li:last-child {
     margin-right: 32px;
 }
-.nav ul li
-{
+.header .nav ul li {
     display: inline-block;
     height: 104px;
     margin-left: 16px;
     margin-right: 16px;
     color: #444444;
-    font-family: open_sanscondensed_light;
     font-size: 22px;
 }
-
-.nav ul li a
-{
+@media (max-width: 860px) {
+    .header .nav ul li {
+        display: block;
+        text-align: left;
+        height: 50px;
+        color: #fff;
+    }
+}
+.header .nav ul li a {
     margin-top: 36px;
     display: inline-block;
+    font-family: open_sanscondensed_light !important;
     color: inherit;
     text-decoration: none;
     height: 33px;
 }
 
-.nav ul li a:hover
-{
-    border-bottom: 2px solid #d0d0d0;
+.header .nav ul li a.active,
+.header .nav ul li a:hover {
+    border-bottom: 2px solid #ecbd62;
 }
 
 /************************************************** M A I N ************************************************************/
 
 .main
 {
-    /*width: 90%;*/
     display: block;
     margin: 0 auto;
     min-height: 920px;
     padding-left: 65px;
     padding-right: 65px;
-    /*background-color: red;*/
+    padding-top: 25px;
     max-width: 1280px;
 }
 
@@ -788,11 +791,12 @@ input:-ms-input-placeholder{opacity: 1;}
 {
     display: inline-block;
     font-family: open_sanslight;
-    font-size: 33px;
+    font-size: 22px;
     color: white;
-    height: 75px;
-    padding-top: 30px;
+    height: 50px;
+    line-height: 50px;
     padding-right: 60px;
+    margin-top: 25px;
     /*line-height: 105px;*/
     text-decoration: none;
     background: url("../img/email-ico.png") center right no-repeat;

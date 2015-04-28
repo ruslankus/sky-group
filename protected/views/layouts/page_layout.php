@@ -3,6 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/home.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/login.css">
@@ -10,23 +12,38 @@
 </head>
 
 <body>
-    <section class="body-height">
-        <header class="header">
-            <a href="#" class="logo"></a>
-            <a href="#" class="right-box menu-button"></a>
-            <a href="#" class="right-box login-button"></a>
-            <nav class="nav">
-                <?php $this->widget('application.widgets.MainMenu');?>
-            </nav>
-        </header>
+    <section class="header-slider">
+        <div class="abs">
+            <div class="container">
+                <a href="/" class="logo"></a>
+                <a href="#" class="right-box login-button"></a>
+                <a href="#" class="right-box menu-button"></a>
+                <div class="nav"><?php $this->widget('application.widgets.MainMenu');?></div>
+            </div>
+        </div><!--/abs-->
+        
+        <div class="abs bottom">
+            <div class="home-form">
+                <div class="container">
+                    <?php $this->renderPartial('_register_form')?>
+                </div><!--/container-->
+            </div><!--/home-form-->
+        </div><!--/abs bottom-->
+        
+        <div class="slider-block">
+            <div class="slider-wrapper">
+                <div class="slide slide-1"></div>
+            </div>
+        </div>
     </section>
+    
     <main class="main">
     
         <?php echo $content; ?>
         
         <section class="footer">
             <div class="footer-top"></div>
-            <div class="footer-content"><span>ContactUs<span></div>
+            <div class="footer-content"><span>СВЯЗАТЬСЯ С НАМИ<span></div>
         </section>
     </main>
 
