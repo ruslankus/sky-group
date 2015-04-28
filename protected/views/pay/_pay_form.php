@@ -33,7 +33,7 @@
 		<input type="hidden" name="IDENTIFICATION.TRANSACTIONID" value="<?php echo $order_id; ?>" />
 		
 		
-         <fieldset class="reg-1">
+         <fieldset class="reg-3">
 		 <h2>Payer information</h2>
 		 <!--name-->
             <input placeholder="Имя" type="text" name="NAME.GIVEN" value="">
@@ -43,6 +43,7 @@
             <input placeholder="street" type="text" name="ADDRESS.STREET" value="<?php echo $sessData['street']?>">
             <input placeholder="city" type="text" name="ADDRESS.CITY" value="<?php echo $sessData['city']; ?>">
 			
+            
             <input placeholder="Zip Code" type="text" name="ADDRESS.ZIP" class="zip">
             <select name="ADDRESS.COUNTRY" class="country">
 				<option value="RU">Россия</option>
@@ -53,7 +54,7 @@
             <input placeholder="phone (optional)" type="text" name="CONTACT.PHONE" value="<?php echo $sessData['phone']; ?>">
             <input placeholder="mobile (optional)" type="text" name="CONTACT.MOBILE" value="<?php echo $sessData['mphone']; ?>">	
         </fieldset>
-		<fieldset class="card-info">
+		<fieldset class="reg-3 card-info">
 		<h2>Card Information</h2>
 		<div class="card">
 			<input placeholder="Name on Card" type="text" name="ACCOUNT.HOLDER" value="" />

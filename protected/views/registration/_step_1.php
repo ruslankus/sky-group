@@ -7,7 +7,7 @@
              placeholder="Номер промоутера" type="text" name="promotion_number" value="<?php echo $sessData['promotion_number']?>">
            
             <input placeholder="Имя" class="<?php echo $errors['user_name']? 'error' : '' ?>"
-             type="text" name="user_name" value="<?php echo $sessData['user_name']?> <?php ?>">
+             type="text" name="user_name" value="<?php echo $sessData['user_name']?>">
            
             <input placeholder="Фамилия"  class="<?php echo $errors['last_name']? 'error' : '' ?>"
              type="text" name="last_name" value="<?php echo $sessData['last_name']?>">

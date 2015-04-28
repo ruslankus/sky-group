@@ -7,7 +7,9 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
+input:focus {
+    outline: none;
+}
 body
 {
     min-width: 360px;
@@ -184,7 +186,23 @@ body
     padding-top: 7px;
     padding-bottom: 7px;
 }
-
+@media (min-width: 490px) and (max-width: 590px) {
+    .main .path-nav a, .main .path-nav span {
+        margin: 7px;
+        margin-top: 35px;
+    }
+}
+@media (max-width: 489px) {
+    .main .path-nav a, .main .path-nav span {
+        font-size: 12px;
+        padding: 10px;
+        padding-top: 5px;
+        padding-bottom: 6px;
+        margin-top: 35px;
+        margin: 7px;
+        margin-top: 35px;
+    }
+}
 .main .path-nav span
 {
     opacity: 0.6;
@@ -223,6 +241,11 @@ body
     float: left;
     position: relative;
     margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+    .form-area fieldset {
+        width: 100%;
+    }
 }
 .main .form-area fieldset.buttons
 {
@@ -368,7 +391,7 @@ body
     font-size: 18px;
     color: #444444;
     font-family: open_sanssemibold;
-    height: 48px;
+    padding: 15px 0;
 }
 
 .main .form-area .question-span span.right
@@ -688,7 +711,6 @@ input:-ms-input-placeholder{opacity: 1;}
 {
     float: right;
 }
-
 .main .form-area fieldset.reg-2 input[type=submit]
 {
     margin-top: 40px;
@@ -715,8 +737,7 @@ input:-ms-input-placeholder{opacity: 1;}
     margin-top: 40px;
 }
 
-.form-area input[type=submit], .form-area button, .form-area a.button
-{
+.form-area input[type=submit], .form-area button, .form-area a.button {
     display: block;
     height: 40px;
     color: #ecbd62;
@@ -733,27 +754,23 @@ input:-ms-input-placeholder{opacity: 1;}
     text-decoration: none;
 }
 
-.form-area input[type=submit].inactive, .main .form-area button.inactive, .main .form-area a.button.inactive
-{
+.form-area input[type=submit].inactive, .main .form-area button.inactive, .main .form-area a.button.inactive {
     color: #c2c2c2;
     background: url("../img/next-grey.png") center right no-repeat;
 }
 
-.form-area input[type=submit].pay, .main .form-area a.button.pay
-{
+.form-area input[type=submit].pay, .main .form-area a.button.pay {
     color: white;
     border: 2px solid #ecbd62;
     background: url("../img/next-white.png") #ecbd62 center right no-repeat;
 }
 
-.form-area a.button
-{
+.form-area a.button {
     height: 36px;
     line-height: 36px;
 }
 
-.form-area a.cancel-link
-{
+.form-area a.cancel-link {
     height: 36px;
     line-height: 36px;
     font-family: open_sanslight;
@@ -761,8 +778,7 @@ input:-ms-input-placeholder{opacity: 1;}
     padding-right: 20px;
 }
 
-.form-area input[type=submit].reversed, .form-area button.reversed, .form-area a.button.reversed
-{
+.form-area input[type=submit].reversed, .form-area button.reversed, .form-area a.button.reversed {
     padding-right: 10px;
     padding-left: 35px;
     background: url("../img/back.png") center left no-repeat;
@@ -780,7 +796,16 @@ input:-ms-input-placeholder{opacity: 1;}
     border-left: 1px solid #dadada;
     margin-bottom: 55px;
 }
-
+@media (max-width: 480px) {
+    .main .form-area fieldset.reg-1 input, .main .form-area fieldset.reg-2 input {
+        float: none;
+        width: 95%;
+    }
+    input[type=submit] {
+        width: 130px!important;
+        float: right!important;
+    }
+}
 /*footer*/
 .footer
 {

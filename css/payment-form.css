@@ -1,36 +1,41 @@
 h2 { margin: 35px 0; }
-.main .form-area fieldset.card-info .card { width: 90%; position: relative; overflow: hidden; height: auto;}
+.main .form-area fieldset.card-info .card { width: 100%; position: relative; overflow: hidden; height: auto;}
 .sur { overflow: hidden; width: 100%; height: auto; position: relative; }
-.main .form-area fieldset.card-info .card input
-{
-   width: 95%;
+.main .form-area fieldset input {
+   width: 100%!important;
 }
-
+.main .form-area fieldset input[type=submit] {
+   width: 150px!important;
+}
+.main .form-area fieldset .zip {
+	width: 25%!important;
+}
+.main .form-area fieldset .country {
+	width: 70%!important;
+	margin-left: 5%;
+}
 .main .form-area fieldset.card-info .card > .card-brand
 {
-	width: 180px;
-	float: left;
-	margin-top: 2px;
-	margin-right: 15px;
+	width: 45%;
 	text-align: center;
+	margin-right: 5%;
 }
 
-.main .form-area fieldset.card-info .card  .card-number
+.main .form-area fieldset.card-info .card .card-number
 {
 	display: inline-block;
-	width: auto!important;
+	width: 70%!important;
 	overflow: hidden;
-	float: none;
 }
 
-.main .form-area fieldset.card-info .card   .card-cvc
+.main .form-area fieldset.card-info .card .card-cvc
 {
-	width: 75px;
+	width: 25%!important;
+    margin-left: 5%;
 	display: inline-block;
-	margin-left: 15px;
-	float: right;
+    
 }
-.main .form-area fieldset.card-info .card  .question
+.main .form-area fieldset.card-info .card .question
 {
     position: absolute;
 	top: 8px;
@@ -38,21 +43,15 @@ h2 { margin: 35px 0; }
 }
 .main .form-area fieldset.card-info .card > .exp-year
 {
-	float: right;
-	width: 100px;
-	margin-right: 15px;
+	width: 20%;
+    margin-right: 5%;
 }
 .main .form-area fieldset.card-info .card > .exp-month
 {
-	float: right;
-	width: 100px;
-	margin-right: 15px;
+	width: 25%;
 }
 .clearfix { display: table; clear: both; }
 .main .form-area fieldset.card-info input[type=submit]
 {
    float: right;
 }
-
-.zip { display: inline-block!important; width: 153px!important; }
-.country { display: inline-block; width: 153px; margin-top: 2px; margin-left: 15px; }

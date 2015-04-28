@@ -31,7 +31,9 @@ button {
     font-size: 0.938em;
     padding: 3px 40px 3px 10px;
 }
-
+input:focus {
+    outline: none;
+}
 input {
     width: 90%;
     padding-left:10px;
