@@ -31,7 +31,7 @@
 <?echo $content?>
 
 <footer class="footer">
-    <a href="#">СВЯЗАТЬСЯ С НАМИ</a>
+    <a href="<?php echo Yii::app()->createUrl('main/contacts'); ?>">СВЯЗАТЬСЯ С НАМИ</a>
 </footer>
 
 <div class="login-box">

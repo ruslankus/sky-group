@@ -43,7 +43,7 @@
         
         <section class="footer">
             <div class="footer-top"></div>
-            <div class="footer-content"><span>СВЯЗАТЬСЯ С НАМИ<span></div>
+            <div class="footer-content"><span><a href="<?php echo Yii::app()->createUrl('main/contacts'); ?>">СВЯЗАТЬСЯ С НАМИ</a><span></div>
         </section>
     </main>
 

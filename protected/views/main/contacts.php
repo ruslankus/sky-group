@@ -11,37 +11,37 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/contacts.css');
 <section class="content">
     <div class="contacts-info">
         <div class="field">
-            Contact number
+            Контактный телефон
         </div>
         <div class="value">
             +470 000 00000
         </div>    
         <div class="field">
-            Help line (for Platinum and Diamond clients)
+            Линия помощи (для платиновых и алмазных клиентов)
         </div>
         <div class="value">
             +470 000 00000
         </div> 
         <div class="field">
-            24/7 help line (3 LS/min)
+            24/7 линия помощи (3LS/мин)
         </div>
         <div class="value">
             +470 000 00000
         </div> 
         <div class="field">
-            Complaint line
+            Линия жалоб
         </div>
         <div class="value">
             +470 000 00000
         </div> 
         <div class="field">
-            Help center online
+            Центр помощи онлайн
         </div>
         <div class="value">
         <a href="mailto:sg-help@server.com">sg-help@server.com</a>
         </div> 
         <div class="field">
-            Email for agents
+            Эл.почта для агентов
         </div>
         <div class="value">
             <a href="mailto:sg-spam@server.com">sg-spam@server.com</a>
@@ -50,23 +50,23 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/contacts.css');
     </div>
 
     <h2>
-        Get in touch with us
+        Свяжись с нами
     </h2>
 
 
     <div class="content-col left">
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Имя">
+        <input type="text" placeholder="Эл. почта">
     </div>
 
     <div class="content-col right">
-        <input type="text" placeholder="Country">
-        <input type="text" placeholder="Phone number">
+        <input type="text" placeholder="Страна">
+        <input type="text" placeholder="номер">
     </div>
     <div class="cls"></div>
-    <textarea>Your request, content, ect</textarea>
+    <textarea>Ваша заявка, содержание, т.д.</textarea>
     <div class="buttons">
-        <a href="#">Cancel</a><button>SEND</button>
+        <a href="#">Отменить </a><button>Отправить</button>
     </div>
 </section>
 </main>

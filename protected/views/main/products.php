@@ -10,42 +10,52 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/products.css');
 </section>
 
 <section class="content">
-    <div class="content-col left">
-        <h2>SUBTITLE TEXT</h2>
+    
+    <div class="content-col">
+        <h2>ПРОДУКТ 1 (название продукта)</h2>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
- 
-         <h2>SUBTITLE TEXT</h2>
+        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+    </div><!--/product-->
+    <div class="content-col">
+        <h2>ПРОДУКТ 2 (название продукта)</h2>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about_2.jpg">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
-        <h2>SUBTITLE TEXT</h2>
+        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+    </div><!--/product-->
+    <div class="content-col">
+        <h2>ПРОДУКТ 3 (название продукта)</h2>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
-    </div>
-    <div class="content-col right">
-        <h2>SUBTITLE TEXT</h2>
+        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+    </div><!--/product-->
+    <div class="content-col">
+        <h2>ПРОДУКТ 4 (название продукта)</h2>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about_2.jpg">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
-        <h2>SUBTITLE TEXT</h2>
+        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+    </div><!--/product-->
+    <div class="content-col">
+        <h2>ПРОДУКТ 5 (название продукта)</h2>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
-
-        <h2>SUBTITLE TEXT</h2>
+        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+    </div><!--/product-->
+    <div class="content-col">
+        <h2>ПРОДУКТ 6 (название продукта)</h2>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about_2.jpg">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus ultrices diam a pellentesque. Curabitur sed est suscipit, fringilla libero a, semper ipsum. Integer id quam nec diam aliquam consequat vitae sit amet augue. Duis eu elit vulputate, fringilla sapien vitae, iaculis dui. Vivamus eu fringilla urna, sit amet viverra dui. Donec varius, tortor ac suscipit vestibulum, magna sem dignissim tellus, eu ultricies diam libero et ligula. Maecenas interdum eros ut magna facilisis, non maximus ante semper. Aliquam erat volutpat.
-        </p>
-    </div>
+        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+    </div><!--/product-->
+    <div class="content-col">
+        <h2>ПРОДУКТ 7 (название продукта)</h2>
+        <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
+        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+    </div><!--/product-->
+    <div class="content-col">
+        <h2>ПРОДУКТ 8 (название продукта)</h2>
+        <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about_2.jpg">
+        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+    </div><!--/product-->
+    <div class="content-col">
+        <h2>ПРОДУКТ 9 (название продукта)</h2>
+        <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
+        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+    </div><!--/product-->
     <div class="cls"></div>
 </section>
 </main>
