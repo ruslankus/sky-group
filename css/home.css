@@ -271,6 +271,7 @@ button {
     left: 0;
     right: 0;
     top: 0;
+    z-index: 2;
 }
 .header-slider > .abs.bottom {
     top: auto;
@@ -384,6 +385,71 @@ button {
 .header-slider > .slider-block {
     width: 100%;
     height: 100%;
+}
+.header-slider > .slider-block > .slider-move {
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    margin-left: -37px;
+}
+.header-slider > .slider-block > .slider-move > span {
+    display: block;
+    background: url(../img/slider-move.png) center center no-repeat;
+    width: 74px;
+    height: 74px;
+}
+.header-slider > .slider-block > .slider-wrapper {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    position: relative;
+}
+.header-slider > .slider-block > .slider-wrapper > .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.header-slider > .slider-block > .slider-wrapper > .slide:first-of-type {
+    display: block;
+}
+.header-slider > .slider-block > .slider-wrapper > .slide.slide-1 {
     background: url(../img/home_bg.jpg) center center no-repeat;
     background-size: cover;
+}
+.header-slider > .slider-block > .slider-wrapper > .slide.slide-2 {
+    background: url(../img/home_bg.jpg) center center no-repeat;
+    background-size: cover;
+}
+.header-slider > .slider-block > .slider-nav {
+    position: absolute;
+    width: 100%;
+    bottom: 120px;
+    text-align: center;
+}
+.header-slider > .slider-block > .slider-nav > ul {
+    display: block;
+    text-align: center;
+    height: auto;
+}
+.header-slider > .slider-block > .slider-nav > ul > li {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 5px;
+    background-color: rgba(0,0,0,0);
+    border: 2px solid #fff;
+    border-radius: 7px;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+}
+.header-slider > .slider-block > .slider-nav > ul > li:hover,
+.header-slider > .slider-block > .slider-nav > ul > li.active {
+    background-color: rgba(0,0,0,0.7);
 }

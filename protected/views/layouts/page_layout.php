@@ -33,6 +33,18 @@
         <div class="slider-block">
             <div class="slider-wrapper">
                 <div class="slide slide-1"></div>
+                <div class="slide slide-2"></div>
+                <div class="slide slide-3"></div>
+            </div>
+            <a href="#" class="slider-move"><span></span></a>
+            <div class="slider-nav">
+                <ul>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
         </div>
     </section>
