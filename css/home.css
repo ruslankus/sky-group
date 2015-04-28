@@ -414,11 +414,13 @@ button {
     right: 0;
     bottom: 0;
 }
+
+.header-slider > .slider-block > .slider-wrapper > .slide.active,
 .header-slider > .slider-block > .slider-wrapper > .slide:first-of-type {
     display: block;
 }
 .header-slider > .slider-block > .slider-wrapper > .slide.slide-1 {
-    background: url(../img/home_bg.jpg) center center no-repeat;
+    background: url(../img/home-banner.jpg) center center no-repeat;
     background-size: cover;
 }
 .header-slider > .slider-block > .slider-wrapper > .slide.slide-2 {

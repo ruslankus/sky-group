@@ -229,5 +229,25 @@ $(document).ready(function(){
         $('.login-box').removeClass('active');
         return false;
     });
+    
+    // home slider move down
+    $(".slider-move").on("click", function() {
+        $('html, body').animate({
+				scrollTop: $("main").offset().top
+			}, 500);
+        return false;
+    });
+    // custom slideshow
+    $(".slider-wrapper > .slide").each(function(i){
+        $(this).data("id",i+1);
+        var nav = $("<li>");
+        if (i==0) {
+            nav.addClass("active");
+            $(this).addClass("active");
+        }
+        nav.data("id",i+1);
+        console.log(nav.data("id"));
+        nav.appendTo(".slider-nav > ul");
+    });
 
 });
