@@ -15,7 +15,7 @@
 
             <div class="children-list">
 
-                <fieldset class="reg-1" id="children_0">
+                <fieldset class="reg-3" id="children_0">
                     <label class="bold-label">1й ребёнок</label>
                     <input placeholder="Имя" type="text" name="children[0][name]" value="">
                     <input placeholder="Фамилия" type="text" name="children[0][surname]" value="">
@@ -33,7 +33,7 @@
                 </fieldset>
                 <div style="clear: both;"></div>
 
-                <fieldset class="reg-1" id="children_1">
+                <fieldset class="reg-3" id="children_1">
                     <label class="bold-label">2й ребёнок</label>
                     <input placeholder="Имя" type="text" name="children[1][name]" value="">
                     <input placeholder="Фамилия" type="text" name="children[1][surname]" value="">
@@ -51,7 +51,7 @@
                 </fieldset>
                 <div style="clear: both;"></div>
 
-                <fieldset class="reg-1" id="children_2">
+                <fieldset class="reg-3" id="children_2">
                     <label class="bold-label">3й ребёнок</label>
                     <input placeholder="Имя" type="text" name="children[2][name]" value="">
                     <input placeholder="Фамилия" type="text" name="children[2][surname]" value="">

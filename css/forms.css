@@ -300,7 +300,7 @@ body
 .form-area input[type=text], .form-area input[type=password]
 {
     display: block;
-    width: 90%;
+    width: 95%;
     padding-left: 2.5%;
     padding-right: 2.5%;
     float: left;
@@ -392,6 +392,7 @@ body
     color: #444444;
     font-family: open_sanssemibold;
     padding: 15px 0;
+    line-height: 25px;
 }
 
 .main .form-area .question-span span.right
@@ -503,12 +504,12 @@ body
     font-family: open_sanslight;
     font-size: 18px;
     color: #444444;
-    height: 75px;
+    height: 55px;
     margin-right: 45px;
     padding-left: 35px;
     position: relative;
     cursor: pointer;
-    line-height: 25px;
+    line-height: 55px;
     text-transform: none;
 }
 
@@ -520,8 +521,8 @@ body
     font-family: open_sanslight;
     font-size: 18px;
     color: #444444;
-    height: 50px;
-    line-height: 29px;
+    height: 55px;
+    line-height: 55px;
     /*margin-right: 45px;*/
     /*padding-left: 35px;*/
     position: relative;
@@ -561,7 +562,7 @@ body
     display: block;
     position: absolute;
     left: 0;
-    top: 1px;
+    top: 15px;
     width: 23px;
     height: 23px;
     border: 2px solid #ecbd62;

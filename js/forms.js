@@ -148,7 +148,7 @@ $(document).ready(function(){
         var count_to_display = children_current_nr+1;
 
         var html = '' +
-            '<fieldset class="reg-1" id="children_'+children_current_nr+'">' +
+            '<fieldset class="reg-3" id="children_'+children_current_nr+'">' +
             '<label class="bold-label">'+count_to_display+'й ребёнок</label>' +
             '<input placeholder="Имя" type="text" name="children['+children_current_nr+'][name]" value="">' +
             '<input placeholder="Фамилия" type="text" name="children['+children_current_nr+'][surname]" value="">' +

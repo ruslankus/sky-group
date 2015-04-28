@@ -28,7 +28,7 @@
         <div style="clear: both;"></div>
 
         <section class="offset hidden-block if-other-person">
-            <fieldset class="right">
+            <fieldset class="right reg-3">
                 <label>Данные владельца карты</label>
                 <input placeholder="Имя владельца карты" type="text" name="" value="">
                 <input placeholder="Фамилия владельца карты" type="text" name="" value="">

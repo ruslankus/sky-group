@@ -12,7 +12,7 @@
         <div style="clear: both;"></div>
 
         <section class="offset <?php echo ($sessData['married'] == 'Yes')? '' : 'hidden-block'; ?> if-married">
-            <fieldset class="reg-1">
+            <fieldset class="reg-3">
                 <a href="#" class="question"></a>
                 <input class="promo" placeholder="Номер ID" type="text" name="partner_Id" value="<?php echo $sessData['partner_Id']?>">
                 <input placeholder="Имя (вписываются с первой страницы)" type="text" name="p_fname" value="<?php echo $sessData['p_fname']?>">
@@ -44,7 +44,7 @@
 
             <div style="clear: both;"></div>
 
-            <fieldset class="reg-1 small-height">
+            <fieldset class="reg-3 small-height">
                 <input placeholder="Профессия" type="text" name="profession" value="<?php echo $sessData['profession']; ?>">
                 <input placeholder="Место работы" type="text" name="employment" value="<?php echo $sessData['employment']; ?>">
             </fieldset>
