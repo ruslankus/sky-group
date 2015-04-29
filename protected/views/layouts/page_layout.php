@@ -19,6 +19,11 @@
                 <a href="#" class="right-box login-button"></a>
                 <a href="#" class="right-box menu-button"></a>
                 <div class="nav"><?php $this->widget('application.widgets.MainMenu');?></div>
+                <?php if($lng == 'en'): ?>
+                    <a href="<?php echo Yii::app()->createUrl('/ru/main/index') ?>" class="right-box language-switcher">RU</a>
+                <?php else: ?>
+                    <a href="<?php echo Yii::app()->createUrl('/en/main/index') ?>" class="right-box language-switcher">EN</a>
+                <?php endif; ?>
             </div>
         </div><!--/abs-->
         
