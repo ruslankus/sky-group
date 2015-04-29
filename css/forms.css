@@ -14,7 +14,30 @@ body
 {
     min-width: 360px;
 }
-
+.questionmark {
+    background-color: #f0b74a;
+    padding: 5px 15px;
+    border-radius: 6px;
+    border-bottom-right-radius: 0px;
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    bottom: 27px;
+    right: 10px;
+    width: 250px;
+    z-index: 3;
+}
+.errorMessage {
+    background-color: #f7142a;
+    padding: 5px 15px;
+    border-radius: 6px;
+    border-bottom-left-radius: 0px;
+    color: #fff;
+    display: block;
+    position: absolute;
+    width: 250px;
+    z-index: 2;
+}
 /********************************************* H E A D E R ************************************************************/
 
 .header

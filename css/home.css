@@ -25,18 +25,14 @@ body
 
 /***************** home form ******************/
 
-input,
-button {
-    color: #ffffff;
-    font-size: 0.938em;
-    padding: 3px 40px 3px 10px;
-}
 input:focus {
     outline: none;
 }
 input {
     width: 90%;
-    padding-left:10px;
+    color: #ffffff;
+    font-size: 0.938em;
+    padding: 3px 10px 3px 10px;
     background:#ecbd62;
     border-top: none;
     border-right: none;
@@ -48,10 +44,13 @@ input {
 
 button {
     background: transparent;
-    color:#ffffff;
+    color: #ffffff;
+    font-size: 0.938em;
+    padding: 3px 40px 3px 10px;
     border:2px solid #ffffff;
     border-radius:3px;
     background: url('../img/home_but_arr.png') 95% 5px no-repeat;
+    cursor: pointer;
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
@@ -148,11 +147,7 @@ button {
     line-height: auto;
 }
 
-.client-box p {
-    padding-top:0;
-    font-size: 0.813em;
-    line-height: 1.125em;
-}
+
 
 .silver {
     background: url('../img/client_silver.jpg') no-repeat left top;
@@ -235,7 +230,7 @@ button {
     height:145px;
     background: #444444;
 }
-
+.footer a { text-decoration: none; }
 .footer-content {
     width:320px;
     margin:0px auto 0 auto;
@@ -246,10 +241,7 @@ button {
     line-height: 50px;
     text-align: center;
     background: url('../img/home_footer_contacts_us.png') no-repeat right center; 
-}
-.footer-content a {
-    color: #fff;
-    text-decoration: none;
+    display: block;
 }
 .footer-top {
     height:40px;

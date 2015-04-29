@@ -1,7 +1,7 @@
 <? /* $order_id = $objOrders->id */ ?>
 <?php $cs = Yii::app()->clientScript; ?>
-<?php $cs->registerCssFile(Yii::app()->request->baseUrl."/css/payment-form.css?".time()); ?>
-<?php $cs->registerScriptFile(Yii::app()->request->baseUrl."/js/payment-form.js?".time(), CClientScript::POS_END); ?>
+<?php $cs->registerCssFile(Yii::app()->request->baseUrl."/css/payment-form.css"); ?>
+<?php $cs->registerScriptFile(Yii::app()->request->baseUrl."/js/payment-form.js", CClientScript::POS_END); ?>
 <main class="main">
 <section class="header-section">
     <h1>Оплата</h1>

@@ -43,5 +43,11 @@ class MainController extends Controller
         $this->render('news');
     }
     
-    
+    public function actionError() {
+        $this->layout = '';
+        if($error=Yii::app()->errorHandler->error)
+        {
+            $this->render('error', array("error"=>$error) );
+        }
+    }
 }

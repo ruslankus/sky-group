@@ -44,9 +44,9 @@
         </section>
 
         <fieldset class="buttons">
-            <a class="reversed left button" href="#">Назад</a>
+            <a class="reversed left button" href="/registration/step/6">Назад</a>
             <input class="right pay" type="submit" value="Оплатить">
-            <a class="right cancel-link" href="#">Отменить</a>
+            <a class="right cancel-link" href="/">Отменить</a>
         </fieldset>
 
         <div style="clear: both;"></div>

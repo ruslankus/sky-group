@@ -1,25 +1,32 @@
+<?php $cs = Yii::app()->clientScript; ?>
+<?php $cs->registerScriptFile(Yii::app()->request->baseUrl."/js/jquery.mask.min.js", CClientScript::POS_END); ?>
+<?php $cs->registerScript("promomask", "$('.promo').mask('AA 000', {
+    translation: {
+      A: {pattern: /[A-Za-z]/}
+    }
+  });", CClientScript::POS_END, array(CClientScript::POS_READY)); ?>
 <section class="form-area">
     <?php echo CHtml::beginForm();?>
          <fieldset class="reg-1">
-            <a href="#" class="question"></a>
+            <a href="#" class="question" data-questionmark="There should be some long or not long text."></a>
             
-            <input class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>"
+            <input data-error="<?php echo $errors['promotion_number']; ?>" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>"
              placeholder="Номер промоутера" type="text" name="promotion_number" value="<?php echo $sessData['promotion_number']?>">
            
-            <input placeholder="Имя" class="<?php echo $errors['user_name']? 'error' : '' ?>"
+            <input data-error="<?php echo $errors['user_name']; ?>" placeholder="Имя" class="<?php echo $errors['user_name']? 'error' : '' ?>"
              type="text" name="user_name" value="<?php echo $sessData['user_name']?>">
            
-            <input placeholder="Фамилия"  class="<?php echo $errors['last_name']? 'error' : '' ?>"
+            <input data-error="<?php echo $errors['last_name']; ?>" placeholder="Фамилия"  class="<?php echo $errors['last_name']? 'error' : '' ?>"
              type="text" name="last_name" value="<?php echo $sessData['last_name']?>">
         </fieldset>
         <fieldset class="reg-2">
-            <input placeholder="Электронная почта"  class="<?php echo $errors['email']? 'error' : '' ?>"
+            <input data-error="<?php echo $errors['email']; ?>" placeholder="Электронная почта"  class="<?php echo $errors['email']? 'error' : '' ?>"
              type="text" name="email" value="<?php echo $sessData['email']?>">
              
-            <input placeholder="Пароль"  class="<?php echo $errors['password']? 'error' : '' ?>"
+            <input data-error="<?php echo $errors['password']; ?>" placeholder="Пароль"  class="<?php echo $errors['password']? 'error' : '' ?>"
              type="password" name="password" value="">
              
-            <input placeholder="Повторите пароль"  class="<?php echo $errors['next_pass']? 'error' : '' ?>"
+            <input data-error="<?php echo $errors['next_pass']; ?>" placeholder="Повторите пароль"  class="<?php echo $errors['next_pass']? 'error' : '' ?>"
              type="password" name="next_pass" value="">
             
             <input type="submit" value="Далее">

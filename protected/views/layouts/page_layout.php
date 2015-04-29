@@ -33,8 +33,6 @@
         <div class="slider-block">
             <div class="slider-wrapper">
                 <div class="slide active" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-banner.jpg);"></div>
-                <div class="slide" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home_bg.jpg);"></div>
-                <div class="slide" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-test.jpg);"></div>
             </div>
             <a href="#" class="slider-move"><span></span></a>
             <div class="slider-nav">
@@ -49,7 +47,7 @@
         
         <section class="footer">
             <div class="footer-top"></div>
-            <div class="footer-content"><span><a href="<?php echo Yii::app()->createUrl('main/contacts'); ?>">СВЯЗАТЬСЯ С НАМИ</a><span></div>
+            <a href="<?php echo Yii::app()->createUrl('main/contacts'); ?>"><span class="footer-content"><span>СВЯЗАТЬСЯ С НАМИ</span></span></a>
         </section>
     </main>
 

@@ -11,6 +11,9 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/forms.css">
     <title><?php echo $this->title;?></title>
+    
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.2.min.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/forms.js"></script>
 </head>
 
 <body>
@@ -51,7 +54,5 @@
 
 
 </body>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.2.min.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/forms.js"></script>
 
 </html>

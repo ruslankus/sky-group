@@ -6,7 +6,10 @@
                         <h1>О НАС</h1>
                         <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home1.jpg">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper sem in luctus accumsan. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus id pretium ligula, sed fringilla arcu. In et laoreet velit, quis accumsan turpis. Suspendisse potenti. Aliquam iaculis porttitor odio. Praesent vehicula tortor vel fermentum semper. 
+                            SkyGroup – это закрытый членский клуб, объединяющий большую группу людей с целью участия и поддержки пользователей в различных системах услуг. SkyGroup предлагает 5 различных видов членства, из которых по гибкой цене Вы можете выбрать абонемент, который устроит Вас и Вашу семью во всех отношениях.
+                        </p>
+                        <p>
+                            Мы постоянно расширяем перечень наших предложений и возможностей, поэтому наши клиенты могут получить широкий спектр услуг, соответствующих самым высоким критериям оценки качества.
                         </p>
                     </div> <!-- / info -col-content -->
                 </div>

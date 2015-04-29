@@ -19,7 +19,7 @@
         </fieldset>
 
         <fieldset class="buttons">
-            <a class="reversed left button" href="#">Назад</a>
+            <a class="reversed left button" href="/registration/step/5">Назад</a>
             <input class="right" type="submit" value="Далее">
         </fieldset>
 

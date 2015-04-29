@@ -27,7 +27,15 @@ $(document).ready(function(){
         {
             $(".if-married").addClass('hidden-block');
         }
-
+        //activate same-adress block
+        if($(this).attr('for') == 'same-no')
+        {
+            $(".if-same").removeClass('hidden-block');
+        }
+        else if($(this).attr('for') == 'same-yes')
+        {
+            $(".if-same").addClass('hidden-block');
+        }
         //activate children block
         if($(this).attr('for') == 'children-yes')
         {
@@ -249,7 +257,6 @@ $(document).ready(function(){
         nav.appendTo(".slider-nav > ul");
     });
     $(document).find(".slider-nav > ul > li").on("click", function() {
-        console.log("opa");
         if (!$(this).hasClass("active")) {
             var $id = $(this).data("id");
             $(this).addClass("active").siblings().removeClass("active");
@@ -258,5 +265,49 @@ $(document).ready(function(){
         }
         return false;
     });
-
+    $(document).find(".question").on("click", function() {
+        var questionmark = $(".questionmark");
+        if (questionmark.length>0) {
+            if ($(this).find(".questionmark").lenght>0) {
+                questionmark.html($(this).data("questionmark"));
+                questionmark.appendTo($(this));
+                questionmark.hide();
+                questionmark.fadeIn();
+            }
+            if ($(this).find(".questionmark").css("display")=='none') {
+                questionmark.html($(this).data("questionmark"));
+                questionmark.fadeIn();
+            }
+            questionmark.on("click", function() {
+                questionmark.fadeOut();
+                return false;
+            });
+        } else {
+            var question = $("<span>");
+            question.html($(this).data("questionmark"));
+            question.addClass("questionmark");
+            question.appendTo($(this));
+            question.hide();
+            question.fadeIn();
+            question.on("click", function() {
+                question.fadeOut();
+                return false;
+            });
+        }
+        return false;
+    });
+    $(document).find("*[data-error]").each(function () {
+        
+        var $this = $(this);
+        var $error = $(this).data("error");
+        if ($error) {
+            var $item = $("<span>");
+            $item.html($error);
+            $item.addClass("errorMessage");
+            $item.css({width: $this.innerWidth(), top: $this.offset().top-30, left: $this.offset().left});
+            $item.appendTo("body");
+            $item.hide();
+            $item.fadeIn();
+        }
+    });
 });
