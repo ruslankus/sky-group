@@ -73,9 +73,9 @@
         </form>
     </div>
 
-</body>
-
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.2.min.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/forms.js"></script>
+</body>
+
 
 </html>

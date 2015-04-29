@@ -4,7 +4,7 @@
                     <div class="col-ico about"></div>
                     <div class="info-col-content">
                         <h1>О НАС</h1>
-                        <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home1.jpg">
+                        <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home1.jpg" alt="">
                         <p>
                             SkyGroup – это закрытый членский клуб, объединяющий большую группу людей с целью участия и поддержки пользователей в различных системах услуг. SkyGroup предлагает 5 различных видов членства, из которых по гибкой цене Вы можете выбрать абонемент, который устроит Вас и Вашу семью во всех отношениях.
                         </p>
