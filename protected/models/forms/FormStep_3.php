@@ -30,24 +30,25 @@ class FormStep_3 extends CFormModel
 	}
     public function marriedRules($attributes, $params)
     {
+        $lng = Yii::app()->language;
         if ($this->married == 'yes') {
             if ( empty( $this->partner_id )) {
-                  $this->addError('partner_id', "Требуется вход");
+                  $this->addError('partner_id', ($lng == 'ru' ? "Требуется вход":"Required field"));
              }
             if ( empty( $this->p_fname )) {
-                  $this->addError('p_fname', "Требуется вход");
+                  $this->addError('p_fname', ($lng == 'ru' ? "Требуется вход":"Required field"));
              }
             if ( empty( $this->p_lname )) {
-                  $this->addError('p_lname', "Требуется вход");
+                  $this->addError('p_lname', ($lng == 'ru' ? "Требуется вход":"Required field"));
              }
             if ( empty( $this->bday )) {
-                  $this->addError('bday', "Требуется вход");
+                  $this->addError('bday', ($lng == 'ru' ? "Требуется вход":"Required field"));
              }
             if ( empty( $this->byear )) {
-                  $this->addError('byear', "Требуется вход");
+                  $this->addError('byear', ($lng == 'ru' ? "Требуется вход":"Required field"));
              }
             if ( empty( $this->bmonth )) {
-                  $this->addError('bmonth', "Требуется вход");
+                  $this->addError('bmonth', ($lng == 'ru' ? "Требуется вход":"Required field"));
              }
             if ( !is_numeric( $this->byear )) {
                   $this->addError('byear', "Неправильный выбор");
@@ -62,24 +63,25 @@ class FormStep_3 extends CFormModel
     }
     public function addressRules($attributes, $params)
     {
+        $lng = Yii::app()->language;
         if ($this->same_address == 'no') {
             if ( empty( $this->street )) {
-                  $this->addError('street', "Требуется вход");
+                  $this->addError('street', ($lng == 'ru' ? "Требуется вход":"Required field"));
              }
             if ( empty( $this->house )) {
-                  $this->addError('house', "Требуется вход");
+                  $this->addError('house', ($lng == 'ru' ? "Требуется вход":"Required field"));
              }
             if ( empty( $this->flat )) {
-                  $this->addError('flat', "Требуется вход");
+                  $this->addError('flat', ($lng == 'ru' ? "Требуется вход":"Required field"));
              }
             if ( empty( $this->city )) {
-                  $this->addError('city', "Требуется вход");
+                  $this->addError('city', ($lng == 'ru' ? "Требуется вход":"Required field"));
              }
             if ( empty( $this->country )) {
-                  $this->addError('country', "Требуется вход");
+                  $this->addError('country', ($lng == 'ru' ? "Требуется вход":"Required field"));
              }
             if ( empty( $this->post_code )) {
-                  $this->addError('post_code', "Требуется вход");
+                  $this->addError('post_code', ($lng == 'ru' ? "Требуется вход":"Required field"));
              }
         }
     }
