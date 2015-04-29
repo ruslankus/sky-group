@@ -8,8 +8,8 @@
 
             <input data-error="<?php echo $errors['id_number']; ?>" class="promo <?php echo $errors['id_number']? 'error' : '' ?>" placeholder="Номер ID" type="text" name="id_number" value="<?php echo $sessData['id_number']?>">
 
-            <input class="<?php echo $errors['first_name']? 'error' : '' ?>" data-error="<?php echo $errors['first_name']; ?>" placeholder="Имя (вписываются с первой страницы)" type="text" name="first_name" value="<?php echo $sessData['first_name']?>">
-            <input class="<?php echo $errors['last_name']? 'error' : '' ?>" data-error="<?php echo $errors['last_name']; ?>" placeholder="Фамилия (вписываются с первой страницы)" type="text" name="last_name" value="<?php echo $sessData['last_name']?>">
+            <input class="<?php echo $errors['first_name']? 'error' : '' ?>" data-error="<?php echo $errors['first_name']; ?>" placeholder="Имя (вписываются с первой страницы)" type="text" name="first_name" value="<?php echo ($sessData['first_name'] ? $sessData['first_name'] : $step_1['first_name']); ?>">
+            <input class="<?php echo $errors['last_name']? 'error' : '' ?>" data-error="<?php echo $errors['last_name']; ?>" placeholder="Фамилия (вписываются с первой страницы)" type="text" name="last_name" value="<?php echo ($sessData['last_name'] ? $sessData['last_name'] : $step_1['last_name']); ?>">
             
              <label>Дата Рождения</label>
 

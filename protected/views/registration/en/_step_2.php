@@ -1,15 +1,16 @@
 <?php $cs = Yii::app()->clientScript; ?>
 <?php $cs->registerScriptFile(Yii::app()->request->baseUrl."/js/jquery.mask.min.js", CClientScript::POS_END); ?>
 <?php $cs->registerScript("promomask", "$('.promo').mask('000000000');", CClientScript::POS_END, array(CClientScript::POS_READY)); ?>
+<?php $step_1 = $got->get('step_1'); ?>
+
 <section class="form-area">
    <?php echo CHtml::beginForm();?>
         <fieldset class="reg-1">
             <a href="#" class="question" data-questionmark="укажите код удостоверения личности"></a>
-
             <input data-error="<?php echo $errors['id_number']; ?>" class="promo <?php echo $errors['id_number']? 'error' : '' ?>" placeholder="Number ID" type="text" name="id_number" value="<?php echo $sessData['id_number']?>">
 
-            <input class="<?php echo $errors['first_name']? 'error' : '' ?>" data-error="<?php echo $errors['first_name']; ?>" placeholder="Name (saved and transferred from the first page)" type="text" name="first_name" value="<?php echo $sessData['first_name']?>">
-            <input class="<?php echo $errors['last_name']? 'error' : '' ?>" data-error="<?php echo $errors['last_name']; ?>" placeholder="Surname (saved and transferred from the first page)" type="text" name="last_name" value="<?php echo $sessData['last_name']?>">
+            <input class="<?php echo $errors['first_name']? 'error' : '' ?>" data-error="<?php echo $errors['first_name']; ?>" placeholder="Name (saved and transferred from the first page)" type="text" name="first_name" value="<?php echo ($sessData['first_name'] ? $sessData['first_name'] : $step_1['user_name']); ?>">
+            <input class="<?php echo $errors['last_name']? 'error' : '' ?>" data-error="<?php echo $errors['last_name']; ?>" placeholder="Surname (saved and transferred from the first page)" type="text" name="last_name" value="<?php echo ($sessData['last_name'] ? $sessData['last_name'] : $step_1['last_name']); ?>">
             
              <label>Date Of Birth</label>
 

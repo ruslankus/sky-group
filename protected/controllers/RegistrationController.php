@@ -20,7 +20,7 @@ class RegistrationController extends Controller
     public function actionIndex(){
         $lng = Yii::app()->language;
         $this->title = $lng == 'ru' ? 'Регистрация' : 'Registration';
-        $this->redirect("/registration/step/1");
+        $this->redirect("/{$lng}/registration/step/1");
     }
     
     public function actionStep($id){
@@ -82,7 +82,7 @@ class RegistrationController extends Controller
         //Debug::d($_SESSION);
 
         $lng = Yii::app()->language;
-        $this->render("{$lng}/registration",array('step'=> $id, 'sessData' => $sessData, 'errors' => $errors,'objProds' => $objProds));
+        $this->render("{$lng}/registration",array('step'=> $id, 'sessData' => $sessData, 'got' => Yii::app()->session, 'errors' => $errors,'objProds' => $objProds));
     }
     
     

@@ -23,66 +23,30 @@ class FormStep_3 extends CFormModel
     public function rules()
 	{
 		return array(
-			// username and password are required
-			array('married, partner_id, p_fname, p_lname, bday, bmonth, byear', 'marriedRules'),
-            array('same_address, street, house, flat, city, country, post_code', 'addressRules'),
+			array('married, partner_id, p_fname, p_lname, bday, bmonth, byear', 'marriedRules', 'check'=>'partner_id, p_fname, p_lname, bday, bmonth, byear'),
+            array('same_address, street, house, flat, city, country, post_code', 'addressRules', 'check'=>'street, house, flat, city, country, post_code'),
 		);
 	}
-    public function marriedRules($attributes, $params)
+    public function marriedRules($attribute, $params)
     {
-        $lng = Yii::app()->language;
-        if ($this->married == 'yes') {
-            if ( empty( $this->partner_id )) {
-                  $this->addError('partner_id', ($lng == 'ru' ? "Требуется вход":"Required field"));
-             }
-            if ( empty( $this->p_fname )) {
-                  $this->addError('p_fname', ($lng == 'ru' ? "Требуется вход":"Required field"));
-             }
-            if ( empty( $this->p_lname )) {
-                  $this->addError('p_lname', ($lng == 'ru' ? "Требуется вход":"Required field"));
-             }
-            if ( empty( $this->bday )) {
-                  $this->addError('bday', ($lng == 'ru' ? "Требуется вход":"Required field"));
-             }
-            if ( empty( $this->byear )) {
-                  $this->addError('byear', ($lng == 'ru' ? "Требуется вход":"Required field"));
-             }
-            if ( empty( $this->bmonth )) {
-                  $this->addError('bmonth', ($lng == 'ru' ? "Требуется вход":"Required field"));
-             }
-            if ( !is_numeric( $this->byear )) {
-                  $this->addError('byear', "Неправильный выбор");
-             }
-            if ( !is_numeric( $this->bmonth )) {
-                  $this->addError('bmonth', "Неправильный выбор");
-             }
-            if ( !is_numeric( $this->bday )) {
-                  $this->addError('bday', "Неправильный выбор");
-             }
+        if (!empty($params['check']) && $this->married == 'yes') {
+            $attributes = explode(",", str_replace(' ', '', $params['check']));
+            foreach ($attributes as $get) {
+                if (empty($this->{$get})) {
+                    $this->addError($get, Yii::t('yii.skygroup','Field cannot be blank.'));
+                }
+            }
         }
     }
-    public function addressRules($attributes, $params)
+    public function addressRules($attribute, $params)
     {
-        $lng = Yii::app()->language;
-        if ($this->same_address == 'no') {
-            if ( empty( $this->street )) {
-                  $this->addError('street', ($lng == 'ru' ? "Требуется вход":"Required field"));
-             }
-            if ( empty( $this->house )) {
-                  $this->addError('house', ($lng == 'ru' ? "Требуется вход":"Required field"));
-             }
-            if ( empty( $this->flat )) {
-                  $this->addError('flat', ($lng == 'ru' ? "Требуется вход":"Required field"));
-             }
-            if ( empty( $this->city )) {
-                  $this->addError('city', ($lng == 'ru' ? "Требуется вход":"Required field"));
-             }
-            if ( empty( $this->country )) {
-                  $this->addError('country', ($lng == 'ru' ? "Требуется вход":"Required field"));
-             }
-            if ( empty( $this->post_code )) {
-                  $this->addError('post_code', ($lng == 'ru' ? "Требуется вход":"Required field"));
-             }
+        if (!empty($params['check']) && $this->same_address == 'no') {
+            $attributes = explode(",", str_replace(' ', '', $params['check']));
+            foreach ($attributes as $get) {
+                if (empty($this->{$get})) {
+                    $this->addError($get, Yii::t('yii.skygroup','Field cannot be blank.'));
+                }
+            }
         }
     }
 }
