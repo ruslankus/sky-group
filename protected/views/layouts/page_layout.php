@@ -33,6 +33,8 @@
         <div class="slider-block">
             <div class="slider-wrapper">
                 <div class="slide active" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-banner.jpg);"></div>
+                <div class="slide" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-banner_2.png);"></div>
+                <div class="slide" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-banner_3.png);"></div>
             </div>
             <a href="#" class="slider-move"><span></span></a>
             <div class="slider-nav">

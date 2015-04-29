@@ -103,7 +103,11 @@ button {
     max-width:400px;
     text-transform: uppercase;
 }
-
+.info-col-content ul li {
+    padding-bottom: 5px;
+    margin-left: 15px;
+    text-transform: capitalize;
+}
 .info-col-content h1{
     padding:0;
     font-family: open_sanscondensed_light;

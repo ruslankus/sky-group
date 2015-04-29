@@ -65,7 +65,7 @@
 			
 			<input class="card-cvc" placeholder="CVC" type="text" name="ACCOUNT.VERIFICATION" value="" />
 			
-			<a href="#" class="question"></a>
+			<a href="#" class="question" data-questionmark="укажите номер карточки удостоверения личности"></a>
 			</div>
 			<span class="clearfix"></span>
 			<select name="ACCOUNT.BRAND" class="card-brand">
