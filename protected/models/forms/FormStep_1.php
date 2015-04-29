@@ -31,7 +31,7 @@ class FormStep_1 extends CFormModel
         if ( !empty($this->promotion_number)) {
             $this->_promo = Discounts::model()->find("code=:promo", array(":promo"=>$this->promotion_number));
             if (!$this->_promo) {
-                $this->addError('promotion_number', Yii::t('skygroup','A PHP extension stopped the file upload.'));
+                $this->addError('promotion_number', Yii::t('yii.skygroup','Promoter\'s code is invalid.'));
             }
         }
     }

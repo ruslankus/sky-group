@@ -60,14 +60,14 @@ class Required extends CValidator
 		{
 			if(!$this->strict && $value!=$this->requiredValue || $this->strict && $value!==$this->requiredValue)
 			{
-				$message=$this->message!==null?$this->message:Yii::t('skygroup','It must be {value}.',
+				$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','It must be {value}.',
 					array('{value}'=>$this->requiredValue));
 				$this->addError($object,$attribute,$message);
 			}
 		}
 		elseif($this->isEmpty($value,$this->trim))
 		{
-			$message=$this->message!==null?$this->message:Yii::t('skygroup','Field cannot be blank.');
+			$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Field cannot be blank.');
 			$this->addError($object,$attribute,$message);
 		}
 	}
@@ -86,7 +86,7 @@ class Required extends CValidator
 		if($this->requiredValue!==null)
 		{
 			if($message===null)
-				$message=Yii::t('skygroup','It must be {value}.');
+				$message=Yii::t('yii.skygroup','It must be {value}.');
 			$message=strtr($message, array(
 				'{value}'=>$this->requiredValue,
 				'{attribute}'=>$object->getAttributeLabel($attribute),
@@ -100,7 +100,7 @@ if(value!=" . CJSON::encode($this->requiredValue) . ") {
 		else
 		{
 			if($message===null)
-				$message=Yii::t('skygroup','Field cannot be blank.');
+				$message=Yii::t('yii.skygroup','Field cannot be blank.');
 			$message=strtr($message, array(
 				'{attribute}'=>$object->getAttributeLabel($attribute),
 			));

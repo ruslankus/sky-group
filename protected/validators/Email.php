@@ -71,7 +71,7 @@ class Email extends CValidator
 
 		if(!$this->validateValue($value))
 		{
-			$message=$this->message!==null?$this->message:Yii::t('skygroup','Must be a valid email address.');
+			$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Must be a valid email address.');
 			$this->addError($object,$attribute,$message);
 		}
 	}
@@ -125,7 +125,7 @@ if (info)
 		else
 			$validateIDN='';
 
-		$message=$this->message!==null ? $this->message : Yii::t('skygroup','Must be a valid email address.');
+		$message=$this->message!==null ? $this->message : Yii::t('yii.skygroup','Must be a valid email address.');
 		$message=strtr($message, array(
 			'{attribute}'=>$object->getAttributeLabel($attribute),
 		));
