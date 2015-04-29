@@ -9,7 +9,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
     'defaultController' => 'main',
-
+    'language'=>'en',
 	// preloading 'log' component
 	'preload'=>array('log'),
 

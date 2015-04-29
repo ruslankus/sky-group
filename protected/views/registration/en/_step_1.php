@@ -8,7 +8,7 @@
 <section class="form-area">
     <?php echo CHtml::beginForm();?>
          <fieldset class="reg-1">
-            <a href="#" class="question" data-questionmark="There should be some long or not long text."></a>
+            <a href="#" class="question" data-questionmark="укажите номер агента для дальнейшей регистрации"></a>
             
             <input data-error="<?php echo $errors['promotion_number']; ?>" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>"
              placeholder="Номер промоутера" type="text" name="promotion_number" value="<?php echo $sessData['promotion_number']?>">
