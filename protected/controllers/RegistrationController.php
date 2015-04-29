@@ -57,9 +57,9 @@ class RegistrationController extends Controller
                 $next = $id + 1;
                                 
                  if($id == 7){
-                   $this->redirect("/pay/send");
+                   $this->redirect(Yii::app()->createUrl("{$lng}/pay/send"));
                 }else{
-                    $this->redirect("/registration/step/{$next}");    
+                    $this->redirect(Yii::app()->createUrl("{$lng}/registration/step/{$next}"));
                 }
             }
             else{

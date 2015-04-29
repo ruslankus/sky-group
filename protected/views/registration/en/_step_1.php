@@ -23,13 +23,13 @@
             <input data-error="<?php echo $errors['email']; ?>" placeholder="Email"  class="<?php echo $errors['email']? 'error' : '' ?>"
              type="text" name="email" value="<?php echo $sessData['email']?>">
              
-            <input data-error="<?php echo $errors['password']; ?>" placeholder="Пароль"  class="<?php echo $errors['password']? 'error' : '' ?>"
+            <input data-error="<?php echo $errors['password']; ?>" placeholder="Password"  class="<?php echo $errors['password']? 'error' : '' ?>"
              type="password" name="password" value="">
              
-            <input data-error="<?php echo $errors['next_pass']; ?>" placeholder="Повторите пароль"  class="<?php echo $errors['next_pass']? 'error' : '' ?>"
+            <input data-error="<?php echo $errors['next_pass']; ?>" placeholder="Repeat password"  class="<?php echo $errors['next_pass']? 'error' : '' ?>"
              type="password" name="next_pass" value="">
             
-            <input type="submit" value="Далее">
+            <input type="submit" value="Next step">
         </fieldset>
     <?php echo CHtml::endForm();?>
 </section>
