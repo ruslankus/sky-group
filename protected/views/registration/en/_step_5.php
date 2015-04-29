@@ -104,48 +104,48 @@
         <section class="offset hidden-block if-chasnaya-strahovka">
             <fieldset class="reg-3 small-height">
 
-                <input id="medicinskoye" type="radio" name="chasnaya-strahovka-type" value="1"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="medicinskoye">Медицинское</label>
+                <input id="medicinskoye" type="radio" name="chasnaya-strahovka-type" value="1"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="medicinskoye">Medical</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified medicinskoye strah-block">
                     <input placeholder="Name of the company" type="text" value="">
-                    <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom" data-questionmark=укажите сумму страхового покрытия, определённую условиями договора"></a>
+                    <input placeholder="Monthly payment" type="text" value="">
+                    <input placeholder="Coverage" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, определённую условиями договора"></a>
                     <div style="clear: both;"></div>
                 </div>
 
-                <input id="neschistny_sluchay" type="radio" name="chasnaya-strahovka-type" value="2"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="neschistny_sluchay">Несчастный случай</label>
+                <input id="neschistny_sluchay" type="radio" name="chasnaya-strahovka-type" value="2"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="neschistny_sluchay">Accident</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified neschistny_sluchay strah-block">
-                    <input placeholder="В какой компанииc?" type="text" value="">
-                    <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, определённую условиями договора"></a>
+                    <input placeholder="Name of the company" type="text" value="">
+                    <input placeholder="Monthly payment" type="text" value="">
+                    <input placeholder="Coverage" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, определённую условиями договора"></a>
                     <div style="clear: both;"></div>
                 </div>
 
-                <input id="strahovka_zhizni" type="radio" name="chasnaya-strahovka-type" value="3"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="strahovka_zhizni">Страховка жизни</label>
+                <input id="strahovka_zhizni" type="radio" name="chasnaya-strahovka-type" value="3"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="strahovka_zhizni">Life insurance</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified strahovka_zhizni strah-block">
-                    <input placeholder="В какой компании?" type="text" value="">
-                    <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, определённую условиями договора"></a>
+                    <input placeholder="Name of the company" type="text" value="">
+                    <input placeholder="Monthly payment" type="text" value="">
+                    <input placeholder="Coverage" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, определённую условиями договора"></a>
                     <div style="clear: both;"></div>
                 </div>
 
-                <input id="nakopitelnaya_programa" type="radio" name="chasnaya-strahovka-type" value="4"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="nakopitelnaya_programa">Накопительная программа</label>
+                <input id="nakopitelnaya_programa" type="radio" name="chasnaya-strahovka-type" value="4"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="nakopitelnaya_programa">Savings program</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified nakopitelnaya_programa strah-block">
-                    <input placeholder="В какой компании?" type="text" value="">
-                    <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, указанную в договоре"></a>
+                    <input placeholder="Name of the company" type="text" value="">
+                    <input placeholder="Monthly payment" type="text" value="">
+                    <input placeholder="Coverage" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, указанную в договоре"></a>
                     <div style="clear: both;"></div>
                 </div>
 
-                <input id="poteria_deesposobnosti" type="radio" name="chasnaya-strahovka-type" value="5"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="poteria_deesposobnosti">Потеря дееспособности</label>
+                <input id="poteria_deesposobnosti" type="radio" name="chasnaya-strahovka-type" value="5"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="poteria_deesposobnosti">The loss of capacity</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified poteria_deesposobnosti strah-block">
-                    <input placeholder="В какой компании?" type="text" value="">
-                    <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, определённую условиями договора"></a>
+                    <input placeholder="Name of the company" type="text" value="">
+                    <input placeholder="Monthly payment" type="text" value="">
+                    <input placeholder="Coverage" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, определённую условиями договора"></a>
                     <div style="clear: both;"></div>
                 </div>
 
@@ -154,8 +154,8 @@
         </section>
 
         <fieldset class="buttons">
-            <a class="reversed left button" href="/registration/step/4">Назад</a>
-            <input class="right" type="submit" value="Далее">
+            <a href="<?php echo Yii::app()->createUrl(Yii::app()->language.'/registration/step/4'); ?>" class="reversed left button">back</a>
+            <input class="right" type="submit" value="Next step">
         </fieldset>
 
 
