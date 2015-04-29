@@ -3,7 +3,6 @@
 class RegistrationController extends Controller
 {
     public $layout='//layouts/main_layout';
-    public $title = "Регистрация";
     public $currentStep;
     
     public $steps = array(
@@ -15,14 +14,21 @@ class RegistrationController extends Controller
         '6' => false,
         '7' => false,
      );
-    
+
+
+
     public function actionIndex(){
+        $lng = Yii::app()->language;
+        $this->title = $lng == 'ru' ? 'Регистрация' : 'Registration';
         $this->redirect("/registration/step/1");
     }
     
     public function actionStep($id){
 
         /* @var $model CFormModel | FormStep_1 | FormStep_2 | FormStep_3 | FormStep_4 | FormStep_5 | FormStep_6 | FormStep_7 */
+
+        $lng = Yii::app()->language;
+        $this->title = $lng == 'ru' ? 'Регистрация' : 'Registration';
 
         $objProds = null;
         $model_class_name = "FormStep_".$id;

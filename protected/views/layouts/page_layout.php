@@ -8,9 +8,9 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/home.css">
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/login.css">
-    <title>Главная</title>
+    <title><?php echo $this->title; ?></title>
 </head>
-
+<?php $lng = Yii::app()->language; ?>
 <body>
     <section class="header-slider">
         <div class="abs">
@@ -25,7 +25,7 @@
         <div class="abs bottom">
             <div class="home-form">
                 <div class="container">
-                    <?php $this->renderPartial('_register_form')?>
+                    <?php $this->renderPartial("//main/{$lng}/_register_form")?>
                 </div><!--/container-->
             </div><!--/home-form-->
         </div><!--/abs bottom-->
@@ -49,21 +49,21 @@
         
         <section class="footer">
             <div class="footer-top"></div>
-            <a href="<?php echo Yii::app()->createUrl('main/contacts'); ?>"><span class="footer-content"><span>СВЯЗАТЬСЯ С НАМИ</span></span></a>
+            <a href="<?php echo Yii::app()->createUrl('main/contacts'); ?>"><span class="footer-content"><span><?php echo $lng == 'en' ? 'CONNECT US' : 'СВЯЗАТЬСЯ С НАМИ'; ?></span></span></a>
         </section>
     </main>
 
     <div class="login-box">
-        <h2>Вход</h2>
+        <h2><?php echo $lng == 'en' ? 'Login' : 'Вход'; ?></h2>
         <span class="close"></span>
-        <form class="form-area" action="<?php echo Yii::app()->createUrl('cabinet/login') ?>" method="post">
-            <input placeholder="Электронная почта" type="text" name="login" value="">
-            <input placeholder="Пароль" type="password" name="password" value="">
+        <form class="form-area" action="<?php echo Yii::app()->createUrl($lng.'/cabinet/login') ?>" method="post">
+            <input placeholder="<?php echo $lng == 'en' ? 'Email' : 'Электронная почта'; ?>" type="text" name="login" value="">
+            <input placeholder="<?php echo $lng == 'en' ? 'Password' : 'Пароль'; ?>" type="password" name="password" value="">
             <div style="clear: both;"></div>
 
             <fieldset class="buttons">
-                <a href="#" class="left cancel-link">Регистрация</a>
-                <input class="pay right" type="submit" value="Войти">
+                <a href="#" class="left cancel-link"><?php echo $lng == 'en' ? 'Registration' : 'Регистрация'; ?></a>
+                <input class="pay right" type="submit" value="<?php echo $lng == 'en' ? 'Enter' : 'Войти'; ?>">
             </fieldset>
         </form>
     </div>

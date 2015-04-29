@@ -3,8 +3,9 @@
 class MainController extends Controller
 {
     public function actionIndex(){
-        
-        $this->title = "Главная";
+
+        $lng = Yii::app()->language;
+        $this->title = $lng == 'ru' ? "Главная" : "Home";
         
         $this->layout = '//layouts/page_layout';
         
@@ -13,41 +14,47 @@ class MainController extends Controller
             
             $arrStep = $_POST;
             Yii::app()->session->add("step_1", $arrStep);
-            
-            $this->redirect("/registration/step/1"); 
+
+            $lng = Yii::app()->language;
+            $this->redirect(Yii::app()->createUrl("{$lng}/registration/step/1"));
         }
         
-        $this->render('index');
+        $this->render("{$lng}/index");
     }//index
     
     
     public function actionAbout(){
-        $this->title = "О нас";
-        $this->render('about'); 
+        $lng = Yii::app()->language;
+        $this->title = $lng == 'ru' ? "О нас" : "About us";
+        $this->render("{$lng}/about");
     }
     
     
     public function actionContacts(){
-      $this->title = "Контакты";
-      $this->render('contacts');     
+        $lng = Yii::app()->language;
+        $this->title = $lng == 'ru' ? "Контакты" : "Contacts";
+        $this->render("{$lng}/contacts");
     }
     
     
     public function actionProducts(){
-        $this->render('products');      
+        $lng = Yii::app()->language;
+        $this->render("{$lng}/products");
     }
     
     
     public function actionNews(){
-        $this->title = "Новости";
-        $this->render('news');
+        $lng = Yii::app()->language;
+        $this->title = $lng == 'ru' ? "Новости" : "News";
+        $this->render("{$lng}/news");
     }
     
     public function actionError() {
         $this->layout = '';
+        $lng = Yii::app()->language;
         if($error=Yii::app()->errorHandler->error)
         {
-            $this->render('error', array("error"=>$error) );
+            $this->render("{$lng}/error", array("error"=>$error) );
         }
     }
 }

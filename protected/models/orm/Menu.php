@@ -8,6 +8,8 @@
  * @property string $label
  * @property string $value
  * @property string $route
+ * @property string $value_en
+ * @property string $value_ru
  */
 class Menu extends CActiveRecord
 {
@@ -27,10 +29,10 @@ class Menu extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('label, value, route', 'safe'),
+			array('label, value, route, value_en, value_ru', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, label, value, route', 'safe', 'on'=>'search'),
+			array('id, label, value, route, value_en, value_ru', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,6 +57,8 @@ class Menu extends CActiveRecord
 			'label' => 'Label',
 			'value' => 'Value',
 			'route' => 'Route',
+			'value_en' => 'Value En',
+			'value_ru' => 'Value Ru',
 		);
 	}
 
@@ -80,6 +84,8 @@ class Menu extends CActiveRecord
 		$criteria->compare('label',$this->label,true);
 		$criteria->compare('value',$this->value,true);
 		$criteria->compare('route',$this->route,true);
+		$criteria->compare('value_en',$this->value_en,true);
+		$criteria->compare('value_ru',$this->value_ru,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

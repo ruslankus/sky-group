@@ -39,6 +39,21 @@
     <nav class="nav">
          <?php $this->widget('application.widgets.MainMenu');?>
     </nav>
+
+    <div class="login-box">
+        <h2><?php echo $lng == 'en' ? 'Login' : 'Вход'; ?></h2>
+        <span class="close"></span>
+        <form class="form-area" action="<?php echo Yii::app()->createUrl($lng.'/cabinet/login') ?>" method="post">
+            <input placeholder="<?php echo $lng == 'en' ? 'Email' : 'Электронная почта'; ?>" type="text" name="login" value="">
+            <input placeholder="<?php echo $lng == 'en' ? 'Password' : 'Пароль'; ?>" type="password" name="password" value="">
+            <div style="clear: both;"></div>
+
+            <fieldset class="buttons">
+                <a href="#" class="left cancel-link"><?php echo $lng == 'en' ? 'Registration' : 'Регистрация'; ?></a>
+                <input class="pay right" type="submit" value="<?php echo $lng == 'en' ? 'Enter' : 'Войти'; ?>">
+            </fieldset>
+        </form>
+    </div>
 </header>
 
 <?echo $content?>
@@ -46,21 +61,6 @@
 <footer class="footer">
     <a href="<?php echo Yii::app()->createUrl($lng.'/main/contacts'); ?>"><?php echo $lng == 'en' ? 'CONNECT US' : 'СВЯЗАТЬСЯ С НАМИ'; ?></a>
 </footer>
-
-<div class="login-box">
-    <h2><?php echo $lng == 'en' ? 'Registration' : 'Регистрация'; ?>Вход</h2>
-    <span class="close"></span>
-    <form class="form-area" action="<?php echo Yii::app()->createUrl('cabinet/login') ?>" method="post">
-        <input placeholder="Электронная почта" type="text" name="login" value="">
-        <input placeholder="Пароль" type="password" name="password" value="">
-        <div style="clear: both;"></div>
-
-        <fieldset class="buttons">
-            <a href="#" class="left cancel-link"><?php echo $lng == 'en' ? 'Registration' : 'Регистрация'; ?></a>
-            <input class="pay right" type="submit" value="<?php echo $lng == 'en' ? 'Enter' : 'Войти'; ?>">
-        </fieldset>
-    </form>
-</div>
 
 
 </body>

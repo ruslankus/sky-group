@@ -8,19 +8,19 @@
 <section class="form-area">
     <?php echo CHtml::beginForm();?>
          <fieldset class="reg-1">
-            <a href="#" class="question" data-questionmark="укажите номер агента для дальнейшей регистрации"></a>
+            <a href="#" class="question" data-questionmark="without filling the agent's number in, it is not possible to proceed"></a>
             
             <input data-error="<?php echo $errors['promotion_number']; ?>" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>"
-             placeholder="Номер промоутера" type="text" name="promotion_number" value="<?php echo $sessData['promotion_number']?>">
+             placeholder="Promoter's number " type="text" name="promotion_number" value="<?php echo $sessData['promotion_number']?>">
            
-            <input data-error="<?php echo $errors['user_name']; ?>" placeholder="Имя" class="<?php echo $errors['user_name']? 'error' : '' ?>"
+            <input data-error="<?php echo $errors['user_name']; ?>" placeholder="Name" class="<?php echo $errors['user_name']? 'error' : '' ?>"
              type="text" name="user_name" value="<?php echo $sessData['user_name']?>">
            
-            <input data-error="<?php echo $errors['last_name']; ?>" placeholder="Фамилия"  class="<?php echo $errors['last_name']? 'error' : '' ?>"
+            <input data-error="<?php echo $errors['last_name']; ?>" placeholder="Surname"  class="<?php echo $errors['last_name']? 'error' : '' ?>"
              type="text" name="last_name" value="<?php echo $sessData['last_name']?>">
         </fieldset>
         <fieldset class="reg-2">
-            <input data-error="<?php echo $errors['email']; ?>" placeholder="Электронная почта"  class="<?php echo $errors['email']? 'error' : '' ?>"
+            <input data-error="<?php echo $errors['email']; ?>" placeholder="Email"  class="<?php echo $errors['email']? 'error' : '' ?>"
              type="text" name="email" value="<?php echo $sessData['email']?>">
              
             <input data-error="<?php echo $errors['password']; ?>" placeholder="Пароль"  class="<?php echo $errors['password']? 'error' : '' ?>"
