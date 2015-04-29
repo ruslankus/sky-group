@@ -42,11 +42,16 @@
                     <div class="info-col-content">
                        <h1>НАША ВИЗИЯ</h1>
                        <p>
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                            <strong>Наша миссия – создание надёжной, востребованной, современной системы клубного членства, оказывающей содействие своим клиентам в различных сферах услуг. Мы стремимся стать незаменимым партнёром для своих клиентов.</strong>
                        </p>
-                       <p>
-                            All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-                       </p>
+                           <ul>
+                               <li>Оказывать своим клиентам удобное, надёжное и быстрое содействие при осуществлении разнообразных действий, связанных со сбором и оформлением необходимой документации.</li>
+                               <li>Гарантировать своевременную поддержку клиентов при пользовании различными системами электронных услуг.</li>
+                               <li>Создать для своих клиентов динамичную, гибкую и комфортную среду участия в клубе.</li>
+                               <li>Создать для своих клиентов динамичную, гибкую и комфортную среду участия в клубе.</li>
+                               <li>Постоянно расширяет сферу сотрудничества с потенциальными участниками для максимального расширения спектра предоставляемых услуг.</li>
+                               <li>Стремится сделать результат совершения необходимых действий более быстрым и прогнозируемым.</li>
+                            </ul>
                     </div> <!-- / info -col-content -->
                 </div>
                 <div class="cls"></div>

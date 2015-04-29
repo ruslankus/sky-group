@@ -109,7 +109,7 @@
                 <div class="offset-in hidden-block small-modified medicinskoye strah-block">
                     <input placeholder="В какой компанииc?" type="text" value="">
                     <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
+                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom" data-questionmark=укажите сумму страхового покрытия, определённую условиями договора"></a>
                     <div style="clear: both;"></div>
                 </div>
 
@@ -118,7 +118,7 @@
                 <div class="offset-in hidden-block small-modified neschistny_sluchay strah-block">
                     <input placeholder="В какой компанииc?" type="text" value="">
                     <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
+                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, определённую условиями договора"></a>
                     <div style="clear: both;"></div>
                 </div>
 
@@ -127,7 +127,7 @@
                 <div class="offset-in hidden-block small-modified strahovka_zhizni strah-block">
                     <input placeholder="В какой компании?" type="text" value="">
                     <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
+                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, определённую условиями договора"></a>
                     <div style="clear: both;"></div>
                 </div>
 
@@ -136,7 +136,7 @@
                 <div class="offset-in hidden-block small-modified nakopitelnaya_programa strah-block">
                     <input placeholder="В какой компании?" type="text" value="">
                     <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
+                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, указанную в договоре"></a>
                     <div style="clear: both;"></div>
                 </div>
 
@@ -145,7 +145,7 @@
                 <div class="offset-in hidden-block small-modified poteria_deesposobnosti strah-block">
                     <input placeholder="В какой компании?" type="text" value="">
                     <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
+                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom" data-questionmark="укажите сумму страхового покрытия, определённую условиями договора"></a>
                     <div style="clear: both;"></div>
                 </div>
 

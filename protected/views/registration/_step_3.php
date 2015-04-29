@@ -1,3 +1,6 @@
+<?php $cs = Yii::app()->clientScript; ?>
+<?php $cs->registerScriptFile(Yii::app()->request->baseUrl."/js/jquery.mask.min.js", CClientScript::POS_END); ?>
+<?php $cs->registerScript("promomask", "$('.promo').mask('000000000');", CClientScript::POS_END, array(CClientScript::POS_READY)); ?>
 <section class="form-area">
 
     <?php echo CHtml::beginForm();?>
@@ -12,8 +15,8 @@
         <div style="clear: both;"></div>
         <section class="offset <?php echo ($sessData['married'] == 'yes')? '' : 'hidden-block'; ?> if-married">
             <fieldset class="reg-3">
-                <a href="#" class="question" data-questionmark="Some question mark"></a>
-                <input data-error="<?php echo $errors['partner_id']; ?>" class="promo <?php echo $errors['id_number']? 'error' : '' ?>" placeholder="Номер ID" type="text" name="partner_id" value="<?php echo $sessData['partner_Id']?>">
+                <a href="#" class="question" data-questionmark="укажите код удостоверения личности супруга(и)"></a>
+                <input data-error="<?php echo $errors['partner_id']; ?>" class="promo <?php echo $errors['id_number']? 'error' : '' ?>" placeholder="Номер ID" type="text" name="partner_id" value="<?php echo $sessData['partner_id']?>">
                 <input class="<?php echo $errors['p_fname']? 'error' : '' ?>" data-error="<?php echo $errors['p_fname']; ?>" placeholder="Имя (вписываются с первой страницы)" type="text" name="p_fname" value="<?php echo $sessData['p_fname']?>">
                 <input class="<?php echo $errors['p_lname']? 'error' : '' ?>" data-error="<?php echo $errors['p_lname']; ?>" placeholder="Фамилия (вписываются с первой страницы)" type="text" name="p_lname" value="<?php echo $sessData['p_lname']?>">
                 <label>Дата Рождения</label>

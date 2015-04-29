@@ -4,7 +4,7 @@
 <section class="form-area">
    <?php echo CHtml::beginForm();?>
         <fieldset class="reg-1">
-            <a href="#" class="question" data-questionmark="Some info"></a>
+            <a href="#" class="question" data-questionmark="укажите код удостоверения личности"></a>
 
             <input data-error="<?php echo $errors['id_number']; ?>" class="promo <?php echo $errors['id_number']? 'error' : '' ?>" placeholder="Номер ID" type="text" name="id_number" value="<?php echo $sessData['id_number']?>">
 
