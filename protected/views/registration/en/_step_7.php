@@ -17,9 +17,9 @@
         </fieldset>
         <div style="clear: both;"></div>
 
-        <label class="block">Оплата</label>
+        <label class="block">Payment</label>
         <div style="clear: both;"></div>
-        <span class="question-span">Является ли владелец карты оплаты другим лицом нежели заказчик?</span>
+        <span class="question-span">Is the owner of the payment card by another person than the customer?</span>
 
         <label data-name="other-person" class="radio" for="other-person-yes">Yes</label>
         <label data-name="other-person" class="radio active" for="other-person-no">No</label>
