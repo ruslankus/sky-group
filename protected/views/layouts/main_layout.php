@@ -21,10 +21,18 @@
 <header class="header">
     <a href="/" class="logo"></a>
 
-    <a href="<?php echo $url ?>" class="right-box <?php echo $class ?> login-button"></a>
-    <span class="right-box menu-button active"></span>
     <?php $url = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? Yii::app()->createUrl('cabinet/logout') : Yii::app()->createUrl('cabinet/index')) : '#'; ?>
     <?php $class = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? 'out' : 'in') : '';  ?>
+
+    <a href="<?php echo $url ?>" class="right-box <?php echo $class ?> login-button"></a>
+    <span class="right-box menu-button active"></span>
+
+    <?php if(Yii::app()->language == 'en'): ?>
+        <a href="<?php echo Yii::app()->createUrl('/ru/main/index') ?>" class="right-box language-switcher">RU</a>
+    <?php else: ?>
+        <a href="<?php echo Yii::app()->createUrl('/en/main/index') ?>" class="right-box language-switcher">EN</a>
+    <?php endif; ?>
+
 
     <nav class="nav">
          <?php $this->widget('application.widgets.MainMenu');?>
@@ -34,7 +42,8 @@
 <?echo $content?>
 
 <footer class="footer">
-    <a href="<?php echo Yii::app()->createUrl('main/contacts'); ?>">СВЯЗАТЬСЯ С НАМИ</a>
+    <?php $lng = Yii::app()->language; ?>
+    <a href="<?php echo Yii::app()->createUrl($lng.'/main/contacts'); ?>">СВЯЗАТЬСЯ С НАМИ</a>
 </footer>
 
 <div class="login-box">

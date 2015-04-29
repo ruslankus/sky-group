@@ -22,4 +22,38 @@ class Controller extends CController
 	public $breadcrumbs=array();
     
     public $title;
+
+
+    /**
+     * Init
+     */
+    public function init()
+    {
+        //set default ime-zone
+        date_default_timezone_set('Europe/Vilnius');
+
+        $language = Yii::app()->request->getParam('language',Yii::app()->params['defaultLanguage']);
+        $this->setLanguage($language);
+    }
+
+    /**
+     * Setup the language
+     * @param $lng
+     */
+    public function setLanguage($lng)
+    {
+        $objUser = Yii::app()->user;
+        $request = Yii::app()->request;
+
+        Yii::app()->language = $lng;
+        $objUser->setState('language', $lng);
+        $request->cookies['language'] = new CHttpCookie('lng', $lng);
+
+        if ($objUser->hasState('language')) {
+            Yii::app()->language = $objUser->getState('language');
+        }
+        elseif (isset($request->cookies['language'])) {
+            Yii::app()->language = $request->cookies['language']->value;
+        }
+    }
 }

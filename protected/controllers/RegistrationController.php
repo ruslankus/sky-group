@@ -21,12 +21,14 @@ class RegistrationController extends Controller
     }
     
     public function actionStep($id){
-        
+
+        /* @var $model CFormModel | FormStep_1 | FormStep_2 | FormStep_3 | FormStep_4 | FormStep_5 | FormStep_6 | FormStep_7 */
+
         $objProds = null;
         $model_class_name = "FormStep_".$id;
         $errors = array();
         $model = new $model_class_name();
-        
+
         $sessData = Yii::app()->session->get("step_{$id}");
         
         $sessSteps = Yii::app()->session->get("steps");
@@ -40,6 +42,7 @@ class RegistrationController extends Controller
             
             $arrStep = $_POST;
             $model->attributes = $_POST;
+
             if($model->validate()){
                 Yii::app()->session->add("step_{$id}", $arrStep);
                 //write session step like complited
@@ -52,7 +55,8 @@ class RegistrationController extends Controller
                 }else{
                     $this->redirect("/registration/step/{$next}");    
                 }
-            }else{
+            }
+            else{
                 foreach($model->errors as $key => $value){
                     $errors[$key] = array_shift($value); 
                 }
@@ -70,7 +74,9 @@ class RegistrationController extends Controller
         }
         
         //Debug::d($_SESSION);
-        $this->render('registration',array('step'=> $id, 'sessData' => $sessData, 'errors' => $errors,'objProds' => $objProds));
+
+        $lng = Yii::app()->language;
+        $this->render("{$lng}/registration",array('step'=> $id, 'sessData' => $sessData, 'errors' => $errors,'objProds' => $objProds));
     }
     
     
