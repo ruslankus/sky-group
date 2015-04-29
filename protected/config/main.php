@@ -20,6 +20,7 @@ return array(
         'application.models.orm.*',
 		'application.components.*',
         'application.helpers.*',
+        'application.validators.*',
 
 	),
 
