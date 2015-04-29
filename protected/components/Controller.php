@@ -32,7 +32,7 @@ class Controller extends CController
         //set default ime-zone
         date_default_timezone_set('Europe/Vilnius');
 
-        $language = Yii::app()->request->getParam('language',Yii::app()->params['defaultLanguage']);
+        $language = Yii::app()->request->getParam('language','en');
         $this->setLanguage($language);
     }
 
