@@ -962,6 +962,7 @@ input:-ms-input-placeholder{opacity: 1;}
     line-height: 104px;
     text-align: center;
     text-decoration: none;
+    z-index: 5;
 }
 
 .header .right-box.language-switcher:hover
