@@ -21,7 +21,7 @@
 <body>
 
 <header class="header">
-    <a href="/" class="logo"></a>
+    <a href="<?php echo Yii::app()->createUrl($lng.'/main/index'); ?>" class="logo"></a>
 
     <?php $url = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? Yii::app()->createUrl('cabinet/logout') : Yii::app()->createUrl('cabinet/index')) : '#'; ?>
     <?php $class = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? 'out' : 'in') : '';  ?>

@@ -15,7 +15,7 @@
     <section class="header-slider">
         <div class="abs">
             <div class="container">
-                <a href="/" class="logo"></a>
+                <a href="<?php echo Yii::app()->createUrl($lng.'/main/index'); ?>" class="logo"></a>
                 <a href="#" class="right-box login-button"></a>
                 <a href="#" class="right-box menu-button"></a>
                 <div class="nav"><?php $this->widget('application.widgets.MainMenu');?></div>
