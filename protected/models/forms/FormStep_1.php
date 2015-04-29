@@ -26,7 +26,8 @@ class FormStep_1 extends CFormModel
         if ( !empty($this->promotion_number)) {
             $this->_promo = Discounts::model()->find("code=:promo", array(":promo"=>$this->promotion_number));
             if (!$this->_promo) {
-                $this->addError('promotion_number', 'Promotion number is not valid.');
+                $lng = Yii::app()->language;
+                $this->addError('promotion_number', ($lng == 'ru' ? 'Количество Реклама не действует':'Promotion number is not valid'));
             }
         }
     }
