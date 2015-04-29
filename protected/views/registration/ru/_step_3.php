@@ -6,8 +6,8 @@
 
         <label data-name="married" class="radio <?php echo ($sessData['married'] == 'yes')? 'active' : ''; ?>" for="married-yes">Да</label>
         <label data-name="married" class="radio <?php echo ($sessData['married'] != 'yes')? 'active' : ''; ?>" for="married-no">Нет</label>
-        <input id="married-yes" type="radio" name="married" value="yes">
-        <input id="married-no" type="radio"  name="married" value="no">
+        <input id="married-yes" type="radio" name="married" value="yes" <?php echo ($sessData['married'] == 'yes')? 'checked="checked"' : ''; ?>>
+        <input id="married-no" type="radio"  name="married" value="no" <?php echo ($sessData['married'] != 'yes')? 'checked="checked"' : ''; ?>>
 
         <div style="clear: both;"></div>
         <section class="offset <?php echo ($sessData['married'] == 'yes')? '' : 'hidden-block'; ?> if-married">
@@ -56,12 +56,12 @@
 
             <label data-name="same-address" class="radio <?php echo ($sessData['same_address'] != 'no')? 'active' : ''; ?>" for="same-yes">Да</label>
             <label data-name="same-address" class="radio <?php echo ($sessData['same_address'] == 'no')? 'active' : ''; ?>" for="same-no">Нет</label>
-            <input id="same-yes" type="radio" name="same_address" value="yes">
-            <input id="same-no" type="radio"  name="same_address" value="no">
+            <input id="same-yes" type="radio" name="same_address" value="yes" <?php echo ($sessData['same_address'] != 'no')? 'checked="checked"' : ''; ?>>
+            <input id="same-no" type="radio"  name="same_address" value="no" <?php echo ($sessData['same_address'] == 'no')? 'checked="checked"' : ''; ?>>
 
             <div style="clear: both;"></div>
             
-                <section class="offset <?php echo ($sessData['same_address'] == 'yes')? 'hidden-block' : ''; ?> if-same">
+                <section class="offset <?php echo ($sessData['same_address'] != 'no')? 'hidden-block' : ''; ?>  if-same">
                     <fieldset class="reg-3">
                         <input class="<?php echo $errors['street']? 'error' : '' ?>" data-error="<?php echo $errors['street']; ?>" placeholder="Улица" type="text" name="street" value="<?php echo $sessData['street']?>">
                 <input class="<?php echo $errors['house']? 'error' : '' ?>" data-error="<?php echo $errors['house']; ?>" placeholder="Дом" type="text" name="house" value="<?php echo $sessData['house']?>">
