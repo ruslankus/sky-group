@@ -1,3 +1,4 @@
+<?php $step_6 = $got->get('step_6'); ?>
 <section class="form-area">
 
     <form method="post">
@@ -6,6 +7,9 @@
             <span class="question-span small block bold">The system assigns a unique number</span>
             <span class="question-span small block bold"><?php echo $_SESSION['step_1']['user_name']." ".$_SESSION['step_1']['last_name'] ?></span>
             <span class="question-span small block">Package service<span class="right bold"><?php echo $objProds->name?></span></span>
+            <?php $disc = Discounts::model()->find("code=:promo", array(":promo"=>$step_6['discount']));
+            if ($dic) {
+            ?>
             <span class="question-span small block">
                 Amount (without discounts)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span>
             </span>
@@ -13,6 +17,7 @@
                Discount (in case of promotional code)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span>
             </span>
             <span class="question-span small block">Amount (with discounts))<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span></span>
+            <?php } ?>
             <div style="clear: both;"></div>
         </fieldset>
         <div style="clear: both;"></div>
