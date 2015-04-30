@@ -14,12 +14,15 @@ class FormStep_4 extends CFormModel
     {
         if ($this->has_children == 'yes') {
             $children = $_REQUEST['children'];
-            print_r(array_filter($children));
+            //print_r(array_filter($children));
             $i=-1;
             foreach ($children as $child) {
                 $i++;
-                $this->addError("children[{$i}][name]", 'what is that? '.$atr);
-                $this->addError("children[{$i}][surname]", 'what is that? '.$atr);
+                if ($i==0) {
+                    if (empty($child['name'])) {
+                        $this->addError("children[{$i}][name]", Yii::t('yii.skygroup','Field cannot be blank.'));
+                    }
+                }
             }
         }
     }

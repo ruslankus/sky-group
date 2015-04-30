@@ -13,6 +13,7 @@
         <section class="offset <?php echo ($sessData['has_children'] == 'yes')? '' : 'hidden-block'; ?> if-children">
             <div class="children-list">
             <?php
+print_r($errors);
                 if ($errors) {
                     foreach ($sessData['children'] as $id=>$child) {
                 ?>
@@ -22,14 +23,29 @@
                     <input class="<?php echo $errors["children[$id][surname]"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[{$id}][surname]"] ? $errors["children[{$id}][surname]"]:''); ?>" placeholder="Surname" type="text" name="children[<?php echo $id; ?>}][surname]" value="<?php echo $sessData['children'][$id]['surname']; ?>">
                     <label>Date of birth</label>
                     <div style="clear: both;"></div>
-                    <select class="<?php echo $errors["children[$id][day]"] ? 'error' : '' ?>" name="children[0][day]" class="selector-1">
+                    <select class="selector-1 <?php echo $errors["children[$id][day]"] ? 'error' : '' ?>" name="children[0][day]">
                         <option value="">Day</option>
+                        <?php
+                    for ($i=1; $i<32; $i++) {
+                        echo '<option value="'.$i.'"'.($sessData['children'][$id]['day'] == $i ? ' selected="selected"':'').'>'.$i.'</option>';
+                    }
+                    ?>
                     </select>
-                    <select class="<?php echo $errors["children[$id][month]"] ? 'error' : '' ?>" name="children[0][month]" class="selector-2">
+                    <select class="selector-2 <?php echo $errors["children[$id][month]"] ? 'error' : '' ?>" name="children[0][month]">
                         <option value="">Month</option>
+                        <?php
+                    for ($i=1; $i<13; $i++) {
+                        echo '<option value="'.$i.'"'.($sessData['children'][$id]['month'] == $i ? ' selected="selected"':'').'>'.$i.'</option>';
+                    }
+                    ?>
                     </select>
-                    <select class="<?php echo $errors["children[$id][year]"] ? 'error' : '' ?>" name="children[0][year]" class="selector-3">
+                    <select class="selector-3 <?php echo $errors["children[$id][year]"] ? 'error' : '' ?>" name="children[0][year]">
                         <option value="">Year</option>
+                        <?php
+                    for ($i=date('Y')-14; $i>date('Y')-100; $i--) {
+                        echo '<option value="'.$i.'"'.($sessData['children'][$id]['year'] == $i ? ' selected="selected"':'').'>'.$i.'</option>';
+                    }
+                    ?>
                     </select>
                 </fieldset>
                 <div style="clear: both;"></div>
@@ -45,12 +61,27 @@
                     <div style="clear: both;"></div>
                     <select name="children[0][day]" class="selector-1">
                         <option value="">Day</option>
+                        <?php
+                    for ($i=1; $i<32; $i++) {
+                        echo '<option value="'.$i.'">'.$i.'</option>';
+                    }
+                    ?>
                     </select>
                     <select name="children[0][month]" class="selector-2">
                         <option value="">Month</option>
+                        <?php
+                    for ($i=1; $i<13; $i++) {
+                        echo '<option value="'.$i.'">'.$i.'</option>';
+                    }
+                    ?>
                     </select>
                     <select name="children[0][year]" class="selector-3">
                         <option value="">Year</option>
+                        <?php
+                    for ($i=date('Y')-14; $i>date('Y')-100; $i--) {
+                        echo '<option value="'.$i.'">'.$i.'</option>';
+                    }
+                    ?>
                     </select>
                 </fieldset>
                 <div style="clear: both;"></div>
