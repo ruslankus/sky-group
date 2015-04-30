@@ -3,30 +3,23 @@
                 <div class="info-col about">
                     <div class="col-ico about"></div>
                     <div class="info-col-content">
-                        <h1>О НАС</h1>
+                        <h1>ABOUT</h1>
                         <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home1.jpg" alt=" ">
-                        <p>
-                            SkyGroup – это закрытый членский клуб, объединяющий большую группу людей с целью участия и поддержки пользователей в различных системах услуг. SkyGroup предлагает 5 различных видов членства, из которых по гибкой цене Вы можете выбрать абонемент, который устроит Вас и Вашу семью во всех отношениях.
-                        </p>
-                        <p>
-                            Мы постоянно расширяем перечень наших предложений и возможностей, поэтому наши клиенты могут получить широкий спектр услуг, соответствующих самым высоким критериям оценки качества.
-                        </p>
+                        <p>Sky Group is a private members-only club, which unites a large group of people into a single network for the purpose of receiving privileged services. Sky Group offers 5 different types of membership plans at an affordable price from which you can choose a plan that satisfies all the criteria for you and your family. </p>
+                        <p>Because we constantly expand our list of services and offerings, our clients always receive a wide range of services that are of the highest quality. </p>
                     </div> <!-- / info -col-content -->
                 </div>
                 <div class="info-col vision">
                     <div class="col-ico vision"></div>
                     <div class="info-col-content">
-                       <h1>НАША ВИЗИЯ</h1>
-                       <p>
-                            <strong>Наша миссия – создание надёжной, востребованной, современной системы клубного членства, оказывающей содействие своим клиентам в различных сферах услуг. Мы стремимся стать незаменимым партнёром для своих клиентов.</strong>
-                       </p>
+                       <h1>OUR VISION</h1>
+                       <p><strong>Our Mission – Our Mission is to create a secure and modern club membership system that provides assistance to its clients in various service areas. We aim to become an irreplaceable partner for our clients.</strong></p>
                            <ul>
-                               <li>Оказывать своим клиентам удобное, надёжное и быстрое содействие при осуществлении разнообразных действий, связанных со сбором и оформлением необходимой документации.</li>
-                               <li>Гарантировать своевременную поддержку клиентов при пользовании различными системами электронных услуг.</li>
-                               <li>Создать для своих клиентов динамичную, гибкую и комфортную среду участия в клубе.</li>
-                               <li>Создать для своих клиентов динамичную, гибкую и комфортную среду участия в клубе.</li>
-                               <li>Постоянно расширяет сферу сотрудничества с потенциальными участниками для максимального расширения спектра предоставляемых услуг.</li>
-                               <li>Стремится сделать результат совершения необходимых действий более быстрым и прогнозируемым.</li>
+                               <li>Provide our clients with convenient, secure and quick assistance when performing various actions related to gathering and filling out necessary paperwork.</li>
+                               <li>Guarantee timely assistance to our clients when using systems a range of electronic services.</li>
+                               <li>Create a dynamic, flexible and comfortable environment for our club members.</li>
+                               <li>Expand constantly our list of partners to offer the most varied specter of services.</li>
+                               <li>Strive to make the service process quick and routine.</li>
                             </ul>
                     </div> <!-- / info -col-content -->
                 </div>

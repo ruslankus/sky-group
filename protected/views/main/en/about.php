@@ -5,35 +5,34 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/about_us.css');
 ?>
 <main class="main">
 <section class="header-section">
-    <h1><span>О нас</span></h1>
+    <h1><span>About us</span></h1>
 </section>
 
 <section class="content">
     <div class="content-col left">
-        <h2>О клубе</h2>
+        <h2>ABOUT THE CLUB</h2>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
-         <p><strong>SkyGroup</strong> – это закрытый членский клуб, объединяющий большую группу людей с целью участия и поддержки пользователей в различных системах услуг. <strong>SkyGroup</strong> предлагает 5 различных видов членства, из которых по гибкой цене Вы можете выбрать абонемент, который устроит Вас и Вашу семью во всех отношениях.</p>
-        <p>Мы постоянно расширяем перечень наших предложений и возможностей, поэтому наши клиенты могут получить широкий спектр услуг, соответствующих самым высоким критериям оценки качества.</p>
-        <p>Основные понятия:<br/>
-          <strong>Клуб</strong> – общество, реквизиты и организационно-правовая форма которого определены настоящим договором, созданное с целью оказания современных услуг в области консультирования, правового сопровождения и поддержки пользователей при обращении в различные учреждения и организации. При функционировании данной системы услуг используется зарегистрированный знак «SkyGroup».</p> 
-        <p><strong>Членство Клуба</strong> – право пользования услугами клуба, возникающее при заключении с обществом настоящего договора, в течение установленного договором срока и в порядке, предусмотренном правилами клуба.</p>
-        <p><strong>Член Клуба</strong> – лицо, достигшее 18-летнего возраста, заключившее членский договор, соблюдающее правила клуба.</p>
-        <p><strong>Правила клуба</strong> – общие, обязательные для соблюдения всеми членами клуба правила, установленные Администрацией клуба.</p> 
+         <p><strong>Sky Group</strong> – is a private members-only club, which unites a large group of people into a single network for the purpose of receiving privileged services. <strong>Sky Group</strong> offers 5 different types of membership plans at an affordable price from which you can choose a plan that satisfies all the criteria for you and your family. </p>
+
+        <p>Main terms: <br/><strong>Club</strong> – Is a community, whose details and legal-entity requirements are defined by this contract, which is formed for the purpose of providing up to date services in the areas of consulting, legal assistance and assisting members with their interactions with various organizations and entities. During the activity of this club the registered trademark “SkyGroup” is used.</p>
+        <p><strong>Club Membership </strong> – the right to use the clubs services, which are defined when agreeing to the contract with the existing organization, for the time period established in the terms of the contract and in the manner that satisfies the rules of the club. </p>
+        <p><strong>Club Member </strong> – An individual, 18 years or older, who has agreed to the contract and who abides by the club rules.</p>
+        <p><strong>Club Rules </strong> – General provisions, mandatory for all club members, established by the club Administration.</p>
 
     </div>
     <div class="content-col right">
-        <h2>УСЛУГИ</h2>
-        <p>Мы предоставляем членам нашего клуба возможность получать услуги по консультированию, дистанционному получению информации, представлению интересов в различных общественных и социальных сферах, пользуясь при этом высококачественным сервисом и льготными тарифами. Вне зависимости от Ваших потребностей при выборе услуги мы поможем Вам сделать выбранный вариант индивидуально удобным и выгодным, удовлетворяющим потребности всех его участников.</p>
-        <p><strong>SkyGroup</strong> не собирает и не хранит финансовую информацию членов клуба. Оплата членских взносов производится путём перехода на веб-сайты уважаемых платёжных систем. Доступ к персональной информации о Членах Клуба ограничен и обязательно включает лишь действующий e-mail. Остальная информация может быть предоставлена только с согласия Члена клуба.</p>
-        <p>Наша цель - удовлетворить потребности членов клуба: осуществить решение возникших вопросов и потребностей наиболее удобным и комфортным образом. Мы оперативно реагируем на пожелания и замечания членов клуба и осуществляем онлайн-поддержку посредством e-mail и телефонной связи.</p>
-        <h3>Перечень услуг:</h3>
+        <h2>SERVICES</h2>
+        <p>We offer our club members a wide range of services such as consulting, remote gathering of information, representation in different civil and social areas while always maintaining the highest quality of these services and providing the most privileged prices. No matter what your needs are when you choose a service we will assist you in making the choice convenient and cost-efficient, always meeting your essential requirements.</p>
+        <p><strong>SkyGroup</strong> does not gather or store the financial information of its members.  Membership fee payments occur by being redirected to the web site of a respected payment system.  Access to club members’ personal information is restricted and only a members active email address can be displayed. All other information can only be provided with the agreement of the club member.</p>
+        <p>Our goal is to satisfy the needs of our club members. This means resolving any questions and needs of our members in the most comfortable and convenient manner. We respond to our members inquires and suggestions quickly and provide online assistance through email and a telephone call.</p>
+        <h3>Catalog of Services: </h3>
         <ul>
-			<li>Каждому потенциальному клиенту предоставляется право приобретения абонемента сроком на 3 года</li>
-			<li>Членам клуба гарантируется помощь при пользовании платежными услугами (оплата налогов, нотариальные услуги и другие)</li>
-			<li>Через 24 часа после присоединения к клубу участнику предоставляется возможность приобретения стандартной страховки включая членов семьи страхуемого лица (страхование от несчастных случаев + операции)</li> 
-			<li>Оплата клубного членства производится ежемесячно</li> 
-			<li>Распределение стоимости членского взноса производится посредством простой и удобной в использовании системы PSP. При этом часть взноса переводится на счет клуба, другая часть на счет страховой компании</li> 
-            <li>Члены клуба имеют возможность воспользоваться интернет порталом для получения льготных услуг или call-центром</li>
+			<li>Each potential member is entitled to obtain a club membership for a period of 3 years </li>
+			<li>Club members are guaranteed assistance when using payment services (tax payment, notary service and others)</li>
+			<li>24 hours after joining the club members are given the opportunity to obtain standard insurance for themselves and their family members (insurance from accidents + medical operations)</li>
+			<li>Payment for membership occurs monthly</li>
+			<li>Monthly membership payments occur through a simple and easy-to-use PSP system. A portion of the payment goes into membership fees, while the other </li>
+            <li>Club members are given access to an internet portal and call-center in order to receive privileged services </li>
 		</ul>
 
      </div>   
