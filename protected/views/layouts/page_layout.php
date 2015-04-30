@@ -11,13 +11,20 @@
     <title><?php echo $this->title; ?></title>
 </head>
 <?php $lng = Yii::app()->language; ?>
+
 <body>
     <section class="header-slider">
         <div class="abs">
             <div class="container">
                 <a href="<?php echo Yii::app()->createUrl($lng.'/main/index'); ?>" class="logo"></a>
-                <a href="#" class="right-box login-button"></a>
+
+                <?php $url = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? Yii::app()->createUrl('cabinet/logout') : Yii::app()->createUrl('cabinet/index')) : '#'; ?>
+                <?php $class = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? 'out_'.$lng : 'in_'.$lng) : '';  ?>
+
+                <a href="<?php echo $url ?>" class="right-box <?php echo $class ?> login-button"></a>
+
                 <a href="#" class="right-box menu-button"></a>
+
                 <div class="nav"><?php $this->widget('application.widgets.MainMenu');?></div>
                 <?php if($lng == 'en'): ?>
                     <a href="<?php echo Yii::app()->createUrl('/ru/main/index') ?>" class="right-box language-switcher">RU</a>

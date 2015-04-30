@@ -76,9 +76,23 @@ body
     float: right;
     cursor: pointer;
 }
-.header .right-box.login-button {
-    background: url("../img/enter.png") center center no-repeat #ecbd62;
+
+.header .right-box.login-button.in_en {
+    background: url("../img/enter_en.png") center center no-repeat #ecbd62;
 }
+
+.header .right-box.login-button.in_ru {
+    background: url("../img/enter_ru.png") center center no-repeat #ecbd62;
+}
+
+.header .right-box.login-button.out_en {
+    background: url("../img/exit_en.png") center center no-repeat #ecbd62;
+}
+
+.header .right-box.login-button.out_ru {
+    background: url("../img/exit_ru.png") center center no-repeat #ecbd62;
+}
+
 .header .right-box.menu-button {
     background: rgba(0,0,0,0.5) url("../img/menu_normal.png") center center no-repeat;
 }
