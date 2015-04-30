@@ -5,43 +5,43 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/contacts.css');
 ?>
 <main class="main">
 <section class="header-section">
-    <h1><span>Контакты</span></h1>
+    <h1><span>CONTACTS</span></h1>
 </section>
 
 <section class="content">
     <div class="contacts-info">
         <div class="field">
-            Контактный телефон
+            Contact phone
         </div>
         <div class="value">
             +470 000 00000
         </div>    
         <div class="field">
-            Линия помощи (для платиновых и алмазных клиентов)
+            Helpline (for platinum and business customers)
         </div>
         <div class="value">
             +470 000 00000
         </div> 
         <div class="field">
-            24/7 линия помощи (3LS/мин)
+            24/7 Helpline (3LS / min)
         </div>
         <div class="value">
             +470 000 00000
         </div> 
         <div class="field">
-            Линия жалоб
+            Complaints
         </div>
         <div class="value">
             +470 000 00000
         </div> 
         <div class="field">
-            Центр помощи онлайн
+            Online Help Center
         </div>
         <div class="value">
         <a href="mailto:sg-help@server.com">sg-help@server.com</a>
         </div> 
         <div class="field">
-            Эл.почта для агентов
+            Email for agents
         </div>
         <div class="value">
             <a href="mailto:sg-spam@server.com">sg-spam@server.com</a>
@@ -50,23 +50,23 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/contacts.css');
     </div>
 
     <h2>
-        Свяжись с нами
+        CONTACT US
     </h2>
 
 
     <div class="content-col left">
-        <input type="text" placeholder="Имя">
-        <input type="text" placeholder="Эл. почта">
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email">
     </div>
 
     <div class="content-col right">
-        <input type="text" placeholder="Страна">
-        <input type="text" placeholder="номер">
+        <input type="text" placeholder="Country">
+        <input type="text" placeholder="Phone">
     </div>
     <div class="cls"></div>
-    <textarea>Ваша заявка, содержание, т.д.</textarea>
+    <textarea>Your request, inquiry, etc.</textarea>
     <div class="buttons">
-        <a href="#">Отменить </a><button>Отправить</button>
+        <a href="#">Cancel</a><button>Send</button>
     </div>
 </section>
 </main>
