@@ -14,13 +14,26 @@ class FormStep_4 extends CFormModel
     {
         if ($this->has_children == 'yes') {
             $children = $_REQUEST['children'];
-            //print_r(array_filter($children));
             $i=-1;
             foreach ($children as $child) {
                 $i++;
-                if ($i==0) {
+                //first child is required, other only if atleast one input submited
+                if ( $i == 0 || ($child['name'] || $child['surname'] || $child['day'] || $child['month'] || $child['year']) ) {
+                    
                     if (empty($child['name'])) {
                         $this->addError("children[{$i}][name]", Yii::t('yii.skygroup','Field cannot be blank.'));
+                    }
+                    if (empty($child['surname'])) {
+                        $this->addError("children[{$i}][surname]", Yii::t('yii.skygroup','Field cannot be blank.'));
+                    }
+                    if (empty($child['day'])) {
+                        $this->addError("children[{$i}][day]", Yii::t('yii.skygroup','Field cannot be blank.'));
+                    }
+                    if (empty($child['month'])) {
+                        $this->addError("children[{$i}][month]", Yii::t('yii.skygroup','Field cannot be blank.'));
+                    }
+                    if (empty($child['year'])) {
+                        $this->addError("children[{$i}][year]", Yii::t('yii.skygroup','Field cannot be blank.'));
                     }
                 }
             }

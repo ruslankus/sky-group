@@ -13,17 +13,16 @@
         <section class="offset <?php echo ($sessData['has_children'] == 'yes')? '' : 'hidden-block'; ?> if-children">
             <div class="children-list">
             <?php
-print_r($errors);
                 if ($errors) {
                     foreach ($sessData['children'] as $id=>$child) {
                 ?>
-                <fieldset class="reg-3" id="children_<?php echo $id; ?>">
+                <fieldset class="reg-3" id="children_<?php echo $id; ?>" data-children="<?php echo $id; ?>">
                     <label class="bold-label"><?php echo $id+1; ?>st child</label>
                     <input class="<?php echo $errors["children[$id][name]"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[$id][name]"] ? $errors["children[$id][name]"]:''); ?>" placeholder="Name" type="text" name="children[<?php echo $id; ?>][name]" value="<?php echo $sessData['children'][$id]['name']; ?>">
-                    <input class="<?php echo $errors["children[$id][surname]"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[{$id}][surname]"] ? $errors["children[{$id}][surname]"]:''); ?>" placeholder="Surname" type="text" name="children[<?php echo $id; ?>}][surname]" value="<?php echo $sessData['children'][$id]['surname']; ?>">
+                    <input class="<?php echo $errors["children[$id][surname]"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[$id][surname]"] ? $errors["children[{$id}][surname]"]:''); ?>" placeholder="Surname" type="text" name="children[<?php echo $id; ?>][surname]" value="<?php echo $sessData['children'][$id]['surname']; ?>">
                     <label>Date of birth</label>
                     <div style="clear: both;"></div>
-                    <select class="selector-1 <?php echo $errors["children[$id][day]"] ? 'error' : '' ?>" name="children[0][day]">
+                    <select class="selector-1 <?php echo $errors["children[$id][day]"] ? 'error' : '' ?>" name="children[<?php echo $id; ?>][day]">
                         <option value="">Day</option>
                         <?php
                     for ($i=1; $i<32; $i++) {
@@ -31,7 +30,7 @@ print_r($errors);
                     }
                     ?>
                     </select>
-                    <select class="selector-2 <?php echo $errors["children[$id][month]"] ? 'error' : '' ?>" name="children[0][month]">
+                    <select class="selector-2 <?php echo $errors["children[$id][month]"] ? 'error' : '' ?>" name="children[<?php echo $id; ?>][month]">
                         <option value="">Month</option>
                         <?php
                     for ($i=1; $i<13; $i++) {
@@ -39,7 +38,7 @@ print_r($errors);
                     }
                     ?>
                     </select>
-                    <select class="selector-3 <?php echo $errors["children[$id][year]"] ? 'error' : '' ?>" name="children[0][year]">
+                    <select class="selector-3 <?php echo $errors["children[$id][year]"] ? 'error' : '' ?>" name="children[<?php echo $id; ?>][year]">
                         <option value="">Year</option>
                         <?php
                     for ($i=date('Y')-14; $i>date('Y')-100; $i--) {
@@ -53,7 +52,7 @@ print_r($errors);
                     }
                 } else {
                     ?>
-                <fieldset class="reg-3" id="children_0">
+                <fieldset class="reg-3" id="children_0" data-children="0">
                     <label class="bold-label">1st child</label>
                     <input placeholder="Name" type="text" name="children[0][name]" value="">
                     <input placeholder="Surname" type="text" name="children[0][surname]" value="">

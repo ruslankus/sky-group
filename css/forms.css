@@ -678,7 +678,13 @@ body
 {
     font-family: open_sanssemibold;
 }
-
+.main .form-area fieldset span.promo
+{
+    font-family: open_sanssemibold;
+    font-size: 18px;
+    padding-left: 2.5%;
+    color: #ababa9;
+}
 .main .form-area fieldset input.half
 {
     width: 40%;

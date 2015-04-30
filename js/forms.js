@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-    var children_current_nr = 2;
+    var children_current_nr = $("fieldset[data-children]:last-of-type").data("children");
+    console.log(children_current_nr);
 
     /**
      * Changing radio-button states
@@ -154,7 +155,7 @@ $(document).ready(function(){
 
         children_current_nr++;
         var count_to_display = children_current_nr+1;
-
+        //
         var html = '' +
             '<fieldset class="reg-3" id="children_'+children_current_nr+'">' +
             '<label class="bold-label">'+count_to_display+'й ребёнок</label>' +
