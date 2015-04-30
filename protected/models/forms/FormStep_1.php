@@ -1,7 +1,7 @@
 <?php
+
 class FormStep_1 extends CFormModel
-{
-    
+{    
     public $promotion_number;
     public $promotion_number_1;
     public $promotion_number_2;
@@ -23,6 +23,7 @@ class FormStep_1 extends CFormModel
 			array('email, password, next_pass, user_name, last_name', 'application.validators.Required'),
             array('email','application.validators.Email'),
             array('password','application.validators.Compare','compareAttribute'=>'next_pass'),
+            array('password, next_pass', 'application.validators.String', 'min'=>6, 'max'=>25),
             array('promotion_number_1, promotion_number_2, promotion_number_3, promotion_number_4, promotion_number_5', 'promotionAuth'),		
 		);
 	}
@@ -38,9 +39,4 @@ class FormStep_1 extends CFormModel
             }
         }
     }
-    
-    
-    
 }
-
-?>

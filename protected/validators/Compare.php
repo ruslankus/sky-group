@@ -102,23 +102,23 @@ class Compare extends CValidator
 				break;
 			case '!=':
 				if(($this->strict && $value===$compareValue) || (!$this->strict && $value==$compareValue))
-					$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Must not be equal to "{compareValue}".');
+					$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Must not be equal to {compareValue}.');
 				break;
 			case '>':
 				if($value<=$compareValue)
-					$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Must be greater than "{compareValue}".');
+					$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Must be greater than {compareValue}.');
 				break;
 			case '>=':
 				if($value<$compareValue)
-					$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Must be greater than or equal to "{compareValue}".');
+					$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Must be greater than or equal to {compareValue}.');
 				break;
 			case '<':
 				if($value>=$compareValue)
-					$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Must be less than "{compareValue}".');
+					$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Must be less than {compareValue}.');
 				break;
 			case '<=':
 				if($value>$compareValue)
-					$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Must be less than or equal to "{compareValue}".');
+					$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Must be less than or equal to {compareValue}.');
 				break;
 			default:
 				throw new CException(Yii::t('yii','Invalid operator "{operator}".',array('{operator}'=>$this->operator)));
@@ -161,27 +161,27 @@ class Compare extends CValidator
 				break;
 			case '!=':
 				if($message===null)
-					$message=Yii::t('yii.skygroup','Must not be equal to "{compareValue}".');
+					$message=Yii::t('yii.skygroup','Must not be equal to {compareValue}.');
 				$condition='value=='.$compareValue;
 				break;
 			case '>':
 				if($message===null)
-					$message=Yii::t('yii.skygroup','Must be greater than "{compareValue}".');
+					$message=Yii::t('yii.skygroup','Must be greater than {compareValue}.');
 				$condition='parseFloat(value)<=parseFloat('.$compareValue.')';
 				break;
 			case '>=':
 				if($message===null)
-					$message=Yii::t('yii.skygroup','Must be greater than or equal to "{compareValue}".');
+					$message=Yii::t('yii.skygroup','Must be greater than or equal to {compareValue}.');
 				$condition='parseFloat(value)<parseFloat('.$compareValue.')';
 				break;
 			case '<':
 				if($message===null)
-					$message=Yii::t('yii.skygroup','Must be less than "{compareValue}".');
+					$message=Yii::t('yii.skygroup','Must be less than {compareValue}.');
 				$condition='parseFloat(value)>=parseFloat('.$compareValue.')';
 				break;
 			case '<=':
 				if($message===null)
-					$message=Yii::t('yii.skygroup','Must be less than or equal to "{compareValue}".');
+					$message=Yii::t('yii.skygroup','Must be less than or equal to {compareValue}.');
 				$condition='parseFloat(value)>parseFloat('.$compareValue.')';
 				break;
 			default:
