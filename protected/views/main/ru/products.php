@@ -46,7 +46,7 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/products.css');
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
         <p>Все услуги клиента со статусом платиновый + возврат наличных денег.</p>
     </div><!--/product-->
-    
+
     <div class="cls"></div>
 </section>
 </main>
