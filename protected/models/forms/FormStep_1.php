@@ -33,10 +33,15 @@ class FormStep_1 extends CFormModel
         if ( empty($this->promotion_number)) {
             $this->addError('promotion_number', Yii::t('yii.skygroup','Field cannot be blank.'));
         } else {
-            $this->_promo = Discounts::model()->find("code=:promo", array(":promo"=>$this->promotion_number));
-            if (!$this->_promo) {
+            //comment this in live
+            if(strtolower(substr($this->promotion_number, 0, 2)) != 'aa') {
                 $this->addError('promotion_number', Yii::t('yii.skygroup','Promoter\'s code is invalid.'));
             }
+            //uncomment in live
+            /*$this->_promo = Discounts::model()->find("code=:promo", array(":promo"=>$this->promotion_number));
+            if (!$this->_promo) {
+                $this->addError('promotion_number', Yii::t('yii.skygroup','Promoter\'s code is invalid.'));
+            }*/
         }
     }
 }
