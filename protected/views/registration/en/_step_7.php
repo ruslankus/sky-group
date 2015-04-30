@@ -33,8 +33,8 @@
                 <input placeholder="Name of cardholder" type="text" name="" value="">
                 <input placeholder="Last name of the card holder" type="text" name="" value="">
                 <input placeholder="Street " type="text" name="" value="">
-                <input class="half separate" placeholder="Flat" type="text" name="" value="">
                 <input class="half" placeholder="House" type="text" name="" value="">
+                <input class="half separate" placeholder="Flat" type="text" name="" value="">
                 <input placeholder="City" type="text" name="" value="">
                 <input placeholder="Country" type="text" name="" value="">
                 <input placeholder="Contact phone number" type="text" name="" value="">

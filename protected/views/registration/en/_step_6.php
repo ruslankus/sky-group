@@ -5,16 +5,14 @@
         <fieldset class="reg-3 small-height">
             <span class="question-span small">Do You have a discount code?</span>
 
-            <label data-name="discount" class="radio" for="discount-yes">Yes</label>
-            <label data-name="discount" class="radio active" for="discount-no">No</label>
-            <input id="discount-yes" type="radio" name="discount_is" value="yes">
-            <input id="discount-no" type="radio" checked name="discount_is" value="no">
+            <label data-name="discount_is" class="radio <?php echo ($sessData['discount_is'] == 'yes')? 'active' : ''; ?>" for="discount-yes">Yes</label>
+            <label data-name="discount_is" class="radio <?php echo ($sessData['discount_is'] != 'yes')? 'active' : ''; ?>" for="discount-no">No</label>
+            <input id="discount-yes" type="radio" name="discount_is" value="yes" <?php echo ($sessData['discount_is'] == 'yes')? 'checked="checked"' : ''; ?>>
+            <input id="discount-no" type="radio" name="discount_is" value="no" <?php echo ($sessData['discount_is'] != 'yes')? 'checked="checked"' : ''; ?>>
             <div style="clear: both;"></div>
             
             <section class="offset <?php echo ($sessData['discount_is'] == 'yes')? '' : 'hidden-block'; ?> if-discount">
-                <fieldset class="reg-3">
-                    <input maxlength="10" class="promo <?php echo $errors['discount']? 'error' : '' ?>" type="text" name="discount" value="<?php echo $sessData['discount']; ?>">
-                </fieldset>
+                <input placeholder="Discount code" maxlength="10" class="promo <?php echo $errors['discount']? 'error' : '' ?>" data-error="<?php echo $errors['discount']? $errors['discount'] : '' ?>" type="text" name="discount" value="<?php echo $sessData['discount']; ?>">
             </section>
             
             <span class="question-span small block bold">Select a service package:</span>
