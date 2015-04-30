@@ -26,10 +26,14 @@
                 <a href="#" class="right-box menu-button"></a>
 
                 <div class="nav"><?php $this->widget('application.widgets.MainMenu');?></div>
+
+                <?php $currentUrl = Yii::app()->request->getUrl(); ?>
                 <?php if($lng == 'en'): ?>
-                    <a href="<?php echo Yii::app()->createUrl('/ru/main/index') ?>" class="right-box language-switcher">RU</a>
+                    <?php $replaced = str_replace('/'.$lng.'/','/ru/',$currentUrl); ?>
+                    <a href="<?php echo $replaced; ?>" class="right-box language-switcher">RU</a>
                 <?php else: ?>
-                    <a href="<?php echo Yii::app()->createUrl('/en/main/index') ?>" class="right-box language-switcher">EN</a>
+                    <?php $replaced = str_replace('/'.$lng.'/','/en/',$currentUrl); ?>
+                    <a href="<?php echo $replaced; ?>" class="right-box language-switcher">EN</a>
                 <?php endif; ?>
             </div>
         </div><!--/abs-->
