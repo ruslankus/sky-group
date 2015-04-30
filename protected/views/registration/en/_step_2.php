@@ -1,5 +1,4 @@
 <?php $step_1 = $got->get('step_1'); ?>
-<?php print_r($errors); ?>
 <section class="form-area">
    <?php echo CHtml::beginForm();?>
         <fieldset class="reg-1">
