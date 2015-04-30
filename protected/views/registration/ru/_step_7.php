@@ -11,7 +11,7 @@
             if ($disc) {
             ?>
             <span class="question-span small block">
-                Сумма (без скидки)<<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span>
+                Сумма (без скидки)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span>
             </span>
             <span class="question-span small block">
                Скидка<span class="right bold"><?php echo number_format($objProds->price * ($disc->value / 100) / 100 ,2)?> ILS</span>
