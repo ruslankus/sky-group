@@ -29,10 +29,13 @@
     <a href="<?php echo $url ?>" class="right-box <?php echo $class ?> login-button"></a>
     <span class="right-box menu-button active"></span>
 
-    <?php if(Yii::app()->language == 'en'): ?>
-        <a href="<?php echo Yii::app()->createUrl('/ru/main/index') ?>" class="right-box language-switcher">RU</a>
+    <?php $currentUrl = Yii::app()->request->getUrl(); ?>
+    <?php if($lng == 'en'): ?>
+        <?php $replaced = str_replace('/'.$lng.'/','/ru/',$currentUrl); ?>
+        <a href="<?php echo $replaced; ?>" class="right-box language-switcher">RU</a>
     <?php else: ?>
-        <a href="<?php echo Yii::app()->createUrl('/en/main/index') ?>" class="right-box language-switcher">EN</a>
+        <?php $replaced = str_replace('/'.$lng.'/','/en/',$currentUrl); ?>
+        <a href="<?php echo $replaced; ?>" class="right-box language-switcher">EN</a>
     <?php endif; ?>
 
 
