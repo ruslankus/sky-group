@@ -74,7 +74,7 @@
             <div style="clear: both;"></div>
 
             <fieldset class="buttons">
-                <a href="#" class="left cancel-link"><?php echo $lng == 'en' ? 'Registration' : 'Регистрация'; ?></a>
+                <a href="<?php echo Yii::app()->createUrl($lng.'/registration/step/1'); ?>" class="left cancel-link"><?php echo $lng == 'en' ? 'Registration' : 'Регистрация'; ?></a>
                 <input class="pay right" type="submit" value="<?php echo $lng == 'en' ? 'Enter' : 'Войти'; ?>">
             </fieldset>
         </form>
