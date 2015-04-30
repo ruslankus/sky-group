@@ -19,7 +19,7 @@
                 <a href="<?php echo Yii::app()->createUrl($lng.'/main/index'); ?>" class="logo"></a>
 
                 <?php $url = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? Yii::app()->createUrl('cabinet/logout') : Yii::app()->createUrl('cabinet/index')) : '#'; ?>
-                <?php $class = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? 'out_'.$lng : 'in_'.$lng) : '';  ?>
+                <?php $class = (!Yii::app()->user->isGuest && Yii::app()->user->getState('role') == 'client') ? (Yii::app()->controller->id == 'cabinet' ? 'out_'.$lng : 'in_'.$lng) : 'in_'.$lng;  ?>
 
                 <a href="<?php echo $url ?>" class="right-box <?php echo $class ?> login-button"></a>
 
