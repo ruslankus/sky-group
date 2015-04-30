@@ -90,6 +90,7 @@ class RegistrationController extends Controller
     }
     
     function clear_empty_array_values(&$array){
+        if (is_array($array)) {
         foreach($array as $key => &$value){
             if (is_array($value)){
                 $this->clear_empty_array_values($value);
@@ -97,6 +98,7 @@ class RegistrationController extends Controller
             if(empty($value)) {
                 unset($array[$key]);
             }
+        }
         }
     }
     
