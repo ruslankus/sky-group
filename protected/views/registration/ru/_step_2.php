@@ -1,6 +1,7 @@
 <?php $cs = Yii::app()->clientScript; ?>
 <?php $cs->registerScriptFile(Yii::app()->request->baseUrl."/js/jquery.mask.min.js", CClientScript::POS_END); ?>
 <?php $cs->registerScript("promomask", "$('.promo').mask('000000000');", CClientScript::POS_END, array(CClientScript::POS_READY)); ?>
+<?php $step_1 = $got->get('step_1'); ?>
 <section class="form-area">
    <?php echo CHtml::beginForm();?>
         <fieldset class="reg-1">

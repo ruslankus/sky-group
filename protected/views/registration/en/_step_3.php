@@ -1,7 +1,7 @@
 <?php $cs = Yii::app()->clientScript; ?>
 <?php $cs->registerScriptFile(Yii::app()->request->baseUrl."/js/jquery.mask.min.js", CClientScript::POS_END); ?>
-<?php $cs->registerScript("promomask", "$('.promo').mask('000000000');", CClientScript::POS_END, array(CClientScript::POS_READY)); 
-?>
+<?php $cs->registerScript("promomask", "$('.promo').mask('000000000');", CClientScript::POS_END, array(CClientScript::POS_READY));  ?>
+<?php $step_1 = $got->get('step_1'); ?>
 <section class="form-area">
 
     <?php echo CHtml::beginForm();?>
@@ -19,7 +19,7 @@
                 <a href="#" class="question" data-questionmark="укажите код удостоверения личности супруга(и)"></a>
                 <input data-error="<?php echo $errors['partner_id']; ?>" class="promo <?php echo $errors['id_number']? 'error' : '' ?>" placeholder="Spouse(s) ID Number" type="text" name="partner_id" value="<?php echo $sessData['partner_id']?>">
                 <input class="<?php echo $errors['p_fname']? 'error' : '' ?>" data-error="<?php echo $errors['p_fname']; ?>" placeholder="Name (saved and transferred from the first page)" type="text" name="p_fname" value="<?php echo $sessData['p_fname']?>">
-                <input class="<?php echo $errors['p_lname']? 'error' : '' ?>" data-error="<?php echo $errors['p_lname']; ?>" placeholder="Surname (saved and transferred from the first page)" type="text" name="p_lname" value="<?php echo $sessData['p_lname']?>">
+                <input class="<?php echo $errors['p_lname']? 'error' : '' ?>" data-error="<?php echo $errors['p_lname']; ?>" placeholder="Surname (saved and transferred from the first page)" type="text" name="p_lname" value="<?php echo ($sessData['p_lname'] ? $sessData['p_lname'] : $step_1['last_name']); ?>">
                 <label>Date of birth</label>
                 <div style="clear: both;"></div>
                 <select class="selector-1 <?php echo $errors['bday']? 'error' : '' ?>" name="bday">

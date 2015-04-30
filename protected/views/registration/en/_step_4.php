@@ -4,20 +4,20 @@
 
         <span class="question-span">Do you have children ?</span>
 
-        <label data-name="children" class="radio" for="children-yes">Yes</label>
-        <label data-name="children" class="radio active" for="children-no">No</label>
-        <input id="children-yes" type="radio" name="children" value="yes">
-        <input id="children-no" type="radio" checked name="children" value="no">
+        <label data-name="children" class="radio <?php echo ($sessData['has_children'] == 'yes')? 'active' : ''; ?>" for="children-yes">Yes</label>
+        <label data-name="children" class="radio <?php echo ($sessData['has_children'] != 'yes')? 'active' : ''; ?>" for="children-no">No</label>
+        <input id="children-yes" type="radio" name="has_children" value="yes" <?php echo ($sessData['has_children'] == 'yes')? 'checked="checked"' : ''; ?>>
+        <input id="children-no" type="radio" name="has_children" value="no" <?php echo ($sessData['has_children'] != 'yes')? 'checked="checked"' : ''; ?>>
 
         <div style="clear: both;"></div>
 
-        <section class="offset hidden-block if-children">
+        <section class="offset <?php echo ($sessData['has_children'] == 'yes')? '' : 'hidden-block'; ?> if-children">
 
             <div class="children-list">
 
                 <fieldset class="reg-3" id="children_0">
                     <label class="bold-label">1st child</label>
-                    <input data-error="<?php echo $errors['children']; ?>" placeholder="Name" type="text" name="children[0][name]" value="">
+                    <input data-error="<?php echo $errors['has_children']; ?>" placeholder="Name" type="text" name="children[0][name]" value="">
                     <input placeholder="Surname" type="text" name="children[0][surname]" value="">
                     <label>Date of birth</label>
                     <div style="clear: both;"></div>
