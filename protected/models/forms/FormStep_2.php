@@ -12,8 +12,6 @@ class FormStep_2 extends CFormModel
     public $id_number_8;
     public $id_number_9;
     
-    public $first_name;
-    public $last_name;
     public $day;
     public $month;
     public $year;
@@ -32,7 +30,7 @@ class FormStep_2 extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('first_name, last_name, day, month, year, street, house, flat, city, country', 'application.validators.Required'),
+			array('day, month, year, street, house, flat, city, country', 'application.validators.Required'),
 			array('day, month, year, phone, mobile_phone', 'application.validators.Numerical'),
             array('year', 'application.validators.String', 'min'=>4, 'max'=>4),
             array('month, day', 'application.validators.String', 'min'=>1, 'max'=>2),
