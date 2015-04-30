@@ -1,3 +1,4 @@
+<?php $step_6 = $got->get('step_6'); ?>
 <section class="form-area">
 
     <form method="post">
@@ -6,14 +7,20 @@
             <span class="question-span small block bold">Система присваивает уникальный номер абонента</span>
             <span class="question-span small block bold"><?php echo $_SESSION['step_1']['user_name']." ".$_SESSION['step_1']['last_name'] ?></span>
             <span class="question-span small block">Пакет обслуживания<span class="right bold"><?php echo $objProds->name?></span></span>
+            <?php $disc = Discounts::model()->find("code=:promo", array(":promo"=>$step_6['discount']));
+            if ($disc) {
+            ?>
             <span class="question-span small block">
-                Сумма (без скидки)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span>
+                Сумма (без скидки)<<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span>
             </span>
             <span class="question-span small block">
-                Скидка (в случае действия промокода)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span>
+               Скидка<span class="right bold"><?php echo number_format($objProds->price * ($disc->value / 100) / 100 ,2)?> ILS</span>
             </span>
-            <span class="question-span small block">Сумма (со скидкой)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span></span>
-            <div style="clear: both;"></div>
+            <span class="question-span small block">Скидка (в случае действия промокода)<span class="right bold"><?php echo number_format(($objProds->price / 100) - ($objProds->price * ($disc->value / 100) / 100),2)?> ILS</span></span>
+            <?php } else { ?>
+            <span class="question-span small block">Скидка<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span></span>
+            <?php } ?>
+        <div style="clear: both;"></div>
         </fieldset>
         <div style="clear: both;"></div>
 
