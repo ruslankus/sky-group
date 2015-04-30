@@ -12,12 +12,11 @@ class FormStep_6 extends CFormModel
 		return array(
 			// username and password are required
 			array('discount_is, discount', 'checkDiscount'),
-			array('packet', 'application.validators.Required'),
 		);
 	}
     public function checkDiscount($attributes, $params)
     {
-        if ($this->discount_is) {
+        if ($this->discount_is == 'yes') {
             if ( empty($this->discount) ) {
                 $this->addError('discount', Yii::t('yii.skygroup','Field cannot be blank.'));
             } else {
