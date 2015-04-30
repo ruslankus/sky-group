@@ -12,50 +12,39 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/products.css');
 <section class="content">
     
     <div class="content-col">
-        <h2>ПРОДУКТ 1 (название продукта)</h2>
+        <h2>Silver Membership</h2>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
-        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+        <p>Tax refund. Insurance claims. Communication costs optimisation.</p>
     </div><!--/product-->
     <div class="content-col">
-        <h2>ПРОДУКТ 2 (название продукта)</h2>
+        <h2>Gold Membership</h2>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about_2.jpg">
-        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+        <p>Tax refund. Insurance claims. National Insurance claims. Communication costs optimisation.
+            Refinancing Mortgages. Filling documents for government offices
+        </p>
     </div><!--/product-->
     <div class="content-col">
-        <h2>ПРОДУКТ 3 (название продукта)</h2>
+        <h2>Platinum Membership</h2>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
-        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+        <p>Tax refund.Insurance claims. National Insurance claims. Communication costs optimisation.
+            Refinancing Mortgages. Filling documents for government offices. Medical examination By orthopaedist Not for court.
+            Optimisation of services from HMO. Call back services
+        </p>
     </div><!--/product-->
     <div class="content-col">
-        <h2>ПРОДУКТ 4 (название продукта)</h2>
+        <h2>Business Membership </h2>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about_2.jpg">
-        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+        <p>Tax refund. Insurance claims. National Insurance claims. Communication costs optimisation. Refinancing Mortgages.
+            Filling documents for government offices. Medical examination By orthopaedist Not for court. Optimisation of services from HMO.
+            Call back services. Secretary services - calendar. Fax to mail service. Basic internet site.
+        </p>
     </div><!--/product-->
     <div class="content-col">
-        <h2>ПРОДУКТ 5 (название продукта)</h2>
+        <h2>Loyalty Membership </h2>
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
-        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
+        <p>Platinum Membership offerings + cash back .</p>
     </div><!--/product-->
-    <div class="content-col">
-        <h2>ПРОДУКТ 6 (название продукта)</h2>
-        <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about_2.jpg">
-        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
-    </div><!--/product-->
-    <div class="content-col">
-        <h2>ПРОДУКТ 7 (название продукта)</h2>
-        <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
-        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
-    </div><!--/product-->
-    <div class="content-col">
-        <h2>ПРОДУКТ 8 (название продукта)</h2>
-        <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about_2.jpg">
-        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
-    </div><!--/product-->
-    <div class="content-col">
-        <h2>ПРОДУКТ 9 (название продукта)</h2>
-        <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
-        <p>Описание продукта, его привилегии, возможности  (перечень услуг).</p>
-    </div><!--/product-->
+    
     <div class="cls"></div>
 </section>
 </main>
