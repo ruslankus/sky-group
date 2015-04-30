@@ -65,7 +65,7 @@
             </fieldset>
 
             <div style="clear: both;"></div>
-            <span class="question-span">То же адрес, как у вас?</span>
+            <span class="question-span">Тот же адрес, как у вас?</span>
 
             <label data-name="same-address" class="radio <?php echo ($sessData['same_address'] != 'no')? 'active' : ''; ?>" for="same-yes">Да</label>
             <label data-name="same-address" class="radio <?php echo ($sessData['same_address'] == 'no')? 'active' : ''; ?>" for="same-no">Нет</label>

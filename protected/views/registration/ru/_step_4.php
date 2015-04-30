@@ -56,7 +56,7 @@
                 } else {
                     ?>
                 <fieldset class="reg-3" id="children_0" data-children="0">
-                    <label class="bold-label">1st child</label>
+                    <label class="bold-label">1ый ребенок</label>
                     <input placeholder="Имя" type="text" name="children[0][name]" value="">
                     <input placeholder="Фамилия" type="text" name="children[0][surname]" value="">
                     <label>Дата Рождения</label>

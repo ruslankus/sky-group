@@ -17,7 +17,7 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/contacts.css');
             +470 000 00000
         </div>    
         <div class="field">
-            Линия помощи (для платиновых и алмазных клиентов)
+            Линия помощи (для платиновых и бизнес клиентов)
         </div>
         <div class="value">
             +470 000 00000

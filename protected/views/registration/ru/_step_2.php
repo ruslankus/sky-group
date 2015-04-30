@@ -16,7 +16,7 @@
             </span>
             
             <input placeholder="Имя (вписываются с первой страницы)" type="text" value="<?php echo $step_1['user_name']; ?>" readonly="readonly" />
-            <input placeholder="амилия (вписываются с первой страницы)" type="text" value="<?php echo $step_1['last_name']; ?>" readonly="readonly" />
+            <input placeholder="Фамилия (вписываются с первой страницы)" type="text" value="<?php echo $step_1['last_name']; ?>" readonly="readonly" />
             
              <label>Дата Рождения</label>
 
