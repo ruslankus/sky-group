@@ -18,7 +18,15 @@ $(document).ready(function(){
         });
 
         $(this).addClass('active');
-
+        //activate discount
+        if($(this).attr('for') == 'discount-yes')
+        {
+            $(".if-discount").removeClass('hidden-block');
+        }
+        else if($(this).attr('for') == 'discount-no')
+        {
+            $(".if-discount").addClass('hidden-block');
+        }
         //activate married-block
         if($(this).attr('for') == 'married-yes')
         {

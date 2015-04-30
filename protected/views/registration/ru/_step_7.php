@@ -33,8 +33,8 @@
                 <input placeholder="Имя владельца карты" type="text" name="" value="">
                 <input placeholder="Фамилия владельца карты" type="text" name="" value="">
                 <input placeholder="Улица" type="text" name="" value="">
-                <input class="half separate" placeholder="Квартира" type="text" name="" value="">
                 <input class="half" placeholder="Дом" type="text" name="" value="">
+                <input class="half separate" placeholder="Квартира" type="text" name="" value="">
                 <input placeholder="Город" type="text" name="" value="">
                 <input placeholder="Страна" type="text" name="" value="">
                 <input placeholder="Контактный номер телефона" type="text" name="" value="">
