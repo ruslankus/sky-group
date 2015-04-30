@@ -13,16 +13,19 @@
         <section class="offset <?php echo ($sessData['has_children'] == 'yes')? '' : 'hidden-block'; ?> if-children">
             <div class="children-list">
             <?php
-                if ($errors) {
+                if ($errors || $sessData['children']) {
+                   $this->clear_empty_array_values( $sessData['children']);
+                    $o=-1;
                     foreach ($sessData['children'] as $id=>$child) {
+                        $o++;
                 ?>
-                <fieldset class="reg-3" id="children_<?php echo $id; ?>" data-children="<?php echo $id; ?>">
-                    <label class="bold-label"><?php echo $id+1; ?>st child</label>
-                    <input class="<?php echo $errors["children[$id][name]"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[$id][name]"] ? $errors["children[$id][name]"]:''); ?>" placeholder="Name" type="text" name="children[<?php echo $id; ?>][name]" value="<?php echo $sessData['children'][$id]['name']; ?>">
-                    <input class="<?php echo $errors["children[$id][surname]"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[$id][surname]"] ? $errors["children[{$id}][surname]"]:''); ?>" placeholder="Surname" type="text" name="children[<?php echo $id; ?>][surname]" value="<?php echo $sessData['children'][$id]['surname']; ?>">
+                <fieldset class="reg-3" id="children_<?php echo $o; ?>" data-children="<?php echo $o; ?>">
+                    <label class="bold-label"><?php echo Yii::t('yii.skygroup','n==1#1st child|n==2#2nd child|n==3#3th child|n>3#{n}th child', ($o+1)); ?></label>
+                    <input class="<?php echo $errors["children[$id][name]"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[$id][name]"] ? $errors["children[$id][name]"]:''); ?>" placeholder="Name" type="text" name="children[<?php echo $o; ?>][name]" value="<?php echo $sessData['children'][$id]['name']; ?>">
+                    <input class="<?php echo $errors["children[$id][surname]"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[$id][surname]"] ? $errors["children[{$id}][surname]"]:''); ?>" placeholder="Surname" type="text" name="children[<?php echo $o; ?>][surname]" value="<?php echo $sessData['children'][$id]['surname']; ?>">
                     <label>Date of birth</label>
                     <div style="clear: both;"></div>
-                    <select class="selector-1 <?php echo $errors["children[$id][day]"] ? 'error' : '' ?>" name="children[<?php echo $id; ?>][day]">
+                    <select class="selector-1 <?php echo $errors["children[$id][day]"] ? 'error' : '' ?>" name="children[<?php echo $o; ?>][day]">
                         <option value="">Day</option>
                         <?php
                     for ($i=1; $i<32; $i++) {
@@ -30,7 +33,7 @@
                     }
                     ?>
                     </select>
-                    <select class="selector-2 <?php echo $errors["children[$id][month]"] ? 'error' : '' ?>" name="children[<?php echo $id; ?>][month]">
+                    <select class="selector-2 <?php echo $errors["children[$id][month]"] ? 'error' : '' ?>" name="children[<?php echo $o; ?>][month]">
                         <option value="">Month</option>
                         <?php
                     for ($i=1; $i<13; $i++) {
@@ -38,7 +41,7 @@
                     }
                     ?>
                     </select>
-                    <select class="selector-3 <?php echo $errors["children[$id][year]"] ? 'error' : '' ?>" name="children[<?php echo $id; ?>][year]">
+                    <select class="selector-3 <?php echo $errors["children[$id][year]"] ? 'error' : '' ?>" name="children[<?php echo $o; ?>][year]">
                         <option value="">Year</option>
                         <?php
                     for ($i=date('Y')-14; $i>date('Y')-100; $i--) {
@@ -89,7 +92,7 @@
             ?>
 
             </div>
-            <a class="add-child-info" href="#">Add information about one more child</a>
+            <a class="add-child-info" href="#" data-lang="<?php echo Yii::app()->language; ?>">Add information about one more child</a>
         </section>
 
         <fieldset class="buttons">
