@@ -63,10 +63,10 @@
         <section class="offset hidden-block if-kasa">
             <fieldset class="reg-3 small-height">
                 <span class="question-span small block">Укажите больничную кассу:</span>
-                <input id="leumit" checked type="radio" name="kasa-type" value="leumit"><label data-name="kasa-type" class="radio modified-small active" for="leumit">LEUMIT</label>
-                <input id="macabi" type="radio" name="kasa-type" value="macabi"><label data-name="kasa-type" class="radio modified-small" for="macabi">MACABI</label>
-                <input id="meucheded" type="radio" name="kasa-type" value="macabi"><label data-name="kasa-type" class="radio modified-small" for="meucheded">MEUCHEDET</label>
-                <input id="calit" type="radio" name="kasa-type" value="macabi"><label data-name="kasa-type" class="radio modified-small" for="calit">CLALIT</label>
+                <input id="leumit" checked type="radio" name="kasa-type" value="leumit"><label data-name="kasa-type" class="radio modified-small active" for="leumit">ЛЕУМИТ</label>
+                <input id="macabi" type="radio" name="kasa-type" value="macabi"><label data-name="kasa-type" class="radio modified-small" for="macabi">МАКАБИ</label>
+                <input id="meucheded" type="radio" name="kasa-type" value="macabi"><label data-name="kasa-type" class="radio modified-small" for="meucheded">МЕУХЕДЕТ</label>
+                <input id="calit" type="radio" name="kasa-type" value="macabi"><label data-name="kasa-type" class="radio modified-small" for="calit">КЛАЛИТ</label>
             </fieldset>
             <div style="clear: both;"></div>
         </section>
