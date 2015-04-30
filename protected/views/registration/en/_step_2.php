@@ -2,7 +2,6 @@
 <section class="form-area">
    <?php echo CHtml::beginForm();?>
         <fieldset class="reg-1">
-            <a href="#" style="top: 32px;" class="question" data-questionmark="укажите код удостоверения личности"></a>
            <span class="promo">Identification number</span>
             <span style="display: block; width:95%;" data-error="<?php echo $errors['id_number']; ?>">
                 <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_1']? 'error' : '' ?>" type="text" name="id_number_1" value="<?php echo $sessData['id_number_1']; ?>">

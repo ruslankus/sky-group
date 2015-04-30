@@ -13,8 +13,9 @@
         <section class="offset <?php echo ($sessData['has_children'] == 'yes')? '' : 'hidden-block'; ?> if-children">
             <div class="children-list">
             <?php
+
+                $this->clear_empty_array_values( $sessData['children']);
                 if ($errors || $sessData['children']) {
-                   $this->clear_empty_array_values( $sessData['children']);
                     $o=-1;
                     foreach ($sessData['children'] as $id=>$child) {
                         $o++;

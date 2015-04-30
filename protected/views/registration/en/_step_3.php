@@ -12,8 +12,7 @@
         <div style="clear: both;"></div>
         <section class="offset <?php echo ($sessData['married'] == 'yes')? '' : 'hidden-block'; ?> if-married">
             <fieldset class="reg-3">
-                <a href="#" style="top: 32px;" class="question" data-questionmark="укажите код удостоверения личности супруга(и)"></a>
-               <span class="promo">Spouse(s) identification number</span>
+               <span class="promo">Spouse identification number</span>
                 <span style="display: block; width:95%;" data-error="<?php echo $errors['id_number']; ?>">
                     <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_1']? 'error' : '' ?>" type="text" name="id_number_1" value="<?php echo $sessData['id_number_1']; ?>">
                     <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_2']? 'error' : '' ?>" type="text" name="id_number_2" value="<?php echo $sessData['id_number_2']?>">
