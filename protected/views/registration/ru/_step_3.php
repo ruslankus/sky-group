@@ -1,6 +1,3 @@
-<?php $cs = Yii::app()->clientScript; ?>
-<?php $cs->registerScriptFile(Yii::app()->request->baseUrl."/js/jquery.mask.min.js", CClientScript::POS_END); ?>
-<?php $cs->registerScript("promomask", "$('.promo').mask('000000000');", CClientScript::POS_END, array(CClientScript::POS_READY));  ?>
 <?php $step_1 = $got->get('step_1'); ?>
 <section class="form-area">
 
@@ -16,10 +13,23 @@
         <div style="clear: both;"></div>
         <section class="offset <?php echo ($sessData['married'] == 'yes')? '' : 'hidden-block'; ?> if-married">
             <fieldset class="reg-3">
-                <a href="#" class="question" data-questionmark="Some question mark"></a>
-                <input data-error="<?php echo $errors['partner_id']; ?>" class="promo <?php echo $errors['id_number']? 'error' : '' ?>" placeholder="Номер ID" type="text" name="partner_id" value="<?php echo $sessData['partner_Id']?>">
-                <input class="<?php echo $errors['p_fname']? 'error' : '' ?>" data-error="<?php echo $errors['p_fname']; ?>" placeholder="Имя (вписываются с первой страницы)" type="text" name="p_fname" value="<?php echo $sessData['p_fname']?>">
-                <input class="<?php echo $errors['p_lname']? 'error' : '' ?>" data-error="<?php echo $errors['p_lname']; ?>" placeholder="Фамилия (вписываются с первой страницы)" type="text" name="p_lname" value="<?php echo ($sessData['p_lname'] ? $sessData['p_lname'] : $step_1['last_name']); ?>">
+                <a href="#" style="top: 32px;" class="question" data-questionmark="укажите код удостоверения личности супруга(и)"></a>
+               <span class="promo">Номер удостоверения личности</span>
+                <span style="display: block; width:95%;" data-error="<?php echo $errors['id_number']; ?>">
+                    <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_1']? 'error' : '' ?>" type="text" name="id_number_1" value="<?php echo $sessData['id_number_1']; ?>">
+                    <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_2']? 'error' : '' ?>" type="text" name="id_number_2" value="<?php echo $sessData['id_number_2']?>">
+                    <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_3']? 'error' : '' ?>" type="text" name="id_number_3" value="<?php echo $sessData['id_number_3']?>">
+                    <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_4']? 'error' : '' ?>" type="text" name="id_number_4" value="<?php echo $sessData['id_number_4']?>">
+                    <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_5']? 'error' : '' ?>" type="text" name="id_number_5" value="<?php echo $sessData['id_number_5']?>">
+                    <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_6']? 'error' : '' ?>" type="text" name="id_number_6" value="<?php echo $sessData['id_number_6']?>">
+                    <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_7']? 'error' : '' ?>" type="text" name="id_number_7" value="<?php echo $sessData['id_number_7']?>">
+                    <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_8']? 'error' : '' ?>" type="text" name="id_number_8" value="<?php echo $sessData['id_number_8']?>">
+                    <input maxlength="1" style="width: 9%;text-align:center;" class="promo <?php echo $errors['id_number_9']? 'error' : '' ?>" type="text" name="id_number_9" value="<?php echo $sessData['id_number_9']?>">
+                </span>
+                
+                <input class="<?php echo $errors['p_fname']? 'error' : '' ?>" data-error="<?php echo $errors['p_fname']; ?>" placeholder="Имя" type="text" name="p_fname" value="<?php echo $sessData['p_fname']?>">
+                <input class="<?php echo $errors['p_lname']? 'error' : '' ?>" data-error="<?php echo $errors['p_lname']; ?>" placeholder="Фамилия" type="text" name="p_lname" value="<?php echo ($sessData['p_lname'] ? $sessData['p_lname'] : $step_1['last_name']); ?>">
+                
                 <label>Дата Рождения</label>
                 <div style="clear: both;"></div>
                 <select class="selector-1 <?php echo $errors['bday']? 'error' : '' ?>" name="bday">
@@ -68,11 +78,15 @@
                 <section class="offset <?php echo ($sessData['same_address'] != 'no')? 'hidden-block' : ''; ?>  if-same">
                     <fieldset class="reg-3">
                         <input class="<?php echo $errors['street']? 'error' : '' ?>" data-error="<?php echo $errors['street']; ?>" placeholder="Улица" type="text" name="street" value="<?php echo $sessData['street']?>">
-                <input class="<?php echo $errors['house']? 'error' : '' ?>" data-error="<?php echo $errors['house']; ?>" placeholder="Дом" type="text" name="house" value="<?php echo $sessData['house']?>">
-                <input class="<?php echo $errors['flat']? 'error' : '' ?>" data-error="<?php echo $errors['flat']; ?>" placeholder="Квартира" type="text" name="flat" value="<?php echo $sessData['flat']?>">
-                <input class="<?php echo $errors['city']? 'error' : '' ?>" data-error="<?php echo $errors['city']; ?>" placeholder="Город" type="text" name="city" value="<?php echo $sessData['city']; ?>">
-                <input class="<?php echo $errors['country']? 'error' : '' ?>" data-error="<?php echo $errors['country']; ?>" placeholder="Страна" type="text" name="country" value="<?php echo $sessData['country']; ?>">
-                <input class="<?php echo $errors['post_code']? 'error' : '' ?>" data-error="<?php echo $errors['post_code']; ?>" placeholder="Почтовый Индекс (Россия)" type="text" name="post_code" value="<?php echo $sessData['post_code']; ?>">
+                            <span style="width:95%;display:block;">
+                                <input class="<?php echo $errors['house']? 'error' : '' ?>" data-error="<?php echo $errors['house']; ?>" placeholder="Дом" type="text" name="house" value="<?php echo $sessData['house']?>" style="width:47%;margin-right:6%;">
+                                <input class="<?php echo $errors['flat']? 'error' : '' ?>" data-error="<?php echo $errors['flat']; ?>" placeholder="Квартира" type="text" name="flat" value="<?php echo $sessData['flat']?>" style="width:47%;">
+                            </span>
+                            <input class="<?php echo $errors['city']? 'error' : '' ?>" data-error="<?php echo $errors['city']; ?>" placeholder="Город" type="text" name="city" value="<?php echo $sessData['city']; ?>">
+                            <span style="width:95%;display:block;">
+                                <input class="<?php echo $errors['country']? 'error' : '' ?>" data-error="<?php echo $errors['country']; ?>" placeholder="Страна" type="text" name="country" value="<?php echo $sessData['country']; ?>" style="width:47%;margin-right:6%;">
+                                <input class="<?php echo $errors['post_code']? 'error' : '' ?>" data-error="<?php echo $errors['post_code']; ?>" placeholder="Почтовый Индекс (Россия)" type="text" name="post_code" value="<?php echo $sessData['post_code']; ?>" style="width:47%;">
+                            </span>
                     </fieldset>
 
                     <div style="clear: both;"></div>
