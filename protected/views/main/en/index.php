@@ -13,30 +13,6 @@
                         </p>
                     </div> <!-- / info -col-content -->
                 </div>
-                <div class="info-col clients">
-                    <div class="col-ico clients"></div>
-                    <div class="info-col-content">
-                        <h1>СТАТУС КЛИЕНТА</h1>
-                        <div  class="client-box silver">
-                            <h2>СЕРЕБРЯНЫЙ КЛИЕНТ</h2>
-                            <p>
-                                ЗДЕСЬ БУДЕТ НАХОДИТЬСЯ ТЕКСТ С ОПИСАНИЕМ СТАТУСА СЕРЕБРЯНОГО КЛИЕНТА.  
-                            </p>
-                        </div>
-                        <div  class="client-box gold">
-                            <h2>ЗОЛОТОЙ КЛИЕНТ</h2>
-                            <p>
-                                ЗДЕСЬ БУДЕТ НАХОДИТЬСЯ ТЕКСТ С ОПИСАНИЕМ СТАТУСА ЗОЛОТОГО КЛИЕНТА. 
-                            </p>
-                        </div>
-                        <div  class="client-box diamond">
-                            <h2>АЛМАЗНЫЙ КЛИЕНТ</h2>
-                            <p>
-                                ЗДЕСЬ БУДЕТ НАХОДИТЬСЯ ТЕКСТ С ОПИСАНИЕМ СТАТУСА АЛМАЗНОГО КЛИЕНТА.   
-                            </p>
-                        </div>
-                    </div> <!-- / info -col-content -->
-                </div>
                 <div class="info-col vision">
                     <div class="col-ico vision"></div>
                     <div class="info-col-content">

@@ -155,28 +155,14 @@ $(document).ready(function(){
 
         children_current_nr++;
         var count_to_display = children_current_nr+1;
-        //
+        
         var html = '' +
             '<fieldset class="reg-3" id="children_'+children_current_nr+'">' +
-            '<label class="bold-label">'+count_to_display+'й ребёнок</label>' +
-            '<input placeholder="Имя" type="text" name="children['+children_current_nr+'][name]" value="">' +
-            '<input placeholder="Фамилия" type="text" name="children['+children_current_nr+'][surname]" value="">' +
-            '<label>Дата Рождения</label>' +
-            '<div style="clear: both;"></div>' +
-            '<select name="children['+children_current_nr+'][day]" class="selector-1">' +
-            '<option>Число</option>' +
-            '</select>' +
-            '<select name="children['+children_current_nr+'][month]" class="selector-2">' +
-            '<option>Месяц</option>' +
-            '</select>' +
-            '<select name="children['+children_current_nr+'][year]" class="selector-3">' +
-            '<option>Год</option>' +
-            '</select>' +
             '</fieldset>' +
             '<div style="clear: both;"></div>';
 
         $(".children-list").append(html);
-
+        $("fieldset#children_"+children_current_nr).load("/registration/children/"+children_current_nr);
         return false;
     });
 

@@ -1,18 +1,14 @@
 <section class="form-area">
     <?php echo CHtml::beginForm();?>
          <fieldset class="reg-1">
-            <a href="#" class="question" data-questionmark="There should be some long or not long text."></a>
+            <a href="#" style="top: 32px;" class="question" data-questionmark="There should be some long or not long text."></a>
            <span class="promo">Номер промоутера</span>
             <span style="display: block; width:95%;" data-error="<?php echo $errors['promotion_number']; ?>">
-                <input maxlength="1" style="width: 9%;margin-left:2%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_1" value="<?php echo $sessData['promotion_number_1']?>">
-                <input maxlength="1" style="width: 9%;margin-left:2%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_2" value="<?php echo $sessData['promotion_number_2']?>">
-                <input maxlength="1" style="width: 9%;margin-left:2%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_3" value="<?php echo $sessData['promotion_number_3']?>">
-                <input maxlength="1" style="width: 9%;margin-left:2%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_4" value="<?php echo $sessData['promotion_number_4']?>">
-                <input maxlength="1" style="width: 9%;margin-left:2%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_5" value="<?php echo $sessData['promotion_number_5']?>">
-                <input maxlength="1" style="width: 9%;margin-left:2%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_6" value="<?php echo $sessData['promotion_number_6']?>">
-                <input maxlength="1" style="width: 9%;margin-left:2%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_7" value="<?php echo $sessData['promotion_number_7']?>">
-                <input maxlength="1" style="width: 9%;margin-left:2%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_8" value="<?php echo $sessData['promotion_number_8']?>">
-                <input maxlength="1" style="width: 9%;margin-left:2%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_9" value="<?php echo $sessData['promotion_number_9']?>">
+                <input maxlength="1" style="width: 15%;margin-right:2%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_1" value="<?php echo $sessData['promotion_number_1']?>">
+                <input maxlength="1" style="width: 15%;margin-right:10%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_2" value="<?php echo $sessData['promotion_number_2']?>">
+                <input maxlength="1" style="width: 18%;margin-right:2%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_3" value="<?php echo $sessData['promotion_number_3']?>">
+                <input maxlength="1" style="width: 18%;margin-right:2%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_4" value="<?php echo $sessData['promotion_number_4']?>">
+                <input maxlength="1" style="width: 18%;text-align:center;" class="promo <?php echo $errors['promotion_number']? 'error' : '' ?>" type="text" name="promotion_number_5" value="<?php echo $sessData['promotion_number_5']?>">
             </span>
              
             <input data-error="<?php echo $errors['user_name']; ?>" placeholder="Имя" class="<?php echo $errors['user_name']? 'error' : '' ?>"

@@ -22,11 +22,12 @@ class RegistrationController extends Controller
         $this->title = $lng == 'ru' ? 'Регистрация' : 'Registration';
         $this->redirect("/{$lng}/registration/step/1");
     }
-    public function actionChild() {
+    public function actionChildren() {
         $this->layout='';
-        $this->render("_children", array("child"=>1));
+        $request = Yii::app()->request;
+        $this->render("_children", array("child"=>$child));
     }
-    public function actionStep($id){
+    public function actionStep($id) {
 
         /* @var $model CFormModel | FormStep_1 | FormStep_2 | FormStep_3 | FormStep_4 | FormStep_5 | FormStep_6 | FormStep_7 */
 

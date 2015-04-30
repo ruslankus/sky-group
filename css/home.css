@@ -88,9 +88,9 @@ button {
 
 .info-col {
     position: relative;
-    width:33.33%;
+    width:50%;
     float:left;
-    padding: 0 15px;
+    padding: 0 25px;
 }
 
 .info-col img {
@@ -100,7 +100,7 @@ button {
 .info-col-content {
     position:relative;
     margin: 0 auto 0 auto;
-    max-width:400px;
+    max-width:90%;
     text-transform: uppercase;
 }
 .info-col-content ul li {
@@ -118,11 +118,6 @@ button {
 }
 @media (max-width: 1279px) {
     .info-col-content h1 { font-size: 50px;  }
-}
-@media (max-width: 920px) {
-    .info-col { width: 50%;  }
-    .info-col.vision { width: 100%; margin-top: 15px; }
-    .info-col.vision > .info-col-content { max-width: 100%; }
 }
 @media (max-width: 650px) {
     .info-col { width: 100%; margin-top: 15px; }
