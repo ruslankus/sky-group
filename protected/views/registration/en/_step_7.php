@@ -11,14 +11,14 @@
             if ($disc) {
             ?>
             <span class="question-span small block">
-                Amount (without discounts)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span>
+                Amount (without discounts)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> EUR</span>
             </span>
             <span class="question-span small block">
-               Discount<span class="right bold"><?php echo number_format($objProds->price * ($disc->value / 100) / 100 ,2)?> ILS</span>
+               Discount<span class="right bold"><?php echo number_format($objProds->price * ($disc->value / 100) / 100 ,2)?> EUR</span>
             </span>
-            <span class="question-span small block">Amount (with discounts)<span class="right bold"><?php echo number_format(($objProds->price / 100) - ($objProds->price * ($disc->value / 100) / 100),2)?> ILS</span></span>
+            <span class="question-span small block">Amount (with discounts)<span class="right bold"><?php echo number_format(($objProds->price / 100) - ($objProds->price * ($disc->value / 100) / 100),2)?> EUR</span></span>
             <?php } else { ?>
-            <span class="question-span small block">Amount<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span></span>
+            <span class="question-span small block">Amount<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> EUR</span></span>
             <?php } ?>
             <div style="clear: both;"></div>
         </fieldset>
