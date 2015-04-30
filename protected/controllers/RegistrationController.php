@@ -25,7 +25,7 @@ class RegistrationController extends Controller
     public function actionChildren() {
         $this->layout='';
         $request = Yii::app()->request;
-        $this->render("_children", array("child"=>$child));
+        $this->render("_children", array("child"=>$request->getPost('child'), "lng"=>$request->getPost('lng')));
     }
     public function actionStep($id) {
 
@@ -89,6 +89,16 @@ class RegistrationController extends Controller
         $this->render("{$lng}/registration",array('step'=> $id, 'sessData' => $sessData, 'got' => Yii::app()->session, 'errors' => $errors,'objProds' => $objProds));
     }
     
+    function clear_empty_array_values(&$array){
+        foreach($array as $key => &$value){
+            if (is_array($value)){
+                $this->clear_empty_array_values($value);
+            }
+            if(empty($value)) {
+                unset($array[$key]);
+            }
+        }
+    }
     
     /*
     public function actionStep2(){

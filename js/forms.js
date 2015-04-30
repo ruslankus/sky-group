@@ -154,7 +154,6 @@ $(document).ready(function(){
     $(".add-child-info").click(function(){
 
         children_current_nr++;
-        var count_to_display = children_current_nr+1;
         
         var html = '' +
             '<fieldset class="reg-3" id="children_'+children_current_nr+'">' +
@@ -162,7 +161,7 @@ $(document).ready(function(){
             '<div style="clear: both;"></div>';
 
         $(".children-list").append(html);
-        $("fieldset#children_"+children_current_nr).load("/registration/children/"+children_current_nr);
+        $("fieldset#children_"+children_current_nr).load("/registration/children/", {child: children_current_nr, lng: $(this).data("lang")});
         return false;
     });
 

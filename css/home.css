@@ -106,7 +106,7 @@ button {
 .info-col-content ul li {
     padding-bottom: 5px;
     margin-left: 15px;
-    text-transform: capitalize;
+    text-transform: none;
 }
 .info-col-content h1{
     padding:0;
