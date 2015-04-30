@@ -6,7 +6,7 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/products.css');
 
 <main class="main">
 <section class="header-section">
-    <h1><span>Продукты</span></h1>
+    <h1><span>Products</span></h1>
 </section>
 
 <section class="content">
@@ -44,7 +44,7 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/products.css');
         <img src="<?php echo Yii::app()->request->baseUrl ?>/img/about1.jpg">
         <p>Platinum Membership offerings + cash back .</p>
     </div><!--/product-->
-    
+
     <div class="cls"></div>
 </section>
 </main>
