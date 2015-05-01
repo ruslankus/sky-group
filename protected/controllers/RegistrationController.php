@@ -22,6 +22,7 @@ class RegistrationController extends Controller
         $this->title = $lng == 'ru' ? 'Регистрация' : 'Registration';
         $this->redirect("/{$lng}/registration/step/1");
     }
+
     public function actionChildren() {
         $this->layout='';
         $request = Yii::app()->request;
@@ -86,7 +87,8 @@ class RegistrationController extends Controller
         //Debug::d($_SESSION);
 
         $lng = Yii::app()->language;
-        $this->render("{$lng}/registration",array('step'=> $id, 'sessData' => $sessData, 'got' => Yii::app()->session, 'errors' => $errors,'objProds' => $objProds));
+        $this->render("{$lng}/registration",array('step'=> $id, 'sessData' => $sessData, 'got' => Yii::app()->session,
+            'errors' => $errors,'objProds' => $objProds, 'lng' => $lng));
     }
     
     function clear_empty_array_values(&$array){

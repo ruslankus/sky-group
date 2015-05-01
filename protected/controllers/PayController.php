@@ -68,17 +68,17 @@ class PayController extends Controller
 			if($callback->isSuccess() === true && $callback->needReview() == false)
 			{
 				echo "http://inlusion.eu/pay";
-				$order->payment_status = "OK|".$response->return->code."|".$response->return->message;
+				$order->payment_status = "OK,".$response->return->code.", ".$response->return->message;
 			}
 			else if($callback->isSuccess() === true && $callback->needReview() == true)
 			{
-				$order->payment_status = "CHECK|".$response->return->code."|".$response->return->message;
+				$order->payment_status = "CHECK, ".$response->return->code.", ".$response->return->message;
 				// payment successful, but needs manual review of transaction.
 				echo "http://inlusion.eu/pay";
 			}
 			else
 			{
-				$order->payment_status = "NOK|".$response->return->code."|".$response->return->message;
+				$order->payment_status = "NOK, ".$response->return->code.", ".$response->return->message;
 				// Payment unsuccessfull
 				echo "http://inlusion.eu/pay/error";
 			}

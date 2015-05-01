@@ -51,7 +51,7 @@
         </section>
 
         <fieldset class="buttons">
-            <a class="reversed left button" href="/registration/step/6">Back</a>
+            <a href="<?php echo Yii::app()->createUrl($lng .'/registration/step/6'); ?>" class="reversed left button">back</a>
             <input class="right pay" type="submit" value="Pay now">
             <a class="right cancel-link" href="/">Cancel</a>
         </fieldset>

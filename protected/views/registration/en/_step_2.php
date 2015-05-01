@@ -70,7 +70,7 @@
 
         
         <fieldset class="buttons">
-            <a href="<?php echo Yii::app()->createUrl(Yii::app()->language.'/registration/step/1'); ?>" class="reversed left button">Back</a>
+            <a href="<?php echo Yii::app()->createUrl( $lng .'/registration/step/1'); ?>" class="reversed left button">Back</a>
             <input class="right" type="submit" value="Next step">
         </fieldset>
         
