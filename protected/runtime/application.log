@@ -1434,3 +1434,30 @@ Stack trace:
 REQUEST_URI=/img/home-banner-2.jpg
 HTTP_REFERER=http://sky.loc/ru/main
 ---
+2015/05/04 10:28:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.cycle2.min.js".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.cycle...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jquery.cycle2.min.js
+HTTP_REFERER=http://sky.loc/en/main
+---
+2015/05/04 10:29:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.cycle2.min.js".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.cycle...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jquery.cycle2.min.js
+HTTP_REFERER=http://sky.loc/en/main
+---
+2015/05/04 10:30:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/jquery.cycle2.min.js".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('js/jquery.cycle...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/jquery.cycle2.min.js
+HTTP_REFERER=http://sky.loc/en/main
+---

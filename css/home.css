@@ -457,12 +457,12 @@ button {
     text-align: center;
     z-index: 100;
 }
-.header-slider > .slider-block > .slider-nav > ul {
+.header-slider > .slider-block > .slider-nav {
     display: block;
     text-align: center;
     height: auto;
 }
-.header-slider > .slider-block > .slider-nav > ul > li {
+.header-slider > .slider-block > .slider-nav > span {
     display: inline-block;
     width: 14px;
     height: 14px;
@@ -474,9 +474,10 @@ button {
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     transition: 0.3s;
+    color: transparent;
 }
-.header-slider > .slider-block > .slider-nav > ul > li:hover,
-.header-slider > .slider-block > .slider-nav > ul > li.active {
+.header-slider > .slider-block > .slider-nav > span:hover,
+.header-slider > .slider-block > .slider-nav > .cycle-pager-active {
     background-color: rgba(0,0,0,0.7);
 }
 
