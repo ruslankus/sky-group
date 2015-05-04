@@ -36,23 +36,24 @@
          <fieldset class="reg-3">
 		 <h2>Payer information</h2>
 		 <!--name-->
-            <input placeholder="Имя" type="text" name="NAME.GIVEN" value="">
-            <input placeholder="Фамилия" type="text" name="NAME.FAMILY" value="">
+            <input placeholder="<?php echo (Yii::t('skygroup','Name'))?>" type="text" name="NAME.GIVEN" value="">
+            <input placeholder="<?php echo (Yii::t('skygroup','Last Name'))?>" type="text" name="NAME.FAMILY" value="">
 			
 		<!--address-->	
-            <input placeholder="street" type="text" name="ADDRESS.STREET" value="<?php echo $sessData['street']?>">
-            <input placeholder="city" type="text" name="ADDRESS.CITY" value="<?php echo $sessData['city']; ?>">
+            <input placeholder="<?php echo (Yii::t('skygroup','street'))?>" type="text" name="ADDRESS.STREET" value="<?php echo $sessData['street']?>">
+            <input placeholder="<?php echo (Yii::t('skygroup','city'))?>" type="text" name="ADDRESS.CITY" value="<?php echo $sessData['city']; ?>">
 			
             
             <input placeholder="Zip Code" type="text" name="ADDRESS.ZIP" class="zip">
             <select name="ADDRESS.COUNTRY" class="country">
+                <option value="IL">Израиль</option>
 				<option value="RU">Россия</option>
 			</select>
 			
 		<!--contacts-->	
-			<input placeholder="Электронная почта" type="text" name="CONTACT.EMAIL" value="<?php echo $sessData['email']?>">
-            <input placeholder="phone (optional)" type="text" name="CONTACT.PHONE" value="<?php echo $sessData['phone']; ?>">
-            <input placeholder="mobile (optional)" type="text" name="CONTACT.MOBILE" value="<?php echo $sessData['mphone']; ?>">	
+			<input placeholder="<?php echo (Yii::t('skygroup','Email'))?>" type="text" name="CONTACT.EMAIL" value="<?php echo $sessData['email']?>">
+            <input placeholder="<?php echo (Yii::t('skygroup','phone (optional)'))?>" type="text" name="CONTACT.PHONE" value="<?php echo $sessData['phone']; ?>">
+            <input placeholder="<?php echo (Yii::t('skygroup','mobile (optional)'))?>" type="text" name="CONTACT.MOBILE" value="<?php echo $sessData['mphone']; ?>">
         </fieldset>
 		<fieldset class="reg-3 card-info">
 		<h2>Card Information</h2>
@@ -61,7 +62,8 @@
 			
 			
 			<div class="sur">
-			<input class="card-number" placeholder="Credit Card Number" type="text" name="ACCOUNT.NUMBER" value="" />
+			<input class="card-number" placeholder="<?php echo (Yii::t('skygroup','Credit Card Number'))?>"
+                   type="text" name="ACCOUNT.NUMBER" value="" />
 			
 			<input class="card-cvc" placeholder="CVC" type="text" name="ACCOUNT.VERIFICATION" value="" />
 			
@@ -73,7 +75,7 @@
 				<option VALUE="MASTER">MASTERCARD</option>
 			</select>
 			<select class="exp-year" name="ACCOUNT.EXPIRY_YEAR">
-				<option value="-">Exp. Year</option>
+				<option value="-"><?php echo (Yii::t('skygroup','Exp. Year'))?></option>
 				<?php
 					for($i=date("Y"); $i<date("Y")+25; $i++):
 						echo "<option>{$i}</option>";
@@ -81,7 +83,7 @@
 				?>
 			</select>
 			<select class="exp-month" name="ACCOUNT.EXPIRY_MONTH">
-				<option value="-">EXp. Month</option>
+				<option value="-"><?php echo (Yii::t('skygroup','EXp. Month'))?></option>
 				<option>01</option>
 				<option>02</option>
 				<option>03</option>
