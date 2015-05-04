@@ -32,6 +32,7 @@ class RegistrationController extends Controller
 
         /* @var $model CFormModel | FormStep_1 | FormStep_2 | FormStep_3 | FormStep_4 | FormStep_5 | FormStep_6 | FormStep_7 */
         $sessData = array();
+        $errors = array();
         $lng = Yii::app()->language;
         $this->title = $lng == 'ru' ? 'Регистрация' : 'Registration';
 
@@ -86,7 +87,8 @@ class RegistrationController extends Controller
         
         //Debug::d($_SESSION);
         
-        
+        $sessData = isset( $sessData ) ? $sessData : array();
+        $sessData['promotion_number'] = isset( $sessData['promotion_number'] ) ? $sessData['promotion_number'] : array();
 
         $lng = Yii::app()->language;
         $this->render("{$lng}/registration",array('step'=> $id, 'sessData' => $sessData, 'got' => Yii::app()->session,
