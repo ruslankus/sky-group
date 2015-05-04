@@ -45,7 +45,7 @@
             <fieldset class="reg-3 small-height">
                 <span class="question-span small block">Укажите вид пособия:</span>
                 <input type="checkbox" id="pensionnoye" name="posobie[pensionnoye]"><label class="check-box-label" for="pensionnoye">Пенсионное пособие</label>
-                <input type="checkbox" id="invalidnost" name="posobie[invalidnost]"><label class="check-box-label" for="invalidnost">Инвалидность</label>
+                <input type="checkbox" id="invalidnost" name="posobie[invalidnost]"><label class="check-box-label" for="invalidnost">Пособие по инвалидности</label>
                 <input type="checkbox" id="bezrabotica" name="posobie[bezrabotica]"><label class="check-box-label" for="bezrabotica">Пособие по безработице</label>
                 <input type="checkbox" id="prozhitochniy" name="posobie[prozhitochniy]"><label class="check-box-label" for="prozhitochniy">Пособие по обеспечению прожиточного минимума</label>
             </fieldset>
