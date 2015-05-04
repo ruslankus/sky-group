@@ -56,7 +56,7 @@
                 } else {
                     ?>
                 <fieldset class="reg-3" id="children_0" data-children="0">
-                    <label class="bold-label">1ый ребенок</label>
+                    <label class="bold-label">1ый ребёнок</label>
                     <input placeholder="Имя" type="text" name="children[0][name]" value="">
                     <input placeholder="Фамилия" type="text" name="children[0][surname]" value="">
                     <label>Дата Рождения</label>
@@ -92,7 +92,7 @@
             ?>
 
             </div>
-            <a class="add-child-info" href="#" data-lang="<?php echo Yii::app()->language; ?>">Добавить информацию о еще одном ребенке</a>
+            <a class="add-child-info" href="#" data-lang="<?php echo Yii::app()->language; ?>">Добавить информацию</a>
         </section>
 
         <fieldset class="buttons">
