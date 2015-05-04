@@ -44,10 +44,10 @@ class FormStep_3 extends CFormModel
         if ( $this->married == 'yes') {
             $this->id_number = $this->id_number_1.$this->id_number_2.$this->id_number_3.$this->id_number_4.$this->id_number_5.$this->id_number_6.$this->id_number_7.$this->id_number_8.$this->id_number_9;
             if ( empty($this->id_number)) {
-                $this->addError('id_number', Yii::t('yii.skygroup','Field cannot be blank.'.$this->id_number_1));
+                $this->addError('id_number', Yii::t('skygroup','Field cannot be blank.'));
             }
             if ( strlen($this->id_number) != 9) {
-                $this->addError('id_number', Yii::t('yii.skygroup','Must be equal to {compareValue}.', array("{compareValue}"=>9)));
+                $this->addError('id_number', Yii::t('skygroup','Must be equal to {compareValue}.', array("{compareValue}"=>9)));
             }
         }
     }
@@ -57,7 +57,7 @@ class FormStep_3 extends CFormModel
             $attributes = explode(",", str_replace(' ', '', $params['check']));
             foreach ($attributes as $get) {
                 if (empty($this->{$get})) {
-                    $this->addError($get, Yii::t('yii.skygroup','Field cannot be blank.'));
+                    $this->addError($get, Yii::t('skygroup','Field cannot be blank.'));
                 }
             }
         }
@@ -68,7 +68,7 @@ class FormStep_3 extends CFormModel
             $attributes = explode(",", str_replace(' ', '', $params['check']));
             foreach ($attributes as $get) {
                 if (empty($this->{$get})) {
-                    $this->addError($get, Yii::t('yii.skygroup','Field cannot be blank.'));
+                    $this->addError($get, Yii::t('skygroup','Field cannot be blank.'));
                 }
             }
         }

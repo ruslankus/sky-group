@@ -8,7 +8,7 @@ class FormStep_1 extends CFormModel
     public $promotion_number_3;
     public $promotion_number_4;
     public $promotion_number_5;
-    public $user_name;
+    public $first_name;
     public $last_name;
     public $email;
     public $password;
@@ -20,10 +20,10 @@ class FormStep_1 extends CFormModel
     {
         return array(
 			// username and password are required
-			array('email, password, next_pass, user_name, last_name', 'required'),
-            array('email','application.validators.Email'),
-            array('password','application.validators.Compare','compareAttribute'=>'next_pass'),
-            array('password, next_pass', 'application.validators.String', 'min'=>6, 'max'=>25),
+			array('email, password, next_pass, first_name, last_name', 'required'),
+            array('email','email'),
+            array('password','compare','compareAttribute'=>'next_pass'),
+            array('password, next_pass', 'length', 'min'=>6, 'max'=>25),
             array('promotion_number_1, promotion_number_2, promotion_number_3, promotion_number_4, promotion_number_5', 'promotionAuth'),		
 		);
 	}
@@ -48,6 +48,7 @@ class FormStep_1 extends CFormModel
     public function attributeLabels()
     {
         return array(
+            'first_name' =>  Yii::t('skygroup','Name'),
             'last_name' =>  Yii::t('skygroup','Last Name'),
             'email' => Yii::t('skygroup','Email'),
             'password' => Yii::t('skygroup','Password'),

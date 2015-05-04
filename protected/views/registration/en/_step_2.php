@@ -15,7 +15,7 @@
                 <input maxlength="1" style="width: 9%;text-align:center;" class="promo <?php echo isset($errors['id_number_8'])? 'error' : '' ?>" type="text" name="id_number_9" value="<?php echo isset($sessData['id_number_9']) ? $sessData['id_number_9']:''; ?>">
             </span>
 
-            <input placeholder="Name (saved and transferred from the first page)" type="text" value="<?php echo $step_1['user_name']; ?>" readonly="readonly" />
+            <input placeholder="Name (saved and transferred from the first page)" type="text" value="<?php echo $step_1['first_name']; ?>" readonly="readonly" />
             <input placeholder="Surname (saved and transferred from the first page)" type="text" value="<?php echo $step_1['last_name']; ?>" readonly="readonly" />
             
              <label>Date Of Birth</label>

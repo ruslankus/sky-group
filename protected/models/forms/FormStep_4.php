@@ -42,6 +42,10 @@ class FormStep_4 extends CFormModel
             }
             else {
                 $this->addError("children_0_name", Yii::t('skygroup','Field cannot be blank.'));
+                $this->addError("children_0_surname", Yii::t('skygroup','Field cannot be blank.'));
+                $this->addError("children_0_year", Yii::t('skygroup','Field cannot be blank.'));
+                $this->addError("children_0_day", Yii::t('skygroup','Field cannot be blank.'));
+                $this->addError("children_0_month", Yii::t('skygroup','Field cannot be blank.'));
             }
         }
     }

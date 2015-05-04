@@ -19,7 +19,7 @@ class FormStep_6 extends CFormModel
         if ($this->discount_is == 'yes') {
              $this->_promo = Discounts::model()->find("code=:promo", array(":promo"=>$this->discount));
              if (!$this->_promo) {
-                $this->addError('discount', Yii::t('yii.skygroup','Discount code is invalid.'));
+                $this->addError('discount', Yii::t('skygroup','Discount code is invalid.'));
              }
         }
     }

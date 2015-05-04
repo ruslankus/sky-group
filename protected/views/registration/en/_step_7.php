@@ -5,7 +5,7 @@
 
         <fieldset class="reg-3 small-height bordered-bottom">
             <span class="question-span small block bold">The system assigns a unique number</span>
-            <span class="question-span small block bold"><?php echo $_SESSION['step_1']['user_name']." ".$_SESSION['step_1']['last_name'] ?></span>
+            <span class="question-span small block bold"><?php echo $_SESSION['step_1']['first_name']." ".$_SESSION['step_1']['last_name'] ?></span>
             <span class="question-span small block">Package service<span class="right bold"><?php echo $objProds->name?></span></span>
             <?php $disc = Discounts::model()->find("code=:promo", array(":promo"=>$step_6['discount']));
             if ($disc) {

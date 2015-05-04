@@ -6,7 +6,6 @@
 <section class="header-section">
     <h1><?php echo Yii::t('skygroup','Payment')?></h1>
 </section>
-<?php print_r($sessData); ?>
 <section class="form-area">
     <?php echo CHtml::beginForm("https://test.ctpe.net/frontend/payment.prc", "post");?>
 	<!--hidden inputs-->
@@ -40,8 +39,8 @@
             <input placeholder="<?php echo (Yii::t('skygroup','Last Name'))?>" type="text" name="NAME.FAMILY" value="">
 			
 		<!--address-->	
-            <input placeholder="<?php echo (Yii::t('skygroup','street'))?>" type="text" name="ADDRESS.STREET" value="<?php echo $sessData['street']?>">
-            <input placeholder="<?php echo (Yii::t('skygroup','city'))?>" type="text" name="ADDRESS.CITY" value="<?php echo $sessData['city']; ?>">
+            <input placeholder="<?php echo (Yii::t('skygroup','street'))?>" type="text" name="ADDRESS.STREET">
+            <input placeholder="<?php echo (Yii::t('skygroup','city'))?>" type="text" name="ADDRESS.CITY">
 			
             
             <input placeholder="Zip Code" type="text" name="ADDRESS.ZIP" class="zip">
@@ -51,9 +50,9 @@
 			</select>
 			
 		<!--contacts-->	
-			<input placeholder="<?php echo (Yii::t('skygroup','Email'))?>" type="text" name="CONTACT.EMAIL" value="<?php echo $sessData['email']?>">
-            <input placeholder="<?php echo (Yii::t('skygroup','phone (optional)'))?>" type="text" name="CONTACT.PHONE" value="<?php echo $sessData['phone']; ?>">
-            <input placeholder="<?php echo (Yii::t('skygroup','mobile (optional)'))?>" type="text" name="CONTACT.MOBILE" value="<?php echo $sessData['mphone']; ?>">
+			<input placeholder="<?php echo (Yii::t('skygroup','Email'))?>" type="text" name="CONTACT.EMAIL">
+            <input placeholder="<?php echo (Yii::t('skygroup','phone (optional)'))?>" type="text" name="CONTACT.PHONE">
+            <input placeholder="<?php echo (Yii::t('skygroup','mobile (optional)'))?>" type="text" name="CONTACT.MOBILE">
         </fieldset>
 		<fieldset class="reg-3 card-info">
 		<h2><?php echo Yii::t('skygroup','Card Information')?></h2>
