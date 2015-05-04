@@ -1045,3 +1045,392 @@ in C:\OpenServer\domains\ysky.local\index.php (13)
 2015/05/03 03:13:43 [warning] [application] Failed to set unsafe attribute "Phone" of "FormStep_1".
 in C:\OpenServer\domains\ysky.local\protected\controllers\RegistrationController.php (55)
 in C:\OpenServer\domains\ysky.local\index.php (13)
+2015/05/04 09:33:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ru".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php:483
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(270): CController->missingAction('ru')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(282): CController->run('ru')
+#2 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('main/ru')
+#3 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/main/ru/
+HTTP_REFERER=http://sky.loc/
+---
+2015/05/04 09:40:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-0.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-0.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:40:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:44:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-0.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-0.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:44:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:44:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:44:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-0.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-0.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:45:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:46:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:47:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:47:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:47:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:48:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:48:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:48:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:48:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:49:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:49:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:49:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:50:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:51:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:51:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:52:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:52:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:52:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:52:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:53:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:53:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:54:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:54:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:54:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:54:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:55:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:55:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:55:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:56:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:56:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
+2015/05/04 09:56:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/home-banner-2.jpg".' in C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('img/home-banner...')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/home-banner-2.jpg
+HTTP_REFERER=http://sky.loc/ru/main
+---
