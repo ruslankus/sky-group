@@ -61,8 +61,8 @@ return array(
                  */
                 '<language:\w{2}>/<controller:\w+>'=>'<controller>/index',
                 '<language:\w{2}>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
-                '<language:\w{2}>/<controller:\w+>/<action:\w+>/<id:\d+>/*'=>'<controller>/<action>',
-                '<language:\w{2}>/<controller:\w+>/<action:\w+>/*'=>'<controller>/<action>',
+                '<language:\w{2}>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+                '<language:\w{2}>/<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
 		
@@ -75,7 +75,7 @@ return array(
 			'errorAction'=>'main/error',
 		),
         
-        /*
+
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
@@ -84,14 +84,14 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				
+				/*
 				array(
 					'class'=>'CWebLogRoute',
 				),
-				
+				*/
 			),
 		),
-        */
+
         
         
 

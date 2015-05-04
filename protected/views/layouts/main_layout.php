@@ -59,7 +59,7 @@
     </div>
 </header>
 
-<?echo $content?>
+<?php echo $content?>
 
 <footer class="footer">
     <a href="<?php echo Yii::app()->createUrl($lng.'/main/contacts'); ?>"><?php echo $lng == 'en' ? 'CONTACT US' : 'СВЯЗАТЬСЯ С НАМИ'; ?></a>

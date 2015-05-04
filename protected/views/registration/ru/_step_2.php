@@ -71,7 +71,7 @@
 
         
         <fieldset class="buttons">
-            <a href="/registration/step/1" class="reversed left button">Назад</a>
+            <a href="<?php echo Yii::app()->createUrl( $lng .'/registration/step/1'); ?>" class="reversed left button">Назад</a>
             <input class="right" type="submit" value="Далее">
         </fieldset>
         

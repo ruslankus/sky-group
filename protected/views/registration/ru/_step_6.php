@@ -22,7 +22,7 @@
             
                 <input id="prod_<?php echo $prod->id?>" type="radio" name="packet" <?php echo ($i==0)? 'checked' : ""; ?> value="<?php echo $prod->id?>">
                 <label data-name="packet" class="radio <?php echo ($i==0)? 'active' : ""; ?> modified-small packet" for="prod_<?php echo $prod->id; ?>">
-                    <span><?php echo $prod->name_ru; ?></span> – price <span class="old"><?php echo number_format($prod->old_price/100 ,2) ?> ILS</span> <span><?php echo number_format($prod->price/100 ,2) ?> ILS</span>
+                    <span><?php echo $prod->name_ru; ?></span> – price <span class="old"><?php echo number_format($prod->old_price/100 ,2) ?> EUR</span> <span><?php echo number_format($prod->price/100 ,2) ?> EUR</span>
                 </label>
                 <div style="clear: both;"></div>
                 <?php echo $prod->description_text_ru?>
@@ -31,7 +31,7 @@
         </fieldset>
 
         <fieldset class="buttons">
-            <a class="reversed left button" href="/registration/step/5">Назад</a>
+            <a class="reversed left button" href="<?php echo Yii::app()->createUrl( $lng .'/registration/step/5'); ?>" >Назад</a>
             <input class="right" type="submit" value="Далее">
         </fieldset>
 

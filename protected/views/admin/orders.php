@@ -44,12 +44,20 @@
 
     </div><!--/content-->
 
-    <div class="pagination">
-        <a href="#" class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-    </div><!--/pagination-->
+    <?php if($totalPages > 1):?>
+        <div class="pagination">
+            <?php for($p=1; $p <= $totalPages; $p++): ?>
+                <?php if($p == $currPage):?>
+                    <?php echo CHtml::link($p,array('/admin/orders/',
+                        'page'=> $p),array('class'=>'active')); ?>
+                <?php else:?>
+                    <?php echo CHtml::link($p,array('/admin/orders/',
+                        'page'=> $p)); ?>
+                <?php endif;?>
+            <?php endfor;?>
+
+        </div><!--/pagination-->
+    <?php endif;?>
 
 
 </main>

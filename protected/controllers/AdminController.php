@@ -49,11 +49,23 @@ class AdminController extends Controller
 
     /**
      * List all clients
+     * @param int $id - page number
      */
     public function actionOrders()
     {
+
+        $request = Yii::app()->request;
+        $page = $request->getParam('page',1);
         $orders = Orders::model()->findAll();
-        $this->render('orders',array('orders' => $orders));
+
+        $paging = CPaginator::getInstance($orders,'15',$page);
+
+        //paginator slicing
+        $orders =  $paging->getPreparedArray();
+        $totalPages = $paging->getTotalPages();
+        $currPage = $paging->getCurrentPage();
+
+        $this->render('orders',array('orders' => $orders, 'totalPages' => $totalPages,'currPage' => $currPage));
     }
 
     /**

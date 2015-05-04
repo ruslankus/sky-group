@@ -29,7 +29,7 @@
 
                 <?php $currentUrl = Yii::app()->request->getUrl(); ?>
                 <?php if($lng == 'en'): ?>
-                    <?php $replaced = str_replace('/'.$lng.'/','/ru/',$currentUrl); ?>
+                    <?php $replaced = str_replace('/'.$lng.'/','/ru/',$currentUrl); $replaced = ($replaced == '/' ? '/ru/main':$replaced); ?>
                     <a href="<?php echo $replaced; ?>" class="right-box language-switcher">RU</a>
                 <?php else: ?>
                     <?php $replaced = str_replace('/'.$lng.'/','/en/',$currentUrl); ?>
@@ -48,9 +48,18 @@
         
         <div class="slider-block">
             <div class="slider-wrapper">
-                <div class="slide active" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-banner.jpg);"></div>
-                <div class="slide" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-banner_2.png);"></div>
-                <div class="slide" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-banner_3.png);"></div>
+                <div class="slide active" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-banner-0.jpg);">
+                    <span class="content">
+                        <span class="text1"><?php echo($lng == 'en' ? 'Information about new product':'ИНФОРМАЦИЯ О НОВОМ ПРОДУКТЕ'); ?></span>
+                        <span class="text2"><?php echo($lng == 'en' ? 'Facility information':'ИНФОРМАЦИЯ ОБ УСЛУГАХ'); ?></span>
+                    </span>
+                </div>
+                <div class="slide" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-banner-1.jpg);">
+                    <span class="content">
+                        <span class="text1"><?php echo($lng == 'en' ? 'Information about new product':'ИНФОРМАЦИЯ О НОВОМ ПРОДУКТЕ'); ?></span>
+                        <span class="text2"><?php echo($lng == 'en' ? 'Facility information':'ИНФОРМАЦИЯ ОБ УСЛУГАХ'); ?></span>
+                    </span>
+                </div>
             </div>
             <a href="#" class="slider-move"><span></span></a>
             <div class="slider-nav">
@@ -85,6 +94,7 @@
     </div>
 
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.2.min.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.cycle.lite.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/forms.js"></script>
 </body>
 

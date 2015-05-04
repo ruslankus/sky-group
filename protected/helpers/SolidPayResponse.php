@@ -43,7 +43,8 @@ class SolidPayResponse
 			return true;
 		return false;
 	}
-	
+
+
 	/*
 	 * @method public object getResponse
 	*/
@@ -66,7 +67,9 @@ class SolidPayResponse
 		{	
 			$this->callback->success = true;
 		}
-		else if (in_array($this->callbackFull['PROCESSING_RETURN_CODE'], array('000.400.000','000.400.010','000.400.020','000.400.030','000.400.040','000.400.050','000.400.060','000.400.070','000.400.080','000.400.090')) == true)
+		else if (in_array($this->callbackFull['PROCESSING_RETURN_CODE'], array('000.400.000','000.400.010',
+                '000.400.020','000.400.030','000.400.040','000.400.050','000.400.060','000.400.070','000.400.080',
+                '000.400.090','000.100.110')) == true)
 		{	
 			$this->callback->success = true;
 			$this->callback->review = true;

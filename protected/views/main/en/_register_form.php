@@ -1,5 +1,5 @@
 <div class="form">
-    <form method="post" action="<?php echo Yii::app()->createUrl(Yii::app()->language.'/main/index'); ?>">
+    <form method="post" action="<?php echo Yii::app()->createUrl(Yii::app()->language.'/registration/step/1'); ?>">
     <table>
         <tr>
             <td><input type="text" name="user_name" placeholder="Name" value=""></td>

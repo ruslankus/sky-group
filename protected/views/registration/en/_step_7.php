@@ -11,14 +11,14 @@
             if ($disc) {
             ?>
             <span class="question-span small block">
-                Amount (without discounts)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span>
+                Amount (without discounts)<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> EUR</span>
             </span>
             <span class="question-span small block">
-               Discount<span class="right bold"><?php echo number_format($objProds->price * ($disc->value / 100) / 100 ,2)?> ILS</span>
+               Discount<span class="right bold"><?php echo number_format($objProds->price * ($disc->value / 100) / 100 ,2)?> EUR</span>
             </span>
-            <span class="question-span small block">Amount (with discounts)<span class="right bold"><?php echo number_format(($objProds->price / 100) - ($objProds->price * ($disc->value / 100) / 100),2)?> ILS</span></span>
+            <span class="question-span small block">Amount (with discounts)<span class="right bold"><?php echo number_format(($objProds->price / 100) - ($objProds->price * ($disc->value / 100) / 100),2)?> EUR</span></span>
             <?php } else { ?>
-            <span class="question-span small block">Amount<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> ILS</span></span>
+            <span class="question-span small block">Amount<span class="right bold"><?php echo number_format($objProds->price / 100 ,2)?> EUR</span></span>
             <?php } ?>
             <div style="clear: both;"></div>
         </fieldset>
@@ -51,7 +51,7 @@
         </section>
 
         <fieldset class="buttons">
-            <a class="reversed left button" href="/registration/step/6">Back</a>
+            <a href="<?php echo Yii::app()->createUrl($lng .'/registration/step/6'); ?>" class="reversed left button">back</a>
             <input class="right pay" type="submit" value="Pay now">
             <a class="right cancel-link" href="/">Cancel</a>
         </fieldset>
