@@ -4076,3 +4076,6 @@ in C:\OpenServer\domains\web\3\sky-group\index.php (13)
 2015/05/04 13:39:43 [warning] [application] Не удалось присвоить небезопасный атрибут "post_code" класса "FormStep_3".
 in C:\OpenServer\domains\web\3\sky-group\protected\controllers\RegistrationController.php (57)
 in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:47:11 [warning] [application] Failed to set unsafe attribute "Phone" of "FormStep_1".
+in C:\OpenServer\domains\ysky.local\protected\controllers\RegistrationController.php (57)
+in C:\OpenServer\domains\ysky.local\index.php (13)
