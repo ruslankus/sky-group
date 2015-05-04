@@ -3,7 +3,6 @@
      <?php echo CHtml::beginForm();?>
         
         <fieldset class="reg-3 small-height">
-            <iframe src="/terms.txt" class="terms"></iframe>
             <span class="question-span small">Do You have a discount code?</span>
 
             <label data-name="discount_is" class="radio <?php echo ($sessData['discount_is'] == 'yes')? 'active' : ''; ?>" for="discount-yes">Yes</label>

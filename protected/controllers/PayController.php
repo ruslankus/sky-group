@@ -51,8 +51,8 @@ class PayController extends Controller
                 $objOrders->client_id = $objClient->id;
                 $objOrders->product_id = $arrSteps['step_6']['packet'];
                 $objOrders->order_time = time();
-                $objOrders->price = '';
-                $objOrders->discount_id = '';
+                $objOrders->price = '31';
+                $objOrders->discount_id = '1';
                 
                 if($objOrders->save()){
                     
