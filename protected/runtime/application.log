@@ -3532,3 +3532,126 @@ in C:\OpenServer\domains\web\3\sky-group\index.php (13)
 2015/05/04 13:02:38 [warning] [application] Failed to set unsafe attribute "phone" of "ContactsForm".
 in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (41)
 in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:06:05 [warning] [application] Failed to set unsafe attribute "phone" of "ContactsForm".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (41)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:06:23 [warning] [application] Failed to set unsafe attribute "phone" of "ContactsForm".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (41)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:06:23 [error] [php] include(YiiMailer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\OpenServer\domains\web\3\sky-group\framework\YiiBase.php:432)
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php(45): spl_autoload_call()
+#1 C:\OpenServer\domains\web\3\sky-group\framework\web\actions\CInlineAction.php(49): MainController->actionContacts()
+#2 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(286): MainController->runAction()
+#4 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(265): MainController->runActionWithFilters()
+#5 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(282): MainController->run()
+#6 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\OpenServer\domains\web\3\sky-group\index.php(13): CWebApplication->run()
+REQUEST_URI=/en/main/contacts
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (45)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:06:59 [warning] [application] Failed to set unsafe attribute "phone" of "ContactsForm".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (41)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:06:59 [error] [exception.CException] exception 'CException' with message 'Property "ContactsForm.body" is not defined.' in C:\OpenServer\domains\web\3\sky-group\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php(45): CComponent->__get('body')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\web\actions\CInlineAction.php(49): MainController->actionContacts()
+#2 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(282): CController->run('contacts')
+#6 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('main/contacts')
+#7 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/en/main/contacts
+HTTP_REFERER=http://sky.loc/en/main/contacts
+---
+2015/05/04 13:08:20 [warning] [application] Failed to set unsafe attribute "phone" of "ContactsForm".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (41)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:08:21 [error] [php] require(C:\OpenServer\domains\web\3\sky-group\protected\config\mail.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (C:\OpenServer\domains\web\3\sky-group\protected\helpers\YiiMailer.php:90)
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\framework\web\actions\CInlineAction.php(49): MainController->actionContacts()
+#1 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(286): MainController->runAction()
+#3 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(265): MainController->runActionWithFilters()
+#4 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(282): MainController->run()
+#5 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\OpenServer\domains\web\3\sky-group\index.php(13): CWebApplication->run()
+REQUEST_URI=/en/main/contacts
+in C:\OpenServer\domains\web\3\sky-group\protected\helpers\YiiMailer.php (90)
+in C:\OpenServer\domains\web\3\sky-group\protected\helpers\YiiMailer.php (90)
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (45)
+2015/05/04 13:09:33 [warning] [application] Failed to set unsafe attribute "phone" of "ContactsForm".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (41)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:09:33 [error] [php] include(C:\OpenServer\domains\web\3\sky-group\protected\extensions\YiiMailer\YiiMailer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\OpenServer\domains\web\3\sky-group\framework\YiiBase.php:404)
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php(45): spl_autoload_call()
+#1 C:\OpenServer\domains\web\3\sky-group\framework\web\actions\CInlineAction.php(49): MainController->actionContacts()
+#2 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(286): MainController->runAction()
+#4 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(265): MainController->runActionWithFilters()
+#5 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(282): MainController->run()
+#6 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\OpenServer\domains\web\3\sky-group\index.php(13): CWebApplication->run()
+REQUEST_URI=/en/main/contacts
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (45)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:10:34 [warning] [application] Failed to set unsafe attribute "phone" of "ContactsForm".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (41)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:10:34 [error] [exception.CException] exception 'CException' with message 'Property "ContactsForm.subject" is not defined.' in C:\OpenServer\domains\web\3\sky-group\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php(49): CComponent->__get('subject')
+#1 C:\OpenServer\domains\web\3\sky-group\framework\web\actions\CInlineAction.php(49): MainController->actionContacts()
+#2 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(282): CController->run('contacts')
+#6 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('main/contacts')
+#7 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/en/main/contacts
+HTTP_REFERER=http://sky.loc/en/main/contacts
+---
+2015/05/04 13:11:02 [warning] [application] Failed to set unsafe attribute "phone" of "ContactsForm".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (41)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:11:02 [error] [exception.CException] exception 'CException' with message 'View "application.views.layouts.mail" does not exist!' in C:\OpenServer\domains\web\3\sky-group\protected\helpers\YiiMailer.php:464
+Stack trace:
+#0 C:\OpenServer\domains\web\3\sky-group\protected\helpers\YiiMailer.php(498): YiiMailer->renderView('application.vie...', Array)
+#1 C:\OpenServer\domains\web\3\sky-group\protected\helpers\YiiMailer.php(482): YiiMailer->MsgHTMLWithLayout('<p>Message from...', 'C:/OpenServer/d...')
+#2 C:\OpenServer\domains\web\3\sky-group\protected\helpers\YiiMailer.php(508): YiiMailer->render()
+#3 C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php(52): YiiMailer->send()
+#4 C:\OpenServer\domains\web\3\sky-group\framework\web\actions\CInlineAction.php(49): MainController->actionContacts()
+#5 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\OpenServer\domains\web\3\sky-group\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(282): CController->run('contacts')
+#9 C:\OpenServer\domains\web\3\sky-group\framework\web\CWebApplication.php(141): CWebApplication->runController('main/contacts')
+#10 C:\OpenServer\domains\web\3\sky-group\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\OpenServer\domains\web\3\sky-group\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/en/main/contacts
+HTTP_REFERER=http://sky.loc/en/main/contacts
+---
+2015/05/04 13:11:52 [warning] [application] Failed to set unsafe attribute "phone" of "ContactsForm".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (41)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:12:32 [warning] [application] Failed to set unsafe attribute "phone" of "ContactsForm".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (41)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:12:51 [warning] [application] Failed to set unsafe attribute "phone" of "ContactsForm".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (41)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 13:12:54 [warning] [application] Failed to set unsafe attribute "phone" of "ContactsForm".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\MainController.php (41)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)

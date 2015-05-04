@@ -41,9 +41,21 @@ class MainController extends Controller
             $model->attributes = $_POST;
             $data = $_POST;
             if($model->validate()){
-                $send = true;
+                
+                $mail = new YiiMailer('contact', array('message' => $model->text, 'name' => $model->name));
+				
+				//set properties
+				$mail->setFrom($model->email, $model->name);
+				$mail->setSubject("Message topic");
+				$mail->setTo(Yii::app()->params['adminEmail']);
+				//send
+				if ($mail->send()) {
+					$send = true;
+				} else {
+					$send = false;
+				}
             }
-            else{
+            else {
                 foreach($model->errors as $key => $value){
                     $error[$key] = array_shift($value); 
                 }
