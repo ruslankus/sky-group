@@ -1461,3 +1461,24 @@ Stack trace:
 REQUEST_URI=/js/jquery.cycle2.min.js
 HTTP_REFERER=http://sky.loc/en/main
 ---
+2015/05/04 10:59:24 [warning] [application] Failed to set unsafe attribute "Phone" of "FormStep_1".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\RegistrationController.php (55)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 10:59:46 [warning] [application] Failed to set unsafe attribute "Phone" of "FormStep_1".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\RegistrationController.php (55)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 11:02:01 [warning] [application] Failed to set unsafe attribute "Phone" of "FormStep_1".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\RegistrationController.php (55)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 11:02:17 [warning] [application] Failed to set unsafe attribute "Phone" of "FormStep_1".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\RegistrationController.php (55)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 11:02:37 [warning] [application] Failed to set unsafe attribute "Phone" of "FormStep_1".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\RegistrationController.php (55)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 11:03:15 [warning] [application] Failed to set unsafe attribute "Phone" of "FormStep_1".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\RegistrationController.php (55)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
+2015/05/04 11:03:21 [warning] [application] Failed to set unsafe attribute "Phone" of "FormStep_1".
+in C:\OpenServer\domains\web\3\sky-group\protected\controllers\RegistrationController.php (55)
+in C:\OpenServer\domains\web\3\sky-group\index.php (13)
