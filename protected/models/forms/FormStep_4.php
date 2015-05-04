@@ -21,7 +21,7 @@ class FormStep_4 extends CFormModel
                 if ( $i == 0 || ($child['name'] || $child['surname'] || $child['day'] || $child['month'] || $child['year']) ) {
                     
                     if (empty($child['name'])) {
-                        $this->addError("children[{$i}][name]", Yii::t('yii.skygroup','Field cannot be blank.'));
+                        $this->addError("children_".$i."_name", Yii::t('yii.skygroup','Field cannot be blank.'));
                     }
                     if (empty($child['surname'])) {
                         $this->addError("children[{$i}][surname]", Yii::t('yii.skygroup','Field cannot be blank.'));

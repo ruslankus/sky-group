@@ -22,6 +22,8 @@ return array(
         'application.helpers.*',
         'application.validators.*',
 		'application.helpers.YiiMailer',
+		'application.messages.*',
+		'application.messages.ru.*',
 
 	),
 

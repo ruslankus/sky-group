@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     var children_current_nr = $("fieldset[data-children]:last-of-type").data("children");
-    console.log(children_current_nr);
+    if(!children_current_nr) { children_current_nr = -1; }
 
     /**
      * Changing radio-button states
@@ -304,7 +304,4 @@ $(document).ready(function(){
             $item.fadeIn();
         }
     });
-    
-    //banner shuffle
-    $('.slider-wrapper').cycle();
 });

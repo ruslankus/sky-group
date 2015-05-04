@@ -101,7 +101,7 @@ class RegistrationController extends Controller
             if(empty($errors["children[".$i."][month]"])) { $errors["children[".$i."][month]"] = 'x'; }
             if(empty($errors["children[".$i."][year]"])) { $errors["children[".$i."][year]"] = 'x'; }
         }*/
-        
+        print_r($errors);
         //Debug::d(get_class_vars($model_class_name));
         //checking errors
 

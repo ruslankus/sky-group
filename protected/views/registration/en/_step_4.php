@@ -23,7 +23,7 @@
                 ?>
                 <fieldset class="reg-3" id="children_<?php echo $o; ?>" data-children="<?php echo $o; ?>">
                     <label class="bold-label"><?php echo Yii::t('yii.skygroup','n==1#1st child|n==2#2nd child|n==3#3th child|n>3#{n}th child', ($o+1)); ?></label>
-                    <input class="<?php echo $errors["children[$id][name]"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[$id][name]"] ? $errors["children[$id][name]"]:''); ?>" placeholder="Name" type="text" name="children[<?php echo $o; ?>][name]" value="<?php echo $sessData['children'][$id]['name']; ?>">
+                    <input class="<?php echo $errors["children_".$id."_name"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[$id][name]"] ? $errors["children[$id][name]"]:''); ?>" placeholder="Name" type="text" name="children[<?php echo $o; ?>][name]" value="<?php echo $sessData['children'][$id]['name']; ?>">
                     <input class="<?php echo $errors["children[$id][surname]"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[$id][surname]"] ? $errors["children[{$id}][surname]"]:''); ?>" placeholder="Surname" type="text" name="children[<?php echo $o; ?>][surname]" value="<?php echo $sessData['children'][$id]['surname']; ?>">
                     <label>Date of birth</label>
                     <div style="clear: both;"></div>
@@ -31,7 +31,7 @@
                         <option value="">Day</option>
                         <?php
                     for ($i=1; $i<32; $i++) {
-                        echo '<option value="'.$i.'"'.($sessData['children'][$id]['day'] == $i ? ' selected="selected"':'').'>'.$i.'</option>';
+                        echo '<option value="'.$i.'">'.$i.'</option>';
                     }
                     ?>
                     </select>
@@ -39,7 +39,7 @@
                         <option value="">Month</option>
                         <?php
                     for ($i=1; $i<13; $i++) {
-                        echo '<option value="'.$i.'"'.($sessData['children'][$id]['month'] == $i ? ' selected="selected"':'').'>'.$i.'</option>';
+                        echo '<option value="'.$i.'">'.$i.'</option>';
                     }
                     ?>
                     </select>
