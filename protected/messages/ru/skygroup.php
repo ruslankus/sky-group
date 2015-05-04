@@ -27,6 +27,11 @@ return array(
     'phone (optional)' => 'телефон (необезательно)',
     'mobile (optional)' => 'моб.телефон (необезательно)',
     'Card Information' => 'Информация о карте ',
+    'Cardholder Name' => 'Владелец карты',
+    'Credit Card Number' => 'Номер карты',
+    'Exp. Year' => 'Годен до Год',
+    'EXp. Month' => 'Годен до Месяц',
+
     
     'Country' => 'Страна',
     'Day' => 'Число',

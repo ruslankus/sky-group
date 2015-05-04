@@ -57,7 +57,7 @@
 		<fieldset class="reg-3 card-info">
 		<h2><?php echo Yii::t('skygroup','Card Information')?></h2>
 		<div class="card">
-			<input placeholder="Name on Card" type="text" name="ACCOUNT.HOLDER" value="" />
+			<input placeholder="<?php echo Yii::t('skygroup','Cardholder Name')?>" type="text" name="ACCOUNT.HOLDER" value="" />
 			
 			
 			<div class="sur">
