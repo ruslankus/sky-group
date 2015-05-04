@@ -57,7 +57,10 @@
                 <input class="<?php echo $errors['house']? 'error' : '' ?>" data-error="<?php echo $errors['house']; ?>" placeholder="House" type="text" name="house" value="<?php echo $sessData['house']?>" style="width: 47%;">
             </span>
             <input class="<?php echo $errors['city']? 'error' : '' ?>" data-error="<?php echo $errors['city']; ?>" placeholder="City" type="text" name="city" value="<?php echo $sessData['city']; ?>">
-            <input class="<?php echo $errors['country']? 'error' : '' ?>" data-error="<?php echo $errors['country']; ?>" placeholder="Country" type="text" name="country" value="<?php echo $sessData['country']; ?>">
+            <select class="<?php echo $errors['country']? 'error' : '' ?>" data-error="<?php echo $errors['country']; ?>" placeholder="Country" type="text" name="country" value="<?php echo $sessData['country']; ?>" style="width: 95%;float:right;">
+                        <option value="IL"><?php echo Yii::t('skygroup','Israel')?></option>
+                        <option value="RU"><?php echo Yii::t('skygroup','Russia')?></option>
+            </select>
             <input class="<?php echo $errors['phone']? 'error' : '' ?>" data-error="<?php echo $errors['phone']; ?>" placeholder="Home Phone" type="text" name="phone" value="<?php echo $sessData['phone']; ?>">
             <input class="<?php echo $errors['mobile_phone']? 'error' : '' ?>" data-error="<?php echo $errors['mobile_phone']; ?>" placeholder="Mobile" type="text" name="mobile_phone" value="<?php echo $sessData['mobile_phone']; ?>">
 

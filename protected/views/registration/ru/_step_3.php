@@ -83,7 +83,10 @@
                             </span>
                             <input class="<?php echo $errors['city']? 'error' : '' ?>" data-error="<?php echo $errors['city']; ?>" placeholder="Город" type="text" name="city" value="<?php echo $sessData['city']; ?>">
                             <span style="width:95%;display:block;">
-                                <input class="<?php echo $errors['country']? 'error' : '' ?>" data-error="<?php echo $errors['country']; ?>" placeholder="Страна" type="text" name="country" value="<?php echo $sessData['country']; ?>" style="width:47%;margin-right:6%;">
+                                <select class="<?php echo $errors['country']? 'error' : '' ?>" data-error="<?php echo $errors['country']; ?>" placeholder="Country" type="text" name="country" value="<?php echo $sessData['country']; ?>" style="width: 47%;margin-right:6%;">
+                <option value="IL"><?php echo Yii::t('skygroup','Israel')?></option>
+                <option value="RU"><?php echo Yii::t('skygroup','Russia')?></option>
+            </select>
                                 <input class="<?php echo $errors['post_code']? 'error' : '' ?>" data-error="<?php echo $errors['post_code']; ?>" placeholder="Почтовый Индекс (Россия)" type="text" name="post_code" value="<?php echo $sessData['post_code']; ?>" style="width:47%;">
                             </span>
                     </fieldset>

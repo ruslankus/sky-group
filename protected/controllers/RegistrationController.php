@@ -97,7 +97,7 @@ class RegistrationController extends Controller
         if (is_array(isset($sessData['children'])?$sessData['children']:'')) {
         foreach ($sessData['children'] as $key=>$child) {
             foreach ($child as $val=>$vale) {
-                $sessData['children'][$key][$val] = isset($sessData['children'][$key][$val]) ? $sessData['children'][$key][$val]:'x';
+                $sessData['children'][$key][$val] = isset($sessData['children'][$key][$val]) ? $sessData['children'][$key][$val]:'';
                 $errors['children_'.$key.'_'.$val] = isset($errors['children_'.$key.'_'.$val]) ? $errors['children_'.$key.'_'.$val]:'';
             }
         }}

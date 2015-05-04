@@ -25,35 +25,57 @@
 		<input type="hidden" name="SECURITY.TOKEN" value="<?php echo Yii::app()->params['payToken']; ?>" />
 		
 		<input type="hidden" name="PAYMENT.CODE" value="DC.DB" />
-		<input type="hidden" name="PRESENTATION.AMOUNT" value="<?php echo $order->price; ?>" />
+		<input type="hidden" name="PRESENTATION.AMOUNT" value="<?php echo round($order->price/100,2); ?>" />
 		<input type="hidden" name="PRESENTATION.CURRENCY" value="<?php echo Yii::app()->params['payCurrency']; ?>" />
 		
 		
 		<input type="hidden" name="IDENTIFICATION.TRANSACTIONID" value="<?php echo $order->id; ?>" />
-		
-		
+
+		 
+		 <!--name-->
+            <input type="hidden" name="NAME.GIVEN" value="<?php echo !empty($steps['step_7']['c_fname'])? $steps['step_7']['c_fname']:$steps['step_1']['first_name'];?>">
+            <input type="hidden" name="NAME.FAMILY" value="<?php echo !empty($steps['step_7']['c_lname'])? $steps['step_7']['c_lname']:$steps['step_1']['last_name'];?>">
+			
+		<!--address-->	
+            <input type="hidden" name="ADDRESS.STREET" value="<?php echo !empty($steps['step_7']['c_street'])? $steps['step_7']['c_street']:$steps['step_2']['street'];?>">
+            <input type="hidden" type="text" name="ADDRESS.CITY" value="<?php echo !empty($steps['step_7']['c_city'])? $steps['step_7']['c_city']:$steps['step_2']['city'];?>">
+			
+            
+            <input type="hidden" name="ADDRESS.ZIP" value="<?php echo !empty($steps['step_7']['c_zip'])? $steps['step_7']['c_zip']:$steps['step_2']['post_code'];?>">
+            <input type="hidden" name="ADDRESS.COUNTRY" value="<?php echo !empty($steps['step_7']['c_country'])? $steps['step_7']['c_country']:$steps['step_2']['country'];?>">
+			
+		<!--contacts-->	
+			<input type="hidden" name="CONTACT.EMAIL" value="<?php echo !empty($steps['step_7']['c_email'])? $steps['step_7']['c_email']:$steps['step_1']['email'];?>">
+            <input type="hidden" name="CONTACT.PHONE" value="<?php echo !empty($steps['step_7']['c_phone'])? $steps['step_7']['c_phone']:$steps['step_2']['phone'];?>">
+            <input type="hidden" name="CONTACT.MOBILE" value="<?php echo !empty($steps['step_7']['phone_mobile'])? $steps['step_7']['phone_mobile']:$steps['step_2']['mobile_phone'];?>">
+
+		<?php /*
          <fieldset class="reg-3">
 		 <h2><?php echo Yii::t('skygroup','Payer information')?></h2>
 		 <!--name-->
-            <input placeholder="<?php echo (Yii::t('skygroup','Name'))?>" type="text" name="NAME.GIVEN" value="">
-            <input placeholder="<?php echo (Yii::t('skygroup','Last Name'))?>" type="text" name="NAME.FAMILY" value="">
+             <?php print_r($steps['step_7']); ?>
+             <?php print_r($steps['step_2']); ?>
+            <input placeholder="<?php echo (Yii::t('skygroup','Name'))?>" type="text" name="NAME.GIVEN" value="<?php echo !empty($steps['step_7']['c_fname'])? $steps['step_7']['c_fname']:$steps['step_1']['first_name'];?>">
+            <input placeholder="<?php echo (Yii::t('skygroup','Last Name'))?>" type="text" name="NAME.FAMILY" value="<?php echo !empty($steps['step_7']['c_lname'])? $steps['step_7']['c_lname']:$steps['step_1']['last_name'];?>">
 			
 		<!--address-->	
-            <input placeholder="<?php echo (Yii::t('skygroup','street'))?>" type="text" name="ADDRESS.STREET">
-            <input placeholder="<?php echo (Yii::t('skygroup','city'))?>" type="text" name="ADDRESS.CITY">
+            <input placeholder="<?php echo (Yii::t('skygroup','street'))?>" type="text" name="ADDRESS.STREET" value="<?php echo !empty($steps['step_7']['c_street'])? $steps['step_7']['c_street']:$steps['step_2']['street'];?>">
+            <input placeholder="<?php echo (Yii::t('skygroup','city'))?>" type="text" name="ADDRESS.CITY" value="<?php echo !empty($steps['step_7']['c_city'])? $steps['step_7']['c_city']:$steps['step_2']['city'];?>">
 			
             
-            <input placeholder="<?php echo Yii::t('skygroup','Zip Code')?>" type="text" name="ADDRESS.ZIP" class="zip">
+            <input placeholder="<?php echo Yii::t('skygroup','Zip Code')?>" type="text" name="ADDRESS.ZIP" class="zip" value="<?php echo !empty($steps['step_7']['c_zip'])? $steps['step_7']['c_zip']:$steps['step_2']['post_code'];?>">
             <select name="ADDRESS.COUNTRY" class="country">
                 <option value="IL"><?php echo Yii::t('skygroup','Israel')?></option>
 				<option value="RU"><?php echo Yii::t('skygroup','Russia')?></option>
 			</select>
 			
 		<!--contacts-->	
-			<input placeholder="<?php echo (Yii::t('skygroup','Email'))?>" type="text" name="CONTACT.EMAIL">
-            <input placeholder="<?php echo (Yii::t('skygroup','phone (optional)'))?>" type="text" name="CONTACT.PHONE">
-            <input placeholder="<?php echo (Yii::t('skygroup','mobile (optional)'))?>" type="text" name="CONTACT.MOBILE">
+			<input placeholder="<?php echo (Yii::t('skygroup','Email'))?>" type="text" name="CONTACT.EMAIL" value="<?php echo !empty($steps['step_7']['c_email'])? $steps['step_7']['c_email']:$steps['step_1']['email'];?>">
+            <input placeholder="<?php echo (Yii::t('skygroup','phone (optional)'))?>" type="text" name="CONTACT.PHONE" value="<?php echo !empty($steps['step_7']['c_phone'])? $steps['step_7']['c_phone']:$steps['step_2']['phone'];?>">
+            <input placeholder="<?php echo (Yii::t('skygroup','mobile (optional)'))?>" type="text" name="CONTACT.MOBILE" value="<?php echo !empty($steps['step_7']['phone_mobile'])? $steps['step_7']['phone_mobile']:$steps['step_2']['mobile_phone'];?>">
         </fieldset>
+        */ ?>
+        <h2><?php echo Yii::t('skygroup','Terms and Conditions')?></h2>
         <fieldset class="reg-3">
                 <div class="terms"><?php echo $terms; ?></iframe>
         </fieldset>

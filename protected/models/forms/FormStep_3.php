@@ -64,7 +64,7 @@ class FormStep_3 extends CFormModel
     }
     public function addressRules($attribute, $params)
     {
-        if (!empty($params['check']) && $this->same_address == 'no') {
+        if (!empty($params['check']) && $this->same_address == 'no' && $this->married == 'yes') {
             $attributes = explode(",", str_replace(' ', '', $params['check']));
             foreach ($attributes as $get) {
                 if (empty($this->{$get})) {

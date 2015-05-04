@@ -81,7 +81,10 @@
                             <input class="<?php echo $errors['flat']? 'error' : '' ?>" data-error="<?php echo $errors['flat']; ?>" placeholder="Apartment" type="text" name="flat" value="<?php echo $sessData['flat']?>" style="width:47%;">
                         </span>
                 <input class="<?php echo $errors['city']? 'error' : '' ?>" data-error="<?php echo $errors['city']; ?>" placeholder="City" type="text" name="city" value="<?php echo $sessData['city']; ?>">
-                <input class="<?php echo $errors['country']? 'error' : '' ?>" data-error="<?php echo $errors['country']; ?>" placeholder="Country" type="text" name="country" value="<?php echo $sessData['country']; ?>">
+                <select class="<?php echo $errors['country']? 'error' : '' ?>" data-error="<?php echo $errors['country']; ?>" placeholder="Country" type="text" name="country" value="<?php echo $sessData['country']; ?>" style="width: 95%;float:left;">
+                    <option value="IL"><?php echo Yii::t('skygroup','Israel')?></option>
+                    <option value="RU"><?php echo Yii::t('skygroup','Russia')?></option>
+                </select>
                     </fieldset>
 
                     <div style="clear: both;"></div>
