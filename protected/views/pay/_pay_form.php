@@ -69,8 +69,8 @@
 			</div>
 			<span class="clearfix"></span>
 			<select name="ACCOUNT.BRAND" class="card-brand">
-				<option>VISA</option>
-				<option>MASTERCARD</option>
+				<option value="VISA">VISA</option>
+				<option VALUE="MASTER">MASTERCARD</option>
 			</select>
 			<select class="exp-year" name="ACCOUNT.EXPIRY_YEAR">
 				<option value="-">Exp. Year</option>
