@@ -43,7 +43,7 @@
 
         <section class="offset hidden-block if-posobie">
             <fieldset class="reg-3 small-height">
-                <span class="question-span small block">Выбрате вид пособия:</span>
+                <span class="question-span small block">Укажите вид пособия:</span>
                 <input type="checkbox" id="pensionnoye" name="posobie[pensionnoye]"><label class="check-box-label" for="pensionnoye">Пенсионное пособие</label>
                 <input type="checkbox" id="invalidnost" name="posobie[invalidnost]"><label class="check-box-label" for="invalidnost">Инвалидность</label>
                 <input type="checkbox" id="bezrabotica" name="posobie[bezrabotica]"><label class="check-box-label" for="bezrabotica">Пособие по безработице</label>
@@ -53,7 +53,7 @@
         </section>
 
 
-        <span class="question-span small">Состоите ли Вы в Больничной кассе ?</span>
+        <span class="question-span small">Состоите ли Вы в больничной кассе ?</span>
         <label data-name="kasa" class="radio" for="kasa-yes">Да</label>
         <label data-name="kasa" class="radio active" for="kasa-no">Нет</label>
         <input id="kasa-yes" type="radio" name="kasa" value="yes">
