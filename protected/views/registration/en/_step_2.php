@@ -3,16 +3,16 @@
    <?php echo CHtml::beginForm();?>
         <fieldset class="reg-1">
            <span class="promo">Identification number</span>
-            <span style="display: block; width:95%;" data-error="<?php echo $errors['id_number']; ?>">
-                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_1']? 'error' : '' ?>" type="text" name="id_number_1" value="<?php echo $sessData['id_number_1']; ?>">
-                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_2']? 'error' : '' ?>" type="text" name="id_number_2" value="<?php echo $sessData['id_number_2']?>">
-                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_3']? 'error' : '' ?>" type="text" name="id_number_3" value="<?php echo $sessData['id_number_3']?>">
-                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_4']? 'error' : '' ?>" type="text" name="id_number_4" value="<?php echo $sessData['id_number_4']?>">
-                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_5']? 'error' : '' ?>" type="text" name="id_number_5" value="<?php echo $sessData['id_number_5']?>">
-                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_6']? 'error' : '' ?>" type="text" name="id_number_6" value="<?php echo $sessData['id_number_6']?>">
-                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_7']? 'error' : '' ?>" type="text" name="id_number_7" value="<?php echo $sessData['id_number_7']?>">
-                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_8']? 'error' : '' ?>" type="text" name="id_number_8" value="<?php echo $sessData['id_number_8']?>">
-                <input maxlength="1" style="width: 9%;text-align:center;" class="promo <?php echo $errors['id_number_9']? 'error' : '' ?>" type="text" name="id_number_9" value="<?php echo $sessData['id_number_9']?>">
+            <span style="display: block; width:95%;" data-error="<?php echo isset($errors['id_number'])?$errors['id_number']:''; ?>">
+                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo isset($errors['id_number_1'])? 'error' : '' ?>" type="text" name="id_number_1" value="<?php echo isset($sessData['id_number_1']) ? $sessData['id_number_1']:''; ?>">
+                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo isset($errors['id_number_2'])? 'error' : '' ?>" type="text" name="id_number_2" value="<?php echo isset($sessData['id_number_2']) ? $sessData['id_number_2']:''; ?>">
+                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo isset($errors['id_number_3'])? 'error' : '' ?>" type="text" name="id_number_3" value="<?php echo isset($sessData['id_number_3']) ? $sessData['id_number_3']:''; ?>">
+                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo isset($errors['id_number_4'])? 'error' : '' ?>" type="text" name="id_number_4" value="<?php echo isset($sessData['id_number_4']) ? $sessData['id_number_4']:''; ?>">
+                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo isset($errors['id_number_5'])? 'error' : '' ?>" type="text" name="id_number_5" value="<?php echo isset($sessData['id_number_5']) ? $sessData['id_number_5']:''; ?>">
+                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo isset($errors['id_number_6'])? 'error' : '' ?>" type="text" name="id_number_6" value="<?php echo isset($sessData['id_number_6']) ? $sessData['id_number_6']:''; ?>">
+                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo isset($errors['id_number_7'])? 'error' : '' ?>" type="text" name="id_number_7" value="<?php echo isset($sessData['id_number_7']) ? $sessData['id_number_7']:''; ?>">
+                <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo isset($errors['id_number_8'])? 'error' : '' ?>" type="text" name="id_number_8" value="<?php echo isset($sessData['id_number_8']) ? $sessData['id_number_8']:''; ?>">
+                <input maxlength="1" style="width: 9%;text-align:center;" class="promo <?php echo isset($errors['id_number_8'])? 'error' : '' ?>" type="text" name="id_number_9" value="<?php echo isset($sessData['id_number_9']) ? $sessData['id_number_9']:''; ?>">
             </span>
 
             <input placeholder="Name (saved and transferred from the first page)" type="text" value="<?php echo $step_1['user_name']; ?>" readonly="readonly" />
@@ -22,29 +22,29 @@
 
             <div style="clear: both;"></div>
 
-            <select class="<?php echo $errors['day']? 'error' : '' ?>" name="day" class="selector-1" style="width: 30%;margin-right: 5%;">
+            <select class="<?php echo isset($errors['day'])? 'error' : '' ?>" name="day" class="selector-1" style="width: 30%;margin-right: 5%;">
                 <option value="">Day</option>
                 <?php
                 for ($i=1; $i<32; $i++) {
-                    echo '<option value="'.$i.'"'.($sessData['day'] == $i ? ' selected="selected"':'').'>'.$i.'</option>';
+                    echo '<option value="'.$i.'"'.(isset($sessData['day'])? $sessData['day']:''== $i ? ' selected="selected"':'').'>'.$i.'</option>';
                 }
                 ?>
             </select>
 
-            <select class="<?php echo $errors['month']? 'error' : '' ?>" name="month" class="selector-2" style="width: 30%;margin-right: 5%;">
+            <select class="<?php echo isset($errors['month'])? 'error' : '' ?>" name="month" class="selector-2" style="width: 30%;margin-right: 5%;">
                 <option value="">Month</option>
                 <?php
                 for ($i=1; $i<13; $i++) {
-                    echo '<option value="'.$i.'"'.($sessData['month'] == $i ? ' selected="selected"':'').'>'.$i.'</option>';
+                    echo '<option value="'.$i.'"'.(isset($sessData['month'])?$sessData['month']:'' == $i ? ' selected="selected"':'').'>'.$i.'</option>';
                 }
                 ?>
             </select>
 
-            <select class="<?php echo $errors['year']? 'error' : '' ?>" name="year" class="selector-3" style="width: 30%;">
+            <select class="<?php echo isset($errors['year'])? 'error' : '' ?>" name="year" class="selector-3" style="width: 30%;">
                 <option value="">Year</option>
                 <?php
                 for ($i=date('Y')-14; $i>date('Y')-100; $i--) {
-                    echo '<option value="'.$i.'"'.($sessData['year'] == $i ? ' selected="selected"':'').'>'.$i.'</option>';
+                    echo '<option value="'.$i.'"'.(isset($sessData['year'])?$sessData['year']:'' == $i ? ' selected="selected"':'').'>'.$i.'</option>';
                 }
                 ?>
             </select>
