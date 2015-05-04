@@ -12,7 +12,7 @@
 
         <section class="offset hidden-block if-ssudy">
             <fieldset class="reg-1 not-tall">
-                <input placeholder="Наименование Банка" type="text" value="">
+                <input placeholder="Наименование банка" type="text" value="">
                 <input placeholder="Сумма ссуды" type="text" value="">
                 <input placeholder="Дата получения ссуды" type="text" value="">
 
