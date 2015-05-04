@@ -46,6 +46,12 @@ button { cursor: pointer; }
     border: 0;
     display: block;
     float: left;
+    white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;
+    padding: 15px;
 }
 /********************************************* H E A D E R ************************************************************/
 

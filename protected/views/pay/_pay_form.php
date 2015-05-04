@@ -55,7 +55,7 @@
             <input placeholder="<?php echo (Yii::t('skygroup','mobile (optional)'))?>" type="text" name="CONTACT.MOBILE">
         </fieldset>
         <fieldset class="reg-3">
-                <iframe src="/terms.txt" class="terms"></iframe>
+                <div class="terms"><?php echo $terms; ?></iframe>
         </fieldset>
 		<fieldset class="reg-3 card-info">
 		<h2><?php echo Yii::t('skygroup','Card Information')?></h2>

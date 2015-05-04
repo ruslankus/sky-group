@@ -55,8 +55,8 @@ class PayController extends Controller
                 $objOrders->discount_id = '1';
                 
                 if($objOrders->save()){
-                    
-                    $this->render('_pay_form', array('order'=>$objOrders, 'steps'=>$arrSteps));
+                    $terms = file_get_contents("terms.txt");
+                    $this->render('_pay_form', array('order'=>$objOrders, 'steps'=>$arrSteps, 'terms'=>$terms));
                     Yii::app()->end();        
                 }    
              
