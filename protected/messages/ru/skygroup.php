@@ -32,9 +32,26 @@ return array(
     'Is of the wrong length (should be {length} characters).',
     'n==1#1st child|n==2#2nd child|n==3#3th child|n>3#{n}th child'=>'n==1#{n}й ребёнок|n==2#{n}й ребёнок|n==3#{n}й ребёнок|n>3#{n}й ребёнок',
     //labels
+    'Name' => 'Имя',
     'Last Name' => 'Фамилия',
     'Email' => 'Почта',
     'Password' => 'Пароль',
-    'Next Pass' => 'Повторите пароль'
+    'Next Pass' => 'Повторите пароль',
+    'Enter your identification number' => 'укажите номер карточки удостоверения личности',
+    'Payment' => 'Оплата',
+    'Payer information' => 'Плательщик',
+    'street' => 'улица',
+    'city' => 'город',
+    'Zip Code' => 'Индекс',
+    'phone (optional)' => 'телефон (необезательно)',
+    'mobile (optional)' => 'моб.телефон (необезательно)',
+    'Card Information' => 'Информация о карте '
+
+
+
+
+
+
+
 
 );

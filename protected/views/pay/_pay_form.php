@@ -4,7 +4,7 @@
 <?php $cs->registerScriptFile(Yii::app()->request->baseUrl."/js/payment-form.js", CClientScript::POS_END); ?>
 <main class="main">
 <section class="header-section">
-    <h1>Оплата</h1>
+    <h1><?php echo Yii::t('skygroup','Payment')?></h1>
 </section>
 <?php print_r($sessData); ?>
 <section class="form-area">
@@ -34,7 +34,7 @@
 		
 		
          <fieldset class="reg-3">
-		 <h2>Payer information</h2>
+		 <h2><?php echo Yii::t('skygroup','Payer information')?></h2>
 		 <!--name-->
             <input placeholder="<?php echo (Yii::t('skygroup','Name'))?>" type="text" name="NAME.GIVEN" value="">
             <input placeholder="<?php echo (Yii::t('skygroup','Last Name'))?>" type="text" name="NAME.FAMILY" value="">
@@ -56,7 +56,7 @@
             <input placeholder="<?php echo (Yii::t('skygroup','mobile (optional)'))?>" type="text" name="CONTACT.MOBILE" value="<?php echo $sessData['mphone']; ?>">
         </fieldset>
 		<fieldset class="reg-3 card-info">
-		<h2>Card Information</h2>
+		<h2><?php echo Yii::t('skygroup','Card Information')?></h2>
 		<div class="card">
 			<input placeholder="Name on Card" type="text" name="ACCOUNT.HOLDER" value="" />
 			
@@ -67,7 +67,7 @@
 			
 			<input class="card-cvc" placeholder="CVC" type="text" name="ACCOUNT.VERIFICATION" value="" />
 			
-			<a href="#" class="question" data-questionmark="укажите номер карточки удостоверения личности"></a>
+			<a href="#" class="question" data-questionmark="<?php echo Yii::t('skygroup','Enter your identification number')?>"></a>
 			</div>
 			<span class="clearfix"></span>
 			<select name="ACCOUNT.BRAND" class="card-brand">
