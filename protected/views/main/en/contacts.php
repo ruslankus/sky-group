@@ -52,7 +52,10 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/contacts.css');
     <h2>
         CONTACT US
     </h2>
-
+    <?php if ($send == true) {
+        echo '<br/>Message sent succesfully.<br/>';
+    }
+    ?>
     <?php echo CHtml::beginForm();?>
     <div class="content-col left">
         <input name="name" type="text" placeholder="Name" data-error="<?php echo $error['name']; ?>" value="<?php echo $data['name']; ?>">
@@ -60,11 +63,11 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/contacts.css');
     </div>
 
     <div class="content-col right">
-        <input name="country" type="text" placeholder="Country" data-error="<?php echo $error['country']; ?>" value="<?php echo $data['counry']; ?>">
+        <input name="country" type="text" placeholder="Country" data-error="<?php echo $error['country']; ?>" value="<?php echo $data['country']; ?>">
         <input name="phone" type="text" placeholder="Phone" data-error="<?php echo $error['phone']; ?>" value="<?php echo $data['phone']; ?>">
     </div>
     <div class="cls"></div>
-    <textarea name="text" data-error="<?php echo $error['text']; ?>"><?php echo !empty($data['text'] ? $data['text']:'Your request, inquiry, etc.<'; ?>/textarea>
+    <textarea name="text" data-error="<?php echo $error['text']; ?>"><?php echo !empty($data['text']) ? $data['text']:'Your request, inquiry, etc.'; ?></textarea>
     <div class="buttons">
         <button>Send</button>
     </div>
