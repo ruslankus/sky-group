@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     var children_current_nr = $("fieldset[data-children]:last-of-type").data("children");
-    if(!children_current_nr) { children_current_nr = -1; }
+    if(children_current_nr !== 0 && children_current_nr<0) { children_current_nr = -1; }
 
     /**
      * Changing radio-button states
