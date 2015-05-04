@@ -33,6 +33,7 @@ class RegistrationController extends Controller
         /* @var $model CFormModel | FormStep_1 | FormStep_2 | FormStep_3 | FormStep_4 | FormStep_5 | FormStep_6 | FormStep_7 */
         $sessData = array();
         $errors = array();
+        
         $lng = Yii::app()->language;
         $this->title = $lng == 'ru' ? 'Регистрация' : 'Registration';
 
@@ -93,14 +94,18 @@ class RegistrationController extends Controller
                 $sessData[$key] = '';
             }
         }
-
+        /*for ($i=0; $i<25; $i++) {
+            if(empty($errors["children[".$i."][name]"])) { $errors["children[".$i."][name]"] = 'x'; }
+            if(empty($errors["children[".$i."][surname]"])) { $errors["children[".$i."][surname]"] = 'x'; }
+            if(empty($errors["children[".$i."][day]"])) { $errors["children[".$i."][day]"] = 'x'; }
+            if(empty($errors["children[".$i."][month]"])) { $errors["children[".$i."][month]"] = 'x'; }
+            if(empty($errors["children[".$i."][year]"])) { $errors["children[".$i."][year]"] = 'x'; }
+        }*/
         
         //Debug::d(get_class_vars($model_class_name));
         //checking errors
 
         
-        $sessData = isset( $sessData ) ? $sessData : array();
-        $sessData['promotion_number'] = isset( $sessData['promotion_number'] ) ? $sessData['promotion_number'] : array();
 
         $lng = Yii::app()->language;
         $this->render("{$lng}/registration",array('step'=> $id, 'sessData' => $sessData, 'got' => Yii::app()->session,

@@ -14,6 +14,7 @@ body
 {
     min-width: 360px;
 }
+button { cursor: pointer; }
 .questionmark {
     background-color: #f0b74a;
     padding: 5px 15px;

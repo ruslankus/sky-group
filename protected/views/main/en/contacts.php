@@ -53,20 +53,21 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/contacts.css');
         CONTACT US
     </h2>
 
-
+    <?php echo CHtml::beginForm();?>
     <div class="content-col left">
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Email">
+        <input name="name" type="text" placeholder="Name" data-error="<?php echo $error['name']; ?>" value="<?php echo $data['name']; ?>">
+        <input name="email" type="text" placeholder="Email" data-error="<?php echo $error['email']; ?>" value="<?php echo $data['email']; ?>">
     </div>
 
     <div class="content-col right">
-        <input type="text" placeholder="Country">
-        <input type="text" placeholder="Phone">
+        <input name="country" type="text" placeholder="Country" data-error="<?php echo $error['country']; ?>" value="<?php echo $data['counry']; ?>">
+        <input name="phone" type="text" placeholder="Phone" data-error="<?php echo $error['phone']; ?>" value="<?php echo $data['phone']; ?>">
     </div>
     <div class="cls"></div>
-    <textarea>Your request, inquiry, etc.</textarea>
+    <textarea name="text" data-error="<?php echo $error['text']; ?>"><?php echo !empty($data['text'] ? $data['text']:'Your request, inquiry, etc.<'; ?>/textarea>
     <div class="buttons">
-        <a href="#">Cancel</a><button>Send</button>
+        <button>Send</button>
     </div>
+    <?php echo CHtml::beginForm();?>
 </section>
 </main>

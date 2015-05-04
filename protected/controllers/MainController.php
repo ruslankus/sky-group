@@ -33,7 +33,28 @@ class MainController extends Controller
     public function actionContacts(){
         $lng = Yii::app()->language;
         $this->title = $lng == 'ru' ? "Контакты" : "Contacts";
-        $this->render("{$lng}/contacts");
+        $model = new ContactsForm();
+        $request = Yii::app()->request;
+         if($request->isPostRequest){
+            
+            $model->attributes = $_POST;
+            $data = $_POST;
+            if($model->validate()){
+                $send = true;
+            }
+            else{
+                foreach($model->errors as $key => $value){
+                    $error[$key] = array_shift($value); 
+                }
+                $send = false;
+            }
+        }
+        $isset = array('name', 'email', 'country', 'phone', 'text');
+        foreach ($isset as $is) {
+            $error[$is] = isset($error[$is]) ? $error[$is]:'';
+            $data[$is] = isset($data[$is]) ? $data[$is]:'';
+        }
+        $this->render("{$lng}/contacts", array("error"=>$error, "send"=>$send, "data"=>$data));
     }
     
     

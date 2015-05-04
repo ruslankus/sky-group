@@ -14,8 +14,9 @@
             <div class="children-list">
             <?php
 
-                $this->clear_empty_array_values( $sessData['children']);
-                if ($errors || $sessData['children']) {
+                $this->clear_empty_array_values( $sessData['children'] );
+                $errors = array_filter($errors);
+                if (!empty($errors) || count($sessData['children'])>0) {
                     $o=-1;
                     foreach ($sessData['children'] as $id=>$child) {
                         $o++;
