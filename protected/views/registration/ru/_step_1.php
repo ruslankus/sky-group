@@ -1,7 +1,7 @@
 <section class="form-area">
     <?php echo CHtml::beginForm();?>
          <fieldset class="reg-1">
-            <a href="#" style="top: 32px;" class="question" data-questionmark="There should be some long or not long text."></a>
+            <a href="#" style="top: 32px;" class="question" data-questionmark="Укажите номер агента для дальнейшей регистрации."></a>
            <span class="promo">Номер промоутера</span>
             <span style="display: block; width:95%;" data-error="<?php echo !empty($errors['promotion_number'])? $errors['promotion_number']:''; ?>">
                 <input maxlength="1" style="width: 15%;margin-right:2%;text-align:center;"
