@@ -39,6 +39,14 @@ button { cursor: pointer; }
     width: 250px;
     z-index: 2;
 }
+.terms {
+    width: 95%;
+    height: 150px;
+    overflow: auto;
+    border: 0;
+    display: block;
+    float: left;
+}
 /********************************************* H E A D E R ************************************************************/
 
 .header

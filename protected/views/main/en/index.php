@@ -5,15 +5,15 @@
                     <div class="info-col-content">
                         <h1>ABOUT US</h1>
                         <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/home1.jpg" alt=" ">
-                        <p>Sky Group is a private members-only club, which unites a large group of people into a single network for the purpose of receiving privileged services. Sky Group offers 5 different types of membership plans at an affordable price from which you can choose a plan that satisfies all the criteria for you and your family. </p>
-                        <p>Because we constantly expand our list of services and offerings, our clients always receive a wide range of services that are of the highest quality. </p>
+                        <p>SKY GROUP IS A PRIVATE MEMBERS-ONLY CLUB, WHICH UNITES LARGE AND VARIED COMMUNITIES OF PEOPLE INTO A SINGLE NETWORK FOR THE PURPOSE OF RECEIVING PRIVILEGED SERVICES. SKY GROUP OFFERS 5 DIFFERENT TYPES OF MEMBERSHIP PLANS AT AN AFFORDABLE PRICE FROM WHICH YOU CAN CHOOSE A PLAN THAT SATISFIES ALL THE needs of YOU AND YOUR FAMILY.
+WE CONSTANTLY EXPAND OUR LIST OF SERVICES AND OFFERS that is why OUR CLIENTS ALWAYS RECEIVE A WIDE RANGE OF SERVICES THAT ARE OF THE HIGHEST QUALITY.</p>
                     </div> <!-- / info -col-content -->
                 </div>
                 <div class="info-col vision">
                     <div class="col-ico vision"></div>
                     <div class="info-col-content">
                        <h1>OUR VISION</h1>
-                       <p><strong>Our Mission – is to create a secure and modern club membership system that provides assistance to its clients in various service areas. We aim to become an irreplaceable partner for our clients.</strong></p>
+                       <p><strong>OUR MISSION  IS TO CREATE A SECURE AND MODERN CLUB MEMBERSHIP SYSTEM THAT PROVIDES ASSISTANCE TO ITS CLIENTS IN VARIOUS SERVICE AREAS. WE AIM TO BECOME AN IRREPLACEABLE PARTNER TO OUR CLIENTS.</strong></p>
                            <ul>
                                <li>Provide our clients with convenient, secure and quick assistance when performing various actions related to gathering and filling out necessary paperwork.</li>
                                <li>Guarantee timely assistance to our clients when using systems a range of electronic services.</li>

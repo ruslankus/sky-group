@@ -1,8 +1,10 @@
 <section class="form-area">
 
      <?php echo CHtml::beginForm();?>
+    <fieldset class="reg-3 small-height">
+        <iframe src="/terms.txt" class="terms"></iframe>
+    
         <span class="question-span small">Код скидки ?</span>
-
             <label data-name="discount_is" class="radio <?php echo ($sessData['discount_is'] == 'yes')? 'active' : ''; ?>" for="discount-yes">Да</label>
             <label data-name="discount_is" class="radio <?php echo ($sessData['discount_is'] != 'yes')? 'active' : ''; ?>" for="discount-no">Нет</label>
             <input id="discount-yes" type="radio" name="discount_is" value="yes" <?php echo ($sessData['discount_is'] == 'yes')? 'checked="checked"' : ''; ?>>
