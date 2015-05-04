@@ -15,6 +15,7 @@ class FormStep_1 extends CFormModel
     public $next_pass;
     
     public $_promo;
+    public $_user;
     
     public function rules()
     {
@@ -22,6 +23,7 @@ class FormStep_1 extends CFormModel
 			// username and password are required
 			array('email, password, next_pass, first_name, last_name', 'required'),
             array('email','email'),
+            array('email','checkUser'),
             array('password','compare','compareAttribute'=>'next_pass'),
             array('password, next_pass', 'length', 'min'=>6, 'max'=>25),
             array('promotion_number_1, promotion_number_2, promotion_number_3, promotion_number_4, promotion_number_5', 'promotionAuth'),		
@@ -44,7 +46,13 @@ class FormStep_1 extends CFormModel
             }*/
         }
     }
-
+    public function checkUser($attributes, $params)
+    {
+        $this->_user = Clients::model()->find("login=:login", array(":login"=>strtolower($this->email)));
+        if ($this->_user) {
+            $this->addError('email', Yii::t('yii.skygroup','Email already registered.'));
+        }
+    }
     public function attributeLabels()
     {
         return array(
