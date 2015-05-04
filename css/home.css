@@ -264,7 +264,7 @@ button {
     left: 0;
     right: 0;
     top: 0;
-    z-index: 2;
+    z-index: 200;
 }
 .header-slider > .abs.bottom {
     top: auto;
@@ -346,6 +346,7 @@ button {
 .header-slider > .abs > .container > .nav {
     display: block;
     float: right;
+    z-index: 200;
 }
 @media (max-width: 860px) {
     .header-slider > .abs > .container > .nav {
@@ -417,6 +418,7 @@ button {
     bottom: 200px;
     left: 50%;
     margin-left: -37px;
+    z-index: 250!important;
 }
 .header-slider > .slider-block > .slider-move > span {
     display: block;
@@ -453,6 +455,7 @@ button {
     width: 100%;
     bottom: 120px;
     text-align: center;
+    z-index: 100;
 }
 .header-slider > .slider-block > .slider-nav > ul {
     display: block;

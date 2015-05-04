@@ -304,4 +304,7 @@ $(document).ready(function(){
             $item.fadeIn();
         }
     });
+    
+    //banner shuffle
+    $('.slider-wrapper').cycle();
 });

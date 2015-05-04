@@ -50,13 +50,13 @@
             <div class="slider-wrapper">
                 <div class="slide active" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-banner-0.jpg);">
                     <span class="content">
-                        <span class="text1"><?php echo($lng == 'en' ? 'INFORMATION ABOUT THE NEW PRODUCT':'ИНФОРМАЦИЯ О НОВОМ ПРОДУКТЕ'); ?></span>
+                        <span class="text1"><?php echo($lng == 'en' ? 'Information about new product':'ИНФОРМАЦИЯ О НОВОМ ПРОДУКТЕ'); ?></span>
                         <span class="text2"><?php echo($lng == 'en' ? 'Facility information':'ИНФОРМАЦИЯ ОБ УСЛУГАХ'); ?></span>
                     </span>
                 </div>
                 <div class="slide" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-banner-1.jpg);">
                     <span class="content">
-                        <span class="text1"><?php echo($lng == 'en' ? 'INFORMATION ABOUT THE NEW PRODUCT':'ИНФОРМАЦИЯ О НОВОМ ПРОДУКТЕ'); ?></span>
+                        <span class="text1"><?php echo($lng == 'en' ? 'Information about new product':'ИНФОРМАЦИЯ О НОВОМ ПРОДУКТЕ'); ?></span>
                         <span class="text2"><?php echo($lng == 'en' ? 'Facility information':'ИНФОРМАЦИЯ ОБ УСЛУГАХ'); ?></span>
                     </span>
                 </div>
