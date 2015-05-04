@@ -94,7 +94,7 @@
         <input id="automobile-no" type="radio" checked name="automobile" value="no">
         <div style="clear: both;"></div>
 
-        <span class="question-span small">Есть ли у Вас частная страховка?  </span>
+        <span class="question-span small">Участвуете ли Вы в системах частного страхования?</span>
         <label data-name="chasnaya-strahovka" class="radio" for="chasnaya-strahovka-yes">Да</label>
         <label data-name="chasnaya-strahovka" class="radio active" for="chasnaya-strahovka-no">Нет</label>
         <input id="chasnaya-strahovka-yes" type="radio" name="chasnaya-strahovka" value="yes">
@@ -104,7 +104,7 @@
         <section class="offset hidden-block if-chasnaya-strahovka">
             <fieldset class="reg-3 small-height">
 
-                <input id="medicinskoye" type="radio" name="chasnaya-strahovka-type" value="1"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="medicinskoye">Медицинское</label>
+                <input id="medicinskoye" type="radio" name="chasnaya-strahovka-type" value="1"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="medicinskoye">Медицинское страхование</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified medicinskoye strah-block">
                     <input placeholder="В какой компанииc?" type="text" value="">
@@ -113,7 +113,7 @@
                     <div style="clear: both;"></div>
                 </div>
 
-                <input id="neschistny_sluchay" type="radio" name="chasnaya-strahovka-type" value="2"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="neschistny_sluchay">Несчастный случай</label>
+                <input id="neschistny_sluchay" type="radio" name="chasnaya-strahovka-type" value="2"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="neschistny_sluchay">Страхование от несчастного случая</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified neschistny_sluchay strah-block">
                     <input placeholder="В какой компанииc?" type="text" value="">
@@ -122,7 +122,7 @@
                     <div style="clear: both;"></div>
                 </div>
 
-                <input id="strahovka_zhizni" type="radio" name="chasnaya-strahovka-type" value="3"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="strahovka_zhizni">Страховка жизни</label>
+                <input id="strahovka_zhizni" type="radio" name="chasnaya-strahovka-type" value="3"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="strahovka_zhizni">Страхование жизни</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified strahovka_zhizni strah-block">
                     <input placeholder="В какой компании?" type="text" value="">
@@ -140,7 +140,7 @@
                     <div style="clear: both;"></div>
                 </div>
 
-                <input id="poteria_deesposobnosti" type="radio" name="chasnaya-strahovka-type" value="5"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="poteria_deesposobnosti">Потеря дееспособности</label>
+                <input id="poteria_deesposobnosti" type="radio" name="chasnaya-strahovka-type" value="5"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="poteria_deesposobnosti">Страхование на случай потери дееспособности</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified poteria_deesposobnosti strah-block">
                     <input placeholder="В какой компании?" type="text" value="">
