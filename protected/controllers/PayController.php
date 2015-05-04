@@ -91,7 +91,6 @@ class PayController extends Controller
 		$response = $callback->getResponse();
 			
 		$order = Orders::model()->findByPk($response->identification->transactionid);
-		$order->price = $response->identification->transactionid;
 		$order->order_time = time();
 			
 			if($callback->isSuccess() === true && $callback->needReview() == false)
