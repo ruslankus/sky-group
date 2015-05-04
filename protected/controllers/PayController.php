@@ -2,9 +2,6 @@
 
 class PayController extends Controller
 {
-    
-    private $_host = "http://inlusion.eu/pay/callback/";
-    
     public $layout='//layouts/main_layout';
     
     public $title = "Регистрация";
@@ -21,11 +18,11 @@ class PayController extends Controller
         for($i = 1; $i <= 7; $i++){
             if(!empty($_SESSION["step_$i"])){
                 $arrSteps["step_$i"] = $_SESSION["step_$i"];
-                unset($_SESSION["step_$i"]);
+                //unset($_SESSION["step_$i"]);
             }
         }
         // delete steps
-        unset($_SESSION['steps']);
+        //unset($_SESSION['steps']);
         
         if(!empty($arrSteps)){
             //ctrate cuctomers
@@ -43,10 +40,12 @@ class PayController extends Controller
                 $objOrders->client_id = $objClient->id;
                 $objOrders->product_id = $arrSteps['step_6']['packet'];
                 $objOrders->order_time = time();
+                $objOrders->price = '';
+                $objOrders->discount_id = '';
                 
                 if($objOrders->save()){
                     
-                    $this->render('_pay_form', array('order_id'=>$objOrders->id));
+                    $this->render('_pay_form', array('order'=>$objOrders, 'steps'=>$arrSteps));
                     Yii::app()->end();        
                 }    
              
@@ -67,20 +66,21 @@ class PayController extends Controller
 			
 			if($callback->isSuccess() === true && $callback->needReview() == false)
 			{
-				echo "http://inlusion.eu/pay";
-				$order->payment_status = "OK,".$response->return->code.", ".$response->return->message;
+				
+				$order->payment_status = json_encode(array('status'=>"OK",'code'=>$response->return->code, 'message'=>$response->return->message, 'fullResponse'=>$response->return->fullResponse));
+                echo Yii::app()->params['payCallbackOk'];
 			}
 			else if($callback->isSuccess() === true && $callback->needReview() == true)
 			{
-				$order->payment_status = "CHECK, ".$response->return->code.", ".$response->return->message;
-				// payment successful, but needs manual review of transaction.
-				echo "http://inlusion.eu/pay";
+				$order->payment_status = json_encode(array('status'=>"CHECK",'code'=>$response->return->code, 'message'=>$response->return->message, 'fullResponse'=>$response->return->fullResponse));
+                // payment successful, but needs manual review of transaction.
+				echo Yii::app()->params['payCallbackOk'];
 			}
 			else
 			{
-				$order->payment_status = "NOK, ".$response->return->code.", ".$response->return->message;
-				// Payment unsuccessfull
-				echo "http://inlusion.eu/pay/error";
+				$order->payment_status = json_encode(array('status'=>"NOK",'code'=>$response->return->code, 'message'=>$response->return->message, 'fullResponse'=>$response->return->fullResponse));
+                // Payment unsuccessfull
+				echo Yii::app()->params['payCallbackNotOk']."/".$response->identification->transactionid;
 			}
 		
 		$order->save();
@@ -89,8 +89,10 @@ class PayController extends Controller
     
     
     public function actionError(){
-        
-        $this->render('fail');
+        $orderId = Yii::app()->request->getParam("id");
+        $order = Orders::model()->findBypk($orderId);
+        $response = json_decode($order->payment_status);
+        $this->render('fail', array('orderId'=>$orderId, 'response'=>$response));
     }
     
     

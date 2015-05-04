@@ -66,6 +66,7 @@ return array(
                 '<language:\w{2}>/<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<language:\w{2}>/<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
                 '<language:\w{2}>/<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                'pay/error/<id:\w+>'=>'pay/error',
 			),
 		),
 		
@@ -105,5 +106,17 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+        // payment form
+        'payUrl'=>'https://test.ctpe.net/frontend/payment.prc',
+        'payResponseUrl'=>'http://inlusion.eu/pay/callback/',
+        'payLogin'=>'8a8294174406c1f2014416ccece406dd',
+        'payPwd'=>'9prrhkqb',
+        'payMode'=>'INTEGRATOR_TEST',
+        'payChannel'=>'8a8294174406c1f2014416cd1ed006df',
+        'paySender'=>'8a8294174406c1f2014416ccece306d9',
+        'payToken'=>'c5dWcFsFkWca3MQF',
+        'payCurrency'=>'EUR',
+        'payCallbackOk'=>'http://inlusion.eu/pay',
+        'payCallbackNotOk'=>'http://inlusion.eu/pay/error',
 	),
 );

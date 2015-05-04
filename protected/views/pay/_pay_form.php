@@ -6,30 +6,31 @@
 <section class="header-section">
     <h1><?php echo Yii::t('skygroup','Payment')?></h1>
 </section>
+    <?php print_r($order); ?> 
 <section class="form-area">
-    <?php echo CHtml::beginForm("https://test.ctpe.net/frontend/payment.prc", "post");?>
+    <?php echo CHtml::beginForm(Yii::app()->params['payUrl'], "post");?>
 	<!--hidden inputs-->
 		<input type="hidden" name="REQUEST.VERSION" value="1.0" />
 		
 		<input type="hidden" name="FRONTEND.MODE" value="ASYNC" />
-		<input type="hidden" name="FRONTEND.RESPONSE_URL" value="http://inlusion.eu/pay/callback/" />
+		<input type="hidden" name="FRONTEND.RESPONSE_URL" value="<?php echo Yii::app()->params['payResponseUrl']; ?>" />
 		
-		<input type="hidden" name="USER.LOGIN" value="8a8294174406c1f2014416ccece406dd" />
-		<input type="hidden" name="USER.PWD" value="9prrhkqb" />
+		<input type="hidden" name="USER.LOGIN" value="<?php echo Yii::app()->params['payLogin']; ?>" />
+		<input type="hidden" name="USER.PWD" value="<?php echo Yii::app()->params['payPwd']; ?>" />
 		
 		<input type="hidden" name="TRANSACTION.MODE" value="INTEGRATOR_TEST" />
-		<input type="hidden" name="TRANSACTION.CHANNEL" value="8a8294174406c1f2014416cd1ed006df" />
+		<input type="hidden" name="TRANSACTION.CHANNEL" value="<?php echo Yii::app()->params['payChannel']; ?>" />
 		<input type="hidden" name="TRANSACTION.RESPONSE" value="SYNC" />
 		
-		<input type="hidden" name="SECURITY.SENDER" value="8a8294174406c1f2014416ccece306d9" />
-		<input type="hidden" name="SECURITY.TOKEN" value="c5dWcFsFkWca3MQF" />
+		<input type="hidden" name="SECURITY.SENDER" value="<?php echo Yii::app()->params['paySender']; ?>" />
+		<input type="hidden" name="SECURITY.TOKEN" value="<?php echo Yii::app()->params['payToken']; ?>" />
 		
 		<input type="hidden" name="PAYMENT.CODE" value="DC.DB" />
-		<input type="hidden" name="PRESENTATION.AMOUNT" value="1.5" />
-		<input type="hidden" name="PRESENTATION.CURRENCY" value="EUR" />
+		<input type="hidden" name="PRESENTATION.AMOUNT" value="<?php echo $order->price; ?>" />
+		<input type="hidden" name="PRESENTATION.CURRENCY" value="<?php echo Yii::app()->params['payCurrency']; ?>" />
 		
 		
-		<input type="hidden" name="IDENTIFICATION.TRANSACTIONID" value="<?php echo $order_id; ?>" />
+		<input type="hidden" name="IDENTIFICATION.TRANSACTIONID" value="<?php echo $order->id; ?>" />
 		
 		
          <fieldset class="reg-3">

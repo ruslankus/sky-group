@@ -59,23 +59,19 @@ class SolidPayResponse
 	private function _generateCallback()
 	{
 		// https://test.solidpayments.net/payment/codes/resultCodes.jsp
-		if ($this->callbackFull['PROCESSING_RETURN_CODE'] === '000.000.000')
-		{
+		if ($this->callbackFull['PROCESSING_RETURN_CODE'] === '000.000.000') {
 			$this->callback->success = true;
 		}
-		else if (in_array($this->callbackFull['PROCESSING_RETURN_CODE'], array('000.400.100','000.500.000','000.500.100','000.600.000')) == true)
-		{	
+		else if (in_array($this->callbackFull['PROCESSING_RETURN_CODE'], array('000.400.100','000.500.000','000.500.100','000.600.000')) == true) {	
 			$this->callback->success = true;
 		}
 		else if (in_array($this->callbackFull['PROCESSING_RETURN_CODE'], array('000.400.000','000.400.010',
                 '000.400.020','000.400.030','000.400.040','000.400.050','000.400.060','000.400.070','000.400.080',
-                '000.400.090','000.100.110')) == true)
-		{	
+                '000.400.090','000.100.110')) == true) {	
 			$this->callback->success = true;
 			$this->callback->review = true;
 		}
-		else
-		{
+		else {
 			$this->callback->success = false;
 		}
 		$this->callback->code = $this->callbackFull['PROCESSING_RESULT'];
@@ -84,6 +80,7 @@ class SolidPayResponse
 		$this->callback->return = (object) array();
 		$this->callback->return->code = $this->callbackFull['PROCESSING_RETURN_CODE'];
 		$this->callback->return->message = $this->callbackFull['PROCESSING_RETURN'];
+		$this->callback->return->fullResponse = $this->callbackFull;
 		
 		$this->callback->status = (object) array();
 		$this->callback->status->code = $this->callbackFull['PROCESSING_STATUS_CODE'];
