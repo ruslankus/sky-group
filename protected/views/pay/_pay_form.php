@@ -43,10 +43,10 @@
             <input placeholder="<?php echo (Yii::t('skygroup','city'))?>" type="text" name="ADDRESS.CITY">
 			
             
-            <input placeholder="Zip Code" type="text" name="ADDRESS.ZIP" class="zip">
+            <input placeholder="<?php echo Yii::t('skygroup','Zip Code')?>" type="text" name="ADDRESS.ZIP" class="zip">
             <select name="ADDRESS.COUNTRY" class="country">
-                <option value="IL">Израиль</option>
-				<option value="RU">Россия</option>
+                <option value="IL"><?php echo Yii::t('skygroup','Israel')?></option>
+				<option value="RU"><?php echo Yii::t('skygroup','Russia')?></option>
 			</select>
 			
 		<!--contacts-->	

@@ -31,6 +31,9 @@ return array(
     'Credit Card Number' => 'Номер карты',
     'Exp. Year' => 'Годен до Год',
     'EXp. Month' => 'Годен до Месяц',
+    'Zip Code' => 'Индекс',
+    'Russia' => 'Россия',
+    'Israel' => 'Израиль',
 
     
     'Country' => 'Страна',
