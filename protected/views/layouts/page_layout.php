@@ -47,7 +47,7 @@
         </div><!--/abs bottom-->
         
         <div class="slider-block">
-            <div class="slider-wrapper">
+            <div class="slider-wrapper cycle-slideshow" data-cycle-swipe="true" data-cycle-pager=".slider-nav" data-cycle-slides=".slide" data-cycle-pause-on-hover="true" data-cycle-speed="200">
                 <div class="slide active" style="background-image: url(<?php echo Yii::app()->request->baseUrl; ?>/img/home-banner-0.jpg);">
                     <span class="content">
                         <span class="text1"><?php echo($lng == 'en' ? 'Information about new product':'ИНФОРМАЦИЯ О НОВОМ ПРОДУКТЕ'); ?></span>
@@ -62,9 +62,7 @@
                 </div>
             </div>
             <a href="#" class="slider-move"><span></span></a>
-            <div class="slider-nav">
-                <ul></ul>
-            </div>
+            <ul class="slider-nav"></ul>
         </div>
     </section>
     
@@ -94,7 +92,7 @@
     </div>
 
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.2.min.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.cycle.lite.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.cycle2.min.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/forms.js"></script>
 </body>
 
