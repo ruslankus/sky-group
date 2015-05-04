@@ -21,6 +21,9 @@ return array(
 		'application.components.*',
         'application.helpers.*',
         'application.validators.*',
+		'application.helpers.YiiMailer',
+		'application.messages.*',
+		'application.messages.ru.*',
 
 	),
 

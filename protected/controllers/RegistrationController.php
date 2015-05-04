@@ -94,13 +94,13 @@ class RegistrationController extends Controller
                 $sessData[$key] = '';
             }
         }
-        /*for ($i=0; $i<25; $i++) {
-            if(empty($errors["children[".$i."][name]"])) { $errors["children[".$i."][name]"] = 'x'; }
-            if(empty($errors["children[".$i."][surname]"])) { $errors["children[".$i."][surname]"] = 'x'; }
-            if(empty($errors["children[".$i."][day]"])) { $errors["children[".$i."][day]"] = 'x'; }
-            if(empty($errors["children[".$i."][month]"])) { $errors["children[".$i."][month]"] = 'x'; }
-            if(empty($errors["children[".$i."][year]"])) { $errors["children[".$i."][year]"] = 'x'; }
-        }*/
+        if (is_array(isset($sessData['children'])?$sessData['children']:'')) {
+        foreach ($sessData['children'] as $key=>$child) {
+            foreach ($child as $val=>$vale) {
+                $sessData['children'][$key][$val] = isset($sessData['children'][$key][$val]) ? $sessData['children'][$key][$val]:'x';
+                $errors['children_'.$key.'_'.$val] = isset($errors['children_'.$key.'_'.$val]) ? $errors['children_'.$key.'_'.$val]:'';
+            }
+        }}
         
         //Debug::d(get_class_vars($model_class_name));
         //checking errors

@@ -52,21 +52,25 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/contacts.css');
     <h2>
         Свяжись с нами
     </h2>
-
-
+<?php if ($send == true) {
+        echo '<br/>Сообщение успешно отправлено<br/>';
+    }
+    ?>
+    <?php echo CHtml::beginForm();?>
     <div class="content-col left">
-        <input type="text" placeholder="Имя">
-        <input type="text" placeholder="Эл. почта">
+        <input name="name" type="text" placeholder="Имя" data-error="<?php echo $error['name']; ?>" value="<?php echo $data['name']; ?>">
+        <input name="email" type="text" placeholder="Эл. почта" data-error="<?php echo $error['email']; ?>" value="<?php echo $data['email']; ?>">
     </div>
 
     <div class="content-col right">
-        <input type="text" placeholder="Страна">
-        <input type="text" placeholder="номер">
+        <input name="country" type="text" placeholder="Страна" data-error="<?php echo $error['country']; ?>" value="<?php echo $data['country']; ?>">
+        <input name="phone" type="text" placeholder="номер" data-error="<?php echo $error['phone']; ?>" value="<?php echo $data['phone']; ?>">
     </div>
     <div class="cls"></div>
-    <textarea>Ваша заявка, содержание, т.д.</textarea>
+    <textarea name="text" data-error="<?php echo $error['text']; ?>"><?php echo !empty($data['text']) ? $data['text']:'Ваша заявка, содержание, т.д.'; ?></textarea>
     <div class="buttons">
-        <a href="#">Отменить </a><button>Отправить</button>
+        <button>Отправить</button>
     </div>
+    <?php echo CHtml::endForm();?>
 </section>
 </main>

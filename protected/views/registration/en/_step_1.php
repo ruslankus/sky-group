@@ -11,8 +11,8 @@
                 <input maxlength="1" style="width: 18%;text-align:center;" class="promo <?php echo isset($errors['promotion_number'])? 'error' : '' ?>" type="text" name="promotion_number_5" value="<?php echo isset($sessData['promotion_number_5']) ? $sessData['promotion_number_5']:'';?>">
             </span>
            
-            <input data-error="<?php echo isset($errors['user_name'])? $errors['user_name']:''; ?>" placeholder="Name" class="<?php echo isset($errors['user_name'])? 'error' : '' ?>"
-             type="text" name="user_name" value="<?php echo isset($sessData['user_name'])? $sessData['user_name']:''; ?>">
+            <input data-error="<?php echo isset($errors['first_name'])? $errors['first_name']:''; ?>" placeholder="Name" class="<?php echo isset($errors['first_name'])? 'error' : '' ?>"
+             type="text" name="first_name" value="<?php echo isset($sessData['first_name'])? $sessData['first_name']:''; ?>">
            
             <input data-error="<?php echo isset($errors['last_name'])? $errors['last_name']:''; ?>" placeholder="Surname"  class="<?php echo isset($errors['last_name'])? 'error' : '' ?>"
              type="text" name="last_name" value="<?php echo isset($sessData['last_name'])? $sessData['last_name']:''; ?>">

@@ -12,41 +12,43 @@
 
         <section class="offset <?php echo ($sessData['has_children'] == 'yes')? '' : 'hidden-block'; ?> if-children">
             <div class="children-list">
-            <?php
-                $this->clear_empty_array_values( $sessData['children']);
-                $errors = array_filter($errors);
-                if (!empty($errors) || count($sessData['children'])>0) {
+             <?php
+
+               // $this->clear_empty_array_values( $sessData['children'] );
+                //$this->clear_empty_array_values( $errors );
+                if (count($errors)>0 || count($sessData['children'])>0) {
                     $o=-1;
+                    $sessData['children'] = isset($sessData['children'])?$sessData['children']:array();
                     foreach ($sessData['children'] as $id=>$child) {
                         $o++;
                 ?>
                 <fieldset class="reg-3" id="children_<?php echo $o; ?>" data-children="<?php echo $o; ?>">
-                    <label class="bold-label"><?php echo Yii::t('yii.skygroup','n==1#1st child|n==2#2nd child|n==3#3th child|n>3#{n}th child', ($o+1)); ?></label>
-                    <input class="<?php echo $errors["children[$id][name]"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[$id][name]"] ? $errors["children[$id][name]"]:''); ?>" placeholder="Имя" type="text" name="children[<?php echo $o; ?>][name]" value="<?php echo $sessData['children'][$id]['name']; ?>">
-                    <input class="<?php echo $errors["children[$id][surname]"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children[$id][surname]"] ? $errors["children[{$id}][surname]"]:''); ?>" placeholder="Фамилия" type="text" name="children[<?php echo $o; ?>][surname]" value="<?php echo $sessData['children'][$id]['surname']; ?>">
-                    <label>Дата Рождения</label>
+                    <label class="bold-label"><?php echo Yii::t('skygroup','n==1#1st child|n==2#2nd child|n==3#3th child|n>3#{n}th child', ($o+1)); ?></label>
+                    <input class="<?php echo $errors["children_".$id."_name"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children_".$id."_name"] ? $errors["children_".$id."_name"]:''); ?>" placeholder="Имя" type="text" name="children[<?php echo $o; ?>][name]" value="<?php echo $sessData['children'][$id]['name']; ?>">
+                    <input class="<?php echo $errors["children_".$id."_surname"] ? 'error' : '' ?>" data-error="<?php echo ($errors["children_".$id."_surname"] ? $errors["children_".$id."_surname"]:''); ?>" placeholder="Фамилия" type="text" name="children[<?php echo $o; ?>][surname]" value="<?php echo $sessData['children'][$id]['surname']; ?>">
+                    <label>Date of birth</label>
                     <div style="clear: both;"></div>
-                    <select class="selector-1 <?php echo $errors["children[$id][day]"] ? 'error' : '' ?>" name="children[<?php echo $o; ?>][day]">
+                    <select class="selector-1 <?php echo $errors["children_".$id."_day"] ? 'error' : '' ?>" name="children[<?php echo $o; ?>][day]">
                         <option value="">Число</option>
                         <?php
                     for ($i=1; $i<32; $i++) {
-                        echo '<option value="'.$i.'"'.($sessData['children'][$id]['day'] == $i ? ' selected="selected"':'').'>'.$i.'</option>';
+                        echo '<option value="'.$i.'">'.$i.'</option>';
                     }
                     ?>
                     </select>
-                    <select class="selector-2 <?php echo $errors["children[$id][month]"] ? 'error' : '' ?>" name="children[<?php echo $o; ?>][month]">
+                    <select class="selector-2 <?php echo $errors["children_".$id."_month"] ? 'error' : '' ?>" name="children[<?php echo $o; ?>][month]">
                         <option value="">Месяц</option>
                         <?php
                     for ($i=1; $i<13; $i++) {
-                        echo '<option value="'.$i.'"'.($sessData['children'][$id]['month'] == $i ? ' selected="selected"':'').'>'.$i.'</option>';
+                        echo '<option value="'.$i.'">'.$i.'</option>';
                     }
                     ?>
                     </select>
-                    <select class="selector-3 <?php echo $errors["children[$id][year]"] ? 'error' : '' ?>" name="children[<?php echo $o; ?>][year]">
+                    <select class="selector-3 <?php echo $errors["children_".$id."_year"] ? 'error' : '' ?>" name="children[<?php echo $o; ?>][year]">
                         <option value="">Год</option>
                         <?php
                     for ($i=date('Y')-14; $i>date('Y')-100; $i--) {
-                        echo '<option value="'.$i.'"'.($sessData['children'][$id]['year'] == $i ? ' selected="selected"':'').'>'.$i.'</option>';
+                        echo '<option value="'.$i.'">'.$i.'</option>';
                     }
                     ?>
                     </select>

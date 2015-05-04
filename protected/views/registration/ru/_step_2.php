@@ -15,7 +15,7 @@
                 <input maxlength="1" style="width: 9%;text-align:center;" class="promo <?php echo $errors['id_number_9']? 'error' : '' ?>" type="text" name="id_number_9" value="<?php echo $sessData['id_number_9']?>">
             </span>
             
-            <input placeholder="Имя (вписываются с первой страницы)" type="text" value="<?php echo $step_1['user_name']; ?>" readonly="readonly" />
+            <input placeholder="Имя (вписываются с первой страницы)" type="text" value="<?php echo $step_1['first_name']; ?>" readonly="readonly" />
             <input placeholder="Фамилия (вписываются с первой страницы)" type="text" value="<?php echo $step_1['last_name']; ?>" readonly="readonly" />
             
              <label>Дата Рождения</label>

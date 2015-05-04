@@ -27,9 +27,9 @@
                        type="text" name="promotion_number_5" value="<?php echo !empty($sessData['promotion_number_5'])? $sessData['promotion_number_5'] : ''?>">
             </span>
              
-            <input data-error="<?php echo !empty($errors['user_name'])? $sessData['user_name']: ''; ?>"
-                   placeholder="Имя" class="<?php echo !empty($errors['user_name'])? 'error' : '' ?>"
-             type="text" name="user_name" value="<?php echo !empty($sessData['user_name'])? $sessData['user_name']: '' ?>">
+            <input data-error="<?php echo !empty($errors['first_name'])? $errors['first_name']: ''; ?>"
+                   placeholder="Имя" class="<?php echo !empty($errors['first_name'])? 'error' : '' ?>"
+             type="text" name="first_name" value="<?php echo !empty($sessData['first_name'])? $sessData['first_name']: '' ?>">
            
             <input data-error="<?php echo $errors['last_name']; ?>" placeholder="Фамилия"  class="<?php echo $errors['last_name']? 'error' : '' ?>"
              type="text" name="last_name" value="<?php echo $sessData['last_name']?>">

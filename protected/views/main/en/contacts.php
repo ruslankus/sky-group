@@ -71,6 +71,6 @@ $cs->registerCssFile(Yii::app()->request->baseUrl.'/css/contacts.css');
     <div class="buttons">
         <button>Send</button>
     </div>
-    <?php echo CHtml::beginForm();?>
+    <?php echo CHtml::endForm();?>
 </section>
 </main>

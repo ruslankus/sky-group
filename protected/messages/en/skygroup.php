@@ -5,12 +5,12 @@
 return array(
     /* Registration texts */
     /* Validators */
-    'Promoter\'s code is invalid.'=>'Код Организатора является недействительным.',
+    'Promoter\'s code is invalid.',
     // required
-    'Field cannot be blank.'=>'Необходимо заполнить поле.',
-    'It must be {value}.'=>'Она должна быть {value}.',
+    'Field cannot be blank.',
+    'It must be {value}.',
     // email
-    'Must be a valid email address.'=>'Должно быть действительный адрес электронной почты.',
+    'Must be a valid email address.',
     // compare
     'Must be repeated exactly.',
     'Must not be equal to {compareValue}.',
@@ -30,5 +30,5 @@ return array(
     'Is too short (minimum is {min} characters).',
     'Is too long (maximum is {max} characters).',
     'Is of the wrong length (should be {length} characters).',
-    'n==1#1st child|n==2#2nd child|n==3#3th child|n>3#{n}th child'=>'n==1#{n}й ребёнок|n==2#{n}й ребёнок|n==3#{n}й ребёнок|n>3#{n}й ребёнок',
+    'n==1#1st child|n==2#2nd child|n==3#3th child|n>3#{n}th child',
 );

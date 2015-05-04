@@ -102,7 +102,7 @@ class Compare extends CValidator
 				break;
 			case '!=':
 				if(($this->strict && $value===$compareValue) || (!$this->strict && $value==$compareValue))
-					$message=$this->message!==null?$this->message:Yii::t('yii.skygroup','Must not be equal to {compareValue}.');
+					$message=$this->message!==null?$this->message:Yii::t('app.skygroup','Must not be equal to {compareValue}.');
 				break;
 			case '>':
 				if($value<=$compareValue)
