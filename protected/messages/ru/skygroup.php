@@ -47,5 +47,12 @@ return array(
     'Mobile Phone' => 'Мобильный телефон',
     'Profession' => 'Профессия',
     'Employment' => 'Место работы',
+    
+    //payments
+    'An error has occurred'=>'Произошла ошибка',
+    'Registration is completed'=>'Регистрация завершена',
+    'Unfortunately, today is not your day. Registration failed. Payment failed.'=>'Увы, сегодня не ваш день. Регистрация провалена. Пэймент не прошел.',
+    'You have successfully paid. You are registered. You are now cool!'=>'Вы успешно оплатили. Вы зарегестрировались. Вы теперь крутой!',
+    'Next'=>'Далее',
 
 );

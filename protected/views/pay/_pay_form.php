@@ -6,14 +6,13 @@
 <section class="header-section">
     <h1><?php echo Yii::t('skygroup','Payment')?></h1>
 </section>
-    <?php print_r($order); ?> 
 <section class="form-area">
     <?php echo CHtml::beginForm(Yii::app()->params['payUrl'], "post");?>
 	<!--hidden inputs-->
 		<input type="hidden" name="REQUEST.VERSION" value="1.0" />
 		
 		<input type="hidden" name="FRONTEND.MODE" value="ASYNC" />
-		<input type="hidden" name="FRONTEND.RESPONSE_URL" value="<?php echo Yii::app()->params['payResponseUrl']; ?>" />
+		<input type="hidden" name="FRONTEND.RESPONSE_URL" value="<?php echo Yii::app()->params['payMerchantUrl']."/".Yii::app()->language; ?>/pay/callback" />
 		
 		<input type="hidden" name="USER.LOGIN" value="<?php echo Yii::app()->params['payLogin']; ?>" />
 		<input type="hidden" name="USER.PWD" value="<?php echo Yii::app()->params['payPwd']; ?>" />

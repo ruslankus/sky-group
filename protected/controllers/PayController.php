@@ -7,6 +7,17 @@ class PayController extends Controller
     public $title = "Регистрация";
     
     public function actionIndex(){
+        $arrSteps = array();
+        Yii::app()->session;
+        
+        for($i = 1; $i <= 7; $i++){
+            if(!empty($_SESSION["step_$i"])){
+                $arrSteps["step_$i"] = $_SESSION["step_$i"];
+                unset($_SESSION["step_$i"]);
+            }
+        }
+        // delete steps
+        unset($_SESSION['steps']);
         $this->render('success');
     }
     
@@ -68,19 +79,19 @@ class PayController extends Controller
 			{
 				
 				$order->payment_status = json_encode(array('status'=>"OK",'code'=>$response->return->code, 'message'=>$response->return->message, 'fullResponse'=>$response->return->fullResponse));
-                echo Yii::app()->params['payCallbackOk'];
+                echo Yii::app()->params['payMerchantUrl']."/".Yii::app()->language."/pay";
 			}
 			else if($callback->isSuccess() === true && $callback->needReview() == true)
 			{
 				$order->payment_status = json_encode(array('status'=>"CHECK",'code'=>$response->return->code, 'message'=>$response->return->message, 'fullResponse'=>$response->return->fullResponse));
                 // payment successful, but needs manual review of transaction.
-				echo Yii::app()->params['payCallbackOk'];
+				echo Yii::app()->params['payMerchantUrl']."/".Yii::app()->language."/pay";
 			}
 			else
 			{
 				$order->payment_status = json_encode(array('status'=>"NOK",'code'=>$response->return->code, 'message'=>$response->return->message, 'fullResponse'=>$response->return->fullResponse));
                 // Payment unsuccessfull
-				echo Yii::app()->params['payCallbackNotOk']."/".$response->identification->transactionid;
+				echo Yii::app()->params['payMerchantUrl']."/".Yii::app()->language."/pay/error/".$response->identification->transactionid;
 			}
 		
 		$order->save();
