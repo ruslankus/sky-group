@@ -84,8 +84,20 @@ class RegistrationController extends Controller
         if($id == 7){
             $objProds = Products::model()->findByPk($_SESSION['step_6']['packet']);
         }
+
+        foreach(get_class_vars($model_class_name) as $key => $value){
+            if(empty($errors[$key])){
+                $errors[$key] = '';
+            }
+            if(empty($sessData[$key])){
+                $sessData[$key] = '';
+            }
+        }
+
         
-        //Debug::d($_SESSION);
+        //Debug::d(get_class_vars($model_class_name));
+        //checking errors
+
         
         $sessData = isset( $sessData ) ? $sessData : array();
         $sessData['promotion_number'] = isset( $sessData['promotion_number'] ) ? $sessData['promotion_number'] : array();
