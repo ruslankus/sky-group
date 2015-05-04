@@ -2,7 +2,7 @@
 
     <?php echo CHtml::beginForm();?>
 
-        <span class="question-span small">Есть ли у вас ипотечные ссуды ?</span>
+        <span class="question-span small">Имеете ли Вы задолженности по ипотечным ссудам ?</span>
 
         <label data-name="ssudy" class="radio" for="ssudy-yes">Да</label>
         <label data-name="ssudy" class="radio active" for="ssudy-no">Нет</label>
@@ -12,9 +12,9 @@
 
         <section class="offset hidden-block if-ssudy">
             <fieldset class="reg-1 not-tall">
-                <input placeholder="В каком банке" type="text" value="">
-                <input placeholder="Сумма" type="text" value="">
-                <input placeholder="В каком году была взята" type="text" value="">
+                <input placeholder="Наименование Банка" type="text" value="">
+                <input placeholder="Сумма ссуды" type="text" value="">
+                <input placeholder="Дата получения ссуды" type="text" value="">
 
                 <span class="question-span small block">Страховщик ипотечной ссуды:</span>
 
@@ -25,7 +25,7 @@
                 <div style="clear: both;"></div>
 
                 <div class="offset-in hidden-block company-name">
-                    <input class="not-tall" placeholder="Название страховой компании" type="text" value="">
+                    <input class="not-tall" placeholder="Наименование страховой компании" type="text" value="">
                     <div style="clear: both;"></div>
                 </div>
 
