@@ -31,6 +31,7 @@ class MainController extends Controller
     
     
     public function actionContacts(){
+        $send = '';
         $lng = Yii::app()->language;
         $this->title = $lng == 'ru' ? "Контакты" : "Contacts";
         $model = new ContactsForm();
