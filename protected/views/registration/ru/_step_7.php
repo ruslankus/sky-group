@@ -36,7 +36,7 @@
 
         <section class="offset hidden-block if-other-person">
             <fieldset class="right reg-3">
-                <label>Данные владельца карты</label>
+                <label>Выбор между карточками</label>
                 <input placeholder="Имя владельца карты" type="text" name="" value="">
                 <input placeholder="Фамилия владельца карты" type="text" name="" value="">
                 <input placeholder="Улица" type="text" name="" value="">

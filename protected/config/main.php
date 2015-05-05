@@ -106,6 +106,8 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+        // RegiTitle
+		'regTitle'=>'Registration',
         // payment form
         'payUrl'=>'https://test.ctpe.net/frontend/payment.prc',
         'payMerchantUrl'=>'http://inlusion.eu',

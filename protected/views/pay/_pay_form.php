@@ -75,10 +75,6 @@
             <input placeholder="<?php echo (Yii::t('skygroup','mobile (optional)'))?>" type="text" name="CONTACT.MOBILE" value="<?php echo !empty($steps['step_7']['phone_mobile'])? $steps['step_7']['phone_mobile']:$steps['step_2']['mobile_phone'];?>">
         </fieldset>
         */ ?>
-        <h2><?php echo Yii::t('skygroup','Terms and Conditions')?></h2>
-        <fieldset class="reg-3">
-                <div class="terms"><?php echo $terms; ?></iframe>
-        </fieldset>
 		<fieldset class="reg-3 card-info">
 		<h2><?php echo Yii::t('skygroup','Card Information')?></h2>
 		<div class="card">
@@ -89,7 +85,7 @@
 			<input class="card-number" placeholder="<?php echo (Yii::t('skygroup','Credit Card Number'))?>"
                    type="text" name="ACCOUNT.NUMBER" value="" />
 			
-			<input class="card-cvc" placeholder="CVC" type="text" name="ACCOUNT.VERIFICATION" value="" />
+			<input class="card-cvc" placeholder="<?php echo Yii::t('skygroup','CVV')?>" type="text" name="ACCOUNT.VERIFICATION" value="" />
 			
 			<a href="#" class="question" data-questionmark="<?php echo Yii::t('skygroup','Enter your identification number')?>"></a>
 			</div>
@@ -124,7 +120,12 @@
 			<span class="clearfix"></span>	
 			
 		</div><!--/card-->
-				<input type="submit" value="Далее">
+        </fieldset>
+    <h2><?php echo Yii::t('skygroup','Terms and Conditions')?></h2>
+        <fieldset class="reg-3">
+                <div class="terms"><?php echo $terms; ?></div>
+            <input type="checkbox" id="accept_terms" name="accept_terms"><label class="check-box-label terms-accept" for="accept"><?php echo (Yii::t('skygroup','I Accept'))?></label>
+				<input id="submit_pay" type="submit" value="<?php echo (Yii::t('skygroup','Checkout'))?>" disabled="disabled"/>
 		</fieldset>
 		
 		<div style="clear: both;"></div>

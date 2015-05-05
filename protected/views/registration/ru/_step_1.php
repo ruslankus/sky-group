@@ -1,8 +1,8 @@
 <section class="form-area">
     <?php echo CHtml::beginForm();?>
          <fieldset class="reg-1">
-            <a href="#" style="top: 32px;" class="question" data-questionmark="Укажите номер агента для дальнейшей регистрации."></a>
-           <span class="promo">Номер промоутера</span>
+            <a href="#" style="top: 32px;" class="question" data-questionmark="при отсутствии номера промоутера исключается возможность дальнейшего заполнения анкетных данных"></a>
+           <span class="promo underline">Номер Промоутера</span>
             <span style="display: block; width:95%;" data-error="<?php echo !empty($errors['promotion_number'])? $errors['promotion_number']:''; ?>">
                 <input maxlength="1" style="width: 15%;margin-right:2%;text-align:center;"
                        class="promo <?php echo !empty($errors['promotion_number'])? 'error' : '' ?>"
@@ -41,7 +41,7 @@
             <input data-error="<?php echo $errors['password']; ?>" placeholder="Пароль"  class="<?php echo $errors['password']? 'error' : '' ?>"
              type="password" name="password" value="">
              
-            <input data-error="<?php echo $errors['next_pass']; ?>" placeholder="Повторите пароль"  class="<?php echo $errors['next_pass']? 'error' : '' ?>"
+            <input data-error="<?php echo $errors['next_pass']; ?>" placeholder="Пароль"  class="<?php echo $errors['next_pass']? 'error' : '' ?>"
              type="password" name="next_pass" value="">
             
             <input type="submit" value="Далее">

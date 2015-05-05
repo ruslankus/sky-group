@@ -2,17 +2,6 @@
 
      <?php echo CHtml::beginForm();?>
     <fieldset class="reg-3 small-height">
-            <span class="question-span small">Код скидки ?</span>
-
-            <label data-name="discount_is" class="radio <?php echo ($sessData['discount_is'] == 'yes')? 'active' : ''; ?>" for="discount-yes">Да</label>
-            <label data-name="discount_is" class="radio <?php echo ($sessData['discount_is'] != 'yes')? 'active' : ''; ?>" for="discount-no">Нет</label>
-            <input id="discount-yes" type="radio" name="discount_is" value="yes" <?php echo ($sessData['discount_is'] == 'yes')? 'checked="checked"' : ''; ?>>
-            <input id="discount-no" type="radio" name="discount_is" value="no" <?php echo ($sessData['discount_is'] != 'yes')? 'checked="checked"' : ''; ?>>
-            <div style="clear: both;"></div>
-            
-            <section class="offset <?php echo ($sessData['discount_is'] == 'yes')? '' : 'hidden-block'; ?> if-discount">
-                <input placeholder="Код скидки" maxlength="10" class="promo <?php echo $errors['discount']? 'error' : '' ?>" data-error="<?php echo $errors['discount']? $errors['discount'] : '' ?>" type="text" name="discount" value="<?php echo $sessData['discount']; ?>">
-            </section>
             
             <span class="question-span small block bold">Выберите пакет обслуживания:</span>
             <?php $i=0; foreach($objProds as $prod):?>
@@ -23,9 +12,12 @@
                 <div style="clear: both;"></div>
                 <?php echo $prod->description_text_ru?>
             <?php $i++; endforeach; ?>
-            
-        </fieldset>
-
+    </fieldset>
+    <fieldset class="reg-3 small-height">
+        <section class="offset if-discount">
+                <input placeholder="Укажите промокод при его наличии" maxlength="10" class="promo <?php echo $errors['discount']? 'error' : '' ?>" data-error="<?php echo $errors['discount']? $errors['discount'] : '' ?>" type="text" name="discount" value="<?php echo $sessData['discount']; ?>">
+        </section>
+    </fieldset>
         <fieldset class="buttons">
             <a class="reversed left button" href="<?php echo Yii::app()->createUrl( $lng .'/registration/step/5'); ?>" >Назад</a>
             <input class="right" type="submit" value="Далее">

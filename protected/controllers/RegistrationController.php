@@ -4,7 +4,6 @@ class RegistrationController extends Controller
 {
     public $layout='//layouts/main_layout';
     public $currentStep;
-    
     public $steps = array(
         '1' => true,
         '2' => false,

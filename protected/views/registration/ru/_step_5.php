@@ -12,11 +12,11 @@
 
         <section class="offset hidden-block if-ssudy">
             <fieldset class="reg-1 not-tall">
-                <input placeholder="Наименование банка" type="text" value="">
+                <input placeholder="Наименование Банка" type="text" value="">
                 <input placeholder="Сумма ссуды" type="text" value="">
                 <input placeholder="Дата получения ссуды" type="text" value="">
 
-                <span class="question-span small block">Страховщик ипотечной ссуды:</span>
+                <span class="question-span small block">Наименование страховщика ипотечной ссуды:</span>
 
                 <label data-name="strah" class="radio active" for="strah-bank">Банк</label>
                 <label data-name="strah" class="radio" for="strah-company">Страховая компания</label>
@@ -34,7 +34,7 @@
         </section>
 
 
-        <span class="question-span small">Получаете ли Вы пособие от Института национального страхования?</span>
+        <span class="question-span small">Получаете ли вы пособие от Института национального страхования ?</span>
         <label data-name="posobie" class="radio" for="posobie-yes">Да</label>
         <label data-name="posobie" class="radio active" for="posobie-no">Нет</label>
         <input id="posobie-yes" type="radio" name="posobie" value="yes">
@@ -62,7 +62,7 @@
 
         <section class="offset hidden-block if-kasa">
             <fieldset class="reg-3 small-height">
-                <span class="question-span small block">Укажите больничную кассу:</span>
+                <span class="question-span small block">Укажите вашу больничную кассу :</span>
                 <input id="leumit" checked type="radio" name="kasa-type" value="leumit"><label data-name="kasa-type" class="radio modified-small active" for="leumit">ЛЕУМИТ</label>
                 <input id="macabi" type="radio" name="kasa-type" value="macabi"><label data-name="kasa-type" class="radio modified-small" for="macabi">МАКАБИ</label>
                 <input id="meucheded" type="radio" name="kasa-type" value="macabi"><label data-name="kasa-type" class="radio modified-small" for="meucheded">МЕУХЕДЕТ</label>
@@ -71,7 +71,7 @@
             <div style="clear: both;"></div>
         </section>
 
-        <span class="question-span small">Есть ли у вас дополнительная страховка в больничной кассе ?</span>
+        <span class="question-span small">Имеете ли Вы дополнительную страховку в больничной кассе ?</span>
         <label data-name="kasa-add" class="radio" for="kasa-additional-yes">Да</label>
         <label data-name="kasa-add" class="radio active" for="kasa-additional-no">Нет</label>
         <input id="kasa-additional-yes" type="radio" name="kasa-additional" value="yes">
@@ -87,7 +87,7 @@
         </fieldset>
         <div style="clear: both;"></div>
 
-        <span class="question-span small">Есть ли в семье автомобиль? </span>
+        <span class="question-span small">Есть ли в Вашей семье Автомобиль? </span>
         <label data-name="automobile" class="radio" for="automobile-yes">Да</label>
         <label data-name="automobile" class="radio active" for="automobile-no">Нет</label>
         <input id="automobile-yes" type="radio" name="automobile" value="yes">
@@ -107,45 +107,45 @@
                 <input id="medicinskoye" type="radio" name="chasnaya-strahovka-type" value="1"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="medicinskoye">Медицинское страхование</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified medicinskoye strah-block">
-                    <input placeholder="В какой компанииc?" type="text" value="">
-                    <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
+                    <input placeholder="Наименование компании" type="text" value="">
+                    <input placeholder="Сумма ежемесячного платежа" type="text" value="">
+                    <input placeholder="Сумма страхового покрытия" type="text" value=""><a href="#" class="question bottom"></a>
                     <div style="clear: both;"></div>
                 </div>
 
                 <input id="neschistny_sluchay" type="radio" name="chasnaya-strahovka-type" value="2"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="neschistny_sluchay">Страхование от несчастного случая</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified neschistny_sluchay strah-block">
-                    <input placeholder="В какой компанииc?" type="text" value="">
-                    <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
+                    <input placeholder="Наименование компании" type="text" value="">
+                    <input placeholder="Сумма ежемесячного платежа" type="text" value="">
+                    <input placeholder="Сумма страхового покрытия" type="text" value=""><a href="#" class="question bottom"></a>
                     <div style="clear: both;"></div>
                 </div>
 
                 <input id="strahovka_zhizni" type="radio" name="chasnaya-strahovka-type" value="3"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="strahovka_zhizni">Страхование жизни</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified strahovka_zhizni strah-block">
-                    <input placeholder="В какой компании?" type="text" value="">
-                    <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
+                    <input placeholder="Наименование компании" type="text" value="">
+                    <input placeholder="Сумма ежемесячного платежа" type="text" value="">
+                    <input placeholder="Сумма страхового покрытия" type="text" value=""><a href="#" class="question bottom"></a>
                     <div style="clear: both;"></div>
                 </div>
 
                 <input id="nakopitelnaya_programa" type="radio" name="chasnaya-strahovka-type" value="4"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="nakopitelnaya_programa">Накопительная программа</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified nakopitelnaya_programa strah-block">
-                    <input placeholder="В какой компании?" type="text" value="">
-                    <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
+                    <input placeholder="Наименование компании" type="text" value="">
+                    <input placeholder="Сумма ежемесячного платежа" type="text" value="">
+                    <input placeholder="Сумма страхового покрытия" type="text" value=""><a href="#" class="question bottom"></a>
                     <div style="clear: both;"></div>
                 </div>
 
                 <input id="poteria_deesposobnosti" type="radio" name="chasnaya-strahovka-type" value="5"><label data-name="chasnaya-strahovka-type" class="radio modified-small lots-of" for="poteria_deesposobnosti">Страхование на случай потери дееспособности</label>
                 <div style="clear: both;"></div>
                 <div class="offset-in hidden-block small-modified poteria_deesposobnosti strah-block">
-                    <input placeholder="В какой компании?" type="text" value="">
-                    <input placeholder="Какой ежемесячный платёж?" type="text" value="">
-                    <input placeholder="Какое покрытие?" type="text" value=""><a href="#" class="question bottom"></a>
+                    <input placeholder="Наименование компании" type="text" value="">
+                    <input placeholder="Сумма ежемесячного платежа" type="text" value="">
+                    <input placeholder="Сумма страхового покрытия" type="text" value=""><a href="#" class="question bottom"></a>
                     <div style="clear: both;"></div>
                 </div>
 

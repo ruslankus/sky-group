@@ -95,7 +95,7 @@
             ?>
 
             </div>
-            <a class="add-child-info" href="#" data-lang="<?php echo Yii::app()->language; ?>">Добавить информацию</a>
+            <a class="add-child-info" href="#" data-lang="<?php echo Yii::app()->language; ?>">Добавить информацию о детях</a>
         </section>
 
         <fieldset class="buttons">

@@ -1,7 +1,7 @@
 <fieldset class="reg-3" id="children_<?php echo $child; ?>" data-children="<?php echo $child; ?>">
     <label class="bold-label"><?php echo Yii::t('skygroup','n==1#1st child|n==2#2nd child|n==3#3th child|n>3#{n}th child', ($child+1), null, $lng); ?></label>
     <input placeholder="<?php echo ($lng =='en'?'Name':'Имя'); ?>" type="text" name="children[<?php echo $child; ?>][name]" value="">
-    <input placeholder="<?php echo ($lng =='en'?'Surname':'Имя'); ?>" type="text" name="children[<?php echo $child; ?>][surname]" value="">
+    <input placeholder="<?php echo ($lng =='en'?'Surname':'Фамилия'); ?>" type="text" name="children[<?php echo $child; ?>][surname]" value="">
     <label><?php echo ($lng =='en'?'Date of birth':'Дата Рождения'); ?></label>
     <div style="clear: both;"></div>
     <select name="children[<?php echo $child; ?>][day]" class="selector-1">

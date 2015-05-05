@@ -306,4 +306,14 @@ $(document).ready(function(){
             $item.fadeIn();
         }
     });
+    $(".terms-accept").on("click", function(){
+        if ($(this).hasClass("checked")) {
+            $("#submit_pay").prop("disabled",false);
+        }
+        else {
+            
+            $("#submit_pay").prop("disabled",true);
+        }
+        return false;
+    });
 });

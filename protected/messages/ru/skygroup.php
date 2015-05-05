@@ -27,8 +27,9 @@ return array(
     'phone (optional)' => 'телефон (необезательно)',
     'mobile (optional)' => 'моб.телефон (необезательно)',
     'Card Information' => 'Информация о карте ',
-    'Cardholder Name' => 'Владелец карты',
+    'Cardholder Name' => 'Наименование владельца карты',
     'Credit Card Number' => 'Номер карты',
+    'CVV' => 'CVV Код',
     'Exp. Year' => 'Годен до Год',
     'EXp. Month' => 'Годен до Месяц',
     'Zip Code' => 'Индекс',
@@ -54,5 +55,8 @@ return array(
     'Unfortunately, today is not your day. Registration failed. Payment failed.'=>'Увы, сегодня не ваш день. Регистрация провалена. Пэймент не прошел.',
     'You have successfully paid. You are registered. You are now cool!'=>'Вы успешно оплатили. Вы зарегестрировались. Вы теперь крутой!',
     'Next'=>'Далее',
+    
+    'I Accept'=>'Принимаю условия',
+    'Checkout'=>'Оплатить',
 
 );

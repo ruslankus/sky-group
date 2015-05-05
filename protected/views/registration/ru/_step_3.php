@@ -13,7 +13,7 @@
         <div style="clear: both;"></div>
         <section class="offset <?php echo ($sessData['married'] == 'yes')? '' : 'hidden-block'; ?> if-married">
             <fieldset class="reg-3">
-               <span class="promo">Номер удостоверения личности</span>
+               <span class="promo underline">Номер ID Супруга(и)</span>
                 <span style="display: block; width:95%;" data-error="<?php echo $errors['id_number']; ?>">
                     <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_1']? 'error' : '' ?>" type="text" name="id_number_1" value="<?php echo $sessData['id_number_1']; ?>">
                     <input maxlength="1" style="width: 9%;margin-right:2.3%;text-align:center;" class="promo <?php echo $errors['id_number_2']? 'error' : '' ?>" type="text" name="id_number_2" value="<?php echo $sessData['id_number_2']?>">
@@ -60,8 +60,8 @@
             <div style="clear: both;"></div>
 
             <fieldset class="reg-3 small-height">
-                <input class="<?php echo $errors['profession']? 'error' : '' ?>" data-error="<?php echo $errors['profession']; ?>" placeholder="Профессия" type="text" name="profession" value="<?php echo $sessData['profession']; ?>">
-                <input class="<?php echo $errors['employment']? 'error' : '' ?>" data-error="<?php echo $errors['employment']; ?>" placeholder="Место работы" type="text" name="employment" value="<?php echo $sessData['employment']; ?>">
+                <input class="<?php echo $errors['profession']? 'error' : '' ?>" data-error="<?php echo $errors['profession']; ?>" placeholder="Профессия (свободное поле для ввода )" type="text" name="profession" value="<?php echo $sessData['profession']; ?>">
+                <input class="<?php echo $errors['employment']? 'error' : '' ?>" data-error="<?php echo $errors['employment']; ?>" placeholder="Место Работы ( свободное поле для ввода )" type="text" name="employment" value="<?php echo $sessData['employment']; ?>">
             </fieldset>
 
             <div style="clear: both;"></div>
@@ -83,7 +83,7 @@
                             </span>
                             <input class="<?php echo $errors['city']? 'error' : '' ?>" data-error="<?php echo $errors['city']; ?>" placeholder="Город" type="text" name="city" value="<?php echo $sessData['city']; ?>">
                             <span style="width:95%;display:block;">
-                                <select class="<?php echo $errors['country']? 'error' : '' ?>" data-error="<?php echo $errors['country']; ?>" placeholder="Country" type="text" name="country" value="<?php echo $sessData['country']; ?>" style="width: 47%;margin-right:6%;">
+                                <select class="<?php echo $errors['country']? 'error' : '' ?>" data-error="<?php echo $errors['country']; ?>" placeholder="Страна" type="text" name="country" value="<?php echo $sessData['country']; ?>" style="width: 47%;margin-right:6%;">
                 <option value="IL"><?php echo Yii::t('skygroup','Israel')?></option>
                 <option value="RU"><?php echo Yii::t('skygroup','Russia')?></option>
             </select>

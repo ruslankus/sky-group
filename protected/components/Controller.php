@@ -23,7 +23,6 @@ class Controller extends CController
     
     public $title;
 
-
     /**
      * Init
      */

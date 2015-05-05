@@ -1004,3 +1004,21 @@ input:-ms-input-placeholder{opacity: 1;}
 {
     color: #ECBD62;
 }
+
+.promo.underline {
+    text-decoration: underline!important;
+    text-align: center;
+    display: block;
+    width: 95%;
+}
+
+.like-input {
+    float: right!important;
+    text-align: left;
+    width: 95%;
+    display: block;
+}
+
+input:disabled {
+    cursor: default!important;
+}
