@@ -40,6 +40,7 @@ h1 span {
 
 .content-col p {
 	margin-bottom: 20px;
+    font-size: 17px;
 }
 
 .content-col h2 {
@@ -96,4 +97,11 @@ h1 span {
  	font-size:15px;
  	line-height:30px;
  }
+}
+ul {
+    font-size: 17px;
+    margin-left: 25px;
+}
+ul > li {
+    margin-top: 5px;
 }
