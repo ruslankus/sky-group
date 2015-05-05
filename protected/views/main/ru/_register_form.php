@@ -7,6 +7,7 @@
                     <td class="one"><input type="text" name="Phone" placeholder="Телефон" value=""></td>
                     <td><input type="text" name="email" placeholder="Эл.почта" value=""></td>
                     <td><button>Регистрация</button></td>
+                    <input type="hidden" name="from_index" value="yes" />
                 </tr>
             </table>
         </form>

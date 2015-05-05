@@ -7,6 +7,7 @@
             <td class="one"><input type="text" name="Phone" placeholder="Phone" value=""></td>
             <td><input type="text" name="email" placeholder="Email" value=""></td>
             <td><button>Registration</button></td>
+            <input type="hidden" name="from_index" value="yes" />
         </tr>
     </table>
     </form>

@@ -14,6 +14,8 @@ class FormStep_1 extends CFormModel
     public $password;
     public $next_pass;
     
+    public $from_index;
+    
     public $_promo;
     public $_user;
     

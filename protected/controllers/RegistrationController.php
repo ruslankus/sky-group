@@ -55,8 +55,8 @@ class RegistrationController extends Controller
             
             $arrStep = $_POST;
             $model->attributes = $_POST;
-
             if($model->validate()){
+                $arrStep['promotion_number'] = isset($model->attributes['promotion_number']) ? $model->attributes['promotion_number']:'';
                 Yii::app()->session->add("step_{$id}", $arrStep);
                 //write session step like complited
                 $sessSteps[$id] = true;
@@ -74,8 +74,10 @@ class RegistrationController extends Controller
                     $errors[$key] = array_shift($value); 
                 }
                 $sessData = $arrStep;
+                
             }//end validation
-            //Debug::d($errors);    
+            //Debug::d($errors); 
+            
         }
         
         if($id == 6){

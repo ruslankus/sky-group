@@ -204,11 +204,13 @@ $(document).ready(function(){
 
         if(!$(this).hasClass('out') && !$(this).hasClass('in'))
         {
+            
+            var box = $('.login-box');
             var top = $(this).offset().top;
             var height = $(this).height();
 
             var result_top = top + height;
-            var box = $('.login-box');
+            var result_left = $(this).offset().left - box.width() + $(this).width();
 
             box.css({'top':result_top+'px','right':'0px'});
 
