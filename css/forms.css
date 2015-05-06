@@ -12,7 +12,7 @@ input:focus, button:focus {
 }
 body
 {
-    min-width: 360px;
+    min-width: 290px;
 }
 button { cursor: pointer; }
 .questionmark {
@@ -59,7 +59,7 @@ button { cursor: pointer; }
 {
     margin: 0 auto;
     max-width: 1280px;
-    min-width: 360px;
+    min-width: 290px;
     position: relative;
 }
 .header:before,
@@ -118,6 +118,8 @@ button { cursor: pointer; }
 .header .nav {
     display: block;
     float: right;
+    
+    z-index: 200;
 }
 @media (max-width: 860px) {
     .header .nav {
@@ -1021,4 +1023,15 @@ input:-ms-input-placeholder{opacity: 1;}
 
 input:disabled {
     cursor: default!important;
+}
+
+@media (max-width: 380px) {
+    .header .logo {
+        width: 104px;
+        height: 104px;
+    }
+}
+
+.logo {
+    
 }
