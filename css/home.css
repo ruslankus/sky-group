@@ -224,26 +224,27 @@ button {
     }
 }
 /******************* footer *********************************/
-.footer{
-    display:block;
-    height:145px;
-    background: #444444;
+.footer
+{
+    display: block;
+    height: 105px;
+    background-color: #444444;
+    text-align: center;
 }
-.footer a { text-decoration: none; }
-.footer-content {
-    width:320px;
-    margin:0px auto 0 auto;
-    padding:5px 0 5px 0;
-    color:#ffffff;
-    font-size:22px;
+
+.footer a
+{
+    display: inline-block;
+    font-family: open_sanslight;
+    font-size: 22px;
+    color: white;
     height: 50px;
     line-height: 50px;
-    text-align: center;
-    background: url('../img/home_footer_contacts_us.png') no-repeat right center; 
-    display: block;
-}
-.footer-top {
-    height:40px;
+    padding-right: 60px;
+    margin-top: 25px;
+    /*line-height: 105px;*/
+    text-decoration: none;
+    background: url("../img/email-ico.png") center right no-repeat;
 }
 
 .cls {

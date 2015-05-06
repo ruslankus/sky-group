@@ -70,10 +70,9 @@
     
         <?php echo $content; ?>
         
-        <section class="footer">
-            <div class="footer-top"></div>
-            <a href="<?php echo Yii::app()->createUrl($lng.'/main/contacts'); ?>"><span class="footer-content"><span><?php echo $lng == 'en' ? 'CONTACT US' : 'СВЯЗАТЬСЯ С НАМИ'; ?></span></span></a>
-        </section>
+        <footer class="footer">
+            <a href="<?php echo Yii::app()->createUrl($lng.'/main/contacts'); ?>"><?php echo $lng == 'en' ? 'CONTACT US' : 'СВЯЗАТЬСЯ С НАМИ'; ?></a>
+        </footer>
     </main>
 
     <div class="login-box">
